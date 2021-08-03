@@ -1,0 +1,18 @@
+{
+  "name": "@onenylxus/lime-examples",
+  "version": "1.0.0",
+  "author": "Lime Project Team",
+  "license": "MIT",
+  "main": "index.js",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "chalk": "^4.1.1",
+    "express": "^4.17.1",
+    "prompt-sync": "^4.2.0"
+  },
+  "scripts": {
+    "prompt": "node prompt.js",
+    "web": "node web.js"
+  }
+}

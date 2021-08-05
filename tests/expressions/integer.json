@@ -1,0 +1,19 @@
+{
+  "name": "Integer expression test",
+  "config": {},
+  "process": [
+    {
+      "desc": "natural define",
+      "tests": [
+        ["1", "1"]
+      ]
+    },
+    {
+      "desc": "whitespace ignore",
+      "tests": [
+        ["1 ", "1"],
+        [" 1", "1"]
+      ]
+    }
+  ]
+}

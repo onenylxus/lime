@@ -1,0 +1,12 @@
+{
+  "name": "Add function test",
+  "config": {},
+  "process": [
+    {
+      "desc": "integer with integer",
+      "tests": [
+        ["1+2", "3"]
+      ]
+    }
+  ]
+}

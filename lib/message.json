@@ -1,0 +1,12 @@
+{
+  "github": "Please create a GitHub issue about how you received this message, thank you. ",
+  "error:functionAgreement": "Function does not agree with parameter types.",
+  "error:inputEmpty": "Prompt input is empty.",
+  "error:inputNotString": "Prompt input is not a string.",
+  "error:invalidSymbol": "Invalid symbol in prompt input.",
+  "issue:invalidExpressionInPrint": "Invalid expression in print process.",
+  "issue:invalidFunctionOrder": "Invalid function order.",
+  "issue:invalidMessage": "Invalid message detected.",
+  "issue:invalidModuleInBuild": "Invalid module in build process.",
+  "issue:invalidTokenInParse": "Invalid token in parse process."
+}

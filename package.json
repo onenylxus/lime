@@ -39,7 +39,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn test --passWithNoTests"
+      "pre-commit": "yarn test"
     }
   },
   "repository": {

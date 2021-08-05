@@ -1,0 +1,12 @@
+{
+  "name": "Subtract function test",
+  "config": {},
+  "process": [
+    {
+      "desc": "integer with integer",
+      "tests": [
+        ["3-2", "1"]
+      ]
+    }
+  ]
+}

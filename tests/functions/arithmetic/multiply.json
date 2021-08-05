@@ -1,0 +1,12 @@
+{
+  "name": "Multiply function test",
+  "config": {},
+  "process": [
+    {
+      "desc": "integer with integer",
+      "tests": [
+        ["3*2", "6"]
+      ]
+    }
+  ]
+}

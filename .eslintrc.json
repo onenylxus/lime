@@ -12,6 +12,15 @@
       "ecmaVersion": 12
     },
     "rules": {
-      "global-require": "off"
+      "brace-style": "off",
+      "class-methods-use-this": "warn",
+      "global-require": "off",
+      "no-console": "off",
+      "no-nested-ternary": "off",
+      "no-plusplus": "off",
+      "no-prototype-builtins": "off",
+      "object-curly-newline": "off",
+      "one-var": "off",
+      "one-var-declaration-per-line": "off"
     }
 }

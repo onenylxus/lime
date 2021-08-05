@@ -4,7 +4,7 @@
   "error:inputEmpty": "Prompt input is empty.",
   "error:inputNotString": "Prompt input is not a string.",
   "error:invalidSymbol": "Invalid symbol in prompt input.",
-  "issue:invalidExpressionInPrint": "Invalid expression in print process.",
+  "issue:invalidExpressionInConstruct": "Invalid expression in constructor.",
   "issue:invalidFunctionOrder": "Invalid function order.",
   "issue:invalidMessage": "Invalid message detected.",
   "issue:invalidModuleInBuild": "Invalid module in build process.",

@@ -1,7 +1,8 @@
 // Require
 const chalk = require('chalk');
 const Prompt = require('prompt-sync')({ sigint: true });
-const Lime = require(process.argv[2] === '-q' ? '../src/lime' : '../dist/bundle')();
+const banner = require('../utils/banner');
+const Lime = process.argv[2] === '-q' ? require('../src/lime')({ developmentMode: true }) : require('../dist/bundle')();
 
 /* ------------------------ division ------------------------ */
 
@@ -34,6 +35,6 @@ if (process.argv[2] === '-q') {
   console.log(chalk.yellow.bold('[?] This prompt is run by explicit code source instead of built bundle. Please build and run the bundle before commit.'));
   console.log('');
 }
-console.log(chalk.green(require('../utils/banner')()));
+console.log(chalk.green(banner()));
 console.log('');
 run();

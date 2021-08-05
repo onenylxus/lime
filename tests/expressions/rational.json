@@ -5,14 +5,7 @@
     {
       "desc": "natural define",
       "tests": [
-        ["123", "123"]
-      ]
-    },
-    {
-      "desc": "whitespace ignore",
-      "tests": [
-        ["1 ", "1"],
-        [" 1", "1"]
+        ["1/2", "1/2"]
       ]
     }
   ]

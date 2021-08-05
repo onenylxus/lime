@@ -11,8 +11,23 @@ class LimeInteger extends LimeExpression {
     // Super from expression class
     super(lime, { isSimple: true });
 
-    // Properties
-    this.value = Types.isNumber(+value) ? Math.trunc(+value) : null;
+    // Build expression
+    if (!Types.isNumber(+value)) {
+      throw new Error('issue:invalidExpressionInConstruct');
+    }
+    this.value = Math.trunc(+value);
+  }
+
+  /* ------------------------ division ------------------------ */
+
+  // Convert to rational
+  toRational() {
+    return this.lime.build('rational')(this, this.lime.build('integer')(1));
+  }
+
+  // Print function
+  print() {
+    return `${this.value}`;
   }
 }
 

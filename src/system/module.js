@@ -3,9 +3,11 @@ const Module = new Map();
 
 // Expressions
 Module.set('integer', require('../expressions/integer'));
+Module.set('rational', require('../expressions/rational'));
 
 // Arithmetic functions
 Module.set('add', require('../functions/arithmetic/add'));
+Module.set('divide', require('../functions/arithmetic/divide'));
 Module.set('multiply', require('../functions/arithmetic/multiply'));
 Module.set('subtract', require('../functions/arithmetic/subtract'));
 

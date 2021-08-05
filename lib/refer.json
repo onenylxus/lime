@@ -1,5 +1,6 @@
 {
   "+": ["add", "b"],
+  "/": ["divide", "b"],
   "*": ["multiply", "b"],
   "-": ["subtract", "b"]
 }

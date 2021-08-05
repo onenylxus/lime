@@ -16,13 +16,15 @@ class Lime {
     this.constants = {};
     this.variables = { ans: undefined };
     this.memory = [];
+
+    console.log(this.config);
   }
 
   /* ------------------------ division ------------------------ */
 
   // Get answer
   get answer() {
-    return this.print(this.variables.ans);
+    return this.variables.ans.print();
   }
 
   /* ------------------------ division ------------------------ */
@@ -70,6 +72,9 @@ class Lime {
       case 'warn': symbol = '?'; break;
       case 'issue': symbol = 'i'; break;
       default: return this.message(ue);
+    }
+    if (this.config.developmentMode && symbol === 'i') {
+      console.log(err);
     }
 
     // Return message
@@ -179,17 +184,6 @@ class Lime {
       const step = this.build('step')(eq.result, pos);
       eq.record(eq.result[pos].evaluate(step));
     }
-  }
-
-  // Print function
-  print(res) {
-    // Integer
-    if (this.identify('integer')(res)) {
-      return `${res.value}`;
-    }
-
-    // Invalid expression
-    throw new Error('issue:invalidExpressionInPrint');
   }
 
   /* ------------------------ division ------------------------ */

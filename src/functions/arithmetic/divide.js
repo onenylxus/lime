@@ -3,12 +3,12 @@ const LimeFunction = require('../../structs/function');
 
 /* ------------------------ division ------------------------ */
 
-// Multiply function class
-class LimeFunctionMultiply extends LimeFunction {
+// Divide function class
+class LimeFunctionDivide extends LimeFunction {
   // Constructor
   constructor(lime, mode) {
     // Super from function class
-    super(lime, { name: 'multiply', mode });
+    super(lime, { name: 'divide', mode });
 
     // Binary operation
     this.operations.b = [
@@ -20,12 +20,16 @@ class LimeFunctionMultiply extends LimeFunction {
 
     // Algorithms
     this.algorithms.set('b(int,int)', (step) => {
-      step.bs(this.lime.build('integer')(step.left.value * step.right.value));
+      if (step.left.value % step.right.value === 0) {
+        step.bs(this.lime.build('integer')(step.left.value / step.right.value));
+      } else {
+        step.bs(this.lime.build('rational')(step.left, step.right));
+      }
     });
     this.algorithms.set('b(rat,rat)', (step) => {
       step.bs(this.lime.build('rational')(
-        this.lime.build('integer')(step.left.value.n * step.right.value.n),
-        this.lime.build('integer')(step.left.value.d * step.right.value.d),
+        this.lime.build('integer')(step.left.value.n * step.right.value.d),
+        this.lime.build('integer')(step.left.value.d * step.right.value.n),
       ));
     });
   }
@@ -34,4 +38,4 @@ class LimeFunctionMultiply extends LimeFunction {
 /* ------------------------ division ------------------------ */
 
 // Export
-module.exports = LimeFunctionMultiply;
+module.exports = LimeFunctionDivide;

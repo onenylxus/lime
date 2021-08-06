@@ -12,8 +12,13 @@ class LimeFunctionAdd extends LimeFunction {
 
     // Binary operation
     this.operations.b = [
-      'cb(int>rat,rat)',
-      'cb(rat,int>rat)',
+      'tz(_+)',
+      'tr(_+)',
+      'tr(_-)',
+
+      'cb(int->rat,rat)',
+      'cb(rat,int->rat)',
+
       'eb(int,int)',
       'eb(rat,rat)',
     ];

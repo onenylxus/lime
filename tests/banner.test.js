@@ -4,7 +4,7 @@ const banner = require('../utils/banner');
 /* ------------------------ division ------------------------ */
 
 // Sample banner
-const sample = 'Lime version 0.1.0\n'
+const sample = 'Lime version 0.1.1\n'
   + 'Mathematics computation engine\n'
   + '2021 Lime Project Team, MIT license\n'
   + 'https://github.com/onenylxus/lime';

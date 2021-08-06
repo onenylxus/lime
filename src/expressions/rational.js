@@ -19,8 +19,8 @@ class LimeRational extends LimeExpression {
 
     // Flip sign if negative denominator
     if (this.value.d < 0) {
-      this.value.n *= -1;
-      this.value.d *= -1;
+      this.nPlace.value *= -1;
+      this.dPlace.value *= -1;
     }
   }
 

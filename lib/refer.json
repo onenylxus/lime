@@ -4,5 +4,7 @@
   ")": ["commonBracket", "x"],
   "/": ["divide", "b"],
   "*": ["multiply", "b"],
+  "_-": ["negative", "r"],
+  "_+": ["positive", "r"],
   "-": ["subtract", "b"]
 }

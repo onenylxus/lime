@@ -9,6 +9,8 @@ Module.set('rational', require('../expressions/rational'));
 Module.set('add', require('../functions/arithmetic/add'));
 Module.set('divide', require('../functions/arithmetic/divide'));
 Module.set('multiply', require('../functions/arithmetic/multiply'));
+Module.set('negative', require('../functions/arithmetic/negative'));
+Module.set('positive', require('../functions/arithmetic/positive'));
 Module.set('subtract', require('../functions/arithmetic/subtract'));
 
 // Structural functions

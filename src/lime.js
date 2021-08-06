@@ -12,8 +12,6 @@ class Lime {
     // Properties
     this.config = { ...require('./config.json'), ...conf };
     this.module = require('./system/module');
-    this.flags = {};
-    this.constants = {};
     this.variables = { ans: undefined };
     this.memory = [];
   }

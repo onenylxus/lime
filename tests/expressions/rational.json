@@ -1,11 +1,12 @@
 {
-  "name": "Integer expression test",
+  "name": "Rational expression test",
   "config": {},
   "process": [
     {
       "desc": "natural define",
       "tests": [
-        ["1/2", "1/2"]
+        ["1/2", "1/2"],
+        ["1/-2", "-1/2"]
       ]
     }
   ]

@@ -13,6 +13,9 @@ const Oplist = {
 
     // Binary: Rational, Rational
     'b(rat,rat)': (step) => step.bpi('rational'),
+
+    // Nested
+    'n()': () => true,
   },
 
   // Actions

@@ -6,5 +6,8 @@
   [
     "divide",
     "multiply"
+  ],
+  [
+    "commonBracket"
   ]
 ]

@@ -6,4 +6,5 @@
 - Added expression: `Integer`, `Rational`
 - Added functions:
   - Arithmetic: `Add`, `Divide`, `Multiply`, `Subtract`
+  - Structural: `CommonBracket`
 - Added tests: `Banner`, `Bundle`, `Error`, `Expressions`, `Functions`, `Module`, `Types`

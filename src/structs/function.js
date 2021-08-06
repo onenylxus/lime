@@ -14,7 +14,7 @@ class LimeFunction {
 
     // Properties
     this.mode = args.hasOwnProperty('mode') && ['l', 'r', 'b', 'n'].includes(args.mode) ? args.mode : 'x';
-    this.name = args.hasOwnProperty('name') ? args.name.toLowerCase() : this.constructor.name.slice(4).toLowerCase();
+    this.name = args.hasOwnProperty('name') ? args.name : this.constructor.name.slice(4);
     this.operations = { l: [], r: [], b: [], n: [] };
     this.algorithms = new Map();
   }
@@ -33,6 +33,11 @@ class LimeFunction {
 
   // Evaluate function
   evaluate(step) {
+    // Unmatched brackets error
+    if (this.mode === 'x') {
+      throw new Error('error:unmatchedBrackets');
+    }
+
     const op = this.operations[this.mode];
     for (let i = 0; i < op.length; i++) {
       // Fetch operation pairs

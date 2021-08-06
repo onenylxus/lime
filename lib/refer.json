@@ -1,5 +1,7 @@
 {
   "+": ["add", "b"],
+  "(": ["commonBracket", "n"],
+  ")": ["commonBracket", "x"],
   "/": ["divide", "b"],
   "*": ["multiply", "b"],
   "-": ["subtract", "b"]

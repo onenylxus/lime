@@ -11,6 +11,9 @@ Module.set('divide', require('../functions/arithmetic/divide'));
 Module.set('multiply', require('../functions/arithmetic/multiply'));
 Module.set('subtract', require('../functions/arithmetic/subtract'));
 
+// Structural functions
+Module.set('commonBracket', require('../functions/structural/commonBracket'));
+
 // Structures
 Module.set('equation', require('../structs/equation'));
 Module.set('expression', require('../structs/expression'));

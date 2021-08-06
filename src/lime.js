@@ -16,8 +16,6 @@ class Lime {
     this.constants = {};
     this.variables = { ans: undefined };
     this.memory = [];
-
-    console.log(this.config);
   }
 
   /* ------------------------ division ------------------------ */
@@ -32,12 +30,12 @@ class Lime {
   // Prompt function
   prompt(input) {
     try {
-      // Check argument validity
+      // Check input validity
       if (!Types.isString(input)) {
-        throw new Error('error:inputNotString');
+        throw new Error('error:inputNotStringInPrompt');
       }
       if (input.length === 0) {
-        throw new Error('error:inputEmpty');
+        throw new Error('error:inputEmptyInPrompt');
       }
 
       // Build equation
@@ -49,7 +47,34 @@ class Lime {
       [this.variables.ans] = eq.result;
       return this.answer;
     } catch (err) {
-      // Convert error to string
+      return this.message(err);
+    }
+  }
+
+  // Direct process function
+  direct(input) {
+    try {
+      // Check input validity
+      if (!Types.isArray(input)) {
+        throw new Error('error:inputNotArrayInDirect');
+      }
+      if (input.length === 0) {
+        throw new Error('error:inputEmptyInDirect');
+      }
+
+      // Build equation
+      const eq = this.build('equation')(input);
+      eq.record(this.build('step')(eq.input.map((v) => {
+        if ((Types.isString(v) || Types.isNumber(v)) && !Types.isUndefined(this.refer(v))) {
+          return this.refer(v);
+        }
+        return v;
+      })));
+
+      // Finalize
+      this.process(eq);
+      return eq.result[0];
+    } catch (err) {
       return this.message(err);
     }
   }

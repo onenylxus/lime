@@ -1,0 +1,20 @@
+{
+  "name": "Decimal function test",
+  "config": {},
+  "process": [
+    {
+      "desc": "integer conversion",
+      "tests": [
+        ["1.0", "1"],
+        ["1.00", "1"]
+      ]
+    },
+    {
+      "desc": "rational conversion",
+      "tests": [
+        ["1.1", "11/10"],
+        ["1.03", "103/100"]
+      ]
+    }
+  ]
+}

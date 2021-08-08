@@ -2,7 +2,8 @@
 
 ### v0.1.1
 - Added functions:
-  - Arithmetic: `Positive`, `Negative`
+  - Arithmetic: `Decimal`, `Exponent`, `Modulo`, `Positive`, `Negative`
+  - Counting: `Factorial`
 ### v0.1.0
 - Set up engine framework, bundling system using Rollup and testing system using Jest
 - Set up prompt and web examples

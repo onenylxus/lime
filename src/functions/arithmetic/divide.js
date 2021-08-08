@@ -12,8 +12,8 @@ class LimeFunctionDivide extends LimeFunction {
 
     // Binary operation
     this.operations.b = [
-      'tr(_+)',
-      'tr(_-)',
+      'tr(+_)',
+      'tr(-_)',
 
       'cb(int->rat,rat)',
       'cb(rat,int->rat)',
@@ -32,8 +32,8 @@ class LimeFunctionDivide extends LimeFunction {
     });
     this.algorithms.set('b(rat,rat)', (step) => {
       step.bs(this.lime.build('rational')(
-        this.lime.build('integer')(step.left.value.n * step.right.value.d),
-        this.lime.build('integer')(step.left.value.d * step.right.value.n),
+        this.lime.direct([step.left.nPlace, '*', step.right.dPlace]),
+        this.lime.direct([step.left.dPlace, '*', step.right.nPlace]),
       ));
     });
   }

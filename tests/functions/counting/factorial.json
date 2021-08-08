@@ -1,0 +1,13 @@
+{
+  "name": "Factorial function test",
+  "config": {},
+  "process": [
+    {
+      "desc": "integer",
+      "tests": [
+        ["0!", "1"],
+        ["5!", "120"]
+      ]
+    }
+  ]
+}

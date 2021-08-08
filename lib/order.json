@@ -1,6 +1,7 @@
 [
   [
     "add",
+    "modulo",
     "subtract"
   ],
   [
@@ -8,8 +9,15 @@
     "multiply"
   ],
   [
+    "exponent"
+  ],
+  [
+    "decimal",
     "negative",
     "positive"
+  ],
+  [
+    "factorial"
   ],
   [
     "commonBracket"

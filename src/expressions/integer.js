@@ -15,7 +15,14 @@ class LimeInteger extends LimeExpression {
     if (!Types.isNumber(+value)) {
       throw new Error('issue:invalidExpressionInConstruct');
     }
-    this.value = Math.trunc(+value);
+    this.string = value;
+  }
+
+  /* ------------------------ division ------------------------ */
+
+  // Get value
+  get value() {
+    return Math.trunc(+this.string);
   }
 
   /* ------------------------ division ------------------------ */

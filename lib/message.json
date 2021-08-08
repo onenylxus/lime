@@ -6,6 +6,7 @@
   "error:inputNotArrayInDirect": "Direct input is not an array.",
   "error:inputNotStringInPrompt": "Prompt input is not a string.",
   "error:invalidSymbol": "Invalid symbol in prompt input.",
+  "error:negativeFactorial": "Factorial function has negative integer input. Currenly gamma function has not been implemented.",
   "error:unmatchedBrackets": "Some brackets are unmatched.",
   "issue:invalidExpressionInConstruct": "Invalid expression in constructor.",
   "issue:invalidFunctionOrder": "Invalid function order.",

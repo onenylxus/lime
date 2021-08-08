@@ -2,9 +2,13 @@
   "+": ["add", "b"],
   "(": ["commonBracket", "n"],
   ")": ["commonBracket", "x"],
+  ".": ["decimal", "b"],
   "/": ["divide", "b"],
+  "^": ["exponent", "b"],
+  "!": ["factorial", "l"],
+  "%": ["modulo", "b"],
   "*": ["multiply", "b"],
-  "_-": ["negative", "r"],
-  "_+": ["positive", "r"],
+  "-_": ["negative", "r"],
+  "+_": ["positive", "r"],
   "-": ["subtract", "b"]
 }

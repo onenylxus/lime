@@ -7,11 +7,17 @@ Module.set('rational', require('../expressions/rational'));
 
 // Arithmetic functions
 Module.set('add', require('../functions/arithmetic/add'));
+Module.set('decimal', require('../functions/arithmetic/decimal'));
 Module.set('divide', require('../functions/arithmetic/divide'));
+Module.set('exponent', require('../functions/arithmetic/exponent'));
+Module.set('modulo', require('../functions/arithmetic/modulo'));
 Module.set('multiply', require('../functions/arithmetic/multiply'));
 Module.set('negative', require('../functions/arithmetic/negative'));
 Module.set('positive', require('../functions/arithmetic/positive'));
 Module.set('subtract', require('../functions/arithmetic/subtract'));
+
+// Counting functions
+Module.set('factorial', require('../functions/counting/factorial'));
 
 // Structural functions
 Module.set('commonBracket', require('../functions/structural/commonBracket'));

@@ -1,0 +1,13 @@
+{
+  "name": "Modulo function test",
+  "config": {},
+  "process": [
+    {
+      "desc": "integer with integer",
+      "tests": [
+        ["5%3", "2"],
+        ["11%4", "3"]
+      ]
+    }
+  ]
+}

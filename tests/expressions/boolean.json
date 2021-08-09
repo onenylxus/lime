@@ -1,0 +1,13 @@
+{
+  "name": "Boolean expression test",
+  "config": {},
+  "process": [
+    {
+      "desc": "natural define",
+      "tests": [
+        ["true", "true"],
+        ["false", "false"]
+      ]
+    }
+  ]
+}

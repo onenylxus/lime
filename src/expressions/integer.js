@@ -5,7 +5,7 @@ const Types = require('../../utils/types');
 /* ------------------------ division ------------------------ */
 
 // Integer class
-class LimeInteger extends LimeExpression {
+class LimeExpressionInteger extends LimeExpression {
   // Constructor
   constructor(lime, value) {
     // Super from expression class
@@ -46,4 +46,4 @@ class LimeInteger extends LimeExpression {
 /* ------------------------ division ------------------------ */
 
 // Export
-module.exports = LimeInteger;
+module.exports = LimeExpressionInteger;

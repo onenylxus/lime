@@ -1,6 +1,12 @@
 [
   [
-    "assign"
+    "assign",
+    "equal",
+    "greater",
+    "greaterEqual",
+    "notEqual",
+    "smaller",
+    "smallerEqual"
   ],
   [
     "add",

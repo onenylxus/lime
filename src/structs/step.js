@@ -58,38 +58,38 @@ class LimeStep {
   /* ------------------------ division ------------------------ */
 
   // Left parameter splice
-  lps(value) {
-    this.data.splice(this.pos - 1, 1, value);
+  lps(...value) {
+    this.data.splice(this.pos - 1, 1, ...value);
   }
 
   // Function splice
-  fs(value) {
-    this.data.splice(this.pos, 1, value);
+  fs(...value) {
+    this.data.splice(this.pos, 1, ...value);
   }
 
   // Right parameter splice
-  rps(value) {
-    this.data.splice(this.pos + 1, 1, value);
+  rps(...value) {
+    this.data.splice(this.pos + 1, 1, ...value);
   }
 
   // Left unary splice
-  lus(value) {
-    this.data.splice(this.pos - 1, 2, value);
+  lus(...value) {
+    this.data.splice(this.pos - 1, 2, ...value);
   }
 
   // Right unary splice
-  rus(value) {
-    this.data.splice(this.pos, 2, value);
+  rus(...value) {
+    this.data.splice(this.pos, 2, ...value);
   }
 
   // Binary splice
-  bs(value) {
-    this.data.splice(this.pos - 1, 3, value);
+  bs(...value) {
+    this.data.splice(this.pos - 1, 3, ...value);
   }
 
   // Nested splice
-  ns(len, value) {
-    this.data.splice(this.pos, len, value);
+  ns(len, ...value) {
+    this.data.splice(this.pos, len, ...value);
   }
 }
 

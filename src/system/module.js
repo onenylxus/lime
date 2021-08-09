@@ -2,6 +2,7 @@
 const Module = new Map();
 
 // Expressions
+Module.set('boolean', require('../expressions/boolean'));
 Module.set('integer', require('../expressions/integer'));
 Module.set('rational', require('../expressions/rational'));
 Module.set('variable', require('../expressions/variable'));
@@ -16,6 +17,14 @@ Module.set('multiply', require('../functions/arithmetic/multiply'));
 Module.set('negative', require('../functions/arithmetic/negative'));
 Module.set('positive', require('../functions/arithmetic/positive'));
 Module.set('subtract', require('../functions/arithmetic/subtract'));
+
+// Comparison functions
+Module.set('equal', require('../functions/comparison/equal'));
+Module.set('greater', require('../functions/comparison/greater'));
+Module.set('greaterEqual', require('../functions/comparison/greaterEqual'));
+Module.set('notEqual', require('../functions/comparison/notEqual'));
+Module.set('smaller', require('../functions/comparison/smaller'));
+Module.set('smallerEqual', require('../functions/comparison/smallerEqual'));
 
 // Counting functions
 Module.set('factorial', require('../functions/counting/factorial'));

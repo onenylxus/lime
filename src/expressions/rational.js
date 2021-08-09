@@ -4,7 +4,7 @@ const LimeExpression = require('../structs/expression');
 /* ------------------------ division ------------------------ */
 
 // Rational class
-class LimeRational extends LimeExpression {
+class LimeExpressionRational extends LimeExpression {
   // Constructor
   constructor(lime, nPlace, dPlace) {
     // Super from expression class
@@ -54,4 +54,4 @@ class LimeRational extends LimeExpression {
 /* ------------------------ division ------------------------ */
 
 // Export
-module.exports = LimeRational;
+module.exports = LimeExpressionRational;

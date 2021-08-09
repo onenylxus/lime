@@ -12,6 +12,7 @@ class LimeFunctionAssign extends LimeFunction {
 
     // Binary operation
     this.operations.b = [
+      'tf(==)',
       'tr(_+)',
       'tr(_-)',
 

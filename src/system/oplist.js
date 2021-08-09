@@ -38,6 +38,9 @@ const Oplist = {
     // [Right unary] Add
     'r(+)': (step) => step.rpi('add'),
 
+    // [Right unary] Assign
+    'r(=)': (step) => step.rpi('assign'),
+
     // [Right unary] Negative
     'r(_-)': (step) => step.rpi('negative'),
 
@@ -53,14 +56,39 @@ const Oplist = {
 
   // Actions
   act: {
+    // Transfer function to equal
+    'f(==)': (step) => {
+      step.rus(step.lime.refer('=='));
+    },
+
+    // Transfer function to factorial and equal
+    'f(!==)': (step) => {
+      step.rus(step.lime.refer('!'), step.lime.refer('=='));
+    },
+
+    // Transfer function to greater equal
+    'f(>=)': (step) => {
+      step.rus(step.lime.refer('>='));
+    },
+
     // Transfer function to negative
     'f(_-)': (step) => {
       step.fs(step.lime.refer('_-'));
     },
 
+    // Transfer function to not equal
+    'f(!=)': (step) => {
+      step.rus(step.lime.refer('!='));
+    },
+
     // Transfer function to positive
     'f(_+)': (step) => {
       step.fs(step.lime.refer('_+'));
+    },
+
+    // Transfer function to smaller equal
+    'f(<=)': (step) => {
+      step.rus(step.lime.refer('<='));
     },
 
     // Convert left parameter from integer to rational
@@ -107,6 +135,21 @@ const Oplist = {
 
     // [Right unary] Convert from variable to expression
     'cr(var->exp)': ['r(var)', 'r(var->exp)'],
+
+    // [Function] Transfer to equal
+    'tf(==)': ['r(=)', 'f(==)'],
+
+    // [Function] Transfer to factorial and equal
+    'tf(!==)': ['r(=)', 'f(!==)'],
+
+    // [Function] Transfer to greater equal
+    'tf(>=)': ['r(=)', 'f(>=)'],
+
+    // [Function] Transfer to not equal
+    'tf(!=)': ['r(=)', 'f(!=)'],
+
+    // [Function] Transfer to smaller equal
+    'tf(<=)': ['r(=)', 'f(<=)'],
 
     // [Right unary] Transfer to positive
     'tr(_+)': ['r(+)', 'r(_+)'],

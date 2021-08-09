@@ -1,15 +1,24 @@
 {
+  "true": ["boolean", true],
+  "false": ["boolean", false],
+
   "+": ["add", "b"],
   "=": ["assign", "b"],
   "(": ["commonBracket", "n"],
   ")": ["commonBracket", "x"],
   ".": ["decimal", "b"],
   "/": ["divide", "b"],
+  "==": ["equal", "b"],
   "^": ["exponent", "b"],
   "!": ["factorial", "l"],
+  ">": ["greater", "b"],
+  ">=": ["greaterEqual", "b"],
   "%": ["modulo", "b"],
   "*": ["multiply", "b"],
   "_-": ["negative", "r"],
+  "!=": ["notEqual", "b"],
   "_+": ["positive", "r"],
+  "<": ["smaller", "b"],
+  "<=": ["smallerEqual", "b"],
   "-": ["subtract", "b"]
 }

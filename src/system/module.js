@@ -4,6 +4,7 @@ const Module = new Map();
 // Expressions
 Module.set('integer', require('../expressions/integer'));
 Module.set('rational', require('../expressions/rational'));
+Module.set('variable', require('../expressions/variable'));
 
 // Arithmetic functions
 Module.set('add', require('../functions/arithmetic/add'));
@@ -20,6 +21,7 @@ Module.set('subtract', require('../functions/arithmetic/subtract'));
 Module.set('factorial', require('../functions/counting/factorial'));
 
 // Structural functions
+Module.set('assign', require('../functions/structural/assign'));
 Module.set('commonBracket', require('../functions/structural/commonBracket'));
 
 // Structures

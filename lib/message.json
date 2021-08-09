@@ -7,10 +7,12 @@
   "error:inputNotStringInPrompt": "Prompt input is not a string.",
   "error:invalidSymbol": "Invalid symbol in prompt input.",
   "error:negativeFactorial": "Factorial function has negative integer input. Currenly gamma function has not been implemented.",
+  "error:undefinedVariable": "Variable is undefined but used.",
   "error:unmatchedBrackets": "Some brackets are unmatched.",
   "issue:invalidExpressionInConstruct": "Invalid expression in constructor.",
   "issue:invalidFunctionOrder": "Invalid function order.",
   "issue:invalidMessage": "Invalid message detected.",
-  "issue:invalidModuleInBuild": "Invalid module in build process.",
-  "issue:invalidTokenInParse": "Invalid token in parse process."
+  "issue:invalidModuleInBuild": "Invalid module in build function.",
+  "issue:invalidResultLengthInProcess": "Invalid result length in process function.",
+  "issue:invalidTokenInParse": "Invalid token in parse function."
 }

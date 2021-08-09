@@ -12,6 +12,8 @@ class LimeFunctionFactorial extends LimeFunction {
 
     // Left unary operation
     this.operations.l = [
+      'cl(var->exp)',
+
       'el(int)',
     ];
 

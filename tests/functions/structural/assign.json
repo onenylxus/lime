@@ -1,0 +1,13 @@
+{
+  "name": "Assign function test",
+  "config": {},
+  "process": [
+    {
+      "desc": "direct assign",
+      "tests": [
+        ["a=1", "1"],
+        ["a", "1"]
+      ]
+    }
+  ]
+}

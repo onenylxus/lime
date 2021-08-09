@@ -1,5 +1,8 @@
 [
   [
+    "assign"
+  ],
+  [
     "add",
     "modulo",
     "subtract"

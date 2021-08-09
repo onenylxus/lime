@@ -15,7 +15,7 @@ class LimeInteger extends LimeExpression {
     if (!Types.isNumber(+value)) {
       throw new Error('issue:invalidExpressionInConstruct');
     }
-    this.string = value;
+    this.string = `${value}`;
   }
 
   /* ------------------------ division ------------------------ */
@@ -30,6 +30,11 @@ class LimeInteger extends LimeExpression {
   // Convert to rational
   toRational() {
     return this.lime.build('rational')(this, this.lime.build('integer')(1));
+  }
+
+  // Simplify function
+  simplify() {
+    return this.lime.build('integer')(this.value);
   }
 
   // Print function

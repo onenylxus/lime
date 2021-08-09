@@ -16,12 +16,6 @@ class LimeRational extends LimeExpression {
     }
     this.nPlace = nPlace;
     this.dPlace = dPlace;
-
-    // Flip sign if negative denominator
-    if (this.value.d < 0) {
-      this.nPlace = this.lime.direct(['-', this.nPlace]);
-      this.dPlace = this.lime.direct(['-', this.dPlace]);
-    }
   }
 
   /* ------------------------ division ------------------------ */
@@ -32,6 +26,24 @@ class LimeRational extends LimeExpression {
   }
 
   /* ------------------------ division ------------------------ */
+
+  // Simplify function
+  simplify() {
+    // Flip negative denominator
+    if (this.value.d < 0) {
+      this.nPlace = this.lime.direct(['-', this.nPlace]);
+      this.dPlace = this.lime.direct(['-', this.dPlace]);
+    }
+
+    // Return
+    if (this.value.d === 1) {
+      return this.nPlace.simplify();
+    }
+    return this.lime.build('rational')(
+      this.nPlace.simplify(),
+      this.dPlace.simplify(),
+    );
+  }
 
   // Print function
   print() {

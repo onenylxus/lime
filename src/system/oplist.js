@@ -14,8 +14,14 @@ const Oplist = {
     // [Binary] Rational, Rational
     'b(rat,rat)': (step) => step.bpi('rational'),
 
+    // [Binary] Variable, Expression
+    'b(var,exp)': (step) => step.lpi('variable') && step.rpi('expression'),
+
     // [Left unary] Integer
     'l(int)': (step) => step.lpi('integer'),
+
+    // [Left unary] Variable
+    'l(var)': (step) => step.lpi('variable'),
 
     // Nested
     'n()': () => true,
@@ -26,14 +32,17 @@ const Oplist = {
     // [Right unary] Rational
     'r(rat)': (step) => step.rpi('rational'),
 
+    // [Right unary] Variable
+    'r(var)': (step) => step.rpi('variable'),
+
     // [Right unary] Add
     'r(+)': (step) => step.rpi('add'),
 
     // [Right unary] Negative
-    'r(-_)': (step) => step.rpi('negative'),
+    'r(_-)': (step) => step.rpi('negative'),
 
     // [Right unary] Positive
-    'r(+_)': (step) => step.rpi('positive'),
+    'r(_+)': (step) => step.rpi('positive'),
 
     // [Right unary] Subtract
     'r(-)': (step) => step.rpi('subtract'),
@@ -45,13 +54,13 @@ const Oplist = {
   // Actions
   act: {
     // Transfer function to negative
-    'f(-_)': (step) => {
-      step.fs(step.lime.refer('-_'));
+    'f(_-)': (step) => {
+      step.fs(step.lime.refer('_-'));
     },
 
     // Transfer function to positive
-    'f(+_)': (step) => {
-      step.fs(step.lime.refer('+_'));
+    'f(_+)': (step) => {
+      step.fs(step.lime.refer('_+'));
     },
 
     // Convert left parameter from integer to rational
@@ -59,19 +68,29 @@ const Oplist = {
       step.lps(step.left.toRational());
     },
 
+    // Convert left parameter from variable to expression
+    'l(var->exp)': (step) => {
+      step.lps(step.left.value);
+    },
+
     // Convert right parameter from integer to rational
     'r(int->rat)': (step) => {
       step.rps(step.right.toRational());
     },
 
+    // Convert left parameter from variable to expression
+    'r(var->exp)': (step) => {
+      step.rps(step.left.value);
+    },
+
     // Transfer right parameter to negative
-    'r(-_)': (step) => {
-      step.rps(step.lime.refer('-_'));
+    'r(_-)': (step) => {
+      step.rps(step.lime.refer('_-'));
     },
 
     // Transfer right parameter to positive
-    'r(+_)': (step) => {
-      step.rps(step.lime.refer('+_'));
+    'r(_+)': (step) => {
+      step.rps(step.lime.refer('_+'));
     },
   },
 
@@ -83,17 +102,23 @@ const Oplist = {
     // [Binary] Convert right parameter from integer to rational
     'cb(rat,int->rat)': ['b(rat,int)', 'r(int->rat)'],
 
-    // [Right unary] Transfer right parameter to positive
-    'tr(+_)': ['r(+)', 'r(+_)'],
+    // [Left unary] Convert from variable to expression
+    'cl(var->exp)': ['l(var)', 'l(var->exp)'],
 
-    // [Right unary] Transfer right parameter to negative
-    'tr(-_)': ['r(-)', 'r(-_)'],
+    // [Right unary] Convert from variable to expression
+    'cr(var->exp)': ['r(var)', 'r(var->exp)'],
+
+    // [Right unary] Transfer to positive
+    'tr(_+)': ['r(+)', 'r(_+)'],
+
+    // [Right unary] Transfer to negative
+    'tr(_-)': ['r(-)', 'r(_-)'],
 
     // Transfer at zero position to positive
-    'tz(+_)': ['z()', 'f(+_)'],
+    'tz(_+)': ['z()', 'f(_+)'],
 
     // Transfer at zero position to negative
-    'tz(-_)': ['z()', 'f(-_)'],
+    'tz(_-)': ['z()', 'f(_-)'],
   },
 };
 

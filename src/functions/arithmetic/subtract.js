@@ -12,12 +12,14 @@ class LimeFunctionSubtract extends LimeFunction {
 
     // Binary operation
     this.operations.b = [
-      'tz(-_)',
-      'tr(+_)',
-      'tr(-_)',
+      'tz(_-)',
+      'tr(_+)',
+      'tr(_-)',
 
       'cb(int->rat,rat)',
       'cb(rat,int->rat)',
+      'cl(var->exp)',
+      'cr(var->exp)',
 
       'eb(int,int)',
       'eb(rat,rat)',

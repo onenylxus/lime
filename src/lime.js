@@ -12,7 +12,7 @@ class Lime {
     // Properties
     this.config = { ...require('./config.json'), ...conf };
     this.module = require('./system/module');
-    this.variables = { ans: undefined };
+    this.variables = new Map();
     this.memory = [];
   }
 
@@ -20,7 +20,7 @@ class Lime {
 
   // Get answer
   get answer() {
-    return this.variables.ans.print();
+    return this.variables.get('ans').print();
   }
 
   /* ------------------------ division ------------------------ */
@@ -42,7 +42,7 @@ class Lime {
 
       // Finalize
       this.memory.push(eq);
-      [this.variables.ans] = eq.result;
+      this.variables.set('ans', eq.result[0]);
       return this.answer;
     } catch (err) {
       return this.message(err);
@@ -206,6 +206,13 @@ class Lime {
       if (pos < 0) { break; }
       const step = this.build('step')(eq.result, pos);
       eq.record(eq.result[pos].evaluate(step));
+    }
+
+    // Finalize result
+    if (eq.result.length === 1) {
+      eq.record(this.build('step')([eq.result[0].simplify()]));
+    } else {
+      throw new Error('issue:invalidResultLengthInProcess');
     }
   }
 

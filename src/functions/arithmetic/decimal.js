@@ -21,7 +21,7 @@ class LimeFunctionDecimal extends LimeFunction {
         const deg = this.lime.direct([10, '^', step.right.string.length]);
         step.bs(this.lime.direct(['(', step.left, '*', deg, '+', step.right, ')', '/', deg]));
       } else {
-        step.bs(this.lime.direct([step.left]));
+        step.bs(step.left);
       }
     });
   }

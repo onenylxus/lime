@@ -1,5 +1,6 @@
 {
   "+": ["add", "b"],
+  "=": ["assign", "b"],
   "(": ["commonBracket", "n"],
   ")": ["commonBracket", "x"],
   ".": ["decimal", "b"],
@@ -8,7 +9,7 @@
   "!": ["factorial", "l"],
   "%": ["modulo", "b"],
   "*": ["multiply", "b"],
-  "-_": ["negative", "r"],
-  "+_": ["positive", "r"],
+  "_-": ["negative", "r"],
+  "_+": ["positive", "r"],
   "-": ["subtract", "b"]
 }

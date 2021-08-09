@@ -3,27 +3,27 @@ const LimeFunction = require('../../structs/function');
 
 /* ------------------------ division ------------------------ */
 
-// Modulo function class
-class LimeFunctionModulo extends LimeFunction {
+// Assign function class
+class LimeFunctionAssign extends LimeFunction {
   // Constructor
   constructor(lime, mode) {
     // Super from function class
-    super(lime, { name: 'modulo', mode });
+    super(lime, { name: 'assign', mode });
 
     // Binary operation
     this.operations.b = [
       'tr(_+)',
       'tr(_-)',
 
-      'cl(var->exp)',
       'cr(var->exp)',
 
-      'eb(int,int)',
+      'eb(var,exp)',
     ];
 
     // Algorithms
-    this.algorithms.set('b(int,int)', (step) => {
-      step.bs(this.lime.build('integer')(step.left.value % step.right.value));
+    this.algorithms.set('b(var,exp)', (step) => {
+      this.lime.variables.set(step.left.key, step.right);
+      step.bs(step.left);
     });
   }
 }
@@ -31,4 +31,4 @@ class LimeFunctionModulo extends LimeFunction {
 /* ------------------------ division ------------------------ */
 
 // Export
-module.exports = LimeFunctionModulo;
+module.exports = LimeFunctionAssign;

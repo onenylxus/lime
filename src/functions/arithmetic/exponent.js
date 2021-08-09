@@ -12,8 +12,11 @@ class LimeFunctionExponent extends LimeFunction {
 
     // Binary operation
     this.operations.b = [
-      'tr(+_)',
-      'tr(-_)',
+      'tr(_+)',
+      'tr(_-)',
+
+      'cl(var->exp)',
+      'cr(var->exp)',
 
       'eb(int,int)',
       'eb(rat,int)',

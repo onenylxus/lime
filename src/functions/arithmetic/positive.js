@@ -12,13 +12,15 @@ class LimeFunctionPositive extends LimeFunction {
 
     // Right unary operation
     this.operations.r = [
-      'tr(+_)',
-      'tr(-_)',
+      'tr(_+)',
+      'tr(_-)',
+
+      'cr(var->exp)',
 
       'er(int)',
       'er(rat)',
-      'er(+_)',
-      'er(-_)',
+      'er(_+)',
+      'er(_-)',
     ];
 
     // Algorithms
@@ -31,11 +33,11 @@ class LimeFunctionPositive extends LimeFunction {
         step.right.dPlace,
       ));
     });
-    this.algorithms.set('r(+_)', (step) => {
-      step.rus(this.lime.refer('+_'));
+    this.algorithms.set('r(_+)', (step) => {
+      step.rus(this.lime.refer('_+'));
     });
-    this.algorithms.set('r(-_)', (step) => {
-      step.rus(this.lime.refer('-_'));
+    this.algorithms.set('r(_-)', (step) => {
+      step.rus(this.lime.refer('_-'));
     });
   }
 }

@@ -78,9 +78,9 @@ const Oplist = {
       step.rps(step.right.toRational());
     },
 
-    // Convert left parameter from variable to expression
+    // Convert right parameter from variable to expression
     'r(var->exp)': (step) => {
-      step.rps(step.left.value);
+      step.rps(step.right.value);
     },
 
     // Transfer right parameter to negative

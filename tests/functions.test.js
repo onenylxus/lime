@@ -24,18 +24,18 @@ describe('Function counting test', () => {
 fs.readdirSync('tests/functions').forEach((folder) => {
   units(`tests/functions/${folder}`, '.json').forEach((key) => {
     const unit = require(`./functions/${folder}/${key}`);
-    const lime = Lime({ testMode: true, ...unit.config });
-    const bundle = Bundle({ testMode: true, ...unit.config });
 
     describe(unit.name, () => {
       Object.values(unit.process).forEach((obj) => {
         const len = obj.tests.length;
         test(`${obj.desc} (${len} test${len === 1 ? '' : 's'})`, () => {
-          for (let item in obj.tests) {
-            const input = obj.tests[item][0], output = obj.tests[item][1];
-            expect(lime.prompt(input)).toStrictEqual(output);
-            expect(bundle.prompt(input)).toStrictEqual(output);
-          }
+          [Lime, Bundle].forEach((p) => {
+            for (let item in obj.tests) {
+              const lime = (p)({ testMode: true, ...unit.config }), l = obj.tests[item].length;
+              obj.tests[item].slice(0, -2).forEach((j) => lime.prompt(j));
+              expect(lime.prompt(obj.tests[item][l - 2])).toStrictEqual(obj.tests[item][l - 1]);
+            }
+          });
         });
         count += len;
       });

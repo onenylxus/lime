@@ -5,8 +5,13 @@
     {
       "desc": "direct assign",
       "tests": [
-        ["a=1", "1"],
-        ["a", "1"]
+        ["a=1", "a", "1"]
+      ]
+    },
+    {
+      "desc": "indirect assign",
+      "tests": [
+        ["a=1", "b=a", "a=2", "b", "1"]
       ]
     }
   ]

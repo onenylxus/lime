@@ -1,4 +1,7 @@
 {
+  "about": ["about"],
+  "help": ["help"],
+
   "true": ["boolean", true],
   "false": ["boolean", false],
 

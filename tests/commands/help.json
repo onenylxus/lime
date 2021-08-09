@@ -1,0 +1,12 @@
+{
+  "name": "Help command test",
+  "config": {},
+  "process": [
+    {
+      "desc": "zero parameters",
+      "tests": [
+        ["help", "Below is a list of available commands:\nabout: shows information about the engine\nhelp: list all available commands"]
+      ]
+    }
+  ]
+}

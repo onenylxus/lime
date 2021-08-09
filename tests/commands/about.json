@@ -1,0 +1,12 @@
+{
+  "name": "About command test",
+  "config": {},
+  "process": [
+    {
+      "desc": "zero parameters",
+      "tests": [
+        ["about", "Lime version 0.1.1\nMathematics computation engine\n2021 Lime Project Team, MIT license\nhttps://github.com/onenylxus/lime"]
+      ]
+    }
+  ]
+}

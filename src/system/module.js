@@ -1,6 +1,10 @@
 // Module map
 const Module = new Map();
 
+// Commands
+Module.set('about', require('../commands/about'));
+Module.set('help', require('../commands/help'));
+
 // Expressions
 Module.set('boolean', require('../expressions/boolean'));
 Module.set('integer', require('../expressions/integer'));
@@ -34,6 +38,7 @@ Module.set('assign', require('../functions/structural/assign'));
 Module.set('commonBracket', require('../functions/structural/commonBracket'));
 
 // Structures
+Module.set('command', require('../structs/command'));
 Module.set('equation', require('../structs/equation'));
 Module.set('expression', require('../structs/expression'));
 Module.set('function', require('../structs/function'));

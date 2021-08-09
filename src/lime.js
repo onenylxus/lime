@@ -40,6 +40,11 @@ class Lime {
       const eq = this.build('equation')(input);
       this.lex(eq);
 
+      // Run command
+      if (this.identify('command')(eq.result[0])) {
+        return eq.result[0].execute(input);
+      }
+
       // Finalize
       this.memory.push(eq);
       this.variables.set('ans', eq.result[0]);
@@ -187,7 +192,9 @@ class Lime {
 
     // Proceed to next step
     eq.record(this.build('step')(res));
-    this.process(eq);
+    if (!this.identify('command')(eq.result[0])) {
+      this.process(eq);
+    }
   }
 
   // Process function
@@ -220,7 +227,13 @@ class Lime {
 
   // Identify function
   identify(...mods) {
-    return (...args) => args.every((v) => mods.some((m) => Types.isClass(this.module.get(m), v)));
+    // Find module
+    if (mods.every((m) => this.module.has(m))) {
+      return (...args) => args.every((v) => mods.some((m) => Types.isClass(this.module.get(m), v)));
+    }
+
+    // Invalid module
+    throw new Error('issue:invalidModuleInIdentify');
   }
 
   // Build function

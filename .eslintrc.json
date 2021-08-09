@@ -15,6 +15,7 @@
       "brace-style": "off",
       "class-methods-use-this": "warn",
       "global-require": "off",
+      "new-cap": "off",
       "no-console": "off",
       "no-nested-ternary": "off",
       "no-plusplus": "off",

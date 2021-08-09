@@ -14,7 +14,7 @@ class LimeFunction {
 
     // Properties
     this.mode = args.hasOwnProperty('mode') && ['l', 'r', 'b', 'n'].includes(args.mode) ? args.mode : 'x';
-    this.name = args.hasOwnProperty('name') ? args.name : this.constructor.name.slice(4);
+    this.name = args.hasOwnProperty('name') ? args.name : this.constructor.name.slice(12);
     this.operations = { l: [], r: [], b: [], n: [] };
     this.algorithms = new Map();
   }

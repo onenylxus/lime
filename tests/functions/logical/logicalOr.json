@@ -1,0 +1,15 @@
+{
+  "name": "Logical OR function test",
+  "config": {},
+  "process": [
+    {
+      "desc": "boolean with boolean",
+      "tests": [
+        ["true||true", "true"],
+        ["true||false", "true"],
+        ["false||true", "true"],
+        ["false||false", "false"]
+      ]
+    }
+  ]
+}

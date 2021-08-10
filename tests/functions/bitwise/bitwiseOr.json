@@ -1,0 +1,12 @@
+{
+  "name": "Bitwise OR function test",
+  "config": {},
+  "process": [
+    {
+      "desc": "integer with integer",
+      "tests": [
+        ["5|3", "7"]
+      ]
+    }
+  ]
+}

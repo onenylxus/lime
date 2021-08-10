@@ -1,0 +1,15 @@
+{
+  "name": "Logical AND function test",
+  "config": {},
+  "process": [
+    {
+      "desc": "boolean with boolean",
+      "tests": [
+        ["true&&true", "true"],
+        ["true&&false", "false"],
+        ["false&&true", "false"],
+        ["false&&false", "false"]
+      ]
+    }
+  ]
+}

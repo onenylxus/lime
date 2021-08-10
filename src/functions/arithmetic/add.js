@@ -13,6 +13,7 @@ class LimeFunctionAdd extends LimeFunction {
     // Binary operation
     this.operations.b = [
       'tz(_+)',
+      'tr(_!)',
       'tr(_+)',
       'tr(_-)',
 

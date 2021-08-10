@@ -2,6 +2,9 @@
 const Oplist = {
   // Conditions
   cond: {
+    // [Binary] Boolean, Boolean
+    'b(bool,bool)': (step) => step.bpi('boolean'),
+
     // [Binary] Integer, Integer
     'b(int,int)': (step) => step.bpi('integer'),
 
@@ -26,6 +29,9 @@ const Oplist = {
     // Nested
     'n()': () => true,
 
+    // [Right unary] Boolean
+    'r(bool)': (step) => step.rpi('boolean'),
+
     // [Right unary] Integer
     'r(int)': (step) => step.rpi('integer'),
 
@@ -41,11 +47,26 @@ const Oplist = {
     // [Right unary] Assign
     'r(=)': (step) => step.rpi('assign'),
 
+    // [Right unary] Bitwise AND
+    'r(&)': (step) => step.rpi('bitwiseAnd'),
+
+    // [Right unary] Bitwise OR
+    'r(|)': (step) => step.rpi('bitwiseOr'),
+
+    // [Right unary] Factorial
+    'r(!)': (step) => step.rpi('factorial'),
+
+    // [Right unary] Greater
+    'r(>)': (step) => step.rpi('greater'),
+
     // [Right unary] Negative
     'r(_-)': (step) => step.rpi('negative'),
 
     // [Right unary] Positive
     'r(_+)': (step) => step.rpi('positive'),
+
+    // [Right unary] Smaller
+    'r(<)': (step) => step.rpi('smaller'),
 
     // [Right unary] Subtract
     'r(-)': (step) => step.rpi('subtract'),
@@ -71,6 +92,21 @@ const Oplist = {
       step.rus(step.lime.refer('>='));
     },
 
+    // Transfer function to logical AND
+    'f(&&)': (step) => {
+      step.rus(step.lime.refer('&&'));
+    },
+
+    // Transfer function to logical NOT
+    'f(_!)': (step) => {
+      step.fs(step.lime.refer('_!'));
+    },
+
+    // Transfer function to logical OR
+    'f(||)': (step) => {
+      step.rus(step.lime.refer('||'));
+    },
+
     // Transfer function to negative
     'f(_-)': (step) => {
       step.fs(step.lime.refer('_-'));
@@ -84,6 +120,16 @@ const Oplist = {
     // Transfer function to positive
     'f(_+)': (step) => {
       step.fs(step.lime.refer('_+'));
+    },
+
+    // Transfer function to shift left
+    'f(<<)': (step) => {
+      step.rus(step.lime.refer('<<'));
+    },
+
+    // Transfer function to shift right
+    'f(>>)': (step) => {
+      step.rus(step.lime.refer('>>'));
     },
 
     // Transfer function to smaller equal
@@ -109,6 +155,11 @@ const Oplist = {
     // Convert right parameter from variable to expression
     'r(var->exp)': (step) => {
       step.rps(step.right.value);
+    },
+
+    // Transfer right parameter to logical NOT
+    'r(_!)': (step) => {
+      step.rps(step.lime.refer('_!'));
     },
 
     // Transfer right parameter to negative
@@ -145,17 +196,35 @@ const Oplist = {
     // [Function] Transfer to greater equal
     'tf(>=)': ['r(=)', 'f(>=)'],
 
+    // [Function] Transfer to logical AND
+    'tf(&&)': ['r(&)', 'f(&&)'],
+
+    // [Function] Transfer to logical OR
+    'tf(||)': ['r(|)', 'f(||)'],
+
     // [Function] Transfer to not equal
     'tf(!=)': ['r(=)', 'f(!=)'],
 
+    // [Function] Transfer to shift left
+    'tf(<<)': ['r(<)', 'f(<<)'],
+
+    // [Function] Transfer to shift right
+    'tf(>>)': ['r(>)', 'f(>>)'],
+
     // [Function] Transfer to smaller equal
     'tf(<=)': ['r(=)', 'f(<=)'],
+
+    // Transfer at zero position to logical NOT
+    'tr(_!)': ['r(!)', 'r(_!)'],
 
     // [Right unary] Transfer to positive
     'tr(_+)': ['r(+)', 'r(_+)'],
 
     // [Right unary] Transfer to negative
     'tr(_-)': ['r(-)', 'r(_-)'],
+
+    // Transfer at zero position to logical NOT
+    'tz(_!)': ['z()', 'f(_!)'],
 
     // Transfer at zero position to positive
     'tz(_+)': ['z()', 'f(_+)'],

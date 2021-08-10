@@ -13,6 +13,8 @@ class LimeFunctionSmaller extends LimeFunction {
     // Binary operation
     this.operations.b = [
       'tf(<=)',
+      'tf(<<)',
+      'tr(_!)',
       'tr(_+)',
       'tr(_-)',
 

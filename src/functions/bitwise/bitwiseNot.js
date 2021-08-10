@@ -3,28 +3,27 @@ const LimeFunction = require('../../structs/function');
 
 /* ------------------------ division ------------------------ */
 
-// Modulo function class
-class LimeFunctionModulo extends LimeFunction {
+// Bitwise NOT function class
+class LimeFunctionBitwiseNot extends LimeFunction {
   // Constructor
   constructor(lime, mode) {
     // Super from function class
-    super(lime, { name: 'modulo', mode });
+    super(lime, { name: 'bitwiseNot', mode });
 
-    // Binary operation
-    this.operations.b = [
+    // Right unary operation
+    this.operations.r = [
       'tr(_!)',
       'tr(_+)',
       'tr(_-)',
 
-      'cl(var->exp)',
       'cr(var->exp)',
 
-      'eb(int,int)',
+      'er(int)',
     ];
 
     // Algorithms
-    this.algorithms.set('b(int,int)', (step) => {
-      step.bs(this.lime.build('integer')(step.left.value % step.right.value));
+    this.algorithms.set('r(int)', (step) => {
+      step.rus(this.lime.direct([~step.right.value]));
     });
   }
 }
@@ -32,4 +31,4 @@ class LimeFunctionModulo extends LimeFunction {
 /* ------------------------ division ------------------------ */
 
 // Export
-module.exports = LimeFunctionModulo;
+module.exports = LimeFunctionBitwiseNot;

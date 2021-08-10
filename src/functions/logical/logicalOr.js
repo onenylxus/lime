@@ -3,12 +3,12 @@ const LimeFunction = require('../../structs/function');
 
 /* ------------------------ division ------------------------ */
 
-// Modulo function class
-class LimeFunctionModulo extends LimeFunction {
+// Logical OR function class
+class LimeFunctionLogicalOr extends LimeFunction {
   // Constructor
   constructor(lime, mode) {
     // Super from function class
-    super(lime, { name: 'modulo', mode });
+    super(lime, { name: 'logicalOr', mode });
 
     // Binary operation
     this.operations.b = [
@@ -19,12 +19,12 @@ class LimeFunctionModulo extends LimeFunction {
       'cl(var->exp)',
       'cr(var->exp)',
 
-      'eb(int,int)',
+      'eb(bool,bool)',
     ];
 
     // Algorithms
-    this.algorithms.set('b(int,int)', (step) => {
-      step.bs(this.lime.build('integer')(step.left.value % step.right.value));
+    this.algorithms.set('b(bool,bool)', (step) => {
+      step.bs(this.lime.build('boolean')(step.left.value || step.right.value));
     });
   }
 }
@@ -32,4 +32,4 @@ class LimeFunctionModulo extends LimeFunction {
 /* ------------------------ division ------------------------ */
 
 // Export
-module.exports = LimeFunctionModulo;
+module.exports = LimeFunctionLogicalOr;

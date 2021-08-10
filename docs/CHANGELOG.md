@@ -6,8 +6,10 @@
 - Added expressions: `Boolean`, `Variable`
 - Added functions:
   - Arithmetic: `Decimal`, `Exponent`, `Modulo`, `Positive`, `Negative`
+  - Bitwise: `BitwiseAnd`, `BitwiseNot`, `BitwiseOr`, `ShiftLeft`, `ShiftRight`
   - Comparison: `Equal`, `Greater`, `GreaterEqual`, `NotEqual`, `Smaller`, `SmallerEqual`
   - Counting: `Factorial`
+  - Logical: `LogicalAnd`, `LogicalNot`, `LogicalOr`
 - Modified existing functions to support new expression types
 - Improved engine independence of expression and function tests
 - Added tests: `Commands`

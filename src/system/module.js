@@ -22,6 +22,13 @@ Module.set('negative', require('../functions/arithmetic/negative'));
 Module.set('positive', require('../functions/arithmetic/positive'));
 Module.set('subtract', require('../functions/arithmetic/subtract'));
 
+// Bitwise functions
+Module.set('bitwiseAnd', require('../functions/bitwise/bitwiseAnd'));
+Module.set('bitwiseNot', require('../functions/bitwise/bitwiseNot'));
+Module.set('bitwiseOr', require('../functions/bitwise/bitwiseOr'));
+Module.set('shiftLeft', require('../functions/bitwise/shiftLeft'));
+Module.set('shiftRight', require('../functions/bitwise/shiftRight'));
+
 // Comparison functions
 Module.set('equal', require('../functions/comparison/equal'));
 Module.set('greater', require('../functions/comparison/greater'));
@@ -32,6 +39,11 @@ Module.set('smallerEqual', require('../functions/comparison/smallerEqual'));
 
 // Counting functions
 Module.set('factorial', require('../functions/counting/factorial'));
+
+// Logical functions
+Module.set('logicalAnd', require('../functions/logical/logicalAnd'));
+Module.set('logicalNot', require('../functions/logical/logicalNot'));
+Module.set('logicalOr', require('../functions/logical/logicalOr'));
 
 // Structural functions
 Module.set('assign', require('../functions/structural/assign'));

@@ -10,7 +10,15 @@
   ],
   [
     "add",
+    "bitwiseAnd",
+    "bitwiseNot",
+    "bitwiseOr",
+    "logicalAnd",
+    "logicalNot",
+    "logicalOr",
     "modulo",
+    "shiftLeft",
+    "shiftRight",
     "subtract"
   ],
   [

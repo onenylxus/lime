@@ -12,6 +12,7 @@ class LimeFunctionDivide extends LimeFunction {
 
     // Binary operation
     this.operations.b = [
+      'tr(_!)',
       'tr(_+)',
       'tr(_-)',
 

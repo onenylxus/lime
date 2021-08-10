@@ -1,0 +1,12 @@
+{
+  "name": "Shift left function test",
+  "config": {},
+  "process": [
+    {
+      "desc": "integer with integer",
+      "tests": [
+        ["5<<1", "10"]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Logical NOT function test",
+  "config": {},
+  "process": [
+    {
+      "desc": "boolean",
+      "tests": [
+        ["!true", "false"],
+        ["!false", "true"]
+      ]
+    }
+  ]
+}

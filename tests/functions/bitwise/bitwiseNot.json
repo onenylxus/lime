@@ -1,0 +1,12 @@
+{
+  "name": "Bitwise NOT function test",
+  "config": {},
+  "process": [
+    {
+      "desc": "integer",
+      "tests": [
+        ["~5", "-6"]
+      ]
+    }
+  ]
+}

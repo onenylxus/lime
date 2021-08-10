@@ -12,6 +12,7 @@ class LimeFunctionPositive extends LimeFunction {
 
     // Right unary operation
     this.operations.r = [
+      'tr(_!)',
       'tr(_+)',
       'tr(_-)',
 

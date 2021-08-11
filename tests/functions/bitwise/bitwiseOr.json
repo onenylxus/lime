@@ -1,9 +1,9 @@
 {
   "name": "Bitwise OR function test",
-  "config": {},
   "process": [
     {
       "desc": "integer with integer",
+      "config": {},
       "tests": [
         ["5|3", "7"]
       ]

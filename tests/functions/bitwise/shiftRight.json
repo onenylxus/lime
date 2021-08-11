@@ -1,9 +1,9 @@
 {
   "name": "Shift right function test",
-  "config": {},
   "process": [
     {
       "desc": "integer with integer",
+      "config": {},
       "tests": [
         ["5>>1", "2"]
       ]

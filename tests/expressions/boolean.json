@@ -1,9 +1,9 @@
 {
   "name": "Boolean expression test",
-  "config": {},
   "process": [
     {
       "desc": "natural define",
+      "config": {},
       "tests": [
         ["true", "true"],
         ["false", "false"]

@@ -20,9 +20,17 @@ yarn add @onenylxus/lime
 ```
 
 ## Application
-Below is an example of using Lime:
+Lime has two operation modes: prompt mode and evaluate mode. Below is an example of using Lime:
 
 ```js
+// Require
 const Lime = require('@onenylxus/lime')();
-Lime.prompt('1+1'); // '2'
+
+// Prompt mode
+Lime.prompt('3*(3+5)/2'); // '12'
+Lime.prompt(''); // returns error message in string
+
+// Evaluate mode
+Lime.evaluate('3*(3+5)/2'); // '12'
+Lime.evaluate(''); // returns error message in Error object
 ```

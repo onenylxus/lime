@@ -1,9 +1,9 @@
 {
   "name": "Logical NOT function test",
-  "config": {},
   "process": [
     {
       "desc": "boolean",
+      "config": {},
       "tests": [
         ["!true", "false"],
         ["!false", "true"]

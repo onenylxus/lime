@@ -28,30 +28,47 @@ class Lime {
   // Prompt function
   prompt(input) {
     try {
-      // Check input validity
-      if (!Types.isString(input)) {
-        throw new Error('error:inputNotStringInPrompt');
-      }
-      if (input.length === 0) {
-        throw new Error('error:inputEmptyInPrompt');
-      }
-
-      // Build equation
-      const eq = this.build('equation')(input);
-      this.lex(eq);
-
-      // Run command
-      if (this.identify('command')(eq.result[0])) {
-        return eq.result[0].execute(input);
-      }
-
-      // Finalize
-      this.memory.push(eq);
-      this.variables.set('ans', eq.result[0]);
-      return this.answer;
+      return this.run(input);
     } catch (err) {
       return this.message(err);
     }
+  }
+
+  // Evaluate function
+  evaluate(input) {
+    try {
+      return this.run(input);
+    } catch (err) {
+      console.log(this.message(err));
+      return '';
+    }
+  }
+
+  /* ------------------------ division ------------------------ */
+
+  // Run function
+  run(input) {
+    // Check input validity
+    if (!Types.isString(input)) {
+      throw new Error('error:inputNotStringInPrompt');
+    }
+    if (input.length === 0) {
+      throw new Error('error:inputEmptyInPrompt');
+    }
+
+    // Build equation
+    const eq = this.build('equation')(input);
+    this.lex(eq);
+
+    // Run command
+    if (this.identify('command')(eq.result[0])) {
+      return eq.result[0].execute(input);
+    }
+
+    // Finalize
+    this.memory.push(eq);
+    this.variables.set('ans', eq.result[0]);
+    return this.answer;
   }
 
   // Direct process function
@@ -78,7 +95,12 @@ class Lime {
       this.process(eq);
       return eq.result[0];
     } catch (err) {
-      return this.message(err);
+      if (this.config.testMode) {
+        return this.message(err);
+      }
+
+      console.log(this.message(err));
+      return undefined;
     }
   }
 

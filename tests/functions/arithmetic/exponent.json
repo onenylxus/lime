@@ -1,9 +1,9 @@
 {
   "name": "Exponent function test",
-  "config": {},
   "process": [
     {
       "desc": "integer with integer",
+      "config": {},
       "tests": [
         ["2^3", "8"],
         ["-2^-2", "-1/4"],
@@ -12,6 +12,7 @@
     },
     {
       "desc": "integer with rational",
+      "config": {},
       "tests": [
         ["(1/2)^3", "1/8"],
         ["(2/3)^-2", "9/4"]

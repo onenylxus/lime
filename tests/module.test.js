@@ -1,6 +1,6 @@
 // Require
 const fs = require('fs');
-const units = require('../utils/units');
+const finder = require('../utils/finder');
 const Module = require('../src/system/module');
 
 /* ------------------------ division ------------------------ */
@@ -12,7 +12,7 @@ const count = {};
 describe('Module test', () => {
   count.expr = 0;
   describe('Expressions', () => {
-    units('src/expressions').forEach((key) => {
+    finder('src/expressions').forEach((key) => {
       test(key, () => {
         expect(Module.has(key)).toBeTruthy();
       });
@@ -23,7 +23,7 @@ describe('Module test', () => {
   count.func = 0;
   describe('Functions', () => {
     fs.readdirSync('src/functions').forEach((folder) => {
-      units(`src/functions/${folder}`).forEach((key) => {
+      finder(`src/functions/${folder}`).forEach((key) => {
         test(key, () => {
           expect(Module.has(key)).toBeTruthy();
         });
@@ -34,7 +34,7 @@ describe('Module test', () => {
 
   count.strc = 0;
   describe('Structures', () => {
-    units('src/structs').forEach((key) => {
+    finder('src/structs').forEach((key) => {
       test(key, () => {
         expect(Module.has(key)).toBeTruthy();
       });

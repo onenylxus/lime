@@ -1,9 +1,9 @@
 {
   "name": "Logical OR function test",
-  "config": {},
   "process": [
     {
       "desc": "boolean with boolean",
+      "config": {},
       "tests": [
         ["true||true", "true"],
         ["true||false", "true"],

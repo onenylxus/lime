@@ -1,9 +1,10 @@
 {
   "name": "@onenylxus/lime",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Mathematics computation engine",
   "author": "Lime Project Team",
   "license": "MIT",
+  "keywords": ["javascript", "mathematics"],
   "main": "dist/bundle.js",
   "module": "dist/bundle-cjs.js",
   "browser": "dist/bundle-esm.js",

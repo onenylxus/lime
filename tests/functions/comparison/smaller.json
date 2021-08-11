@@ -1,9 +1,9 @@
 {
   "name": "Smaller function test",
-  "config": {},
   "process": [
     {
       "desc": "integer with integer",
+      "config": {},
       "tests": [
         ["1<1", "false"],
         ["1<2", "true"],
@@ -12,6 +12,7 @@
     },
     {
       "desc": "integer with rational",
+      "config": {},
       "tests": [
         ["1<(1/2)", "false"],
         ["(1/2)<1", "true"]
@@ -19,6 +20,7 @@
     },
     {
       "desc": "rational with rational",
+      "config": {},
       "tests": [
         ["(1/2)<(1/3)", "false"]
       ]

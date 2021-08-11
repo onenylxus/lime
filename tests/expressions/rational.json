@@ -1,9 +1,9 @@
 {
   "name": "Rational expression test",
-  "config": {},
   "process": [
     {
       "desc": "natural define",
+      "config": {},
       "tests": [
         ["1/2", "1/2"],
         ["1/-2", "-1/2"]

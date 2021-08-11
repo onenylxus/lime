@@ -1,9 +1,9 @@
 {
   "name": "Variable expression test",
-  "config": {},
   "process": [
     {
       "desc": "answer variable",
+      "config": {},
       "tests": [
         ["1", "ans", "1"],
         ["2+4", "ans", "6"]

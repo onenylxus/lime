@@ -3,8 +3,8 @@ const fs = require('fs');
 
 /* ------------------------ division ------------------------ */
 
-// Unit function
-function units(dir, type = '.js') {
+// Finder function
+function finder(dir, type = '.js') {
   return fs
     .readdirSync(dir)
     .filter((file) => file.endsWith(type))
@@ -14,4 +14,4 @@ function units(dir, type = '.js') {
 /* ------------------------ division ------------------------ */
 
 // Export
-module.exports = units;
+module.exports = finder;

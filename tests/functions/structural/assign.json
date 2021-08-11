@@ -1,15 +1,16 @@
 {
   "name": "Assign function test",
-  "config": {},
   "process": [
     {
       "desc": "direct assign",
+      "config": {},
       "tests": [
         ["a=1", "a", "1"]
       ]
     },
     {
       "desc": "indirect assign",
+      "config": {},
       "tests": [
         ["a=1", "b=a", "a=2", "b", "1"]
       ]

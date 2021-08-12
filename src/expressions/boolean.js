@@ -25,12 +25,10 @@ class LimeExpressionBoolean extends LimeExpression {
 
   // Convert to integer
   toInteger() {
-    return this.value ? this.lime.direct([1]) : this.lime.direct([0]);
-  }
-
-  // Convert to rational
-  toRational() {
-    return this.toInteger().toRational();
+    if (this.lime.config.strictBoolean) {
+      throw new Error('warn:strictBoolean');
+    }
+    return this.lime.direct([+this.value]);
   }
 
   // Simplify function

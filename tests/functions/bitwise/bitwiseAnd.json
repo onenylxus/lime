@@ -2,6 +2,24 @@
   "name": "Bitwise AND function test",
   "process": [
     {
+      "desc": "boolean with boolean",
+      "config": {},
+      "tests": [
+        ["false&false", "0"],
+        ["false&true", "0"],
+        ["true&false", "0"],
+        ["true&true", "1"]
+      ]
+    },
+    {
+      "desc": "boolean with integer",
+      "config": {},
+      "tests": [
+        ["false&5", "0"],
+        ["5&true", "1"]
+      ]
+    },
+    {
       "desc": "integer with integer",
       "config": {},
       "tests": [

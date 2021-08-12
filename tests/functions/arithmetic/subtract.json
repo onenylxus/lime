@@ -2,6 +2,32 @@
   "name": "Subtract function test",
   "process": [
     {
+      "desc": "boolean with boolean",
+      "config": {},
+      "tests": [
+        ["false-false", "0"],
+        ["false-true", "-1"],
+        ["true-false", "1"],
+        ["true-true", "0"]
+      ]
+    },
+    {
+      "desc": "boolean with integer",
+      "config": {},
+      "tests": [
+        ["false-6", "-6"],
+        ["2-true", "1"]
+      ]
+    },
+    {
+      "desc": "boolean with rational",
+      "config": {},
+      "tests": [
+        ["true-(5/7)", "2/7"],
+        ["(1/3)-false", "1/3"]
+      ]
+    },
+    {
       "desc": "integer with integer",
       "config": {},
       "tests": [

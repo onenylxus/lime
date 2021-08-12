@@ -16,7 +16,8 @@ class LimeFunctionBitwiseNot extends LimeFunction {
       'tr(_+)',
       'tr(_-)',
 
-      'cr(var->exp)',
+      'cr(var->expr)',
+      'cr(bool->int)',
 
       'er(int)',
     ];

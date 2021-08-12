@@ -18,13 +18,19 @@ const Oplist = {
     'b(rat,rat)': (step) => step.bpi('rational'),
 
     // [Binary] Variable, Expression
-    'b(var,exp)': (step) => step.lpi('variable') && step.rpi('expression'),
+    'b(var,expr)': (step) => step.lpi('variable') && step.rpi('expression'),
+
+    // [Left unary] Boolean
+    'l(bool)': (step) => step.lpi('boolean'),
 
     // [Left unary] Integer
     'l(int)': (step) => step.lpi('integer'),
 
     // [Left unary] Variable
     'l(var)': (step) => step.lpi('variable'),
+
+    // [Left unary] Non-boolean
+    'l(!bool)': (step) => !step.lpi('boolean'),
 
     // Nested
     'n()': () => true,
@@ -40,6 +46,9 @@ const Oplist = {
 
     // [Right unary] Variable
     'r(var)': (step) => step.rpi('variable'),
+
+    // [Right unary] Non-boolean
+    'r(!bool)': (step) => !step.rpi('boolean'),
 
     // [Right unary] Add
     'r(+)': (step) => step.rpi('add'),
@@ -137,24 +146,44 @@ const Oplist = {
       step.rus(step.lime.refer('<='));
     },
 
-    // Convert left parameter from integer to rational
-    'l(int->rat)': (step) => {
+    // Convert left parameter from boolean to integer
+    'l(expr->int)': (step) => {
+      step.lps(step.left.toInteger());
+    },
+
+    // Convert left parameter rational
+    'l(expr->rat)': (step) => {
       step.lps(step.left.toRational());
     },
 
     // Convert left parameter from variable to expression
-    'l(var->exp)': (step) => {
+    'l(var->expr)': (step) => {
       step.lps(step.left.value);
     },
 
+    // Convert left parameter from non-boolean to boolean
+    'l(!bool->bool)': (step) => {
+      step.lps(step.left.toBoolean());
+    },
+
+    // Convert right parameter from boolean to integer
+    'r(expr->int)': (step) => {
+      step.rps(step.right.toInteger());
+    },
+
     // Convert right parameter from integer to rational
-    'r(int->rat)': (step) => {
+    'r(expr->rat)': (step) => {
       step.rps(step.right.toRational());
     },
 
     // Convert right parameter from variable to expression
-    'r(var->exp)': (step) => {
+    'r(var->expr)': (step) => {
       step.rps(step.right.value);
+    },
+
+    // Convert right parameter from non-boolean to boolean
+    'r(!bool->bool)': (step) => {
+      step.rps(step.right.toBoolean());
     },
 
     // Transfer right parameter to logical NOT
@@ -176,16 +205,28 @@ const Oplist = {
   // Operation pairs
   pair: {
     // [Binary] Convert left parameter from integer to rational
-    'cb(int->rat,rat)': ['b(int,rat)', 'l(int->rat)'],
+    'cb(int->rat,rat)': ['b(int,rat)', 'l(expr->rat)'],
 
     // [Binary] Convert right parameter from integer to rational
-    'cb(rat,int->rat)': ['b(rat,int)', 'r(int->rat)'],
+    'cb(rat,int->rat)': ['b(rat,int)', 'r(expr->rat)'],
+
+    // [Left unary] Convert from boolean to integer
+    'cl(bool->int)': ['l(bool)', 'l(expr->int)'],
 
     // [Left unary] Convert from variable to expression
-    'cl(var->exp)': ['l(var)', 'l(var->exp)'],
+    'cl(var->expr)': ['l(var)', 'l(var->expr)'],
+
+    // [Left unary] Convert from non-boolean to boolean
+    'cl(!bool->bool)': ['l(!bool)', 'l(!bool->bool)'],
+
+    // [Right unary] Convert from boolean to integer
+    'cr(bool->int)': ['r(bool)', 'r(expr->int)'],
 
     // [Right unary] Convert from variable to expression
-    'cr(var->exp)': ['r(var)', 'r(var->exp)'],
+    'cr(var->expr)': ['r(var)', 'r(var->expr)'],
+
+    // [Right unary] Convert from non-boolean to boolean
+    'cr(!bool->bool)': ['r(!bool)', 'r(!bool->bool)'],
 
     // [Function] Transfer to equal
     'tf(==)': ['r(=)', 'f(==)'],

@@ -16,8 +16,10 @@ class LimeFunctionExponent extends LimeFunction {
       'tr(_+)',
       'tr(_-)',
 
-      'cl(var->exp)',
-      'cr(var->exp)',
+      'cl(var->expr)',
+      'cr(var->expr)',
+      'cl(bool->int)',
+      'cr(bool->int)',
 
       'eb(int,int)',
       'eb(rat,int)',
@@ -26,6 +28,9 @@ class LimeFunctionExponent extends LimeFunction {
     // Algorithms
     this.algorithms.set('b(int,int)', (step) => {
       if (step.right.value >= 0) {
+        if (step.left.value === 0 && step.right.value === 0) {
+          throw new Error('warn:zeroExponentOfZero');
+        }
         step.bs(this.lime.build('integer')(step.left.value ** step.right.value));
       } else {
         step.bs(this.lime.build('rational')(

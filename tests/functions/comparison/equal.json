@@ -2,6 +2,32 @@
   "name": "Equal function test",
   "process": [
     {
+      "desc": "boolean with boolean",
+      "config": {},
+      "tests": [
+        ["false==false", "true"],
+        ["false==true", "false"],
+        ["true==false", "false"],
+        ["true==true", "true"]
+      ]
+    },
+    {
+      "desc": "boolean with integer",
+      "config": {},
+      "tests": [
+        ["false==3", "false"],
+        ["1==true", "true"]
+      ]
+    },
+    {
+      "desc": "boolean with rational",
+      "config": {},
+      "tests": [
+        ["false==(1/6)", "false"],
+        ["(2/5)==true", "false"]
+      ]
+    },
+    {
       "desc": "integer with integer",
       "config": {},
       "tests": [

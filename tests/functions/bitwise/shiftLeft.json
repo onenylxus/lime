@@ -2,6 +2,24 @@
   "name": "Shift left function test",
   "process": [
     {
+      "desc": "boolean with boolean",
+      "config": {},
+      "tests": [
+        ["false<<false", "0"],
+        ["false<<true", "0"],
+        ["true<<false", "1"],
+        ["true<<true", "2"]
+      ]
+    },
+    {
+      "desc": "boolean with integer",
+      "config": {},
+      "tests": [
+        ["false<<2", "0"],
+        ["5<<true", "10"]
+      ]
+    },
+    {
       "desc": "integer with integer",
       "config": {},
       "tests": [

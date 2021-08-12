@@ -2,6 +2,32 @@
   "name": "Not equal function test",
   "process": [
     {
+      "desc": "boolean with boolean",
+      "config": {},
+      "tests": [
+        ["false!=false", "false"],
+        ["false!=true", "true"],
+        ["true!=false", "true"],
+        ["true!=true", "false"]
+      ]
+    },
+    {
+      "desc": "boolean with integer",
+      "config": {},
+      "tests": [
+        ["false!=3", "true"],
+        ["1!=true", "false"]
+      ]
+    },
+    {
+      "desc": "boolean with rational",
+      "config": {},
+      "tests": [
+        ["false!=(1/6)", "true"],
+        ["(2/5)!=true", "true"]
+      ]
+    },
+    {
       "desc": "integer with integer",
       "config": {},
       "tests": [

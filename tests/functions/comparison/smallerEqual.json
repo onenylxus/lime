@@ -2,6 +2,32 @@
   "name": "Smaller equal function test",
   "process": [
     {
+      "desc": "boolean with boolean",
+      "config": {},
+      "tests": [
+        ["false<=false", "true"],
+        ["false<=true", "true"],
+        ["true<=false", "false"],
+        ["true<=true", "true"]
+      ]
+    },
+    {
+      "desc": "boolean with integer",
+      "config": {},
+      "tests": [
+        ["false<=7", "true"],
+        ["1<=true", "true"]
+      ]
+    },
+    {
+      "desc": "boolean with rational",
+      "config": {},
+      "tests": [
+        ["true<=(1/2)", "false"],
+        ["(2/3)<=false", "false"]
+      ]
+    },
+    {
       "desc": "integer with integer",
       "config": {},
       "tests": [

@@ -5,8 +5,23 @@
       "desc": "boolean",
       "config": {},
       "tests": [
-        ["!true", "false"],
-        ["!false", "true"]
+        ["!false", "true"],
+        ["!true", "false"]
+      ]
+    },
+    {
+      "desc": "integer",
+      "config": {},
+      "tests": [
+        ["!0", "true"],
+        ["!2", "false"]
+      ]
+    },
+    {
+      "desc": "rational",
+      "config": {},
+      "tests": [
+        ["!(1/2)", "false"]
       ]
     }
   ]

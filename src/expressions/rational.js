@@ -27,6 +27,11 @@ class LimeExpressionRational extends LimeExpression {
 
   /* ------------------------ division ------------------------ */
 
+  // Convert to boolean
+  toBoolean() {
+    return this.lime.build('boolean')(this.value.n / this.value.d);
+  }
+
   // Simplify function
   simplify() {
     // Flip negative denominator

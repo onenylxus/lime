@@ -17,8 +17,10 @@ class LimeFunctionBitwiseOr extends LimeFunction {
       'tr(_+)',
       'tr(_-)',
 
-      'cl(var->exp)',
-      'cr(var->exp)',
+      'cl(var->expr)',
+      'cr(var->expr)',
+      'cl(bool->int)',
+      'cr(bool->int)',
 
       'eb(int,int)',
     ];

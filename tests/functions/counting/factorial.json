@@ -2,6 +2,14 @@
   "name": "Factorial function test",
   "process": [
     {
+      "desc": "boolean",
+      "config": {},
+      "tests": [
+        ["false!", "1"],
+        ["true!", "1"]
+      ]
+    },
+    {
       "desc": "integer",
       "config": {},
       "tests": [

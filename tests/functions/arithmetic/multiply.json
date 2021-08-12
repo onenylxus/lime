@@ -2,6 +2,32 @@
   "name": "Multiply function test",
   "process": [
     {
+      "desc": "boolean with boolean",
+      "config": {},
+      "tests": [
+        ["false*false", "0"],
+        ["false*true", "0"],
+        ["true*false", "0"],
+        ["true*true", "1"]
+      ]
+    },
+    {
+      "desc": "boolean with integer",
+      "config": {},
+      "tests": [
+        ["false*4", "0"],
+        ["2*true", "2"]
+      ]
+    },
+    {
+      "desc": "boolean with rational",
+      "config": {},
+      "tests": [
+        ["false*(1/3)", "0/3"],
+        ["(4/5)*true", "4/5"]
+      ]
+    },
+    {
       "desc": "integer with integer",
       "config": {},
       "tests": [

@@ -15,7 +15,8 @@ class LimeFunctionFactorial extends LimeFunction {
       'tz(_!)',
       'tf(!=)',
 
-      'cl(var->exp)',
+      'cl(var->expr)',
+      'cl(bool->int)',
 
       'el(int)',
     ];
@@ -23,7 +24,7 @@ class LimeFunctionFactorial extends LimeFunction {
     // Algorithms
     this.algorithms.set('l(int)', (step) => {
       if (step.left.value < 0) {
-        throw new Error('error:negativeFactorial');
+        throw new Error('warn:negativeFactorial');
       }
       if (step.left.value > 0) {
         step.lus(this.lime.direct([step.left, '*', '(', step.left, '-', 1, ')', '!']));

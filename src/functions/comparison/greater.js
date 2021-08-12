@@ -18,10 +18,12 @@ class LimeFunctionGreater extends LimeFunction {
       'tr(_+)',
       'tr(_-)',
 
+      'cl(var->expr)',
+      'cr(var->expr)',
+      'cl(bool->int)',
+      'cr(bool->int)',
       'cb(int->rat,rat)',
       'cb(rat,int->rat)',
-      'cl(var->exp)',
-      'cr(var->exp)',
 
       'eb(int,int)',
       'eb(rat,rat)',

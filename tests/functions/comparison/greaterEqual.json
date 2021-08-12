@@ -2,6 +2,32 @@
   "name": "Greater equal function test",
   "process": [
     {
+      "desc": "boolean with boolean",
+      "config": {},
+      "tests": [
+        ["false>=false", "true"],
+        ["false>=true", "false"],
+        ["true>=false", "true"],
+        ["true>=true", "true"]
+      ]
+    },
+    {
+      "desc": "boolean with integer",
+      "config": {},
+      "tests": [
+        ["false>=0", "true"],
+        ["0>=true", "false"]
+      ]
+    },
+    {
+      "desc": "boolean with rational",
+      "config": {},
+      "tests": [
+        ["false>=(5/6)", "false"],
+        ["(6/5)>=true", "true"]
+      ]
+    },
+    {
       "desc": "integer with integer",
       "config": {},
       "tests": [

@@ -2,6 +2,7 @@
 
 ### v0.1.2
 - Set up prompt and evaluate modes for input
+- Modified existing function to support boolean and non-boolean conversions
 - Set up crosstesting system and standardized process-based tests
 ### v0.1.1
 - Set up command system in prompt

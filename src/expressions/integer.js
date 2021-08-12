@@ -27,6 +27,11 @@ class LimeExpressionInteger extends LimeExpression {
 
   /* ------------------------ division ------------------------ */
 
+  // Convert to boolean
+  toBoolean() {
+    return this.lime.build('boolean')(this.value);
+  }
+
   // Convert to rational
   toRational() {
     return this.lime.build('rational')(this, this.lime.build('integer')(1));

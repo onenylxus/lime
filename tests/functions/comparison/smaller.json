@@ -2,6 +2,32 @@
   "name": "Smaller function test",
   "process": [
     {
+      "desc": "boolean with boolean",
+      "config": {},
+      "tests": [
+        ["false<false", "false"],
+        ["false<true", "true"],
+        ["true<false", "false"],
+        ["true<true", "false"]
+      ]
+    },
+    {
+      "desc": "boolean with integer",
+      "config": {},
+      "tests": [
+        ["false<3", "true"],
+        ["4<true", "false"]
+      ]
+    },
+    {
+      "desc": "boolean with rational",
+      "config": {},
+      "tests": [
+        ["false<(1/6)", "true"],
+        ["(8/3)<true", "false"]
+      ]
+    },
+    {
       "desc": "integer with integer",
       "config": {},
       "tests": [

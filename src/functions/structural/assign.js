@@ -16,13 +16,13 @@ class LimeFunctionAssign extends LimeFunction {
       'tr(_+)',
       'tr(_-)',
 
-      'cr(var->exp)',
+      'cr(var->expr)',
 
-      'eb(var,exp)',
+      'eb(var,expr)',
     ];
 
     // Algorithms
-    this.algorithms.set('b(var,exp)', (step) => {
+    this.algorithms.set('b(var,expr)', (step) => {
       this.lime.variables.set(step.left.key, step.right);
       step.bs(step.left);
     });

@@ -3,7 +3,9 @@
   "process": [
     {
       "desc": "boolean with boolean",
-      "config": {},
+      "config": {
+        "strictBoolean": false
+      },
       "tests": [
         ["false<<false", "0"],
         ["false<<true", "0"],
@@ -13,7 +15,9 @@
     },
     {
       "desc": "boolean with integer",
-      "config": {},
+      "config": {
+        "strictBoolean": false
+      },
       "tests": [
         ["false<<2", "0"],
         ["5<<true", "10"]

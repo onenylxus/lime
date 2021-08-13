@@ -1,5 +1,23 @@
 // Types class
 class Types {
+  // Auto detect type
+  static auto(...args) {
+    const res = args.map((v) => {
+      if (Types.isUndefined(v)) { return 'undefined'; }
+      if (Types.isNull(v)) { return 'null'; }
+      if (Types.isBoolean(v)) { return 'boolean'; }
+      if (Types.isNumber(v)) { return 'number'; }
+      if (Types.isString(v)) { return 'string'; }
+      if (Types.isFunction(v)) { return 'function'; }
+      if (Types.isArray(v)) { return 'array'; }
+      if (Types.isObject(v)) { return 'object'; }
+      return '';
+    });
+    return res.length > 1 ? res : res[0];
+  }
+
+  /* ------------------------ division ------------------------ */
+
   // Undefined
   static isUndefined(...args) {
     return args.every((v) => v === undefined);

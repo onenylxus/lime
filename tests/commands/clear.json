@@ -1,0 +1,12 @@
+{
+  "name": "Clear command test",
+  "process": [
+    {
+      "desc": "zero parameters",
+      "config": {},
+      "tests": [
+        ["1", "clear", "ans", "0"]
+      ]
+    }
+  ]
+}

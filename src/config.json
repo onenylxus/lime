@@ -1,5 +1,7 @@
 {
   "developmentMode": false,
-  "strictBoolean": false,
+  "promptShowRuntime": false,
+  "promptShowSteps": false,
+  "strictBoolean": true,
   "testMode": false
 }

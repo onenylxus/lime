@@ -1,0 +1,19 @@
+{
+  "name": "Config command test",
+  "process": [
+    {
+      "desc": "one parameter",
+      "config": {},
+      "tests": [
+        ["config testMode", "testMode: true"]
+      ]
+    },
+    {
+      "desc": "two parameters",
+      "config": {},
+      "tests": [
+        ["config strictBoolean false", "config strictBoolean", "strictBoolean: false"]
+      ]
+    }
+  ]
+}

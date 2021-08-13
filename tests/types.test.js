@@ -7,6 +7,7 @@ const Types = require('../utils/types');
 describe('Types test', () => {
   // Undefined
   test('undefined', () => {
+    expect(Types.auto(undefined)).toStrictEqual('undefined');
     expect(Types.isUndefined(undefined)).toBeTruthy();
     expect(Types.isUndefined(undefined, undefined)).toBeTruthy();
     expect(Types.isUndefined(1)).toBeFalsy();
@@ -17,6 +18,7 @@ describe('Types test', () => {
 
   // Null
   test('null', () => {
+    expect(Types.auto(null)).toStrictEqual('null');
     expect(Types.isNull(null)).toBeTruthy();
     expect(Types.isNull(null, null)).toBeTruthy();
     expect(Types.isNull(1)).toBeFalsy();
@@ -49,6 +51,7 @@ describe('Types test', () => {
 
   // Boolean
   test('boolean', () => {
+    expect(Types.auto(true, false)).toStrictEqual(['boolean', 'boolean']);
     expect(Types.isBoolean(true)).toBeTruthy();
     expect(Types.isBoolean(true, false)).toBeTruthy();
     expect(Types.isBoolean(0)).toBeFalsy();
@@ -59,6 +62,7 @@ describe('Types test', () => {
 
   // Number
   test('number', () => {
+    expect(Types.auto(1)).toStrictEqual('number');
     expect(Types.isNumber(1)).toBeTruthy();
     expect(Types.isNumber(1, 2.3)).toBeTruthy();
     expect(Types.isNumber('')).toBeFalsy();
@@ -69,6 +73,7 @@ describe('Types test', () => {
 
   // String
   test('string', () => {
+    expect(Types.auto('')).toStrictEqual('string');
     expect(Types.isString('')).toBeTruthy();
     expect(Types.isString('', 'a')).toBeTruthy();
     expect(Types.isString(1)).toBeFalsy();
@@ -79,6 +84,7 @@ describe('Types test', () => {
 
   // Function
   test('function', () => {
+    expect(Types.auto(() => 0)).toStrictEqual('function');
     expect(Types.isFunction(() => 0)).toBeTruthy();
     expect(Types.isFunction(() => 0, () => '')).toBeTruthy();
     expect(Types.isFunction(1)).toBeFalsy();
@@ -89,6 +95,7 @@ describe('Types test', () => {
 
   // Array
   test('array', () => {
+    expect(Types.auto([])).toStrictEqual('array');
     expect(Types.isArray([])).toBeTruthy();
     expect(Types.isArray([], [0])).toBeTruthy();
     expect(Types.isArray(1)).toBeFalsy();
@@ -99,6 +106,7 @@ describe('Types test', () => {
 
   // Object
   test('object', () => {
+    expect(Types.auto({})).toStrictEqual('object');
     expect(Types.isObject({})).toBeTruthy();
     expect(Types.isObject({}, { a: 1 })).toBeTruthy();
     expect(Types.isObject(1)).toBeFalsy();

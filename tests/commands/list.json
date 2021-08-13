@@ -1,0 +1,12 @@
+{
+  "name": "List command test",
+  "process": [
+    {
+      "desc": "one parameter",
+      "config": {},
+      "tests": [
+        ["list memory", []]
+      ]
+    }
+  ]
+}

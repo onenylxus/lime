@@ -6,6 +6,8 @@
   "error:inputEmptyInPrompt": "Prompt input is empty.",
   "error:inputNotArrayInDirect": "Direct input is not an array.",
   "error:inputNotStringInPrompt": "Prompt input is not a string.",
+  "error:invalidConfigProperty": "Invalid configuration property in config command",
+  "error:invalidListProperty": "Invalid list property in list command",
   "error:invalidSymbol": "Invalid symbol in prompt input.",
   "error:undefinedVariable": "Variable is undefined but used.",
   "error:unmatchedBrackets": "Some brackets are unmatched.",

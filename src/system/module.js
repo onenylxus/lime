@@ -3,7 +3,10 @@ const Module = new Map();
 
 // Commands
 Module.set('about', require('../commands/about'));
+Module.set('clear', require('../commands/clear'));
+Module.set('config', require('../commands/config'));
 Module.set('help', require('../commands/help'));
+Module.set('list', require('../commands/list'));
 
 // Expressions
 Module.set('boolean', require('../expressions/boolean'));

@@ -56,6 +56,11 @@ class Lime {
       throw new Error('error:inputEmptyInPrompt');
     }
 
+    // Set default answer variable if not exist
+    if (!this.variables.has('ans')) {
+      this.variables.set('ans', this.direct([0]));
+    }
+
     // Build equation
     const eq = this.build('equation')(input);
     this.lex(eq);
@@ -67,6 +72,9 @@ class Lime {
 
     // Finalize
     this.memory.push(eq);
+    if (this.config.promptShowRuntime) {
+      console.log(`Equation runtime: ${eq.runtime / 1000}s`);
+    }
     this.variables.set('ans', eq.result[0]);
     return this.answer;
   }

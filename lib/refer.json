@@ -1,6 +1,9 @@
 {
   "about": ["about"],
+  "clear": ["clear"],
+  "config": ["config"],
   "help": ["help"],
+  "list": ["list"],
 
   "true": ["boolean", true],
   "false": ["boolean", false],

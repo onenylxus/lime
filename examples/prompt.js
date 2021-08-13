@@ -1,5 +1,6 @@
 // Require
 const chalk = require('chalk');
+const Types = require('../utils/types');
 const Prompt = require('prompt-sync')({ sigint: true });
 const Lime = process.argv[2] === '-q' ? require('../src/lime')({ developmentMode: true }) : require('../dist/bundle')();
 
@@ -11,11 +12,11 @@ function run() {
   console.log('');
   if (line !== 'exit') {
     let res = Lime.prompt(line);
-    if (res.startsWith('[!]')) {
+    if (Types.isString(res) && res.startsWith('[!]')) {
       console.log(chalk.red.bold(res));
-    } else if (res.startsWith('[?]')) {
+    } else if (Types.isString(res) && res.startsWith('[?]')) {
       console.log(chalk.yellow.bold(res));
-    } else if (res.startsWith('[i]')) {
+    } else if (Types.isString(res) && res.startsWith('[i]')) {
       console.log(chalk.blue.bold(res));
     } else {
       console.log(res);

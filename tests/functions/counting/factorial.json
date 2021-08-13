@@ -3,7 +3,9 @@
   "process": [
     {
       "desc": "boolean",
-      "config": {},
+      "config": {
+        "strictBoolean": false
+      },
       "tests": [
         ["false!", "1"],
         ["true!", "1"]

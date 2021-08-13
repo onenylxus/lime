@@ -6,9 +6,17 @@
       "config": {},
       "tests": [
         ["+3", "3"],
-        ["+false", "0"],
-        ["+true", "1"],
         ["+(1/2)", "1/2"]
+      ]
+    },
+    {
+      "desc": "boolean",
+      "config": {
+        "strictBoolean": false
+      },
+      "tests": [
+        ["+false", "0"],
+        ["+true", "1"]
       ]
     },
     {

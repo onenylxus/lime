@@ -1,5 +1,6 @@
 // Require
 const LimeCommand = require('../structs/command');
+const Types = require('../../utils/types');
 
 /* ------------------------ division ------------------------ */
 
@@ -12,13 +13,10 @@ class LimeCommandList extends LimeCommand {
 
     // Operations
     this.operations.set(1, (prop) => {
-      switch (prop) {
-        case 'config': return this.lime.config;
-        case 'module': return this.lime.module;
-        case 'variable': return Object.fromEntries(this.lime.variables);
-        case 'memory': return this.lime.memory;
-        default: throw new Error('error:invalidListProperty');
+      if (!this.lime.hasOwnProperty(prop) || Types.isFunction(this.lime[prop])) {
+        throw new Error('error:invalidListProperty');
       }
+      return Types.isClass(Map, this.lime[prop]) ? Object.fromEntries(this.lime[prop]) : this.lime[prop];
     });
   }
 }

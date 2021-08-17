@@ -17,6 +17,7 @@ class LimeFunctionLogicalNot extends LimeFunction {
       'tr(_-)',
 
       'cr(var->expr)',
+      'cr(arg{expr}->expr)',
       'cr(!bool->bool)',
 
       'er(bool)',

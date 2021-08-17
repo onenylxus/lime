@@ -5,6 +5,9 @@ const Oplist = {
     // [Binary] Boolean, Boolean
     'b(bool,bool)': (step) => step.bpi('boolean'),
 
+    // [Binary] Expression, Expression
+    'b(expr,expr)': (step) => step.bpi('expression'),
+
     // [Binary] Integer, Integer
     'b(int,int)': (step) => step.bpi('integer'),
 
@@ -20,6 +23,9 @@ const Oplist = {
     // [Binary] Variable, Expression
     'b(var,expr)': (step) => step.lpi('variable') && step.rpi('expression'),
 
+    // [Left unary] Argument{Expression}
+    'l(arg{expr})': (step) => step.lpi('argument') && step.left.length === 1 && step.ci('expression')(step.left.places[0]),
+
     // [Left unary] Boolean
     'l(bool)': (step) => step.lpi('boolean'),
 
@@ -34,6 +40,9 @@ const Oplist = {
 
     // Nested
     'n()': () => true,
+
+    // [Right unary] Argument{Expression}
+    'r(arg{expr})': (step) => step.rpi('argument') && step.right.length === 1 && step.ci('expression')(step.right.places[0]),
 
     // [Right unary] Boolean
     'r(bool)': (step) => step.rpi('boolean'),
@@ -146,12 +155,17 @@ const Oplist = {
       step.rus(step.lime.refer('<='));
     },
 
+    // Convert left parameter from argument length 1 to expression
+    'l(arg{expr}->expr)': (step) => {
+      step.lps(step.left.simplify());
+    },
+
     // Convert left parameter from boolean to integer
     'l(expr->int)': (step) => {
       step.lps(step.left.toInteger());
     },
 
-    // Convert left parameter rational
+    // Convert left parameter from integer to rational
     'l(expr->rat)': (step) => {
       step.lps(step.left.toRational());
     },
@@ -164,6 +178,11 @@ const Oplist = {
     // Convert left parameter from non-boolean to boolean
     'l(!bool->bool)': (step) => {
       step.lps(step.left.toBoolean());
+    },
+
+    // Convert right parameter from argument length 1 to expression
+    'r(arg{expr}->expr)': (step) => {
+      step.rps(step.right.simplify());
     },
 
     // Convert right parameter from boolean to integer
@@ -210,6 +229,9 @@ const Oplist = {
     // [Binary] Convert right parameter from integer to rational
     'cb(rat,int->rat)': ['b(rat,int)', 'r(expr->rat)'],
 
+    // [Left unary] Convert from argument length 1 to expression
+    'cl(arg{expr}->expr)': ['l(arg{expr})', 'l(arg{expr}->expr)'],
+
     // [Left unary] Convert from boolean to integer
     'cl(bool->int)': ['l(bool)', 'l(expr->int)'],
 
@@ -218,6 +240,9 @@ const Oplist = {
 
     // [Left unary] Convert from non-boolean to boolean
     'cl(!bool->bool)': ['l(!bool)', 'l(!bool->bool)'],
+
+    // [Right unary] Convert from argument length 1 to expression
+    'cr(arg{expr}->expr)': ['r(arg{expr})', 'r(arg{expr}->expr)'],
 
     // [Right unary] Convert from boolean to integer
     'cr(bool->int)': ['r(bool)', 'r(expr->int)'],

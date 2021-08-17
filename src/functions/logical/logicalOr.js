@@ -18,6 +18,8 @@ class LimeFunctionLogicalOr extends LimeFunction {
 
       'cl(var->expr)',
       'cr(var->expr)',
+      'cl(arg{expr}->expr)',
+      'cr(arg{expr}->expr)',
       'cl(!bool->bool)',
       'cr(!bool->bool)',
 

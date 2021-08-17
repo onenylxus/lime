@@ -17,6 +17,7 @@ class LimeFunctionAssign extends LimeFunction {
       'tr(_-)',
 
       'cr(var->expr)',
+      'cr(arg{expr}->expr)',
 
       'eb(var,expr)',
     ];

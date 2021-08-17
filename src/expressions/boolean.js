@@ -8,7 +8,7 @@ class LimeExpressionBoolean extends LimeExpression {
   // Constructor
   constructor(lime, value) {
     // Super from expression class
-    super(lime, { isSimple: true });
+    super(lime, { name: 'boolean', shorthand: 'bool', isSimple: true });
 
     // Build expression
     this.raw = value;

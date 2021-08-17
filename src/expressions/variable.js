@@ -8,7 +8,7 @@ class LimeExpressionVariable extends LimeExpression {
   // Constructor
   constructor(lime, key) {
     // Super from expression class
-    super(lime, { isSimple: true });
+    super(lime, { name: 'variable', shorthand: 'var', isSimple: true });
 
     // Build expression
     this.key = key;

@@ -9,7 +9,7 @@ class LimeExpressionInteger extends LimeExpression {
   // Constructor
   constructor(lime, value) {
     // Super from expression class
-    super(lime, { isSimple: true });
+    super(lime, { name: 'integer', shorthand: 'int', isSimple: true });
 
     // Build expression
     if (!Types.isNumber(+value)) {

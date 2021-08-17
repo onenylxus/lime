@@ -1,0 +1,12 @@
+{
+  "name": "Omitted function test",
+  "process": [
+    {
+      "desc": "multiply function",
+      "config": {},
+      "tests": [
+        ["2(3)", "6"]
+      ]
+    }
+  ]
+}

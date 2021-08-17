@@ -1,5 +1,6 @@
 {
   "github": "Please create a GitHub issue about how you received this message, thank you. ",
+  "error:emptyArgumentInSimplify": "Empty argument in simplify function.",
   "error:invalidParametersInCommand": "Invalid parameters in command.",
   "error:functionAgreement": "Function does not agree with parameter types.",
   "error:inputEmptyInDirect": "Direct input is empty.",

@@ -231,11 +231,18 @@ class Lime {
   process(eq) {
     const bool = true;
     while (bool) {
+      // Insert omitted function
+      for (let i = 1; i < eq.result.length; i++) {
+        if (this.identify('expression')(eq.result[i - 1], eq.result[i])) {
+          eq.result.splice(i, 0, this.build('omitted')('b'));
+        }
+      }
+
       // Search function by order
       let pos = -1;
-      for (let i = 0; i < eq.result.length; i++) {
-        if (this.identify('function')(eq.result[i])) {
-          pos = pos < 0 ? i : (eq.result[i].order > eq.result[pos].order ? i : pos);
+      for (let j = 0; j < eq.result.length; j++) {
+        if (this.identify('function')(eq.result[j])) {
+          pos = pos < 0 ? j : (eq.result[j].order > eq.result[pos].order ? j : pos);
         }
       }
 

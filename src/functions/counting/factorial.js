@@ -16,6 +16,7 @@ class LimeFunctionFactorial extends LimeFunction {
       'tf(!=)',
 
       'cl(var->expr)',
+      'cl(arg{expr}->expr)',
       'cl(bool->int)',
 
       'el(int)',

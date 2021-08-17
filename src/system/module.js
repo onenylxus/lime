@@ -9,6 +9,7 @@ Module.set('help', require('../commands/help'));
 Module.set('list', require('../commands/list'));
 
 // Expressions
+Module.set('argument', require('../expressions/argument'));
 Module.set('boolean', require('../expressions/boolean'));
 Module.set('integer', require('../expressions/integer'));
 Module.set('rational', require('../expressions/rational'));
@@ -50,7 +51,9 @@ Module.set('logicalOr', require('../functions/logical/logicalOr'));
 
 // Structural functions
 Module.set('assign', require('../functions/structural/assign'));
+Module.set('columnSplit', require('../functions/structural/columnSplit'));
 Module.set('commonBracket', require('../functions/structural/commonBracket'));
+Module.set('omitted', require('../functions/structural/omitted'));
 
 // Structures
 Module.set('command', require('../structs/command'));

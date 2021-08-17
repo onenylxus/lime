@@ -35,6 +35,11 @@ class LimeStep {
 
   /* ------------------------ division ------------------------ */
 
+  // Custom identify
+  ci(...mods) {
+    return (...values) => this.lime.identify(...mods)(...values);
+  }
+
   // Left parameter identify
   lpi(...mods) {
     return this.lime.identify(...mods)(this.left);

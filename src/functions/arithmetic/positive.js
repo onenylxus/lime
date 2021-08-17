@@ -17,6 +17,7 @@ class LimeFunctionPositive extends LimeFunction {
       'tr(_-)',
 
       'cr(var->expr)',
+      'cr(arg{expr}->expr)',
       'cr(bool->int)',
 
       'er(int)',

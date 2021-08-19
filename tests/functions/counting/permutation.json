@@ -1,0 +1,14 @@
+{
+  "name": "Permutation function test",
+  "process": [
+    {
+      "desc": "argument of integer and integer",
+      "config": {
+
+      },
+      "tests": [
+        ["npr(3,2)", "6"]
+      ]
+    }
+  ]
+}

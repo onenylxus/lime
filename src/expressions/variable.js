@@ -30,6 +30,11 @@ class LimeExpressionVariable extends LimeExpression {
   simplify() {
     return this.value.simplify();
   }
+
+  // Finalize function
+  finalize() {
+    return this.simplify();
+  }
 }
 
 /* ------------------------ division ------------------------ */

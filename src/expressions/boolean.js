@@ -36,6 +36,11 @@ class LimeExpressionBoolean extends LimeExpression {
     return this.lime.build('boolean')(this.value);
   }
 
+  // Finalize function
+  finalize() {
+    return this.simplify();
+  }
+
   // Print function
   print() {
     return this.value ? 'true' : 'false';

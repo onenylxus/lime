@@ -42,6 +42,11 @@ class LimeExpressionInteger extends LimeExpression {
     return this.lime.build('integer')(this.value);
   }
 
+  // Finalize function
+  finalize() {
+    return this.simplify();
+  }
+
   // Print function
   print() {
     return `${this.value}`;

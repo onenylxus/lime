@@ -1,0 +1,20 @@
+{
+  "name": "Ceiling function test",
+  "process": [
+    {
+      "desc": "argument of integer",
+      "config": {},
+      "tests": [
+        ["ceil(5)", "5"]
+      ]
+    },
+    {
+      "desc": "argument of rational",
+      "config": {},
+      "tests": [
+        ["ceil(5/2)", "3"],
+        ["ceil(-5/2)", "-2"]
+      ]
+    }
+  ]
+}

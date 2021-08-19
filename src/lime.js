@@ -231,9 +231,9 @@ class Lime {
   process(eq) {
     const bool = true;
     while (bool) {
-      // Insert omitted function
-      for (let i = 1; i < eq.result.length; i++) {
-        if (this.identify('expression')(eq.result[i - 1], eq.result[i])) {
+      for (let i = 0; i < eq.result.length; i++) {
+        // Insert omitted function
+        if (i > 0 && this.identify('expression')(eq.result[i - 1], eq.result[i])) {
           eq.result.splice(i, 0, this.build('omitted')('b'));
         }
       }
@@ -254,7 +254,7 @@ class Lime {
 
     // Finalize result
     if (eq.result.length === 1) {
-      eq.record(this.build('step')([eq.result[0].simplify()]));
+      eq.record(this.build('step')([eq.result[0].finalize()]));
     } else {
       throw new Error('issue:invalidResultLengthInProcess');
     }

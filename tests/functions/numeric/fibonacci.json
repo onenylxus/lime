@@ -1,0 +1,12 @@
+{
+  "name": "Fibonacci function test",
+  "process": [
+    {
+      "desc": "argument of integer",
+      "config": {},
+      "tests": [
+        ["fibonacci(6)", "8"]
+      ]
+    }
+  ]
+}

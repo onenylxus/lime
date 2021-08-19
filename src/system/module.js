@@ -42,12 +42,34 @@ Module.set('smaller', require('../functions/comparison/smaller'));
 Module.set('smallerEqual', require('../functions/comparison/smallerEqual'));
 
 // Counting functions
+Module.set('combination', require('../functions/counting/combination'));
 Module.set('factorial', require('../functions/counting/factorial'));
+Module.set('permutation', require('../functions/counting/permutation'));
 
 // Logical functions
 Module.set('logicalAnd', require('../functions/logical/logicalAnd'));
 Module.set('logicalNot', require('../functions/logical/logicalNot'));
 Module.set('logicalOr', require('../functions/logical/logicalOr'));
+
+// Numeric functions
+Module.set('ceiling', require('../functions/numeric/ceiling'));
+Module.set('fibonacci', require('../functions/numeric/fibonacci'));
+Module.set('floor', require('../functions/numeric/floor'));
+Module.set('greatestCommonDivisor', require('../functions/numeric/greatestCommonDivisor'));
+Module.set('leastCommonMultiple', require('../functions/numeric/leastCommonMultiple'));
+Module.set('prime', require('../functions/numeric/prime'));
+Module.set('reciprocal', require('../functions/numeric/reciprocal'));
+Module.set('round', require('../functions/numeric/round'));
+Module.set('truncation', require('../functions/numeric/truncation'));
+
+// Statistical functions
+Module.set('maximum', require('../functions/statistical/maximum'));
+Module.set('mean', require('../functions/statistical/mean'));
+Module.set('minimum', require('../functions/statistical/minimum'));
+Module.set('product', require('../functions/statistical/product'));
+Module.set('random', require('../functions/statistical/random'));
+Module.set('range', require('../functions/statistical/range'));
+Module.set('sum', require('../functions/statistical/sum'));
 
 // Structural functions
 Module.set('assign', require('../functions/structural/assign'));

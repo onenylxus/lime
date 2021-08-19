@@ -1,0 +1,12 @@
+{
+  "name": "Product function test",
+  "process": [
+    {
+      "desc": "argument of expressions",
+      "config": {},
+      "tests": [
+        ["prod(2,3,5)", "30"]
+      ]
+    }
+  ]
+}

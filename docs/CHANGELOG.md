@@ -3,7 +3,9 @@
 ### v0.2.0 (dev)
 - Added expressions: `Argument`
 - Added functions:
-  - Defining: `DefineBoolean`, `DefineInteger`, `DefineRational`
+  - Counting: `Combination`, `Permutation`
+  - Numeric: `Ceiling`, `Fibonacci`, `Floor`, `greatestCommonDivisor`, `LeastCommonMultiple`, `Prime`, `Reciprocal`, `Round`, `Truncation`
+  - Statistical: `Maximum`, `Mean`, `Minimum`, `Product`, `Random`, `Range`, `Sum`
   - Structural: `ColumnSplit`, `Omitted`
 - Modified existing functions to support new expression types
 ### v0.1.2 (Aug 16, 2021)

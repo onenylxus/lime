@@ -19,6 +19,7 @@
       "new-cap": "off",
       "no-bitwise": "off",
       "no-console": "off",
+      "no-loop-func": "off",
       "no-nested-ternary": "off",
       "no-plusplus": "off",
       "no-prototype-builtins": "off",

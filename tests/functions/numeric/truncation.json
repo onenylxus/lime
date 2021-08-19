@@ -1,0 +1,20 @@
+{
+  "name": "Truncation function test",
+  "process": [
+    {
+      "desc": "argument of integer",
+      "config": {},
+      "tests": [
+        ["trunc(5)", "5"]
+      ]
+    },
+    {
+      "desc": "argument of rational",
+      "config": {},
+      "tests": [
+        ["trunc(5/2)", "2"],
+        ["trunc(-5/2)", "-2"]
+      ]
+    }
+  ]
+}

@@ -9,7 +9,7 @@ class LimeExpressionArgument extends LimeExpression {
   // Constructor
   constructor(lime, ...places) {
     // Super from expression class
-    super(lime, { name: 'argument', shorthand: 'par', isSimple: false });
+    super(lime, { name: 'argument', shorthand: 'arg', isSimple: false });
 
     // Build expression
     if (!this.lime.identify('expression')(...places) && !(places.length === 1 && Types.isNull(places[0]))) {
@@ -39,13 +39,18 @@ class LimeExpressionArgument extends LimeExpression {
 
   // Simplify function
   simplify() {
+    return this.places.map((p) => p.simplify());
+  }
+
+  // Finalize function
+  finalize() {
     if (this.isEmpty) {
-      throw new Error('error:emptyArgumentInSimplify');
+      throw new Error('error:emptyArgumentInFinalize');
     }
     if (this.length === 1) {
-      return this.places[0].simplify();
+      return this.places[0].finalize();
     }
-    return this.places.map((p) => p.simplify());
+    return this.places.map((p) => p.finalize());
   }
 }
 

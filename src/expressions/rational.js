@@ -50,6 +50,11 @@ class LimeExpressionRational extends LimeExpression {
     );
   }
 
+  // Finalize function
+  finalize() {
+    return this.simplify();
+  }
+
   // Print function
   print() {
     return `${this.value.n}/${this.value.d}`;

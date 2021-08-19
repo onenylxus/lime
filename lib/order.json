@@ -1,5 +1,8 @@
 [
   [
+    "columnSplit"
+  ],
+  [
     "assign",
     "equal",
     "greater",
@@ -34,8 +37,26 @@
     "positive"
   ],
   [
+    "ceiling",
+    "combination",
     "factorial",
-    "omitted"
+    "fibonacci",
+    "floor",
+    "greatestCommonDivisor",
+    "leastCommonMultiple",
+    "maximum",
+    "mean",
+    "minimum",
+    "omitted",
+    "permutation",
+    "prime",
+    "product",
+    "random",
+    "range",
+    "reciprocal",
+    "round",
+    "sum",
+    "truncation"
   ],
   [
     "commonBracket"

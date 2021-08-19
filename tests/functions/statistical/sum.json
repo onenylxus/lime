@@ -1,0 +1,12 @@
+{
+  "name": "Sum function test",
+  "process": [
+    {
+      "desc": "argument of expressions",
+      "config": {},
+      "tests": [
+        ["sum(2,3,5)", "10"]
+      ]
+    }
+  ]
+}

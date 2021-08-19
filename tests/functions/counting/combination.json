@@ -1,0 +1,14 @@
+{
+  "name": "Combination function test",
+  "process": [
+    {
+      "desc": "argument of integer and integer",
+      "config": {
+
+      },
+      "tests": [
+        ["ncr(3,2)", "3"]
+      ]
+    }
+  ]
+}

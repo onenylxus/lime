@@ -1,0 +1,29 @@
+{
+  "name": "Random function test",
+  "process": [
+    {
+      "desc": "empty argument",
+      "config": {},
+      "tests": [
+        ["rand()>=0", "true"],
+        ["rand()<=1", "true"]
+      ]
+    },
+    {
+      "desc": "argument of integer",
+      "config": {},
+      "tests": [
+        ["rand(5)>=0", "true"],
+        ["rand(5)<=5", "true"]
+      ]
+    },
+    {
+      "desc": "argument of integer and integer",
+      "config": {},
+      "tests": [
+        ["rand(4,7)>=4", "true"],
+        ["rand(4,7)<=7", "true"]
+      ]
+    }
+  ]
+}

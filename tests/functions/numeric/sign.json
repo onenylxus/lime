@@ -1,0 +1,22 @@
+{
+  "name": "Sign function test",
+  "process": [
+    {
+      "desc": "argument of integer",
+      "config": {},
+      "tests": [
+        ["sgn(3)", "1"],
+        ["sgn(0)", "0"],
+        ["sgn(-3)", "-1"]
+      ]
+    },
+    {
+      "desc": "argument of rational",
+      "config": {},
+      "tests": [
+        ["sgn(5/2)", "1"],
+        ["sgn(-5/2)", "-1"]
+      ]
+    }
+  ]
+}

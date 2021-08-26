@@ -9,6 +9,7 @@
   "true": ["boolean", true],
   "()": ["argument", null],
 
+  "abs": ["absolute", "r"],
   "ceil": ["ceiling", "r"],
   "fibonacci": ["fibonacci", "r"],
   "floor": ["floor", "r"],
@@ -25,6 +26,7 @@
   "range": ["range", "r"],
   "reciprocal": ["reciprocal", "r"],
   "round": ["round", "r"],
+  "sgn": ["sign", "r"],
   "sum": ["sum", "r"],
   "trunc": ["truncation", "r"],
   "+": ["add", "b"],

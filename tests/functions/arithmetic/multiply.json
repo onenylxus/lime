@@ -29,7 +29,7 @@
         "strictBoolean": false
       },
       "tests": [
-        ["false*(1/3)", "0/3"],
+        ["false*(1/3)", "0"],
         ["(4/5)*true", "4/5"]
       ]
     },

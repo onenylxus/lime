@@ -19,8 +19,8 @@ class LimeFunctionAdd extends LimeFunction {
 
       'cl(var->expr)',
       'cr(var->expr)',
-      'cl(arg{expr}->expr)',
-      'cr(arg{expr}->expr)',
+      'cl(arg{expr[1]}->expr)',
+      'cr(arg{expr[1]}->expr)',
       'cl(bool->int)',
       'cr(bool->int)',
       'cb(int->rat,rat)',

@@ -4,9 +4,10 @@
 - Added expressions: `Argument`
 - Added functions:
   - Counting: `Combination`, `Permutation`
-  - Numeric: `Ceiling`, `Fibonacci`, `Floor`, `greatestCommonDivisor`, `LeastCommonMultiple`, `Prime`, `Reciprocal`, `Round`, `Truncation`
+  - Numeric: `Absolute`, `Ceiling`, `Fibonacci`, `Floor`, `greatestCommonDivisor`, `LeastCommonMultiple`, `Prime`, `Reciprocal`, `Round`, `Sign`, `Truncation`
   - Statistical: `Maximum`, `Mean`, `Minimum`, `Product`, `Random`, `Range`, `Sum`
   - Structural: `ColumnSplit`, `Omitted`
+- Improved rational simplify process
 - Modified existing functions to support new expression types
 ### v0.1.2 (Aug 16, 2021)
 - Set up prompt and evaluate modes for input

@@ -13,7 +13,7 @@ class LimeFunctionRandom extends LimeFunction {
     // Operations
     this.operations.r = [
       'er(arg{})',
-      'er(arg{int})',
+      'er(arg{int[1]})',
       'er(arg{int[2]})',
     ];
 
@@ -22,7 +22,7 @@ class LimeFunctionRandom extends LimeFunction {
       const m = 10 ** 15;
       step.rus(this.lime.direct([Math.floor(Math.random() * m), '/', m]));
     });
-    this.algorithms.set('r(arg{int})', (step) => {
+    this.algorithms.set('r(arg{int[1]})', (step) => {
       step.rus(this.lime.direct(['rand', '(', 0, ',', step.right.places[0], ')']));
     });
     this.algorithms.set('r(arg{int[2]})', (step) => {

@@ -52,6 +52,7 @@ Module.set('logicalNot', require('../functions/logical/logicalNot'));
 Module.set('logicalOr', require('../functions/logical/logicalOr'));
 
 // Numeric functions
+Module.set('absolute', require('../functions/numeric/absolute'));
 Module.set('ceiling', require('../functions/numeric/ceiling'));
 Module.set('fibonacci', require('../functions/numeric/fibonacci'));
 Module.set('floor', require('../functions/numeric/floor'));
@@ -60,6 +61,7 @@ Module.set('leastCommonMultiple', require('../functions/numeric/leastCommonMulti
 Module.set('prime', require('../functions/numeric/prime'));
 Module.set('reciprocal', require('../functions/numeric/reciprocal'));
 Module.set('round', require('../functions/numeric/round'));
+Module.set('sign', require('../functions/numeric/sign'));
 Module.set('truncation', require('../functions/numeric/truncation'));
 
 // Statistical functions

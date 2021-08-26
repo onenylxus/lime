@@ -17,7 +17,7 @@ class LimeFunctionNegative extends LimeFunction {
       'tr(_-)',
 
       'cr(var->expr)',
-      'cr(arg{expr}->expr)',
+      'cr(arg{expr[1]}->expr)',
       'cr(bool->int)',
 
       'er(int)',

@@ -23,8 +23,8 @@ const Oplist = {
     // [Binary] Variable, Expression
     'b(var,expr)': (step) => step.lpi('variable') && step.rpi('expression'),
 
-    // [Left unary] Argument{Expression}
-    'l(arg{expr})': (step) => step.lpi('argument') && step.left.length === 1 && step.ci('expression')(step.left.places[0]),
+    // [Left unary] Argument{Expression[1]}
+    'l(arg{expr[1]})': (step) => step.lpi('argument') && step.left.length === 1 && step.ci('expression')(step.left.places[0]),
 
     // [Left unary] Boolean
     'l(bool)': (step) => step.lpi('boolean'),
@@ -44,26 +44,20 @@ const Oplist = {
     // [Right unary] Argument{}
     'r(arg{})': (step) => step.rpi('argument') && step.right.isEmpty,
 
-    // [Right unary] Argument{Expression}
-    'r(arg{expr})': (step) => step.rpi('argument') && step.right.length === 1 && step.ci('expression')(step.right.places[0]),
-
-    // [Right unary] Argument{Expression[2]}
-    'r(arg{expr[2]})': (step) => step.rpi('argument') && step.right.length === 2 && step.ci('expression')(step.right.places[0], step.right.places[1]),
+    // [Right unary] Argument{Expression[1]}
+    'r(arg{expr[1]})': (step) => step.rpi('argument') && step.right.length === 1 && step.ci('expression')(...step.right.places),
 
     // [Right unary] Argument{Expression[Any]}
     'r(arg{expr[@]})': (step) => step.rpi('argument') && step.ci('expression')(...step.right.places),
 
-    // [Right unary] Argument{Integer}
-    'r(arg{int})': (step) => step.rpi('argument') && step.right.length === 1 && step.ci('integer')(step.right.places[0]),
+    // [Right unary] Argument{Integer[1]}
+    'r(arg{int[1]})': (step) => step.rpi('argument') && step.right.length === 1 && step.ci('integer')(...step.right.places),
 
     // [Right unary] Argument{Integer[2]}
-    'r(arg{int[2]})': (step) => step.rpi('argument') && step.right.length === 2 && step.ci('integer')(step.right.places[0], step.right.places[1]),
+    'r(arg{int[2]})': (step) => step.rpi('argument') && step.right.length === 2 && step.ci('integer')(...step.right.places),
 
-    // [Right unary] Argument{Integer[Any]}
-    'r(arg{int[@]})': (step) => step.rpi('argument') && step.ci('integer')(...step.right.places),
-
-    // [Right unary] Argument{Rational}
-    'r(arg{rat})': (step) => step.rpi('argument') && step.right.length === 1 && step.ci('rational')(step.right.places[0]),
+    // [Right unary] Argument{Rational[1]}
+    'r(arg{rat[1]})': (step) => step.rpi('argument') && step.right.length === 1 && step.ci('rational')(...step.right.places),
 
     // [Right unary] Boolean
     'r(bool)': (step) => step.rpi('boolean'),
@@ -177,7 +171,7 @@ const Oplist = {
     },
 
     // Convert left parameter from argument length 1 to expression
-    'l(arg{expr}->expr)': (step) => {
+    'l(arg{expr[1]}->expr)': (step) => {
       step.lps(step.left.finalize());
     },
 
@@ -202,7 +196,7 @@ const Oplist = {
     },
 
     // Convert right parameter from argument length 1 to expression
-    'r(arg{expr}->expr)': (step) => {
+    'r(arg{expr[1]}->expr)': (step) => {
       step.rps(step.right.finalize());
     },
 
@@ -251,7 +245,7 @@ const Oplist = {
     'cb(rat,int->rat)': ['b(rat,int)', 'r(expr->rat)'],
 
     // [Left unary] Convert from argument length 1 to expression
-    'cl(arg{expr}->expr)': ['l(arg{expr})', 'l(arg{expr}->expr)'],
+    'cl(arg{expr[1]}->expr)': ['l(arg{expr[1]})', 'l(arg{expr[1]}->expr)'],
 
     // [Left unary] Convert from boolean to integer
     'cl(bool->int)': ['l(bool)', 'l(expr->int)'],
@@ -263,7 +257,7 @@ const Oplist = {
     'cl(!bool->bool)': ['l(!bool)', 'l(!bool->bool)'],
 
     // [Right unary] Convert from argument length 1 to expression
-    'cr(arg{expr}->expr)': ['r(arg{expr})', 'r(arg{expr}->expr)'],
+    'cr(arg{expr[1]}->expr)': ['r(arg{expr[1]})', 'r(arg{expr[1]}->expr)'],
 
     // [Right unary] Convert from boolean to integer
     'cr(bool->int)': ['r(bool)', 'r(expr->int)'],

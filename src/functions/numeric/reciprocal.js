@@ -12,11 +12,11 @@ class LimeFunctionReciprocal extends LimeFunction {
 
     // Operations
     this.operations.r = [
-      'er(arg{expr})',
+      'er(arg{expr[1]})',
     ];
 
     // Algorithms
-    this.algorithms.set('r(arg{expr})', (step) => {
+    this.algorithms.set('r(arg{expr[1]})', (step) => {
       step.rus(this.lime.direct([1, '/', step.right.places[0]]));
     });
   }

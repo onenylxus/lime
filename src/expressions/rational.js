@@ -34,6 +34,11 @@ class LimeExpressionRational extends LimeExpression {
 
   // Simplify function
   simplify() {
+    // Reduce by common factor
+    const f = this.lime.direct(['gcd', '(', this.nPlace, ',', this.dPlace, ')']);
+    this.nPlace = this.lime.direct([this.nPlace, '/', f]);
+    this.dPlace = this.lime.direct([this.dPlace, '/', f]);
+
     // Flip negative denominator
     if (this.value.d < 0) {
       this.nPlace = this.lime.direct(['-', this.nPlace]);

@@ -12,11 +12,11 @@ class LimeFunctionPrime extends LimeFunction {
 
     // Operations
     this.operations.r = [
-      'er(arg{int})',
+      'er(arg{int[1]})',
     ];
 
     // Algorithms
-    this.algorithms.set('r(arg{int})', (step) => {
+    this.algorithms.set('r(arg{int[1]})', (step) => {
       const t = step.right.value[0];
       if (t < 1) {
         throw new Error('error:invalidArgumentLogic');

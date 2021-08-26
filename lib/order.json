@@ -37,6 +37,7 @@
     "positive"
   ],
   [
+    "absolute",
     "ceiling",
     "combination",
     "factorial",
@@ -55,6 +56,7 @@
     "range",
     "reciprocal",
     "round",
+    "sign",
     "sum",
     "truncation"
   ],

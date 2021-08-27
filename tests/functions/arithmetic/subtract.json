@@ -14,6 +14,16 @@
       ]
     },
     {
+      "desc": "boolean with complex",
+      "config": {
+        "strictBoolean": false
+      },
+      "tests": [
+        ["false-(1+2i)", "-1-2i"],
+        ["(6-i)-true", "5-i"]
+      ]
+    },
+    {
       "desc": "boolean with integer",
       "config": {
         "strictBoolean": false
@@ -31,6 +41,29 @@
       "tests": [
         ["true-(5/7)", "2/7"],
         ["(1/3)-false", "1/3"]
+      ]
+    },
+    {
+      "desc": "complex with complex",
+      "config": {},
+      "tests": [
+        ["(1+4i)-(2-5i)", "-1+9i"]
+      ]
+    },
+    {
+      "desc": "complex with integer",
+      "config": {},
+      "tests": [
+        ["(1+4i)-3", "-2+4i"],
+        ["5-(-3+3i)", "8-3i"]
+      ]
+    },
+    {
+      "desc": "complex with rational",
+      "config": {},
+      "tests": [
+        ["(1-2i)-(1/2)", "1/2-2i"],
+        ["(4/3)-(2/3+i)", "2/3-i"]
       ]
     },
     {

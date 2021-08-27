@@ -9,7 +9,7 @@ class LimeExpressionInteger extends LimeExpression {
   // Constructor
   constructor(lime, value) {
     // Super from expression class
-    super(lime, { name: 'integer', shorthand: 'int', isSimple: true });
+    super(lime, { name: 'integer', isSimple: true });
 
     // Build expression
     if (!Types.isNumber(+value)) {
@@ -30,6 +30,11 @@ class LimeExpressionInteger extends LimeExpression {
   // Convert to boolean
   toBoolean() {
     return this.lime.build('boolean')(this.value);
+  }
+
+  // Convert to complex
+  toComplex() {
+    return this.lime.build('complex')(this, this.lime.build('integer')(0));
   }
 
   // Convert to rational

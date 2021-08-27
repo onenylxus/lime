@@ -40,20 +40,22 @@
     "absolute",
     "ceiling",
     "combination",
+    "conjugate",
     "factorial",
     "fibonacci",
     "floor",
     "greatestCommonDivisor",
+    "imaginary",
     "leastCommonMultiple",
     "maximum",
     "mean",
     "minimum",
-    "omitted",
     "permutation",
     "prime",
     "product",
     "random",
     "range",
+    "real",
     "reciprocal",
     "round",
     "sign",
@@ -61,6 +63,7 @@
     "truncation"
   ],
   [
-    "commonBracket"
+    "commonBracket",
+    "omitted"
   ]
 ]

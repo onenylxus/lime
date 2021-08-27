@@ -1,0 +1,14 @@
+{
+  "name": "Real function test",
+  "process": [
+    {
+      "desc": "argument of complex",
+      "config": {
+
+      },
+      "tests": [
+        ["re(1+2i)", "1"]
+      ]
+    }
+  ]
+}

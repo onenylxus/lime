@@ -1,0 +1,14 @@
+{
+  "name": "Conjugate function test",
+  "process": [
+    {
+      "desc": "argument of complex",
+      "config": {
+
+      },
+      "tests": [
+        ["conj(1+i)", "1-i"]
+      ]
+    }
+  ]
+}

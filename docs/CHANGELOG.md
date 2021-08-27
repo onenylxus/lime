@@ -1,6 +1,11 @@
 # Changelog
 
-### v0.2.0 (dev)
+### v0.2.1 (dev)
+- Added expressions: `Complex`
+- Added functions:
+  - Complex: `Conjugate`, `Imaginary`, `Real`
+- Modified existing functions to support new expression types
+### v0.2.0 (Aug 26, 2021)
 - Added expressions: `Argument`
 - Added functions:
   - Counting: `Combination`, `Permutation`

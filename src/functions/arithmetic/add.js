@@ -25,9 +25,12 @@ class LimeFunctionAdd extends LimeFunction {
       'cr(bool->int)',
       'cb(int->rat,rat)',
       'cb(rat,int->rat)',
+      'cb({int|rat}->comp,comp)',
+      'cb(comp,{int|rat}->comp)',
 
       'eb(int,int)',
       'eb(rat,rat)',
+      'eb(comp,comp)',
     ];
 
     // Algorithms
@@ -38,6 +41,12 @@ class LimeFunctionAdd extends LimeFunction {
       step.bs(this.lime.build('rational')(
         this.lime.direct([step.left.nPlace, '*', step.right.dPlace, '+', step.right.nPlace, '*', step.left.dPlace]),
         this.lime.direct([step.left.dPlace, '*', step.right.dPlace]),
+      ));
+    });
+    this.algorithms.set('b(comp,comp)', (step) => {
+      step.bs(this.lime.build('complex')(
+        this.lime.direct([step.left.rPlace, '+', step.right.rPlace]),
+        this.lime.direct([step.left.iPlace, '+', step.right.iPlace]),
       ));
     });
   }

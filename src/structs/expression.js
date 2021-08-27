@@ -12,7 +12,6 @@ class LimeExpression {
 
     // Properties
     this.name = args.hasOwnProperty('name') ? args.name : this.constructor.name.slice(12);
-    this.shorthand = args.hasOwnProperty('shorthand') ? args.shorthand : '';
     this.isSimple = args.hasOwnProperty('isSimple') && Types.isBoolean(args.isSimple) ? args.isSimple : true;
   }
 }

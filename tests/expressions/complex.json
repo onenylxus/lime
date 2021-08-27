@@ -1,0 +1,12 @@
+{
+  "name": "Complex expression test",
+  "process": [
+    {
+      "desc": "natural define",
+      "config": {},
+      "tests": [
+        ["i", "i"]
+      ]
+    }
+  ]
+}

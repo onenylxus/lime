@@ -1,0 +1,14 @@
+{
+  "name": "Imaginary function test",
+  "process": [
+    {
+      "desc": "argument of complex",
+      "config": {
+
+      },
+      "tests": [
+        ["im(2+i)", "1"]
+      ]
+    }
+  ]
+}

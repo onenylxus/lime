@@ -24,9 +24,12 @@ class LimeFunctionDivide extends LimeFunction {
       'cr(bool->int)',
       'cb(int->rat,rat)',
       'cb(rat,int->rat)',
+      'cb({int|rat}->comp,comp)',
+      'cb(comp,{int|rat}->comp)',
 
       'eb(int,int)',
       'eb(rat,rat)',
+      'eb(comp,comp)',
     ];
 
     // Algorithms
@@ -41,6 +44,12 @@ class LimeFunctionDivide extends LimeFunction {
       step.bs(this.lime.build('rational')(
         this.lime.direct([step.left.nPlace, '*', step.right.dPlace]),
         this.lime.direct([step.left.dPlace, '*', step.right.nPlace]),
+      ));
+    });
+    this.algorithms.set('b(comp,comp)', (step) => {
+      step.bs(this.lime.build('complex')(
+        this.lime.direct(['re', '(', step.left, '*', 'conj', '(', step.right, ')', ')', '/', '(', step.right, '*', 'conj', '(', step.right, ')', ')']),
+        this.lime.direct(['im', '(', step.left, '*', 'conj', '(', step.right, ')', ')', '/', '(', step.right, '*', 'conj', '(', step.right, ')', ')']),
       ));
     });
   }

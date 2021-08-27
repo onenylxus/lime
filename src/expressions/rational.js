@@ -8,7 +8,7 @@ class LimeExpressionRational extends LimeExpression {
   // Constructor
   constructor(lime, nPlace, dPlace) {
     // Super from expression class
-    super(lime, { name: 'rational', shorthand: 'rat', isSimple: true });
+    super(lime, { name: 'rational', isSimple: true });
 
     // Build expression
     if (!this.lime.identify('integer')(nPlace, dPlace)) {
@@ -32,6 +32,11 @@ class LimeExpressionRational extends LimeExpression {
     return this.lime.build('boolean')(this.value.n / this.value.d);
   }
 
+  // Convert to complex
+  toComplex() {
+    return this.lime.build('complex')(this, this.lime.build('integer')(0));
+  }
+
   // Simplify function
   simplify() {
     // Reduce by common factor
@@ -49,10 +54,7 @@ class LimeExpressionRational extends LimeExpression {
     if (this.value.d === 1) {
       return this.nPlace.simplify();
     }
-    return this.lime.build('rational')(
-      this.nPlace.simplify(),
-      this.dPlace.simplify(),
-    );
+    return this.lime.build('rational')(this.nPlace.simplify(), this.dPlace.simplify());
   }
 
   // Finalize function
@@ -62,7 +64,7 @@ class LimeExpressionRational extends LimeExpression {
 
   // Print function
   print() {
-    return `${this.value.n}/${this.value.d}`;
+    return `${this.nPlace.print()}/${this.dPlace.print()}`;
   }
 }
 

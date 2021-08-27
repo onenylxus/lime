@@ -24,9 +24,12 @@ class LimeFunctionMultiply extends LimeFunction {
       'cr(bool->int)',
       'cb(int->rat,rat)',
       'cb(rat,int->rat)',
+      'cb({int|rat}->comp,comp)',
+      'cb(comp,{int|rat}->comp)',
 
       'eb(int,int)',
       'eb(rat,rat)',
+      'eb(comp,comp)',
     ];
 
     // Algorithms
@@ -37,6 +40,12 @@ class LimeFunctionMultiply extends LimeFunction {
       step.bs(this.lime.build('rational')(
         this.lime.direct([step.left.nPlace, '*', step.right.nPlace]),
         this.lime.direct([step.left.dPlace, '*', step.right.dPlace]),
+      ));
+    });
+    this.algorithms.set('b(comp,comp)', (step) => {
+      step.bs(this.lime.build('complex')(
+        this.lime.direct([step.left.rPlace, '*', step.right.rPlace, '-', step.left.iPlace, '*', step.right.iPlace]),
+        this.lime.direct([step.left.rPlace, '*', step.right.iPlace, '+', step.left.iPlace, '*', step.right.rPlace]),
       ));
     });
   }

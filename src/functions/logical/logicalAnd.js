@@ -20,8 +20,8 @@ class LimeFunctionLogicalAnd extends LimeFunction {
       'cr(var->expr)',
       'cl(arg{expr[1]}->expr)',
       'cr(arg{expr[1]}->expr)',
-      'cl(!bool->bool)',
-      'cr(!bool->bool)',
+      'cl({comp|int|rat}->bool)',
+      'cr({comp|int|rat}->bool)',
 
       'eb(bool,bool)',
     ];

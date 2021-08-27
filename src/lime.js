@@ -253,7 +253,7 @@ class Lime {
     }
 
     // Finalize result
-    if (eq.result.length === 1) {
+    if (eq.result.length === 1 && (!this.identify('argument')(eq.result[0]) || eq.result[0].length === 1)) {
       eq.record(this.build('step')([eq.result[0].finalize()]));
     } else {
       throw new Error('issue:invalidResultLengthInProcess');

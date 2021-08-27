@@ -11,6 +11,7 @@ Module.set('list', require('../commands/list'));
 // Expressions
 Module.set('argument', require('../expressions/argument'));
 Module.set('boolean', require('../expressions/boolean'));
+Module.set('complex', require('../expressions/complex'));
 Module.set('integer', require('../expressions/integer'));
 Module.set('rational', require('../expressions/rational'));
 Module.set('variable', require('../expressions/variable'));
@@ -40,6 +41,11 @@ Module.set('greaterEqual', require('../functions/comparison/greaterEqual'));
 Module.set('notEqual', require('../functions/comparison/notEqual'));
 Module.set('smaller', require('../functions/comparison/smaller'));
 Module.set('smallerEqual', require('../functions/comparison/smallerEqual'));
+
+// Complex functions
+Module.set('conjugate', require('../functions/complex/conjugate'));
+Module.set('imaginary', require('../functions/complex/imaginary'));
+Module.set('real', require('../functions/complex/real'));
 
 // Counting functions
 Module.set('combination', require('../functions/counting/combination'));

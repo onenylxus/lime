@@ -5,6 +5,12 @@ const Oplist = {
     // [Binary] Boolean, Boolean
     'b(bool,bool)': (step) => step.bpi('boolean'),
 
+    // [Binary] Complex, Complex
+    'b(comp,comp)': (step) => step.bpi('complex'),
+
+    // [Binary] Complex, {Integer|Rational}
+    'b(comp,{int|rat})': (step) => step.lpi('complex') && step.rpi('integer', 'rational'),
+
     // [Binary] Expression, Expression
     'b(expr,expr)': (step) => step.bpi('expression'),
 
@@ -23,6 +29,9 @@ const Oplist = {
     // [Binary] Variable, Expression
     'b(var,expr)': (step) => step.lpi('variable') && step.rpi('expression'),
 
+    // [Binary] {Integer|Rational}, Complex
+    'b({int|rat},comp)': (step) => step.lpi('integer', 'rational') && step.rpi('complex'),
+
     // [Left unary] Argument{Expression[1]}
     'l(arg{expr[1]})': (step) => step.lpi('argument') && step.left.length === 1 && step.ci('expression')(step.left.places[0]),
 
@@ -35,14 +44,17 @@ const Oplist = {
     // [Left unary] Variable
     'l(var)': (step) => step.lpi('variable'),
 
-    // [Left unary] Non-boolean
-    'l(!bool)': (step) => !step.lpi('boolean'),
+    // [Left unary] {Complex|Integer|Rational}
+    'l({comp|int|rat})': (step) => step.lpi('complex', 'integer', 'rational'),
 
     // Nested
     'n()': () => true,
 
     // [Right unary] Argument{}
     'r(arg{})': (step) => step.rpi('argument') && step.right.isEmpty,
+
+    // [Right unary] Argument{Complex[1]}
+    'r(arg{comp[1]})': (step) => step.rpi('argument') && step.right.length === 1 && step.ci('complex')(...step.right.places),
 
     // [Right unary] Argument{Expression[1]}
     'r(arg{expr[1]})': (step) => step.rpi('argument') && step.right.length === 1 && step.ci('expression')(...step.right.places),
@@ -59,6 +71,9 @@ const Oplist = {
     // [Right unary] Argument{Rational[1]}
     'r(arg{rat[1]})': (step) => step.rpi('argument') && step.right.length === 1 && step.ci('rational')(...step.right.places),
 
+    // [Right unary] Argument{{Integer|Rational}[Some]}
+    'r(arg{{int|rat}[$]})': (step) => step.rpi('argument') && step.right.places.some((p) => step.ci('integer', 'rational')(p)),
+
     // [Right unary] Boolean
     'r(bool)': (step) => step.rpi('boolean'),
 
@@ -71,8 +86,8 @@ const Oplist = {
     // [Right unary] Variable
     'r(var)': (step) => step.rpi('variable'),
 
-    // [Right unary] Non-boolean
-    'r(!bool)': (step) => !step.rpi('boolean'),
+    // [Right unary] Complex, integer or rational
+    'r({comp|int|rat})': (step) => step.rpi('complex', 'integer', 'rational'),
 
     // [Right unary] Add
     'r(+)': (step) => step.rpi('add'),
@@ -190,14 +205,26 @@ const Oplist = {
       step.lps(step.left.value);
     },
 
-    // Convert left parameter from non-boolean to boolean
-    'l(!bool->bool)': (step) => {
+    // Convert left parameter from complex, integer or rational to boolean
+    'l({comp|int|rat}->bool)': (step) => {
       step.lps(step.left.toBoolean());
+    },
+
+    // Convert left parameter from integer or rational to complex
+    'l({int|rat}->comp)': (step) => {
+      step.lps(step.left.toComplex());
     },
 
     // Convert right parameter from argument length 1 to expression
     'r(arg{expr[1]}->expr)': (step) => {
       step.rps(step.right.finalize());
+    },
+
+    // Convert right parameter from argument with some integer or rational to argument with complex
+    'r(arg{{int|rat}[$]}->arg{comp[$]})': (step) => {
+      const res = step.right;
+      res.places = res.places.map((p) => (step.ci('integer', 'rational')(p) ? p.toComplex() : p));
+      step.rps(res);
     },
 
     // Convert right parameter from boolean to integer
@@ -215,9 +242,14 @@ const Oplist = {
       step.rps(step.right.value);
     },
 
-    // Convert right parameter from non-boolean to boolean
-    'r(!bool->bool)': (step) => {
+    // Convert right parameter from complex, integer or rational to boolean
+    'r({comp|int|rat}->bool)': (step) => {
       step.rps(step.right.toBoolean());
+    },
+
+    // Convert right parameter from integer or rational to complex
+    'r({int|rat}->comp)': (step) => {
+      step.rps(step.right.toComplex());
     },
 
     // Transfer right parameter to logical NOT
@@ -238,11 +270,17 @@ const Oplist = {
 
   // Operation pairs
   pair: {
+    // [Left unary] Convert right parameter from integer or rational to complex
+    'cb(comp,{int|rat}->comp)': ['b(comp,{int|rat})', 'r({int|rat}->comp)'],
+
     // [Binary] Convert left parameter from integer to rational
     'cb(int->rat,rat)': ['b(int,rat)', 'l(expr->rat)'],
 
     // [Binary] Convert right parameter from integer to rational
     'cb(rat,int->rat)': ['b(rat,int)', 'r(expr->rat)'],
+
+    // [Right unary] Convert left parameter from integer or rational to complex
+    'cb({int|rat}->comp,comp)': ['b({int|rat},comp)', 'l({int|rat}->comp)'],
 
     // [Left unary] Convert from argument length 1 to expression
     'cl(arg{expr[1]}->expr)': ['l(arg{expr[1]})', 'l(arg{expr[1]}->expr)'],
@@ -254,10 +292,13 @@ const Oplist = {
     'cl(var->expr)': ['l(var)', 'l(var->expr)'],
 
     // [Left unary] Convert from non-boolean to boolean
-    'cl(!bool->bool)': ['l(!bool)', 'l(!bool->bool)'],
+    'cl({comp|int|rat}->bool)': ['l({comp|int|rat})', 'l({comp|int|rat}->bool)'],
 
     // [Right unary] Convert from argument length 1 to expression
     'cr(arg{expr[1]}->expr)': ['r(arg{expr[1]})', 'r(arg{expr[1]}->expr)'],
+
+    // [Right unary] Convert from argument with some integer or rational to argument with complex
+    'cr(arg{{int|rat}[$]}->arg{comp[$]})': ['r(arg{{int|rat}[$]})', 'r(arg{{int|rat}[$]}->arg{comp[$]})'],
 
     // [Right unary] Convert from boolean to integer
     'cr(bool->int)': ['r(bool)', 'r(expr->int)'],
@@ -266,7 +307,7 @@ const Oplist = {
     'cr(var->expr)': ['r(var)', 'r(var->expr)'],
 
     // [Right unary] Convert from non-boolean to boolean
-    'cr(!bool->bool)': ['r(!bool)', 'r(!bool->bool)'],
+    'cr({comp|int|rat}->bool)': ['r({comp|int|rat})', 'r({comp|int|rat}->bool)'],
 
     // [Function] Transfer to equal
     'tf(==)': ['r(=)', 'f(==)'],

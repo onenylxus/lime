@@ -5,7 +5,7 @@
       "desc": "zero parameters",
       "config": {},
       "tests": [
-        ["about", "Lime version 0.2.0\nMathematics computation engine\n2021 Lime Project Team, MIT license\nhttps://github.com/onenylxus/lime"]
+        ["about", "Lime version 0.2.1\nMathematics computation engine\n2021 Lime Project Team, MIT license\nhttps://github.com/onenylxus/lime"]
       ]
     }
   ]

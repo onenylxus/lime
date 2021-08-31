@@ -1,4 +1,13 @@
 {
   "name": "Argument expression test",
-  "process": []
+  "process": [
+    {
+      "desc": "resolve to simple expression",
+      "config": {},
+      "tests": [
+        ["(1)", "1"],
+        ["((1))", "1"]
+      ]
+    }
+  ]
 }

@@ -21,15 +21,19 @@ class LimeFunctionPrime extends LimeFunction {
       if (t < 1) {
         throw new Error('error:invalidArgumentLogic');
       }
+      if (!this.lime.store.hasOwnProperty('prime')) {
+        this.lime.store.prime = [2];
+      }
 
-      const primes = [2]; let i = 3;
-      while (primes.length < t) {
-        if (primes.every((p) => i % p !== 0)) {
-          primes.push(i);
+      const s = [...this.lime.store.prime]; let i = s[s.length - 1] + 1;
+      while (s.length < t) {
+        if (s.every((p) => i % p !== 0)) {
+          s.push(i);
         }
         i++;
       }
-      step.rus(this.lime.direct([primes[primes.length - 1]]));
+      this.lime.store.prime = [...s];
+      step.rus(this.lime.direct([s[t - 1]]));
     });
   }
 }

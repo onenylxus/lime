@@ -21,8 +21,17 @@ class LimeFunctionFibonacci extends LimeFunction {
       if (t < 1) {
         throw new Error('error:invalidArgumentLogic');
       }
+      if (!this.lime.store.hasOwnProperty('fibonacci')) {
+        this.lime.store.fibonacci = [1, 1];
+      }
 
-      step.rus(this.lime.direct(t > 2 ? ['fibonacci', '(', t, '-', 1, ')', '+', 'fibonacci', '(', t, '-', 2, ')'] : [1]));
+      const s = [...this.lime.store.fibonacci];
+      while (s.length < t) {
+        s.push(s[s.length - 2] + s[s.length - 1]);
+      }
+
+      this.lime.store.fibonacci = [...s];
+      step.rus(this.lime.direct([s[t - 1]]));
     });
   }
 }

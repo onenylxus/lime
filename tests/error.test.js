@@ -37,7 +37,7 @@ describe('Error handling test', () => {
     expect(bundle.direct('1').includes(Message['error:inputNotArrayInDirect'])).toBeTruthy();
   });
 
-  test('empty string in prompt input', () => {
+  test('empty string in direct input', () => {
     expect(lime.direct([]).includes(Message['error:inputEmptyInDirect'])).toBeTruthy();
     expect(bundle.direct([]).includes(Message['error:inputEmptyInDirect'])).toBeTruthy();
   });

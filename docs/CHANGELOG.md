@@ -1,6 +1,7 @@
 # Changelog
 
-### v0.2.1 (dev)
+### v0.2.1 (Aug 31, 2021)
+- Set up store system to prevent repeated calculation
 - Added expressions: `Complex`
 - Added functions:
   - Complex: `Conjugate`, `Imaginary`, `Real`

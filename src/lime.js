@@ -14,6 +14,7 @@ class Lime {
     this.module = require('./system/module');
     this.variables = new Map();
     this.memory = [];
+    this.store = {};
   }
 
   /* ------------------------ division ------------------------ */

@@ -14,6 +14,7 @@ class LimeCommandClear extends LimeCommand {
     this.operations.set(0, () => {
       this.lime.variables = new Map();
       this.lime.memory = [];
+      this.lime.store = {};
       return 'Cleared';
     });
   }

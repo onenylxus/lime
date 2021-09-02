@@ -13,6 +13,7 @@ Module.set('argument', require('../expressions/argument'));
 Module.set('boolean', require('../expressions/boolean'));
 Module.set('complex', require('../expressions/complex'));
 Module.set('integer', require('../expressions/integer'));
+Module.set('matrix', require('../expressions/matrix'));
 Module.set('rational', require('../expressions/rational'));
 Module.set('variable', require('../expressions/variable'));
 
@@ -83,7 +84,9 @@ Module.set('sum', require('../functions/statistical/sum'));
 Module.set('assign', require('../functions/structural/assign'));
 Module.set('columnSplit', require('../functions/structural/columnSplit'));
 Module.set('commonBracket', require('../functions/structural/commonBracket'));
+Module.set('matrixBracket', require('../functions/structural/matrixBracket'));
 Module.set('omitted', require('../functions/structural/omitted'));
+Module.set('rowSplit', require('../functions/structural/rowSplit'));
 
 // Structures
 Module.set('command', require('../structs/command'));

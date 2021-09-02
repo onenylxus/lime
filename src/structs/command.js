@@ -15,7 +15,7 @@ class LimeCommand {
 
   // Execute function
   execute(input) {
-    const params = input.split(/\s/).slice(1), len = params.length;
+    const params = input.split(/\s/).slice(1); const len = params.length;
     if (!this.operations.has(len)) {
       throw new Error('error:invalidParametersInCommand');
     }

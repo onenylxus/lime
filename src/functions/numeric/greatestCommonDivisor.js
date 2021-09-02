@@ -17,7 +17,7 @@ class LimeFunctionGreatestCommonDivisor extends LimeFunction {
 
     // Algorithms
     this.algorithms.set('r(arg{int[2]})', (step) => {
-      let l = step.right.value[0], r = step.right.value[1];
+      let l = step.right.value[0]; let r = step.right.value[1];
       while (r !== 0) {
         const t = r;
         r = l % r;

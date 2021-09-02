@@ -15,7 +15,7 @@ class LimeFunction {
     // Properties
     this.mode = args.hasOwnProperty('mode') && ['l', 'r', 'b', 'n'].includes(args.mode) ? args.mode : 'x';
     this.name = args.hasOwnProperty('name') ? args.name : this.constructor.name.slice(12);
-    this.operations = { l: [], r: [], b: [], n: [] };
+    this.operations = {};
     this.algorithms = new Map();
   }
 
@@ -41,7 +41,7 @@ class LimeFunction {
     const op = this.operations[this.mode];
     for (let i = 0; i < op.length; i++) {
       // Fetch operation pairs
-      let cond, act;
+      let cond; let act;
       if (Types.isString(op[i])) {
         cond = op[i][0] === 'e' ? Oplist.cond[op[i].substring(1)] : Oplist.cond[Oplist.pair[op[i]][0]];
         act = op[i][0] === 'e' ? this.algorithms.get(op[i].substring(1)) : Oplist.act[Oplist.pair[op[i]][1]];

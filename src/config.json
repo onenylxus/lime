@@ -3,5 +3,6 @@
   "promptShowRuntime": false,
   "promptShowSteps": false,
   "strictBoolean": true,
+  "tabSize": 2,
   "testMode": false
 }

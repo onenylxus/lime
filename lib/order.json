@@ -1,6 +1,7 @@
 [
   [
-    "columnSplit"
+    "columnSplit",
+    "rowSplit"
   ],
   [
     "assign",
@@ -64,6 +65,7 @@
   ],
   [
     "commonBracket",
+    "matrixBracket",
     "omitted"
   ]
 ]

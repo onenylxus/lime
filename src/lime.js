@@ -2,6 +2,8 @@
 const Message = require('../lib/message.json');
 const Refer = require('../lib/refer.json');
 const Types = require('../utils/types');
+const Config = require('./config.json');
+const Module = require('./system/module');
 
 /* ------------------------ division ------------------------ */
 
@@ -10,8 +12,8 @@ class Lime {
   // Constructor
   constructor(conf) {
     // Properties
-    this.config = { ...require('./config.json'), ...conf };
-    this.module = require('./system/module');
+    this.config = { ...Config, ...conf };
+    this.module = Module;
     this.variables = new Map();
     this.memory = [];
     this.store = {};
@@ -144,7 +146,7 @@ class Lime {
 
   // Lex function
   lex(eq) {
-    const step = eq.input, res = [];
+    const step = eq.input; const res = [];
     for (let i = 0; i < step.length; i++) {
       const ch = step[i]; let key = ch;
 
@@ -185,7 +187,7 @@ class Lime {
   // Parse function
   parse(eq) {
     // Convert tokens to blocks
-    const tokens = eq.solution.shift(), res = [];
+    const tokens = eq.solution.shift(); const res = [];
     for (let i = 0; i < tokens.length; i++) {
       switch (tokens[i].type) {
         // Whitespace

@@ -7,7 +7,7 @@ function crosstest(testFunc, expectFunc, limeClass, bundleClass, unit) {
       [limeClass, bundleClass].forEach((p) => {
         ['prompt', 'evaluate'].forEach((m) => {
           obj.tests.forEach((t) => {
-            const lime = (p)({ testMode: true, ...obj.config }), l = t.length;
+            const lime = (p)({ testMode: true, ...obj.config }); const l = t.length;
             t.slice(0, -2).forEach((j) => lime[m](j));
             (expectFunc)(lime[m](t[l - 2])).toStrictEqual(t[l - 1]);
           });

@@ -1,0 +1,20 @@
+{
+  "name": "Zero matrix function test",
+  "process": [
+    {
+      "desc": "argument of integer",
+      "config": {},
+      "tests": [
+        ["zeromat(1)", "[0]"],
+        ["zeromat(2)", "[0,0;0,0]"]
+      ]
+    },
+    {
+      "desc": "argument of integer and integer",
+      "config": {},
+      "tests": [
+        ["zeromat(2,3)", "[0,0,0;0,0,0]"]
+      ]
+    }
+  ]
+}

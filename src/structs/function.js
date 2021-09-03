@@ -1,4 +1,4 @@
-// Include
+// Require
 const Oplist = require('../system/oplist');
 const Order = require('../../lib/order.json');
 const Types = require('../../utils/types');

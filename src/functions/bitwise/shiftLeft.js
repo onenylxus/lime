@@ -1,4 +1,4 @@
-// Include
+// Require
 const LimeFunction = require('../../structs/function');
 
 /* ------------------------ division ------------------------ */

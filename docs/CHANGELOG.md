@@ -3,6 +3,7 @@
 ### v0.2.2 (dev)
 - Added expressions: `Matrix`
 - Added functions:
+  - Matrix: `IdentityMatrix`, `OneMatrix`, `ZeroMatrix`
   - Structural: `MatrixBracket`, `RowSplit`
 ### v0.2.1 (Aug 31, 2021)
 - Set up store system to prevent repeated calculation

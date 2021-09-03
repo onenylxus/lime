@@ -46,11 +46,13 @@
     "fibonacci",
     "floor",
     "greatestCommonDivisor",
+    "identityMatrix",
     "imaginary",
     "leastCommonMultiple",
     "maximum",
     "mean",
     "minimum",
+    "oneMatrix",
     "permutation",
     "prime",
     "product",
@@ -61,7 +63,8 @@
     "round",
     "sign",
     "sum",
-    "truncation"
+    "truncation",
+    "zeroMatrix"
   ],
   [
     "commonBracket",

@@ -58,6 +58,11 @@ Module.set('logicalAnd', require('../functions/logical/logicalAnd'));
 Module.set('logicalNot', require('../functions/logical/logicalNot'));
 Module.set('logicalOr', require('../functions/logical/logicalOr'));
 
+// Matrix functions
+Module.set('identityMatrix', require('../functions/matrix/identityMatrix'));
+Module.set('oneMatrix', require('../functions/matrix/oneMatrix'));
+Module.set('zeroMatrix', require('../functions/matrix/zeroMatrix'));
+
 // Numeric functions
 Module.set('absolute', require('../functions/numeric/absolute'));
 Module.set('ceiling', require('../functions/numeric/ceiling'));

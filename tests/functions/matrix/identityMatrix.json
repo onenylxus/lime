@@ -1,0 +1,13 @@
+{
+  "name": "Identity matrix function test",
+  "process": [
+    {
+      "desc": "argument of integer",
+      "config": {},
+      "tests": [
+        ["idmat(1)", "[1]"],
+        ["idmat(2)", "[1,0;0,1]"]
+      ]
+    }
+  ]
+}

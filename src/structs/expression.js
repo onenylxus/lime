@@ -1,4 +1,4 @@
-// Include
+// Require
 const Types = require('../../utils/types');
 
 /* ------------------------ division ------------------------ */

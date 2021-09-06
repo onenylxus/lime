@@ -25,7 +25,6 @@ class LimeFunctionOneMatrix extends LimeFunction {
           places[j].push(this.lime.direct([1]));
         }
       }
-      console.log(places);
       step.rus(this.lime.build('matrix')(places));
     });
     this.algorithms.set('r(arg{int[2]})', (step) => {

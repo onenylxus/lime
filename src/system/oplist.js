@@ -26,6 +26,9 @@ const Oplist = {
     // [Binary] Rational, Rational
     'b(rat,rat)': (step) => step.bpi('rational'),
 
+    // [Binary] Matrix, Matrix
+    'b(mat,mat)': (step) => step.bpi('matrix'),
+
     // [Binary] Variable, Expression
     'b(var,expr)': (step) => step.lpi('variable') && step.rpi('expression'),
 

@@ -58,7 +58,7 @@ class LimeFunctionMatrixBracket extends LimeFunction {
       }
 
       // Evaluate and splice
-      const places = []; let len = 2 + (++row) * (++col);
+      const places = []; let len = 1 + (++row) * (++col);
       for (let j = 0; j < row; j++) {
         places.push([]);
         for (let k = 0; k < col; k++) {

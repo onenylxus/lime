@@ -3,7 +3,7 @@
 ### v0.2.2 (dev)
 - Added expressions: `Matrix`
 - Added functions:
-  - Matrix: `IdentityMatrix`, `OneMatrix`, `ZeroMatrix`
+  - Matrix: `IdentityMatrix`, `Index`, `OneMatrix`, `ZeroMatrix`
   - Structural: `MatrixBracket`, `RowSplit`
 - Modified existing functions to support new expression types
 ### v0.2.1 (Aug 31, 2021)
@@ -16,7 +16,7 @@
 - Added expressions: `Argument`
 - Added functions:
   - Counting: `Combination`, `Permutation`
-  - Numeric: `Absolute`, `Ceiling`, `Fibonacci`, `Floor`, `greatestCommonDivisor`, `LeastCommonMultiple`, `Prime`, `Reciprocal`, `Round`, `Sign`, `Truncation`
+  - Numeric: `Absolute`, `Ceiling`, `Fibonacci`, `Floor`, `GreatestCommonDivisor`, `LeastCommonMultiple`, `Prime`, `Reciprocal`, `Round`, `Sign`, `Truncation`
   - Statistical: `Maximum`, `Mean`, `Minimum`, `Product`, `Random`, `Range`, `Sum`
   - Structural: `ColumnSplit`, `Omitted`
 - Improved rational simplify process

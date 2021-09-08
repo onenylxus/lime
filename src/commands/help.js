@@ -13,9 +13,9 @@ class LimeCommandHelp extends LimeCommand {
     // Operations
     this.operations.set(0, () => {
       const res = ['Below is a list of available commands:'];
-      this.lime.module.forEach((m) => {
+      this.lime.module.forEach((M) => {
         try {
-          const v = new (m)(this.lime);
+          const v = new (M)(this.lime);
           if (v instanceof LimeCommand) {
             res.push(`${v.name}: ${v.description}`);
           }

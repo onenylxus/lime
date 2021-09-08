@@ -60,6 +60,7 @@ Module.set('logicalOr', require('../functions/logical/logicalOr'));
 
 // Matrix functions
 Module.set('identityMatrix', require('../functions/matrix/identityMatrix'));
+Module.set('index', require('../functions/matrix/index'));
 Module.set('oneMatrix', require('../functions/matrix/oneMatrix'));
 Module.set('zeroMatrix', require('../functions/matrix/zeroMatrix'));
 

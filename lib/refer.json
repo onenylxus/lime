@@ -18,6 +18,7 @@
   "gcd": ["greatestCommonDivisor", "r"],
   "idmat": ["identityMatrix", "r"],
   "im": ["imaginary", "r"],
+  "index": ["index", "r"],
   "lcm": ["leastCommonMultiple", "r"],
   "max": ["maximum", "r"],
   "mean": ["mean", "r"],

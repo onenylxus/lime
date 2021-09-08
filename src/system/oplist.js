@@ -3,127 +3,208 @@ const Oplist = {
   // Conditions
   cond: {
     // [Binary] Boolean, Boolean
-    'b(bool,bool)': (step) => step.bpi('boolean'),
+    'b(bool,bool)':
+      (step) => step.bpi('boolean'),
 
     // [Binary] Complex, Complex
-    'b(comp,comp)': (step) => step.bpi('complex'),
+    'b(comp,comp)':
+      (step) => step.bpi('complex'),
 
     // [Binary] Complex, {Integer|Rational}
-    'b(comp,{int|rat})': (step) => step.lpi('complex') && step.rpi('integer', 'rational'),
+    'b(comp,{int|rat})':
+      (step) => step.lpi('complex')
+      && step.rpi('integer', 'rational'),
 
     // [Binary] Expression, Expression
-    'b(expr,expr)': (step) => step.bpi('expression'),
+    'b(expr,expr)':
+      (step) => step.bpi('expression'),
 
     // [Binary] Integer, Integer
-    'b(int,int)': (step) => step.bpi('integer'),
+    'b(int,int)':
+      (step) => step.bpi('integer'),
 
     // [Binary] Integer, Rational
-    'b(int,rat)': (step) => step.lpi('integer') && step.rpi('rational'),
+    'b(int,rat)':
+      (step) => step.lpi('integer')
+      && step.rpi('rational'),
 
     // [Binary] Rational, Integer
-    'b(rat,int)': (step) => step.lpi('rational') && step.rpi('integer'),
+    'b(rat,int)':
+      (step) => step.lpi('rational')
+      && step.rpi('integer'),
 
     // [Binary] Rational, Rational
-    'b(rat,rat)': (step) => step.bpi('rational'),
+    'b(rat,rat)':
+      (step) => step.bpi('rational'),
+
+    // [Binary] Matrix, Argument{Integer[1]}
+    'b(mat,arg{int[1]})':
+      (step) => step.lpi('matrix')
+      && step.rpi('argument')
+      && step.right.length === 1
+      && step.ci('integer')(...step.right.places),
 
     // [Binary] Matrix, Matrix
-    'b(mat,mat)': (step) => step.bpi('matrix'),
+    'b(mat,mat)':
+      (step) => step.bpi('matrix'),
 
     // [Binary] Variable, Expression
-    'b(var,expr)': (step) => step.lpi('variable') && step.rpi('expression'),
+    'b(var,expr)':
+      (step) => step.lpi('variable')
+      && step.rpi('expression'),
 
     // [Binary] {Integer|Rational}, Complex
-    'b({int|rat},comp)': (step) => step.lpi('integer', 'rational') && step.rpi('complex'),
+    'b({int|rat},comp)':
+      (step) => step.lpi('integer', 'rational')
+      && step.rpi('complex'),
 
     // [Left unary] Argument{Expression[1]}
-    'l(arg{expr[1]})': (step) => step.lpi('argument') && step.left.length === 1 && step.ci('expression')(step.left.places[0]),
+    'l(arg{expr[1]})':
+      (step) => step.lpi('argument')
+      && step.left.length === 1
+      && step.ci('expression')(...step.left.places),
 
     // [Left unary] Boolean
-    'l(bool)': (step) => step.lpi('boolean'),
+    'l(bool)':
+      (step) => step.lpi('boolean'),
 
     // [Left unary] Integer
-    'l(int)': (step) => step.lpi('integer'),
+    'l(int)':
+      (step) => step.lpi('integer'),
 
     // [Left unary] Variable
-    'l(var)': (step) => step.lpi('variable'),
+    'l(var)':
+      (step) => step.lpi('variable'),
 
     // [Left unary] {Complex|Integer|Rational}
-    'l({comp|int|rat})': (step) => step.lpi('complex', 'integer', 'rational'),
+    'l({comp|int|rat})':
+      (step) => step.lpi('complex', 'integer', 'rational'),
 
     // Nested
     'n()': () => true,
 
     // [Right unary] Argument{}
-    'r(arg{})': (step) => step.rpi('argument') && step.right.isEmpty,
+    'r(arg{})':
+      (step) => step.rpi('argument')
+      && step.right.isEmpty,
 
     // [Right unary] Argument{Complex[1]}
-    'r(arg{comp[1]})': (step) => step.rpi('argument') && step.right.length === 1 && step.ci('complex')(...step.right.places),
+    'r(arg{comp[1]})':
+      (step) => step.rpi('argument')
+      && step.right.length === 1
+      && step.ci('complex')(...step.right.places),
 
     // [Right unary] Argument{Expression[1]}
-    'r(arg{expr[1]})': (step) => step.rpi('argument') && step.right.length === 1 && step.ci('expression')(...step.right.places),
+    'r(arg{expr[1]})':
+      (step) => step.rpi('argument')
+      && step.right.length === 1
+      && step.ci('expression')(...step.right.places),
 
     // [Right unary] Argument{Expression[Any]}
-    'r(arg{expr[@]})': (step) => step.rpi('argument') && step.ci('expression')(...step.right.places),
+    'r(arg{expr[@]})':
+      (step) => step.rpi('argument')
+      && step.ci('expression')(...step.right.places),
 
     // [Right unary] Argument{Integer[1]}
-    'r(arg{int[1]})': (step) => step.rpi('argument') && step.right.length === 1 && step.ci('integer')(...step.right.places),
+    'r(arg{int[1]})':
+      (step) => step.rpi('argument')
+      && step.right.length === 1
+      && step.ci('integer')(...step.right.places),
 
     // [Right unary] Argument{Integer[2]}
-    'r(arg{int[2]})': (step) => step.rpi('argument') && step.right.length === 2 && step.ci('integer')(...step.right.places),
+    'r(arg{int[2]})':
+      (step) => step.rpi('argument')
+      && step.right.length === 2
+      && step.ci('integer')(...step.right.places),
 
     // [Right unary] Argument{Rational[1]}
-    'r(arg{rat[1]})': (step) => step.rpi('argument') && step.right.length === 1 && step.ci('rational')(...step.right.places),
+    'r(arg{rat[1]})':
+      (step) => step.rpi('argument')
+      && step.right.length === 1
+      && step.ci('rational')(...step.right.places),
+
+    // [Right unary] Argument{Matrix[1],Integer[1]}
+    'r(arg{mat[1],int[1]})':
+      (step) => step.rpi('argument')
+      && step.right.length === 2
+      && step.ci('matrix')(step.right.places[0])
+      && step.ci('integer')(step.right.places[1]),
+
+    // [Right unary] Argument{Matrix[1],Integer[1]}
+    'r(arg{mat[1],int[2]})':
+      (step) => step.rpi('argument')
+      && step.right.length === 3
+      && step.ci('matrix')(step.right.places[0])
+      && step.ci('integer')(step.right.places[1], step.right.places[2]),
 
     // [Right unary] Argument{{Integer|Rational}[Some]}
-    'r(arg{{int|rat}[$]})': (step) => step.rpi('argument') && step.right.places.some((p) => step.ci('integer', 'rational')(p)),
+    'r(arg{{int|rat}[$]})':
+      (step) => step.rpi('argument')
+      && step.right.places.some((p) => step.ci('integer', 'rational')(p)),
 
     // [Right unary] Boolean
-    'r(bool)': (step) => step.rpi('boolean'),
+    'r(bool)':
+      (step) => step.rpi('boolean'),
 
     // [Right unary] Integer
-    'r(int)': (step) => step.rpi('integer'),
+    'r(int)':
+      (step) => step.rpi('integer'),
 
     // [Right unary] Rational
-    'r(rat)': (step) => step.rpi('rational'),
+    'r(rat)':
+      (step) => step.rpi('rational'),
 
     // [Right unary] Variable
-    'r(var)': (step) => step.rpi('variable'),
+    'r(var)':
+      (step) => step.rpi('variable'),
 
     // [Right unary] Complex, integer or rational
-    'r({comp|int|rat})': (step) => step.rpi('complex', 'integer', 'rational'),
+    'r({comp|int|rat})':
+      (step) => step.rpi('complex', 'integer', 'rational'),
 
     // [Right unary] Add
-    'r(+)': (step) => step.rpi('add'),
+    'r(+)':
+      (step) => step.rpi('add'),
 
     // [Right unary] Assign
-    'r(=)': (step) => step.rpi('assign'),
+    'r(=)':
+      (step) => step.rpi('assign'),
 
     // [Right unary] Bitwise AND
-    'r(&)': (step) => step.rpi('bitwiseAnd'),
+    'r(&)':
+      (step) => step.rpi('bitwiseAnd'),
 
     // [Right unary] Bitwise OR
-    'r(|)': (step) => step.rpi('bitwiseOr'),
+    'r(|)':
+      (step) => step.rpi('bitwiseOr'),
 
     // [Right unary] Factorial
-    'r(!)': (step) => step.rpi('factorial'),
+    'r(!)':
+      (step) => step.rpi('factorial'),
 
     // [Right unary] Greater
-    'r(>)': (step) => step.rpi('greater'),
+    'r(>)':
+      (step) => step.rpi('greater'),
 
     // [Right unary] Negative
-    'r(_-)': (step) => step.rpi('negative'),
+    'r(_-)':
+      (step) => step.rpi('negative'),
 
     // [Right unary] Positive
-    'r(_+)': (step) => step.rpi('positive'),
+    'r(_+)':
+      (step) => step.rpi('positive'),
 
     // [Right unary] Smaller
-    'r(<)': (step) => step.rpi('smaller'),
+    'r(<)':
+      (step) => step.rpi('smaller'),
 
     // [Right unary] Subtract
-    'r(-)': (step) => step.rpi('subtract'),
+    'r(-)':
+      (step) => step.rpi('subtract'),
 
     // Zero position
-    'z()': (step) => step.pos === 0,
+    'z()':
+      (step) => step.pos === 0,
   },
 
   // Actions

@@ -32,10 +32,11 @@ class LimeFunctionCommonBracket extends LimeFunction {
             stack.pop();
             if (stack.length === 0) { break; }
           }
+          nest[part].push(data[++i]);
         }
 
         // Splits
-        else if (this.lime.identify('columnSplit')(data[i + 1])) {
+        else if (this.lime.identify('columnSplit')(data[i + 1]) && stack.length === 1) {
           nest.push([]);
           part++;
           i++;
@@ -44,7 +45,9 @@ class LimeFunctionCommonBracket extends LimeFunction {
         }
 
         // General expressions and functions
-        nest[part].push(data[++i]);
+        else {
+          nest[part].push(data[++i]);
+        }
       }
       if (stack.length > 0) {
         throw new Error('error:unmatchedBrackets');

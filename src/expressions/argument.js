@@ -12,7 +12,10 @@ class LimeExpressionArgument extends LimeExpression {
     super(lime, { name: 'argument', isSimple: false });
 
     // Build expression
-    if (!this.lime.identify('expression')(...places) && !(Types.isNull(places[0]))) {
+    if (
+      !this.lime.identify('expression')(...places)
+      && !(Types.isNull(places[0]))
+    ) {
       throw new Error('issue:invalidExpressionInConstruct');
     }
     this.places = places;

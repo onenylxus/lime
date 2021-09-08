@@ -1,0 +1,19 @@
+{
+  "name": "Index function test",
+  "process": [
+    {
+      "desc": "argument of matrix and integer",
+      "config": {},
+      "tests": [
+        ["index([1,2,3;4,5,6],4)", "4"]
+      ]
+    },
+    {
+      "desc": "argument of matrix, integer and integer",
+      "config": {},
+      "tests": [
+        ["index([1,2,3;4,5,6],1,1)", "1"]
+      ]
+    }
+  ]
+}

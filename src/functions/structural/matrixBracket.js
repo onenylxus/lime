@@ -32,16 +32,17 @@ class LimeFunctionMatrixBracket extends LimeFunction {
             stack.pop();
             if (stack.length === 0) { break; }
           }
+          nest[row][col].push(data[++i]);
         }
 
         // Splits
-        else if (this.lime.identify('columnSplit')(data[i + 1])) {
+        else if (this.lime.identify('columnSplit')(data[i + 1]) && stack.length === 1) {
           nest[row].push([]);
           col++;
           i++;
-        } else if (this.lime.identify('rowSplit')(data[i + 1])) {
+        } else if (this.lime.identify('rowSplit')(data[i + 1]) && stack.length === 1) {
           if (row > 0 && nest[row].length !== nest[0].length) {
-            throw new Error();
+            throw new Error('error:invalidArgumentLogic');
           }
 
           nest.push([[]]);
@@ -51,7 +52,9 @@ class LimeFunctionMatrixBracket extends LimeFunction {
         }
 
         // General expressions and functions
-        nest[row][col].push(data[++i]);
+        else {
+          nest[row][col].push(data[++i]);
+        }
       }
       if (stack.length > 0) {
         throw new Error('error:unmatchedBrackets');

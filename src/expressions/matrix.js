@@ -12,7 +12,10 @@ class LimeExpressionMatrix extends LimeExpression {
     super(lime, { name: 'matrix', isSimple: false });
 
     // Build expression
-    if (!this.lime.identify('expression')(...places.flat()) && !(Types.isNull(places[0][0]))) {
+    if (
+      !this.lime.identify('expression')(...places.flat())
+      && !(Types.isNull(places[0][0]))
+    ) {
       throw new Error('issue:invalidExpressionInConstruct');
     }
     const l = places[0].length;
@@ -37,6 +40,11 @@ class LimeExpressionMatrix extends LimeExpression {
   // Get column
   get column() {
     return this.isEmpty ? 0 : this.places[0].length;
+  }
+
+  // Get size
+  get size() {
+    return this.row * this.column;
   }
 
   // Get empty matrix status

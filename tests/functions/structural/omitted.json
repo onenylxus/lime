@@ -2,6 +2,13 @@
   "name": "Omitted function test",
   "process": [
     {
+      "desc": "index function",
+      "config": {},
+      "tests": [
+        ["[1,2;3,4](2)", "2"]
+      ]
+    },
+    {
       "desc": "multiply function",
       "config": {},
       "tests": [

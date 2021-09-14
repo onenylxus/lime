@@ -42,6 +42,7 @@
     "ceiling",
     "combination",
     "conjugate",
+    "determinant",
     "factorial",
     "fibonacci",
     "floor",
@@ -53,6 +54,7 @@
     "maximum",
     "mean",
     "minimum",
+    "minor",
     "oneMatrix",
     "permutation",
     "prime",
@@ -64,6 +66,7 @@
     "round",
     "sign",
     "sum",
+    "trace",
     "truncation",
     "zeroMatrix"
   ],

@@ -3,7 +3,7 @@
 ### v0.2.2 (dev)
 - Added expressions: `Matrix`
 - Added functions:
-  - Matrix: `IdentityMatrix`, `Index`, `OneMatrix`, `ZeroMatrix`
+  - Matrix: `Determinant`, `IdentityMatrix`, `Index`, `Minor`, `OneMatrix`, `Trace`, `ZeroMatrix`
   - Structural: `MatrixBracket`, `RowSplit`
 - Modified existing functions to support new expression types
 ### v0.2.1 (Aug 31, 2021)

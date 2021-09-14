@@ -123,6 +123,12 @@ const Oplist = {
       && step.right.length === 1
       && step.ci('rational')(...step.right.places),
 
+    // [Right unary] Argument{Matrix[1]}
+    'r(arg{mat[1]})':
+      (step) => step.rpi('argument')
+      && step.right.length === 1
+      && step.ci('matrix')(...step.right.places),
+
     // [Right unary] Argument{Matrix[1],Integer[1]}
     'r(arg{mat[1],int[1]})':
       (step) => step.rpi('argument')

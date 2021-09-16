@@ -35,6 +35,7 @@
   "re": ["real", "r"],
   "reciprocal": ["reciprocal", "r"],
   "round": ["round", "r"],
+  "rref": ["reducedRowEchelonForm", "r"],
   "sgn": ["sign", "r"],
   "sum": ["sum", "r"],
   "tr": ["trace", "r"],

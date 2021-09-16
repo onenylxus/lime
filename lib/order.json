@@ -63,6 +63,7 @@
     "range",
     "real",
     "reciprocal",
+    "reducedRowEchelonForm",
     "round",
     "sign",
     "sum",

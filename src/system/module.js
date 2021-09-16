@@ -64,6 +64,7 @@ Module.set('identityMatrix', require('../functions/matrix/identityMatrix'));
 Module.set('index', require('../functions/matrix/index'));
 Module.set('minor', require('../functions/matrix/minor'));
 Module.set('oneMatrix', require('../functions/matrix/oneMatrix'));
+Module.set('reducedRowEchelonForm', require('../functions/matrix/reducedRowEchelonForm'));
 Module.set('trace', require('../functions/matrix/trace'));
 Module.set('zeroMatrix', require('../functions/matrix/zeroMatrix'));
 

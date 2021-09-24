@@ -18,8 +18,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+        registry-url: https://npm.pkg.github.com/
     - name: Install dependencies with yarn
       run: yarn --frozen-lockfile
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
     - name: Run tests with jest
       run: yarn test
     - name: Upload coverage with codecov

@@ -1,6 +1,6 @@
 {
   "name": "@onenylxus/lime",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Mathematics computation engine",
   "author": "Lime Project Team",
   "license": "MIT",
@@ -12,7 +12,9 @@
   "module": "dist/bundle-cjs.js",
   "browser": "dist/bundle-esm.js",
   "sideEffects": false,
-  "dependencies": {},
+  "dependencies": {
+    "@onenylxus/helpers": "^1.0.0"
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-json": "^4.1.0",

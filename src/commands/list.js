@@ -1,6 +1,6 @@
 // Require
+const { Types } = require('@onenylxus/helpers');
 const LimeCommand = require('../structs/command');
-const Types = require('../../utils/types');
 
 /* ------------------------ division ------------------------ */
 

@@ -1,5 +1,5 @@
 // Require
-const Types = require('../../utils/types');
+const { Types } = require('@onenylxus/helpers');
 
 /* ------------------------ division ------------------------ */
 

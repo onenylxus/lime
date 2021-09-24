@@ -30,15 +30,18 @@ class LimeFunctionPositive extends LimeFunction {
     this.algorithms.set('r(int)', (step) => {
       step.rus(this.lime.direct([1, '*', step.right]));
     });
+
     this.algorithms.set('r(rat)', (step) => {
       step.rus(this.lime.build('rational')(
         this.lime.direct([step.right.nPlace]),
         step.right.dPlace,
       ));
     });
+
     this.algorithms.set('r(_+)', (step) => {
       step.rus(this.lime.refer('_+'));
     });
+
     this.algorithms.set('r(_-)', (step) => {
       step.rus(this.lime.refer('_-'));
     });

@@ -20,6 +20,7 @@ class LimeFunctionRound extends LimeFunction {
     this.algorithms.set('r(arg{int[1]})', (step) => {
       step.rus(this.lime.direct([step.right.value[0]]));
     });
+
     this.algorithms.set('r(arg{rat[1]})', (step) => {
       step.rus(this.lime.direct([Math.round(step.right.value[0].n / step.right.value[0].d)]));
     });

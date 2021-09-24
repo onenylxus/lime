@@ -21,13 +21,17 @@
     "logicalNot",
     "logicalOr",
     "modulo",
+    "scalarAdd",
+    "scalarSubtract",
     "shiftLeft",
     "shiftRight",
     "subtract"
   ],
   [
     "divide",
-    "multiply"
+    "multiply",
+    "scalarDivide",
+    "scalarMultiply"
   ],
   [
     "exponent"
@@ -68,6 +72,7 @@
     "sign",
     "sum",
     "trace",
+    "transpose",
     "truncation",
     "zeroMatrix"
   ],

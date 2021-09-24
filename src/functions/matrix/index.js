@@ -29,6 +29,7 @@ class LimeFunctionIndex extends LimeFunction {
       const c = (step.right.value[1] - 1) % step.right.places[0].column;
       step.rus(step.right.places[0].places[r][c]);
     });
+
     this.algorithms.set('r(arg{mat[1],int[2]})', (step) => {
       if (
         step.right.value[1] <= 0

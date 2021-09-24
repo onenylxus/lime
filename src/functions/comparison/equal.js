@@ -33,6 +33,7 @@ class LimeFunctionEqual extends LimeFunction {
     this.algorithms.set('b(int,int)', (step) => {
       step.bs(this.lime.build('boolean')(step.left.value === step.right.value));
     });
+
     this.algorithms.set('b(rat,rat)', (step) => {
       step.bs(this.lime.direct([step.left.nPlace, '*', step.right.dPlace, '==', step.right.nPlace, '*', step.left.dPlace]));
     });

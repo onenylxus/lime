@@ -3,6 +3,7 @@
 ### v0.2.2 (dev)
 - Added expressions: `Matrix`
 - Added functions:
+  - Arithmetic: `ScalarAdd`, `ScalarDivide`, `ScalarMultiply`, `ScalarSubtract`
   - Matrix: `Determinant`, `IdentityMatrix`, `Index`, `Minor`, `OneMatrix`, `Trace`, `ZeroMatrix`
   - Structural: `MatrixBracket`, `RowSplit`
 - Modified existing functions to support new expression types

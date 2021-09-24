@@ -26,6 +26,10 @@ Module.set('modulo', require('../functions/arithmetic/modulo'));
 Module.set('multiply', require('../functions/arithmetic/multiply'));
 Module.set('negative', require('../functions/arithmetic/negative'));
 Module.set('positive', require('../functions/arithmetic/positive'));
+Module.set('scalarAdd', require('../functions/arithmetic/scalarAdd'));
+Module.set('scalarDivide', require('../functions/arithmetic/scalarDivide'));
+Module.set('scalarMultiply', require('../functions/arithmetic/scalarMultiply'));
+Module.set('scalarSubtract', require('../functions/arithmetic/scalarSubtract'));
 Module.set('subtract', require('../functions/arithmetic/subtract'));
 
 // Bitwise functions
@@ -66,6 +70,7 @@ Module.set('minor', require('../functions/matrix/minor'));
 Module.set('oneMatrix', require('../functions/matrix/oneMatrix'));
 Module.set('reducedRowEchelonForm', require('../functions/matrix/reducedRowEchelonForm'));
 Module.set('trace', require('../functions/matrix/trace'));
+Module.set('transpose', require('../functions/matrix/transpose'));
 Module.set('zeroMatrix', require('../functions/matrix/zeroMatrix'));
 
 // Numeric functions

@@ -27,6 +27,7 @@ class LimeFunctionZeroMatrix extends LimeFunction {
       }
       step.rus(this.lime.build('matrix')(places));
     });
+
     this.algorithms.set('r(arg{int[2]})', (step) => {
       const places = [];
       for (let j = 0; j < step.right.value[0]; j++) {

@@ -41,6 +41,7 @@ class LimeFunctionExponent extends LimeFunction {
         ));
       }
     });
+
     this.algorithms.set('b(rat,int)', (step) => {
       if (step.right.value >= 0) {
         step.bs(this.lime.build('rational')(

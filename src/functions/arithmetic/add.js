@@ -38,18 +38,21 @@ class LimeFunctionAdd extends LimeFunction {
     this.algorithms.set('b(int,int)', (step) => {
       step.bs(this.lime.build('integer')(step.left.value + step.right.value));
     });
+
     this.algorithms.set('b(rat,rat)', (step) => {
       step.bs(this.lime.build('rational')(
         this.lime.direct([step.left.nPlace, '*', step.right.dPlace, '+', step.right.nPlace, '*', step.left.dPlace]),
         this.lime.direct([step.left.dPlace, '*', step.right.dPlace]),
       ));
     });
+
     this.algorithms.set('b(comp,comp)', (step) => {
       step.bs(this.lime.build('complex')(
         this.lime.direct([step.left.rPlace, '+', step.right.rPlace]),
         this.lime.direct([step.left.iPlace, '+', step.right.iPlace]),
       ));
     });
+
     this.algorithms.set('b(mat,mat)', (step) => {
       if (step.left.row !== step.right.row || step.left.column !== step.right.column) {
         throw new Error('error:invalidMatrixDimensions');

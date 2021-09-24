@@ -44,6 +44,11 @@ const Oplist = {
       && step.right.length === 1
       && step.ci('integer')(...step.right.places),
 
+    // [Binary] Matrix, {Complex|Integer|Rational}
+    'b(mat,{comp|int|rat})':
+      (step) => step.lpi('matrix')
+      && step.rpi('complex', 'integer', 'rational'),
+
     // [Binary] Matrix, Matrix
     'b(mat,mat)':
       (step) => step.bpi('matrix'),
@@ -52,6 +57,11 @@ const Oplist = {
     'b(var,expr)':
       (step) => step.lpi('variable')
       && step.rpi('expression'),
+
+    // [Binary] {Complex|Integer|Rational}, Matrix
+    'b({comp|int|rat},mat)':
+      (step) => step.lpi('complex', 'integer', 'rational')
+      && step.rpi('matrix'),
 
     // [Binary] {Integer|Rational}, Complex
     'b({int|rat},comp)':
@@ -184,6 +194,10 @@ const Oplist = {
     'r(|)':
       (step) => step.rpi('bitwiseOr'),
 
+    // [Right unary] Divide
+    'r(/)':
+      (step) => step.rpi('divide'),
+
     // [Right unary] Factorial
     'r(!)':
       (step) => step.rpi('factorial'),
@@ -191,6 +205,10 @@ const Oplist = {
     // [Right unary] Greater
     'r(>)':
       (step) => step.rpi('greater'),
+
+    // [Right unary] Multiply
+    'r(*)':
+      (step) => step.rpi('multiply'),
 
     // [Right unary] Negative
     'r(_-)':
@@ -258,6 +276,26 @@ const Oplist = {
     // Transfer function to positive
     'f(_+)': (step) => {
       step.fs(step.lime.refer('_+'));
+    },
+
+    // Transfer function to scalar add
+    'f(.+)': (step) => {
+      step.rus(step.lime.refer('.+'));
+    },
+
+    // Transfer function to scalar divide
+    'f(./)': (step) => {
+      step.rus(step.lime.refer('./'));
+    },
+
+    // Transfer function to scalar multiply
+    'f(.*)': (step) => {
+      step.rus(step.lime.refer('.*'));
+    },
+
+    // Transfer function to scalar add
+    'f(.-)': (step) => {
+      step.rus(step.lime.refer('.-'));
     },
 
     // Transfer function to shift left
@@ -416,6 +454,18 @@ const Oplist = {
 
     // [Function] Transfer to not equal
     'tf(!=)': ['r(=)', 'f(!=)'],
+
+    // [Function] Transfer to scalar add
+    'tf(.+)': ['r(+)', 'f(.+)'],
+
+    // [Function] Transfer to scalar divide
+    'tf(./)': ['r(/)', 'f(./)'],
+
+    // [Function] Transfer to scalar multiply
+    'tf(.*)': ['r(*)', 'f(.*)'],
+
+    // [Function] Transfer to scalar subtract
+    'tf(.-)': ['r(-)', 'f(.-)'],
 
     // [Function] Transfer to shift left
     'tf(<<)': ['r(<)', 'f(<<)'],

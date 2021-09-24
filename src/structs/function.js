@@ -1,7 +1,7 @@
 // Require
+const { Types } = require('@onenylxus/helpers');
 const Oplist = require('../system/oplist');
 const Order = require('../../lib/order.json');
-const Types = require('../../utils/types');
 
 /* ------------------------ division ------------------------ */
 

@@ -523,6 +523,11 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
+"@onenylxus/helpers@^1.0.0":
+  version "1.0.0"
+  resolved "https://npm.pkg.github.com/download/@onenylxus/helpers/1.0.0/5fc3b94c29293187bf819a7f3231045d08c5b5cab29fa8b3aee1a46fd7e6d993#1008efd93bdb8181d97f56c8f1eb4d59fbf55902"
+  integrity sha512-coob0voNZkb9QvmBQDTKZyLMi9OTU3QHF136G8EmGcPBuZ5HnfgVU+lV0OdLMBvWMpvLW+x3HLnS4A6Ucv2c3Q==
+
 "@rollup/plugin-commonjs@^20.0.0":
   version "20.0.0"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-commonjs/-/plugin-commonjs-20.0.0.tgz#3246872dcbcb18a54aaa6277a8c7d7f1b155b745"

@@ -1,6 +1,6 @@
 // Require
+const { Types } = require('@onenylxus/helpers');
 const LimeExpression = require('../structs/expression');
-const Types = require('../../utils/types');
 
 /* ------------------------ division ------------------------ */
 

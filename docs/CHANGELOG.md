@@ -1,10 +1,11 @@
 # Changelog
 
-### v0.2.2 (dev)
+### v0.3.0 (dev)
+### v0.2.2 (Sep 25, 2021)
 - Added expressions: `Matrix`
 - Added functions:
   - Arithmetic: `ScalarAdd`, `ScalarDivide`, `ScalarMultiply`, `ScalarSubtract`
-  - Matrix: `Determinant`, `IdentityMatrix`, `Index`, `Minor`, `OneMatrix`, `Trace`, `ZeroMatrix`
+  - Matrix: `Determinant`, `IdentityMatrix`, `Index`, `Minor`, `OneMatrix`, `Trace`, `Transpose`, `ZeroMatrix`
   - Structural: `MatrixBracket`, `RowSplit`
 - Modified existing functions to support new expression types
 ### v0.2.1 (Aug 31, 2021)

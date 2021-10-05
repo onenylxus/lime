@@ -17,24 +17,12 @@ class LimeFunctionScalarDivide extends LimeFunction {
       'cl(bool->int)',
       'cr(bool->int)',
 
-      'eb(mat,{comp|int|rat})',
       'eb(mat,mat)',
+      'eb(mat,{comp|int|rat})',
       'eb({comp|int|rat},mat)',
     ];
 
     // Algorithms
-    this.algorithms.set('b(mat,{comp|int|rat})', (step) => {
-      const places = [];
-      for (let j = 0; j < step.left.row; j++) {
-        places.push([]);
-        for (let i = 0; i < step.left.column; i++) {
-          places[j].push(this.lime.direct([step.left.places[j][i], '/', step.right]));
-        }
-      }
-
-      step.bs(this.lime.build('matrix')(places));
-    });
-
     this.algorithms.set('b(mat,mat)', (step) => {
       if (step.left.row !== step.right.row || step.left.column !== step.right.column) {
         throw new Error('error:invalidMatrixDimensions');
@@ -45,6 +33,18 @@ class LimeFunctionScalarDivide extends LimeFunction {
         places.push([]);
         for (let i = 0; i < step.left.column; i++) {
           places[j].push(this.lime.direct([step.left.places[j][i], '/', step.right.places[j][i]]));
+        }
+      }
+
+      step.bs(this.lime.build('matrix')(places));
+    });
+
+    this.algorithms.set('b(mat,{comp|int|rat})', (step) => {
+      const places = [];
+      for (let j = 0; j < step.left.row; j++) {
+        places.push([]);
+        for (let i = 0; i < step.left.column; i++) {
+          places[j].push(this.lime.direct([step.left.places[j][i], '/', step.right]));
         }
       }
 

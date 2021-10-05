@@ -70,6 +70,8 @@
   ";": ["rowSplit", "x"],
   ".+": ["scalarAdd", "b"],
   "./": ["scalarDivide", "b"],
+  ".^": ["scalarExponent", "b"],
+  ".%": ["scalarModulo", "b"],
   ".*": ["scalarMultiply", "b"],
   ".-": ["scalarSubtract", "b"],
   "<<": ["shiftLeft", "b"],

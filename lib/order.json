@@ -22,6 +22,7 @@
     "logicalOr",
     "modulo",
     "scalarAdd",
+    "scalarModulo",
     "scalarSubtract",
     "shiftLeft",
     "shiftRight",
@@ -34,7 +35,8 @@
     "scalarMultiply"
   ],
   [
-    "exponent"
+    "exponent",
+    "scalarExponent"
   ],
   [
     "decimal",

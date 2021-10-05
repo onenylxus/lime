@@ -17,12 +17,16 @@ class LimeFunctionScalarAdd extends LimeFunction {
       'cl(bool->int)',
       'cr(bool->int)',
 
-      'eb(mat,{comp|int|rat})',
       'eb(mat,mat)',
+      'eb(mat,{comp|int|rat})',
       'eb({comp|int|rat},mat)',
     ];
 
     // Algorithms
+    this.algorithms.set('b(mat,mat)', (step) => {
+      step.bs(this.lime.direct([step.left, '+', step.right]));
+    });
+
     this.algorithms.set('b(mat,{comp|int|rat})', (step) => {
       const places = [];
       for (let j = 0; j < step.left.row; j++) {
@@ -33,10 +37,6 @@ class LimeFunctionScalarAdd extends LimeFunction {
       }
 
       step.bs(this.lime.build('matrix')(places));
-    });
-
-    this.algorithms.set('b(mat,mat)', (step) => {
-      step.bs(this.lime.direct([step.left, '+', step.right]));
     });
 
     this.algorithms.set('b({comp|int|rat},mat)', (step) => {

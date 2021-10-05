@@ -23,10 +23,36 @@ const Oplist = {
     'b(int,int)':
       (step) => step.bpi('integer'),
 
+    // [Binary] Integer, Matrix
+    'b(int,mat)':
+      (step) => step.lpi('integer')
+      && step.rpi('matrix'),
+
     // [Binary] Integer, Rational
     'b(int,rat)':
       (step) => step.lpi('integer')
       && step.rpi('rational'),
+
+    // [Binary] Matrix, Argument{Integer[1]}
+    'b(mat,arg{int[1]})':
+      (step) => step.lpi('matrix')
+      && step.rpi('argument')
+      && step.right.length === 1
+      && step.ci('integer')(...step.right.places),
+
+    // [Binary] Matrix, Integer
+    'b(mat,int)':
+      (step) => step.lpi('matrix')
+      && step.rpi('integer'),
+
+    // [Binary] Matrix, Matrix
+    'b(mat,mat)':
+      (step) => step.bpi('matrix'),
+
+    // [Binary] Matrix, {Complex|Integer|Rational}
+    'b(mat,{comp|int|rat})':
+      (step) => step.lpi('matrix')
+      && step.rpi('complex', 'integer', 'rational'),
 
     // [Binary] Rational, Integer
     'b(rat,int)':
@@ -36,22 +62,6 @@ const Oplist = {
     // [Binary] Rational, Rational
     'b(rat,rat)':
       (step) => step.bpi('rational'),
-
-    // [Binary] Matrix, Argument{Integer[1]}
-    'b(mat,arg{int[1]})':
-      (step) => step.lpi('matrix')
-      && step.rpi('argument')
-      && step.right.length === 1
-      && step.ci('integer')(...step.right.places),
-
-    // [Binary] Matrix, {Complex|Integer|Rational}
-    'b(mat,{comp|int|rat})':
-      (step) => step.lpi('matrix')
-      && step.rpi('complex', 'integer', 'rational'),
-
-    // [Binary] Matrix, Matrix
-    'b(mat,mat)':
-      (step) => step.bpi('matrix'),
 
     // [Binary] Variable, Expression
     'b(var,expr)':
@@ -67,6 +77,11 @@ const Oplist = {
     'b({int|rat},comp)':
       (step) => step.lpi('integer', 'rational')
       && step.rpi('complex'),
+
+    // [Binary] {Integer|Rational}, Matrix
+    'b({int|rat},mat)':
+      (step) => step.lpi('integer', 'rational')
+      && step.rpi('matrix'),
 
     // [Left unary] Argument{Expression[1]}
     'l(arg{expr[1]})':
@@ -166,6 +181,10 @@ const Oplist = {
     'r(int)':
       (step) => step.rpi('integer'),
 
+    // [Right unary] Matrix
+    'r(mat)':
+      (step) => step.rpi('matrix'),
+
     // [Right unary] Rational
     'r(rat)':
       (step) => step.rpi('rational'),
@@ -198,6 +217,10 @@ const Oplist = {
     'r(/)':
       (step) => step.rpi('divide'),
 
+    // [Right unary] Exponent
+    'r(^)':
+      (step) => step.rpi('exponent'),
+
     // [Right unary] Factorial
     'r(!)':
       (step) => step.rpi('factorial'),
@@ -205,6 +228,10 @@ const Oplist = {
     // [Right unary] Greater
     'r(>)':
       (step) => step.rpi('greater'),
+
+    // [Right unary] Modulo
+    'r(%)':
+      (step) => step.rpi('modulo'),
 
     // [Right unary] Multiply
     'r(*)':
@@ -286,6 +313,16 @@ const Oplist = {
     // Transfer function to scalar divide
     'f(./)': (step) => {
       step.rus(step.lime.refer('./'));
+    },
+
+    // Transfer function to scalar exponent
+    'f(.^)': (step) => {
+      step.rus(step.lime.refer('.^'));
+    },
+
+    // Transfer function to scalar modulo
+    'f(.%)': (step) => {
+      step.rus(step.lime.refer('.%'));
     },
 
     // Transfer function to scalar multiply
@@ -460,6 +497,12 @@ const Oplist = {
 
     // [Function] Transfer to scalar divide
     'tf(./)': ['r(/)', 'f(./)'],
+
+    // [Function] Transfer to scalar exponent
+    'tf(.^)': ['r(^)', 'f(.^)'],
+
+    // [Function] Transfer to scalar modulo
+    'tf(.%)': ['r(%)', 'f(.%)'],
 
     // [Function] Transfer to scalar multiply
     'tf(.*)': ['r(*)', 'f(.*)'],

@@ -3,12 +3,12 @@ const LimeFunction = require('../../structs/function');
 
 /* ------------------------ division ------------------------ */
 
-// Scalar multiply function class
-class LimeFunctionScalarMultiply extends LimeFunction {
+// Scalar exponent function class
+class LimeFunctionScalarExponent extends LimeFunction {
   // Constructor
   constructor(lime, mode) {
     // Super from function class
-    super(lime, { name: 'scalarMultiply', mode });
+    super(lime, { name: 'scalarExponent', mode });
 
     // Binary operation
     this.operations.b = [
@@ -17,12 +17,24 @@ class LimeFunctionScalarMultiply extends LimeFunction {
       'cl(bool->int)',
       'cr(bool->int)',
 
+      'eb(mat,int)',
       'eb(mat,mat)',
-      'eb(mat,{comp|int|rat})',
-      'eb({comp|int|rat},mat)',
+      'eb({int|rat},mat)',
     ];
 
     // Algorithms
+    this.algorithms.set('b(mat,int)', (step) => {
+      const places = [];
+      for (let j = 0; j < step.left.row; j++) {
+        places.push([]);
+        for (let i = 0; i < step.left.column; i++) {
+          places[j].push(this.lime.direct([step.left.places[j][i], '^', step.right]));
+        }
+      }
+
+      step.bs(this.lime.build('matrix')(places));
+    });
+
     this.algorithms.set('b(mat,mat)', (step) => {
       if (step.left.row !== step.right.row || step.left.column !== step.right.column) {
         throw new Error('error:invalidMatrixDimensions');
@@ -32,31 +44,19 @@ class LimeFunctionScalarMultiply extends LimeFunction {
       for (let j = 0; j < step.left.row; j++) {
         places.push([]);
         for (let i = 0; i < step.left.column; i++) {
-          places[j].push(this.lime.direct([step.left.places[j][i], '*', step.right.places[j][i]]));
+          places[j].push(this.lime.direct([step.left.places[j][i], '^', step.right.places[j][i]]));
         }
       }
 
       step.bs(this.lime.build('matrix')(places));
     });
 
-    this.algorithms.set('b(mat,{comp|int|rat})', (step) => {
-      const places = [];
-      for (let j = 0; j < step.left.row; j++) {
-        places.push([]);
-        for (let i = 0; i < step.left.column; i++) {
-          places[j].push(this.lime.direct([step.left.places[j][i], '*', step.right]));
-        }
-      }
-
-      step.bs(this.lime.build('matrix')(places));
-    });
-
-    this.algorithms.set('b({comp|int|rat},mat)', (step) => {
+    this.algorithms.set('b({int|rat},mat)', (step) => {
       const places = [];
       for (let j = 0; j < step.right.row; j++) {
         places.push([]);
         for (let i = 0; i < step.right.column; i++) {
-          places[j].push(this.lime.direct([step.left, '*', step.right.places[j][i]]));
+          places[j].push(this.lime.direct([step.left, '^', step.right.places[j][i]]));
         }
       }
 
@@ -68,4 +68,4 @@ class LimeFunctionScalarMultiply extends LimeFunction {
 /* ------------------------ division ------------------------ */
 
 // Export
-module.exports = LimeFunctionScalarMultiply;
+module.exports = LimeFunctionScalarExponent;

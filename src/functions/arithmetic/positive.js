@@ -20,22 +20,19 @@ class LimeFunctionPositive extends LimeFunction {
       'cr(arg{expr[1]}->expr)',
       'cr(bool->int)',
 
-      'er(int)',
-      'er(rat)',
+      'er({comp|int|rat})',
+      'er(mat)',
       'er(_+)',
       'er(_-)',
     ];
 
     // Algorithms
-    this.algorithms.set('r(int)', (step) => {
+    this.algorithms.set('r({comp|int|rat})', (step) => {
       step.rus(this.lime.direct([1, '*', step.right]));
     });
 
-    this.algorithms.set('r(rat)', (step) => {
-      step.rus(this.lime.build('rational')(
-        this.lime.direct([step.right.nPlace]),
-        step.right.dPlace,
-      ));
+    this.algorithms.set('r(mat)', (step) => {
+      step.rus(this.lime.direct([1, '.*', step.right]));
     });
 
     this.algorithms.set('r(_+)', (step) => {

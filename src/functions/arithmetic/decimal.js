@@ -14,6 +14,8 @@ class LimeFunctionDecimal extends LimeFunction {
     this.operations.b = [
       'tf(.+)',
       'tf(./)',
+      'tf(.^)',
+      'tf(.%)',
       'tf(.*)',
       'tf(.-)',
 

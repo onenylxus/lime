@@ -1,6 +1,6 @@
 // Require
+const { Types } = require('@onenylxus/helpers');
 const chalk = require('chalk');
-const Types = require('../utils/types');
 const Prompt = require('prompt-sync')({ sigint: true });
 const Lime = process.argv[2] === '-q' ? require('../src/lime')({ developmentMode: true }) : require('../dist/bundle')();
 

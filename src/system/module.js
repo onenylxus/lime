@@ -28,6 +28,8 @@ Module.set('negative', require('../functions/arithmetic/negative'));
 Module.set('positive', require('../functions/arithmetic/positive'));
 Module.set('scalarAdd', require('../functions/arithmetic/scalarAdd'));
 Module.set('scalarDivide', require('../functions/arithmetic/scalarDivide'));
+Module.set('scalarExponent', require('../functions/arithmetic/scalarExponent'));
+Module.set('scalarModulo', require('../functions/arithmetic/scalarModulo'));
 Module.set('scalarMultiply', require('../functions/arithmetic/scalarMultiply'));
 Module.set('scalarSubtract', require('../functions/arithmetic/scalarSubtract'));
 Module.set('subtract', require('../functions/arithmetic/subtract'));

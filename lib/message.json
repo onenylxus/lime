@@ -15,6 +15,7 @@
   "error:invalidSymbol": "Invalid symbol in prompt input.",
   "error:undefinedVariable": "Variable is undefined but used.",
   "error:unmatchedBrackets": "Some brackets are unmatched.",
+  "error:zeroMatrixDeterminant": "Determinant of matrix is zero.",
   "issue:invalidExpressionInConstruct": "Invalid expression in constructor.",
   "issue:invalidFunctionOrder": "Invalid function order.",
   "issue:invalidMessage": "Invalid message detected.",

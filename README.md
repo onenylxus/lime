@@ -7,15 +7,10 @@ Step 1: Make sure that `node` version is at least `12`:
 node --version
 ```
 
-Step 2a: Install Lime through `npm`:
+Step 2: Install Lime through `npm` or `yarn`:
 
 ```bat
 npm install @onenylxus/lime
-```
-
-Step 2b: Install Lime through `yarn`:
-
-```bat
 yarn add @onenylxus/lime
 ```
 

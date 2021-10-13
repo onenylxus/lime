@@ -1,0 +1,12 @@
+{
+  "name": "Adjoint function test",
+  "process": [
+    {
+      "desc": "argument of matrix",
+      "config": {},
+      "tests": [
+        ["adj([1,2;3,4])", "[4,-2;-3,1]"]
+      ]
+    }
+  ]
+}

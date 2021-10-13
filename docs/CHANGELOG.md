@@ -4,6 +4,7 @@
 - Isolated type identifier to another package
 - Added functions:
   - Arithmetic: `ScalarExponent`, `ScalarModulo`
+  - Matrix: `Adjoint`, `Cofactor`, `Inverse`
 - Modified existing functions to support new expression types
 ### v0.2.2 (Sep 25, 2021)
 - Added expressions: `Matrix`

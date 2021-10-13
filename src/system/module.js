@@ -65,9 +65,12 @@ Module.set('logicalNot', require('../functions/logical/logicalNot'));
 Module.set('logicalOr', require('../functions/logical/logicalOr'));
 
 // Matrix functions
+Module.set('adjoint', require('../functions/matrix/adjoint'));
+Module.set('cofactor', require('../functions/matrix/cofactor'));
 Module.set('determinant', require('../functions/matrix/determinant'));
 Module.set('identityMatrix', require('../functions/matrix/identityMatrix'));
 Module.set('index', require('../functions/matrix/index'));
+Module.set('inverse', require('../functions/matrix/inverse'));
 Module.set('minor', require('../functions/matrix/minor'));
 Module.set('oneMatrix', require('../functions/matrix/oneMatrix'));
 Module.set('reducedRowEchelonForm', require('../functions/matrix/reducedRowEchelonForm'));

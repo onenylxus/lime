@@ -11,7 +11,9 @@
   "()": ["argument", null],
 
   "abs": ["absolute", "r"],
+  "adj": ["adjoint", "r"],
   "ceil": ["ceiling", "r"],
+  "cof": ["cofactor", "r"],
   "conj": ["conjugate", "r"],
   "det": ["determinant", "r"],
   "fibonacci": ["fibonacci", "r"],
@@ -20,6 +22,7 @@
   "idmat": ["identityMatrix", "r"],
   "im": ["imaginary", "r"],
   "index": ["index", "r"],
+  "inv": ["inverse", "r"],
   "lcm": ["leastCommonMultiple", "r"],
   "max": ["maximum", "r"],
   "mean": ["mean", "r"],

@@ -45,7 +45,9 @@
   ],
   [
     "absolute",
+    "adjoint",
     "ceiling",
+    "cofactor",
     "combination",
     "conjugate",
     "determinant",
@@ -56,6 +58,7 @@
     "identityMatrix",
     "imaginary",
     "index",
+    "inverse",
     "leastCommonMultiple",
     "maximum",
     "mean",

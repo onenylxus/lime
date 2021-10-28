@@ -1,11 +1,16 @@
 {
   "name": "Prime function test",
+  "version": 2,
   "process": [
     {
       "desc": "argument of integer",
       "config": {},
       "tests": [
-        ["prime(5)", "11"]
+        {
+          "input": ["prime(5)"],
+          "type": "equals",
+          "output": "11"
+        }
       ]
     }
   ]

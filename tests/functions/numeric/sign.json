@@ -1,21 +1,42 @@
 {
   "name": "Sign function test",
+  "version": 2,
   "process": [
     {
       "desc": "argument of integer",
       "config": {},
       "tests": [
-        ["sgn(3)", "1"],
-        ["sgn(0)", "0"],
-        ["sgn(-3)", "-1"]
+        {
+          "input": ["sgn(3)"],
+          "type": "equals",
+          "output": "1"
+        },
+        {
+          "input": ["sgn(0)"],
+          "type": "equals",
+          "output": "0"
+        },
+        {
+          "input": ["sgn(-3)"],
+          "type": "equals",
+          "output": "-1"
+        }
       ]
     },
     {
       "desc": "argument of rational",
       "config": {},
       "tests": [
-        ["sgn(5/2)", "1"],
-        ["sgn(-5/2)", "-1"]
+        {
+          "input": ["sgn(5/2)"],
+          "type": "equals",
+          "output": "1"
+        },
+        {
+          "input": ["sgn(-5/2)"],
+          "type": "equals",
+          "output": "-1"
+        }
       ]
     }
   ]

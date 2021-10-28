@@ -1,18 +1,27 @@
 {
   "name": "Assign function test",
+  "version": 2,
   "process": [
     {
       "desc": "direct assign",
       "config": {},
       "tests": [
-        ["a=1", "a", "1"]
+        {
+          "input": ["a=1", "a"],
+          "type": "equals",
+          "output": "1"
+        }
       ]
     },
     {
       "desc": "indirect assign",
       "config": {},
       "tests": [
-        ["a=1", "b=a", "a=2", "b", "1"]
+        {
+          "input": ["a=1", "b=a", "a=2", "b"],
+          "type": "equals",
+          "output": "1"
+        }
       ]
     }
   ]

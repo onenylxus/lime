@@ -1,20 +1,37 @@
 {
   "name": "Absolute function test",
+  "version": 2,
   "process": [
     {
       "desc": "argument of integer",
       "config": {},
       "tests": [
-        ["abs(3)", "3"],
-        ["abs(-3)", "3"]
+        {
+          "input": ["abs(3)"],
+          "type": "equals",
+          "output": "3"
+        },
+        {
+          "input": ["abs(-3)"],
+          "type": "equals",
+          "output": "3"
+        }
       ]
     },
     {
       "desc": "argument of rational",
       "config": {},
       "tests": [
-        ["abs(5/2)", "5/2"],
-        ["abs(-5/2)", "5/2"]
+        {
+          "input": ["abs(5/2)"],
+          "type": "equals",
+          "output": "5/2"
+        },
+        {
+          "input": ["abs(-5/2)"],
+          "type": "equals",
+          "output": "5/2"
+        }
       ]
     }
   ]

@@ -1,19 +1,32 @@
 {
   "name": "Truncation function test",
+  "version": 2,
   "process": [
     {
       "desc": "argument of integer",
       "config": {},
       "tests": [
-        ["trunc(5)", "5"]
+        {
+          "input": ["trunc(5)"],
+          "type": "equals",
+          "output": "5"
+        }
       ]
     },
     {
       "desc": "argument of rational",
       "config": {},
       "tests": [
-        ["trunc(5/2)", "2"],
-        ["trunc(-5/2)", "-2"]
+        {
+          "input": ["trunc(5/2)"],
+          "type": "equals",
+          "output": "2"
+        },
+        {
+          "input": ["trunc(-5/2)"],
+          "type": "equals",
+          "output": "-2"
+        }
       ]
     }
   ]

@@ -1,11 +1,16 @@
 {
   "name": "List command test",
+  "version": 2,
   "process": [
     {
       "desc": "one parameter",
       "config": {},
       "tests": [
-        ["list memory", []]
+        {
+          "input": ["list memory"],
+          "type": "equals",
+          "output": []
+        }
       ]
     }
   ]

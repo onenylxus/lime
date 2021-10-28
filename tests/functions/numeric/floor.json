@@ -1,19 +1,32 @@
 {
   "name": "Floor function test",
+  "version": 2,
   "process": [
     {
       "desc": "argument of integer",
       "config": {},
       "tests": [
-        ["floor(5)", "5"]
+        {
+          "input": ["floor(5)"],
+          "type": "equals",
+          "output": "5"
+        }
       ]
     },
     {
       "desc": "argument of rational",
       "config": {},
       "tests": [
-        ["floor(5/2)", "2"],
-        ["floor(-5/2)", "-3"]
+        {
+          "input": ["floor(5/2)"],
+          "type": "equals",
+          "output": "2"
+        },
+        {
+          "input": ["floor(-5/2)"],
+          "type": "equals",
+          "output": "-3"
+        }
       ]
     }
   ]

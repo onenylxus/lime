@@ -1,12 +1,21 @@
 {
   "name": "Rational expression test",
+  "version": 2,
   "process": [
     {
       "desc": "natural define",
       "config": {},
       "tests": [
-        ["1/2", "1/2"],
-        ["1/-2", "-1/2"]
+        {
+          "input": ["1/2"],
+          "type": "equals",
+          "output": "1/2"
+        },
+        {
+          "input": ["1/-2"],
+          "type": "equals",
+          "output": "-1/2"
+        }
       ]
     }
   ]

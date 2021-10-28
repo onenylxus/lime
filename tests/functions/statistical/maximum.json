@@ -1,11 +1,16 @@
 {
   "name": "Maximum function test",
+  "version": 2,
   "process": [
     {
       "desc": "argument of expressions",
       "config": {},
       "tests": [
-        ["max(1,3/2,2)", "2"]
+        {
+          "input": ["max(1,3/2,2)"],
+          "type": "equals",
+          "output": "2"
+        }
       ]
     }
   ]

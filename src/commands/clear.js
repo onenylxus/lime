@@ -3,7 +3,7 @@ const LimeCommand = require('../structs/command');
 
 /* ------------------------ division ------------------------ */
 
-// Clear command
+// Clear command class
 class LimeCommandClear extends LimeCommand {
   // Constructor
   constructor(lime) {

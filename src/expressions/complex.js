@@ -3,7 +3,7 @@ const LimeExpression = require('../structs/expression');
 
 /* ------------------------ division ------------------------ */
 
-// Complex class
+// Complex expression class
 class LimeExpressionComplex extends LimeExpression {
   // Constructor
   constructor(lime, rPlace, iPlace) {

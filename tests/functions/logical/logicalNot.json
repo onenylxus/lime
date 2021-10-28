@@ -1,5 +1,6 @@
 {
   "name": "Logical NOT function test",
+  "version": 2,
   "process": [
     {
       "desc": "boolean",
@@ -7,23 +8,43 @@
         "strictBoolean": false
       },
       "tests": [
-        ["!false", "true"],
-        ["!true", "false"]
+        {
+          "input": ["!false"],
+          "type": "equals",
+          "output": "true"
+        },
+        {
+          "input": ["!true"],
+          "type": "equals",
+          "output": "false"
+        }
       ]
     },
     {
       "desc": "integer",
       "config": {},
       "tests": [
-        ["!0", "true"],
-        ["!2", "false"]
+        {
+          "input": ["!0"],
+          "type": "equals",
+          "output": "true"
+        },
+        {
+          "input": ["!2"],
+          "type": "equals",
+          "output": "false"
+        }
       ]
     },
     {
       "desc": "rational",
       "config": {},
       "tests": [
-        ["!(1/2)", "false"]
+        {
+          "input": ["!(1/2)"],
+          "type": "equals",
+          "output": "false"
+        }
       ]
     }
   ]

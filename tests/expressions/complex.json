@@ -1,11 +1,16 @@
 {
   "name": "Complex expression test",
+  "version": 2,
   "process": [
     {
       "desc": "natural define",
       "config": {},
       "tests": [
-        ["i", "i"]
+        {
+          "input": ["i"],
+          "type": "equals",
+          "output": "i"
+        }
       ]
     }
   ]

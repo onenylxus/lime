@@ -1,19 +1,32 @@
 {
   "name": "Ceiling function test",
+  "version": 2,
   "process": [
     {
       "desc": "argument of integer",
       "config": {},
       "tests": [
-        ["ceil(5)", "5"]
+        {
+          "input": ["ceil(5)"],
+          "type": "equals",
+          "output": "5"
+        }
       ]
     },
     {
       "desc": "argument of rational",
       "config": {},
       "tests": [
-        ["ceil(5/2)", "3"],
-        ["ceil(-5/2)", "-2"]
+        {
+          "input": ["ceil(5/2)"],
+          "type": "equals",
+          "output": "3"
+        },
+        {
+          "input": ["ceil(-5/2)"],
+          "type": "equals",
+          "output": "-2"
+        }
       ]
     }
   ]

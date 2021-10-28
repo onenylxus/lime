@@ -1,19 +1,32 @@
 {
   "name": "Zero matrix function test",
+  "version": 2,
   "process": [
     {
       "desc": "argument of integer",
       "config": {},
       "tests": [
-        ["zeromat(1)", "[0]"],
-        ["zeromat(2)", "[0,0;0,0]"]
+        {
+          "input": ["zeromat(1)"],
+          "type": "equals",
+          "output": "[0]"
+        },
+        {
+          "input": ["zeromat(2)"],
+          "type": "equals",
+          "output": "[0,0;0,0]"
+        }
       ]
     },
     {
       "desc": "argument of integer and integer",
       "config": {},
       "tests": [
-        ["zeromat(2,3)", "[0,0,0;0,0,0]"]
+        {
+          "input": ["zeromat(2,3)"],
+          "type": "equals",
+          "output": "[0,0,0;0,0,0]"
+        }
       ]
     }
   ]

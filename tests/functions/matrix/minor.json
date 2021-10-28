@@ -1,11 +1,16 @@
 {
   "name": "Minor function test",
+  "version": 2,
   "process": [
     {
       "desc": "argument of matrix, integer and integer",
       "config": {},
       "tests": [
-        ["minor([1,2,3;4,5,6],1,2)", "[4,6]"]
+        {
+          "input": ["minor([1,2,3;4,5,6],1,2)"],
+          "type": "equals",
+          "output": "[4,6]"
+        }
       ]
     }
   ]

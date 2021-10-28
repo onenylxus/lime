@@ -1,11 +1,16 @@
 {
   "name": "Adjoint function test",
+  "version": 2,
   "process": [
     {
       "desc": "argument of matrix",
       "config": {},
       "tests": [
-        ["adj([1,2;3,4])", "[4,-2;-3,1]"]
+        {
+          "input": ["adj([1,2;3,4])"],
+          "type": "equals",
+          "output": "[4,-2;-3,1]"
+        }
       ]
     }
   ]

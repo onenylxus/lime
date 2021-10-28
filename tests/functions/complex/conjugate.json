@@ -1,5 +1,6 @@
 {
   "name": "Conjugate function test",
+  "version": 2,
   "process": [
     {
       "desc": "argument of complex",
@@ -7,7 +8,11 @@
 
       },
       "tests": [
-        ["conj(1+i)", "1-i"]
+        {
+          "input": ["conj(1+i)"],
+          "type": "equals",
+          "output": "1-i"
+        }
       ]
     }
   ]

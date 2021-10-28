@@ -1,5 +1,6 @@
 {
   "name": "Permutation function test",
+  "version": 2,
   "process": [
     {
       "desc": "argument of integer and integer",
@@ -7,7 +8,11 @@
 
       },
       "tests": [
-        ["npr(3,2)", "6"]
+        {
+          "input": ["npr(3,2)"],
+          "type": "equals",
+          "output": "6"
+        }
       ]
     }
   ]

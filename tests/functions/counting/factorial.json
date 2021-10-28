@@ -1,5 +1,6 @@
 {
   "name": "Factorial function test",
+  "version": 2,
   "process": [
     {
       "desc": "boolean",
@@ -7,16 +8,32 @@
         "strictBoolean": false
       },
       "tests": [
-        ["false!", "1"],
-        ["true!", "1"]
+        {
+          "input": ["false!"],
+          "type": "equals",
+          "output": "1"
+        },
+        {
+          "input": ["true!"],
+          "type": "equals",
+          "output": "1"
+        }
       ]
     },
     {
       "desc": "integer",
       "config": {},
       "tests": [
-        ["0!", "1"],
-        ["5!", "120"]
+        {
+          "input": ["0!"],
+          "type": "equals",
+          "output": "1"
+        },
+        {
+          "input": ["5!"],
+          "type": "equals",
+          "output": "120"
+        }
       ]
     }
   ]

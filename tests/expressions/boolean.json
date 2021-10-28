@@ -1,12 +1,21 @@
 {
   "name": "Boolean expression test",
+  "version": 2,
   "process": [
     {
       "desc": "natural define",
       "config": {},
       "tests": [
-        ["true", "true"],
-        ["false", "false"]
+        {
+          "input": ["true"],
+          "type": "equals",
+          "output": "true"
+        },
+        {
+          "input": ["false"],
+          "type": "equals",
+          "output": "false"
+        }
       ]
     }
   ]

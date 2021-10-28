@@ -1,11 +1,16 @@
 {
   "name": "Help command test",
+  "version": 2,
   "process": [
     {
       "desc": "zero parameters",
       "config": {},
       "tests": [
-        ["help", "Below is a list of available commands:\nabout: show information about the engine\nclear: clear variables and memory\nconfig: view and modify engine configurations\nhelp: list all available commands\nlist: list specified engine property"]
+        {
+          "input": ["help"],
+          "type": "equals",
+          "output": "Below is a list of available commands:\nabout: show information about the engine\nclear: clear variables and memory\nconfig: view and modify engine configurations\nhelp: list all available commands\nlist: list specified engine property"
+        }
       ]
     }
   ]

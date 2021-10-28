@@ -4,7 +4,7 @@ const LimeExpression = require('../structs/expression');
 
 /* ------------------------ division ------------------------ */
 
-// Matrix class
+// Matrix expression class
 class LimeExpressionMatrix extends LimeExpression {
   // Constructor
   constructor(lime, places) {

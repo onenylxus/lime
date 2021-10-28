@@ -1,11 +1,16 @@
 {
   "name": "Clear command test",
+  "version": 2,
   "process": [
     {
       "desc": "zero parameters",
       "config": {},
       "tests": [
-        ["1", "clear", "ans", "0"]
+        {
+          "input": ["1", "clear", "ans"],
+          "type": "equals",
+          "output": "0"
+        }
       ]
     }
   ]

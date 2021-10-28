@@ -1,5 +1,6 @@
 {
   "name": "Divide function test",
+  "version": 2,
   "process": [
     {
       "desc": "boolean with boolean",
@@ -7,8 +8,16 @@
         "strictBoolean": false
       },
       "tests": [
-        ["false/true", "0"],
-        ["true/true", "1"]
+        {
+          "input": ["false/true"],
+          "type": "equals",
+          "output": "0"
+        },
+        {
+          "input": ["true/true"],
+          "type": "equals",
+          "output": "1"
+        }
       ]
     },
     {
@@ -17,8 +26,16 @@
         "strictBoolean": false
       },
       "tests": [
-        ["false/(1-2i)", "0"],
-        ["(3-i)/true", "3-i"]
+        {
+          "input": ["false/(1+2i)"],
+          "type": "equals",
+          "output": "0"
+        },
+        {
+          "input": ["(3-i)/true"],
+          "type": "equals",
+          "output": "3-i"
+        }
       ]
     },
     {
@@ -27,8 +44,16 @@
         "strictBoolean": false
       },
       "tests": [
-        ["true/3", "1/3"],
-        ["2/true", "2"]
+        {
+          "input": ["true/3"],
+          "type": "equals",
+          "output": "1/3"
+        },
+        {
+          "input": ["2/true"],
+          "type": "equals",
+          "output": "2"
+        }
       ]
     },
     {
@@ -37,54 +62,102 @@
         "strictBoolean": false
       },
       "tests": [
-        ["true/(2/3)", "3/2"],
-        ["(2/5)/true", "2/5"]
+        {
+          "input": ["true/(2/3)"],
+          "type": "equals",
+          "output": "3/2"
+        },
+        {
+          "input": ["(2/5)/true"],
+          "type": "equals",
+          "output": "2/5"
+        }
       ]
     },
     {
       "desc": "complex with complex",
       "config": {},
       "tests": [
-        ["(1+2i)/(1-2i)", "-3/5+4/5i"]
+        {
+          "input": ["(1+2i)/(1-2i)"],
+          "type": "equals",
+          "output": "-3/5+4/5i"
+        }
       ]
     },
     {
       "desc": "complex with integer",
       "config": {},
       "tests": [
-        ["(3+9i)/3", "1+3i"],
-        ["5/(-1+2i)", "-1-2i"]
+        {
+          "input": ["(3+9i)/3"],
+          "type": "equals",
+          "output": "1+3i"
+        },
+        {
+          "input": ["5/(-1+2i)"],
+          "type": "equals",
+          "output": "-1-2i"
+        }
       ]
     },
     {
       "desc": "complex with rational",
       "config": {},
       "tests": [
-        ["(1-2i)/(1/2)", "2-4i"],
-        ["(1/2)/(1+i)", "1/4-1/4i"]
+        {
+          "input": ["(1-2i)/(1/2)"],
+          "type": "equals",
+          "output": "2-4i"
+        },
+        {
+          "input": ["(1/2)/(1+i)"],
+          "type": "equals",
+          "output": "1/4-1/4i"
+        }
       ]
     },
     {
       "desc": "integer with integer",
       "config": {},
       "tests": [
-        ["4/2", "2"],
-        ["1/3", "1/3"]
+        {
+          "input": ["4/2"],
+          "type": "equals",
+          "output": "2"
+        },
+        {
+          "input": ["1/3"],
+          "type": "equals",
+          "output": "1/3"
+        }
       ]
     },
     {
       "desc": "integer with rational",
       "config": {},
       "tests": [
-        ["(1/2)/3", "1/6"],
-        ["1/(2/3)", "3/2"]
+        {
+          "input": ["(1/2)/3"],
+          "type": "equals",
+          "output": "1/6"
+        },
+        {
+          "input": ["1/(2/3)"],
+          "type": "equals",
+          "output": "3/2"
+        }
       ]
     },
     {
       "desc": "rational with rational",
       "config": {},
       "tests": [
-        ["(1/3)/(1/4)", "4/3"]
+        {
+          "input": ["(1/3)/(1/4)"],
+          "type": "equals",
+          "output": "4/3"
+        }
       ]
     }
   ]

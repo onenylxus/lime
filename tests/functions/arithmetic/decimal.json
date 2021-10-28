@@ -1,20 +1,37 @@
 {
   "name": "Decimal function test",
+  "version": 2,
   "process": [
     {
       "desc": "integer conversion",
       "config": {},
       "tests": [
-        ["1.0", "1"],
-        ["1.00", "1"]
+        {
+          "input": ["1.0"],
+          "type": "equals",
+          "output": "1"
+        },
+        {
+          "input": ["1.00"],
+          "type": "equals",
+          "output": "1"
+        }
       ]
     },
     {
       "desc": "rational conversion",
       "config": {},
       "tests": [
-        ["1.1", "11/10"],
-        ["1.03", "103/100"]
+        {
+          "input": ["1.1"],
+          "type": "equals",
+          "output": "11/10"
+        },
+        {
+          "input": ["1.03"],
+          "type": "equals",
+          "output": "103/100"
+        }
       ]
     }
   ]

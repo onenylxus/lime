@@ -1,11 +1,16 @@
 {
   "name": "Least common multiple function test",
+  "version": 2,
   "process": [
     {
       "desc": "argument of integer and integer",
       "config": {},
       "tests": [
-        ["lcm(4,6)", "12"]
+        {
+          "input": ["lcm(4,6)"],
+          "type": "equals",
+          "output": "12"
+        }
       ]
     }
   ]

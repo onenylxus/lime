@@ -4,7 +4,7 @@ const LimeExpression = require('../structs/expression');
 
 /* ------------------------ division ------------------------ */
 
-// Argument class
+// Argument expression class
 class LimeExpressionArgument extends LimeExpression {
   // Constructor
   constructor(lime, ...places) {

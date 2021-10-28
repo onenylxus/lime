@@ -1,11 +1,16 @@
 {
   "name": "Product function test",
+  "version": 2,
   "process": [
     {
       "desc": "argument of expressions",
       "config": {},
       "tests": [
-        ["prod(2,3,5)", "30"]
+        {
+          "input": ["prod(2,3,5)"],
+          "type": "equals",
+          "output": "30"
+        }
       ]
     }
   ]

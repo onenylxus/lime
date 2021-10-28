@@ -3,7 +3,7 @@ const LimeExpression = require('../structs/expression');
 
 /* ------------------------ division ------------------------ */
 
-// Variable class
+// Variable expression class
 class LimeExpressionVariable extends LimeExpression {
   // Constructor
   constructor(lime, key) {

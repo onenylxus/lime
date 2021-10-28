@@ -1,12 +1,21 @@
 {
   "name": "Argument expression test",
+  "version": 2,
   "process": [
     {
       "desc": "resolve to simple expression",
       "config": {},
       "tests": [
-        ["(1)", "1"],
-        ["((1))", "1"]
+        {
+          "input": ["(1)"],
+          "type": "equals",
+          "output": "1"
+        },
+        {
+          "input": ["((1))"],
+          "type": "equals",
+          "output": "1"
+        }
       ]
     }
   ]

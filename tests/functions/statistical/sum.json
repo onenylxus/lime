@@ -1,11 +1,16 @@
 {
   "name": "Sum function test",
+  "version": 2,
   "process": [
     {
       "desc": "argument of expressions",
       "config": {},
       "tests": [
-        ["sum(2,3,5)", "10"]
+        {
+          "input": ["sum(2,3,5)"],
+          "type": "equals",
+          "output": "10"
+        }
       ]
     }
   ]

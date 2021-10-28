@@ -1,18 +1,27 @@
 {
   "name": "Omitted function test",
+  "version": 2,
   "process": [
     {
       "desc": "index function",
       "config": {},
       "tests": [
-        ["[1,2;3,4](2)", "2"]
+        {
+          "input": ["[1,2;3,4](2)"],
+          "type": "equals",
+          "output": "2"
+        }
       ]
     },
     {
       "desc": "multiply function",
       "config": {},
       "tests": [
-        ["2(3)", "6"]
+        {
+          "input": ["2(3)"],
+          "type": "equals",
+          "output": "6"
+        }
       ]
     }
   ]

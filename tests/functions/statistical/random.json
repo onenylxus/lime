@@ -1,28 +1,53 @@
 {
   "name": "Random function test",
+  "version": 2,
   "process": [
     {
       "desc": "empty argument",
       "config": {},
       "tests": [
-        ["rand()>=0", "true"],
-        ["rand()<=1", "true"]
+        {
+          "input": ["rand()>=0"],
+          "type": "equals",
+          "output": "true"
+        },
+        {
+          "input": ["rand()<=1"],
+          "type": "equals",
+          "output": "true"
+        }
       ]
     },
     {
       "desc": "argument of integer",
       "config": {},
       "tests": [
-        ["rand(5)>=0", "true"],
-        ["rand(5)<=5", "true"]
+        {
+          "input": ["rand(5)>=0"],
+          "type": "equals",
+          "output": "true"
+        },
+        {
+          "input": ["rand(5)<=5"],
+          "type": "equals",
+          "output": "true"
+        }
       ]
     },
     {
       "desc": "argument of integer and integer",
       "config": {},
       "tests": [
-        ["rand(4,7)>=4", "true"],
-        ["rand(4,7)<=7", "true"]
+        {
+          "input": ["rand(4,7)>=4"],
+          "type": "equals",
+          "output": "true"
+        },
+        {
+          "input": ["rand(4,7)<=7"],
+          "type": "equals",
+          "output": "true"
+        }
       ]
     }
   ]

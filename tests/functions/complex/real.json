@@ -1,5 +1,6 @@
 {
   "name": "Real function test",
+  "version": 2,
   "process": [
     {
       "desc": "argument of complex",
@@ -7,7 +8,11 @@
 
       },
       "tests": [
-        ["re(1+2i)", "1"]
+        {
+          "input": ["re(1+2i)"],
+          "type": "equals",
+          "output": "1"
+        }
       ]
     }
   ]

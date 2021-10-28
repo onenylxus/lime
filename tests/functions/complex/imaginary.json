@@ -1,5 +1,6 @@
 {
   "name": "Imaginary function test",
+  "version": 2,
   "process": [
     {
       "desc": "argument of complex",
@@ -7,7 +8,11 @@
 
       },
       "tests": [
-        ["im(2+i)", "1"]
+        {
+          "input": ["im(2+i)"],
+          "type": "equals",
+          "output": "1"
+        }
       ]
     }
   ]

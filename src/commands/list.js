@@ -4,7 +4,7 @@ const LimeCommand = require('../structs/command');
 
 /* ------------------------ division ------------------------ */
 
-// List command
+// List command class
 class LimeCommandList extends LimeCommand {
   // Constructor
   constructor(lime) {

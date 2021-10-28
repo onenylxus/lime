@@ -1,19 +1,32 @@
 {
   "name": "One matrix function test",
+  "version": 2,
   "process": [
     {
       "desc": "argument of integer",
       "config": {},
       "tests": [
-        ["onemat(1)", "[1]"],
-        ["onemat(2)", "[1,1;1,1]"]
+        {
+          "input": ["onemat(1)"],
+          "type": "equals",
+          "output": "[1]"
+        },
+        {
+          "input": ["onemat(2)"],
+          "type": "equals",
+          "output": "[1,1;1,1]"
+        }
       ]
     },
     {
       "desc": "argument of integer and integer",
       "config": {},
       "tests": [
-        ["onemat(2,3)", "[1,1,1;1,1,1]"]
+        {
+          "input": ["onemat(2,3)"],
+          "type": "equals",
+          "output": "[1,1,1;1,1,1]"
+        }
       ]
     }
   ]

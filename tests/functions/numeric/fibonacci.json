@@ -1,11 +1,16 @@
 {
   "name": "Fibonacci function test",
+  "version": 2,
   "process": [
     {
       "desc": "argument of integer",
       "config": {},
       "tests": [
-        ["fibonacci(6)", "8"]
+        {
+          "input": ["fibonacci(6)"],
+          "type": "equals",
+          "output": "8"
+        }
       ]
     }
   ]

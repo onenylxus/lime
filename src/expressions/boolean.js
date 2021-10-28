@@ -3,7 +3,7 @@ const LimeExpression = require('../structs/expression');
 
 /* ------------------------ division ------------------------ */
 
-// Boolean class
+// Boolean expression class
 class LimeExpressionBoolean extends LimeExpression {
   // Constructor
   constructor(lime, value) {

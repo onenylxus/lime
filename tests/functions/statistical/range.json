@@ -1,11 +1,16 @@
 {
   "name": "Range function test",
+  "version": 2,
   "process": [
     {
       "desc": "argument of expressions",
       "config": {},
       "tests": [
-        ["range(1,3/2,3)", "2"]
+        {
+          "input": ["range(1,3/2,3)"],
+          "type": "equals",
+          "output": "2"
+        }
       ]
     }
   ]

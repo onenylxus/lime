@@ -1,5 +1,6 @@
 {
   "name": "Add function test",
+  "version": 2,
   "process": [
     {
       "desc": "boolean with boolean",
@@ -7,10 +8,26 @@
         "strictBoolean": false
       },
       "tests": [
-        ["false+false", "0"],
-        ["false+true", "1"],
-        ["true+false", "1"],
-        ["true+true", "2"]
+        {
+          "input": ["false+false"],
+          "type": "equals",
+          "output": "0"
+        },
+        {
+          "input": ["false+true"],
+          "type": "equals",
+          "output": "1"
+        },
+        {
+          "input": ["true+false"],
+          "type": "equals",
+          "output": "1"
+        },
+        {
+          "input": ["true+true"],
+          "type": "equals",
+          "output": "2"
+        }
       ]
     },
     {
@@ -19,8 +36,16 @@
         "strictBoolean": false
       },
       "tests": [
-        ["false+(1+2i)", "1+2i"],
-        ["(6-i)+true", "7-i"]
+        {
+          "input": ["false+(1+2i)"],
+          "type": "equals",
+          "output": "1+2i"
+        },
+        {
+          "input": ["(6-i)+true"],
+          "type": "equals",
+          "output": "7-i"
+        }
       ]
     },
     {
@@ -29,8 +54,16 @@
         "strictBoolean": false
       },
       "tests": [
-        ["false+3", "3"],
-        ["4+true", "5"]
+        {
+          "input": ["false+3"],
+          "type": "equals",
+          "output": "3"
+        },
+        {
+          "input": ["4+true"],
+          "type": "equals",
+          "output": "5"
+        }
       ]
     },
     {
@@ -39,60 +72,108 @@
         "strictBoolean": false
       },
       "tests": [
-        ["false+(1/6)", "1/6"],
-        ["(2/5)+true", "7/5"]
+        {
+          "input": ["false+(1/6)"],
+          "type": "equals",
+          "output": "1/6"
+        },
+        {
+          "input": ["(2/5)+true"],
+          "type": "equals",
+          "output": "7/5"
+        }
       ]
     },
     {
       "desc": "complex with complex",
       "config": {},
       "tests": [
-        ["(1+4i)+(2-5i)", "3-i"]
+        {
+          "input": ["(1+4i)+(2-5i)"],
+          "type": "equals",
+          "output": "3-i"
+        }
       ]
     },
     {
       "desc": "complex with integer",
       "config": {},
       "tests": [
-        ["(1+4i)+3", "4+4i"],
-        ["5+(-3+2i)", "2+2i"]
+        {
+          "input": ["(1+4i)+3"],
+          "type": "equals",
+          "output": "4+4i"
+        },
+        {
+          "input": ["5+(-3+2i)"],
+          "type": "equals",
+          "output": "2+2i"
+        }
       ]
     },
     {
       "desc": "complex with rational",
       "config": {},
       "tests": [
-        ["(1-2i)+(1/2)", "3/2-2i"],
-        ["(1/3)+(2/3+i)", "1+i"]
+        {
+          "input": ["(1-2i)+(1/2)"],
+          "type": "equals",
+          "output": "3/2-2i"
+        },
+        {
+          "input": ["(1/3)+(2/3+i)"],
+          "type": "equals",
+          "output": "1+i"
+        }
       ]
     },
     {
       "desc": "integer with integer",
       "config": {},
       "tests": [
-        ["1+2", "3"]
+        {
+          "input": ["1+2"],
+          "type": "equals",
+          "output": "3"
+        }
       ]
     },
     {
       "desc": "integer with rational",
       "config": {},
       "tests": [
-        ["1+(1/4)", "5/4"],
-        ["(3/4)+2", "11/4"]
+        {
+          "input": ["1+(1/4)"],
+          "type": "equals",
+          "output": "5/4"
+        },
+        {
+          "input": ["(3/4)+2"],
+          "type": "equals",
+          "output": "11/4"
+        }
       ]
     },
     {
       "desc": "rational with rational",
       "config": {},
       "tests": [
-        ["(1/3)+(1/4)", "7/12"]
+        {
+          "input": ["(1/3)+(1/4)"],
+          "type": "equals",
+          "output": "7/12"
+        }
       ]
     },
     {
       "desc": "matrix with matrix",
       "config": {},
       "tests": [
-        ["[1,2,3;3,2,1]+[1,3,3;-1,0,4]", "[2,5,6;2,2,5]"]
+        {
+          "input": ["[1,2,3;3,2,1]+[1,3,3;-1,0,4]"],
+          "type": "equals",
+          "output": "[2,5,6;2,2,5]"
+        }
       ]
     }
   ]

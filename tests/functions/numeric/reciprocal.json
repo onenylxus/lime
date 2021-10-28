@@ -1,18 +1,27 @@
 {
   "name": "Reciprocal function test",
+  "version": 2,
   "process": [
     {
       "desc": "argument of integer",
       "config": {},
       "tests": [
-        ["reciprocal(5)", "1/5"]
+        {
+          "input": ["reciprocal(5)"],
+          "type": "equals",
+          "output": "1/5"
+        }
       ]
     },
     {
       "desc": "argument of rational",
       "config": {},
       "tests": [
-        ["reciprocal(5/2)", "2/5"]
+        {
+          "input": ["reciprocal(5/2)"],
+          "type": "equals",
+          "output": "2/5"
+        }
       ]
     }
   ]

@@ -4,7 +4,7 @@ const LimeExpression = require('../structs/expression');
 
 /* ------------------------ division ------------------------ */
 
-// Integer class
+// Integer expression class
 class LimeExpressionInteger extends LimeExpression {
   // Constructor
   constructor(lime, value) {

@@ -1,5 +1,6 @@
 {
   "name": "Equal function test",
+  "version": 2,
   "process": [
     {
       "desc": "boolean with boolean",
@@ -7,10 +8,26 @@
         "strictBoolean": false
       },
       "tests": [
-        ["false==false", "true"],
-        ["false==true", "false"],
-        ["true==false", "false"],
-        ["true==true", "true"]
+        {
+          "input": ["false==false"],
+          "type": "equals",
+          "output": "true"
+        },
+        {
+          "input": ["false==true"],
+          "type": "equals",
+          "output": "false"
+        },
+        {
+          "input": ["true==false"],
+          "type": "equals",
+          "output": "false"
+        },
+        {
+          "input": ["true==true"],
+          "type": "equals",
+          "output": "true"
+        }
       ]
     },
     {
@@ -19,8 +36,16 @@
         "strictBoolean": false
       },
       "tests": [
-        ["false==3", "false"],
-        ["1==true", "true"]
+        {
+          "input": ["false==3"],
+          "type": "equals",
+          "output": "false"
+        },
+        {
+          "input": ["1==true"],
+          "type": "equals",
+          "output": "true"
+        }
       ]
     },
     {
@@ -29,39 +54,75 @@
         "strictBoolean": false
       },
       "tests": [
-        ["false==(1/6)", "false"],
-        ["(2/5)==true", "false"]
+        {
+          "input": ["false==(1/6)"],
+          "type": "equals",
+          "output": "false"
+        },
+        {
+          "input": ["(2/5)==true"],
+          "type": "equals",
+          "output": "false"
+        }
       ]
     },
     {
       "desc": "integer with integer",
       "config": {},
       "tests": [
-        ["1==1", "true"],
-        ["1==2", "false"],
-        ["2==1", "false"]
+        {
+          "input": ["1==1"],
+          "type": "equals",
+          "output": "true"
+        },
+        {
+          "input": ["1==2"],
+          "type": "equals",
+          "output": "false"
+        },
+        {
+          "input": ["2==1"],
+          "type": "equals",
+          "output": "false"
+        }
       ]
     },
     {
       "desc": "integer with rational",
       "config": {},
       "tests": [
-        ["1==(1/2)", "false"],
-        ["(1/2)==1", "false"]
+        {
+          "input": ["1==(1/2)"],
+          "type": "equals",
+          "output": "false"
+        },
+        {
+          "input": ["(1/2)==1"],
+          "type": "equals",
+          "output": "false"
+        }
       ]
     },
     {
       "desc": "rational with rational",
       "config": {},
       "tests": [
-        ["(1/2)==(1/3)", "false"]
+        {
+          "input": ["(1/2)==(1/3)"],
+          "type": "equals",
+          "output": "false"
+        }
       ]
     },
     {
       "desc": "factorial before equal",
       "config": {},
       "tests": [
-        ["5!==120", "true"]
+        {
+          "input": ["5!==120"],
+          "type": "equals",
+          "output": "true"
+        }
       ]
     }
   ]

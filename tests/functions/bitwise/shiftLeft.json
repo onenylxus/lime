@@ -1,5 +1,6 @@
 {
   "name": "Shift left function test",
+  "version": 2,
   "process": [
     {
       "desc": "boolean with boolean",
@@ -7,10 +8,26 @@
         "strictBoolean": false
       },
       "tests": [
-        ["false<<false", "0"],
-        ["false<<true", "0"],
-        ["true<<false", "1"],
-        ["true<<true", "2"]
+        {
+          "input": ["false<<false"],
+          "type": "equals",
+          "output": "0"
+        },
+        {
+          "input": ["false<<true"],
+          "type": "equals",
+          "output": "0"
+        },
+        {
+          "input": ["true<<false"],
+          "type": "equals",
+          "output": "1"
+        },
+        {
+          "input": ["true<<true"],
+          "type": "equals",
+          "output": "2"
+        }
       ]
     },
     {
@@ -19,15 +36,27 @@
         "strictBoolean": false
       },
       "tests": [
-        ["false<<2", "0"],
-        ["5<<true", "10"]
+        {
+          "input": ["false<<2"],
+          "type": "equals",
+          "output": "0"
+        },
+        {
+          "input": ["5<<true"],
+          "type": "equals",
+          "output": "10"
+        }
       ]
     },
     {
       "desc": "integer with integer",
       "config": {},
       "tests": [
-        ["5<<1", "10"]
+        {
+          "input": ["5<<1"],
+          "type": "equals",
+          "output": "10"
+        }
       ]
     }
   ]

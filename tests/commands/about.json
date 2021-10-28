@@ -1,11 +1,16 @@
 {
   "name": "About command test",
+  "version": 2,
   "process": [
     {
       "desc": "zero parameters",
       "config": {},
       "tests": [
-        ["about", "Lime version 0.3.0\nMathematics computation engine\n2021 Lime Project Team, MIT license\nhttps://github.com/onenylxus/lime"]
+        {
+          "input": ["about"],
+          "type": "equals",
+          "output": "Lime version 0.3.0\nMathematics computation engine\n2021 Lime Project Team, MIT license\nhttps://github.com/onenylxus/lime"
+        }
       ]
     }
   ]

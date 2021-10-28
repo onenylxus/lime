@@ -1,18 +1,27 @@
 {
   "name": "Config command test",
+  "version": 2,
   "process": [
     {
       "desc": "one parameter",
       "config": {},
       "tests": [
-        ["config testMode", "testMode: true"]
+        {
+          "input": ["config testMode"],
+          "type": "equals",
+          "output": "testMode: true"
+        }
       ]
     },
     {
       "desc": "two parameters",
       "config": {},
       "tests": [
-        ["config strictBoolean false", "config strictBoolean", "strictBoolean: false"]
+        {
+          "input": ["config strictBoolean false", "config strictBoolean"],
+          "type": "equals",
+          "output": "strictBoolean: false"
+        }
       ]
     }
   ]

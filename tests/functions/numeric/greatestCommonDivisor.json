@@ -1,11 +1,16 @@
 {
   "name": "Greatest common divisor function test",
+  "version": 2,
   "process": [
     {
       "desc": "argument of integer and integer",
       "config": {},
       "tests": [
-        ["gcd(4,6)", "2"]
+        {
+          "input": ["gcd(4,6)"],
+          "type": "equals",
+          "output": "2"
+        }
       ]
     }
   ]

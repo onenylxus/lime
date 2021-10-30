@@ -13,7 +13,7 @@
   "browser": "dist/bundle-esm.js",
   "sideEffects": false,
   "dependencies": {
-    "@onenylxus/helpers": "^1.0.0"
+    "@onenylxus/helpers": "^1.1.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^20.0.0",

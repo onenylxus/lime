@@ -188,6 +188,7 @@ class Lime {
   parse(eq) {
     // Convert tokens to blocks
     const tokens = eq.solution.shift(); const res = [];
+    let sBool = false; let t = '';
     for (let i = 0; i < tokens.length; i++) {
       switch (tokens[i].type) {
         // Whitespace
@@ -201,8 +202,13 @@ class Lime {
 
         // Symbol and variable
         case 'symbol': case 'variable':
+          // String
+          if (tokens[i].value === '"') {
+            sBool = true; t = '';
+          }
+
           // Referred key
-          if (Refer.hasOwnProperty(tokens[i].value)) {
+          else if (Refer.hasOwnProperty(tokens[i].value)) {
             res.push(this.refer(tokens[i].value));
           }
 
@@ -221,9 +227,19 @@ class Lime {
         default:
           throw new Error('issue:invalidTokenInParse');
       }
+
+      while (i + 1 < tokens.length && sBool) {
+        if (tokens[i + 1].value === '"') {
+          res.push(this.build('string')(t));
+          sBool = false; i++;
+        } else {
+          t += `${tokens[++i].type === 'whitespace' ? ' ' : tokens[i].value}`;
+        }
+      }
     }
 
     // Proceed to next step
+    if (sBool) { throw new Error('error:unmatchedBrackets'); }
     eq.record(this.build('step')(res));
     if (!this.identify('command')(eq.result[0])) {
       this.process(eq);

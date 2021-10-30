@@ -32,6 +32,7 @@ class LimeFunctionAdd extends LimeFunction {
       'eb(rat,rat)',
       'eb(comp,comp)',
       'eb(mat,mat)',
+      'eb(str,str)',
     ];
 
     // Algorithms
@@ -67,6 +68,10 @@ class LimeFunctionAdd extends LimeFunction {
       }
 
       step.bs(this.lime.build('matrix')(places));
+    });
+
+    this.algorithms.set('b(str,str)', (step) => {
+      step.bs(this.lime.direct(['concat', '(', step.left, ',', step.right, ')']));
     });
   }
 }

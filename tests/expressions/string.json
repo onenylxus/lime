@@ -1,0 +1,53 @@
+{
+  "name": "String expression test",
+  "version": 2,
+  "process": [
+    {
+      "desc": "natural define",
+      "config": {},
+      "tests": [
+        {
+          "input": ["\"\""],
+          "type": "equals",
+          "output": "\"\""
+        },
+        {
+          "input": ["\"1\""],
+          "type": "equals",
+          "output": "\"1\""
+        },
+        {
+          "input": ["\"a\""],
+          "type": "equals",
+          "output": "\"a\""
+        },
+        {
+          "input": ["\"+\""],
+          "type": "equals",
+          "output": "\"+\""
+        }
+      ]
+    },
+    {
+      "desc": "whitespace handling",
+      "config": {},
+      "tests": [
+        {
+          "input": ["\" \""],
+          "type": "equals",
+          "output": "\" \""
+        },
+        {
+          "input": ["\"  \""],
+          "type": "equals",
+          "output": "\"  \""
+        },
+        {
+          "input": ["\"a b\""],
+          "type": "equals",
+          "output": "\"a b\""
+        }
+      ]
+    }
+  ]
+}

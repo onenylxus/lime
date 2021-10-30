@@ -1,0 +1,17 @@
+{
+  "name": "Length function test",
+  "version": 2,
+  "process": [
+    {
+      "desc": "argument of string",
+      "config": {},
+      "tests": [
+        {
+          "input": ["len(\"123456\")"],
+          "type": "equals",
+          "output": "6"
+        }
+      ]
+    }
+  ]
+}

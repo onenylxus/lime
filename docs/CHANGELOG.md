@@ -2,10 +2,13 @@
 
 ### v0.3.0 (dev)
 - Isolated type identifier to another package
+- Added expressions: `String`
 - Added functions:
   - Arithmetic: `ScalarExponent`, `ScalarModulo`
   - Matrix: `Adjoint`, `Cofactor`, `Inverse`
+  - String: `Concatenate`, `Length`
 - Modified existing functions to support new expression types
+- Modified test script format
 ### v0.2.2 (Sep 25, 2021)
 - Added expressions: `Matrix`
 - Added functions:

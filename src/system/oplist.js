@@ -63,6 +63,10 @@ const Oplist = {
     'b(rat,rat)':
       (step) => step.bpi('rational'),
 
+    // [Binary] String, String
+    'b(str,str)':
+      (step) => step.bpi('string'),
+
     // [Binary] Variable, Expression
     'b(var,expr)':
       (step) => step.lpi('variable')
@@ -167,6 +171,17 @@ const Oplist = {
       && step.right.length === 3
       && step.ci('matrix')(step.right.places[0])
       && step.ci('integer')(step.right.places[1], step.right.places[2]),
+
+    // [Right unary] Argument{String[1]}
+    'r(arg{str[1]})':
+      (step) => step.rpi('argument')
+      && step.right.length === 1
+      && step.ci('string')(...step.right.places),
+
+    // [Right unary] Argument{String[Any]}
+    'r(arg{str[@]})':
+      (step) => step.rpi('argument')
+      && step.ci('string')(...step.right.places),
 
     // [Right unary] Argument{{Integer|Rational}[Some]}
     'r(arg{{int|rat}[$]})':

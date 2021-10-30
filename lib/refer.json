@@ -14,6 +14,7 @@
   "adj": ["adjoint", "r"],
   "ceil": ["ceiling", "r"],
   "cof": ["cofactor", "r"],
+  "concat": ["concatenate", "r"],
   "conj": ["conjugate", "r"],
   "det": ["determinant", "r"],
   "fibonacci": ["fibonacci", "r"],
@@ -24,6 +25,7 @@
   "index": ["index", "r"],
   "inv": ["inverse", "r"],
   "lcm": ["leastCommonMultiple", "r"],
+  "len": ["length", "r"],
   "max": ["maximum", "r"],
   "mean": ["mean", "r"],
   "min": ["minimum", "r"],
@@ -45,6 +47,7 @@
   "transpose": ["transpose", "r"],
   "trunc": ["truncation", "r"],
   "zeromat": ["zeroMatrix", "r"],
+
   "+": ["add", "b"],
   "=": ["assign", "b"],
   "&": ["bitwiseAnd", "b"],

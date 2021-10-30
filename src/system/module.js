@@ -15,6 +15,7 @@ Module.set('complex', require('../expressions/complex'));
 Module.set('integer', require('../expressions/integer'));
 Module.set('matrix', require('../expressions/matrix'));
 Module.set('rational', require('../expressions/rational'));
+Module.set('string', require('../expressions/string'));
 Module.set('variable', require('../expressions/variable'));
 
 // Arithmetic functions
@@ -99,6 +100,10 @@ Module.set('product', require('../functions/statistical/product'));
 Module.set('random', require('../functions/statistical/random'));
 Module.set('range', require('../functions/statistical/range'));
 Module.set('sum', require('../functions/statistical/sum'));
+
+// String functions
+Module.set('concatenate', require('../functions/string/concatenate'));
+Module.set('length', require('../functions/string/length'));
 
 // Structural functions
 Module.set('assign', require('../functions/structural/assign'));

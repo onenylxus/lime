@@ -1,0 +1,17 @@
+{
+  "name": "Concatenate function test",
+  "version": 2,
+  "process": [
+    {
+      "desc": "argument of string and string",
+      "config": {},
+      "tests": [
+        {
+          "input": ["concat(\"a\",\"b\",\"c\")"],
+          "type": "equals",
+          "output": "\"abc\""
+        }
+      ]
+    }
+  ]
+}

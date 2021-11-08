@@ -60,6 +60,9 @@ Module.set('combination', require('../functions/counting/combination'));
 Module.set('factorial', require('../functions/counting/factorial'));
 Module.set('permutation', require('../functions/counting/permutation'));
 
+// Identify functions
+Module.set('type', require('../functions/identify/type'));
+
 // Logical functions
 Module.set('logicalAnd', require('../functions/logical/logicalAnd'));
 Module.set('logicalNot', require('../functions/logical/logicalNot'));

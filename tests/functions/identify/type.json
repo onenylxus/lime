@@ -1,0 +1,77 @@
+{
+  "name": "Type function test",
+  "version": 2,
+  "process": [
+    {
+      "desc": "argument of boolean",
+      "config": {},
+      "tests": [
+        {
+          "input": ["type(false)"],
+          "type": "equals",
+          "output": "\"boolean\""
+        },
+        {
+          "input": ["type(true)"],
+          "type": "equals",
+          "output": "\"boolean\""
+        }
+      ]
+    },
+    {
+      "desc": "argument of complex",
+      "config": {},
+      "tests": [
+        {
+          "input": ["type(i)"],
+          "type": "equals",
+          "output": "\"complex\""
+        }
+      ]
+    },
+    {
+      "desc": "argument of integer",
+      "config": {},
+      "tests": [
+        {
+          "input": ["type(1)"],
+          "type": "equals",
+          "output": "\"integer\""
+        }
+      ]
+    },
+    {
+      "desc": "argument of matrix",
+      "config": {},
+      "tests": [
+        {
+          "input": ["type([1,2;3,4])"],
+          "type": "equals",
+          "output": "\"matrix\""
+        }
+      ]
+    },
+    {
+      "desc": "argument of rational",
+      "config": {},
+      "tests": [
+        {
+          "input": ["type(1/2)"],
+          "type": "equals",
+          "output": "\"rational\""
+        }
+      ]
+    },
+    {
+      "desc": "argument of string",
+      "config": {},
+      "tests": [
+        {
+          "input": ["type(\"a\")"],
+          "type": "equals",
+          "output": "\"string\""
+        }
+      ]
+    }
+  ]
+}

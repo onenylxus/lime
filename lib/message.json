@@ -1,21 +1,24 @@
 {
   "github": "Please create a GitHub issue about how you received this message, thank you. ",
+
   "error:emptyArgumentInFinalize": "Empty argument in finalize function.",
   "error:functionAgreement": "Function does not agree with parameter types.",
-  "error:invalidArgumentLength": "Invalid argument length.",
-  "error:invalidArgumentLogic": "Invalid argument logic.",
-  "error:invalidMatrixDimensions": "Invalid matrix dimensions.",
-  "error:invalidParametersInCommand": "Invalid parameters in command.",
   "error:inputEmptyInDirect": "Direct input is empty.",
   "error:inputEmptyInPrompt": "Prompt input is empty.",
   "error:inputNotArrayInDirect": "Direct input is not an array.",
   "error:inputNotStringInPrompt": "Prompt input is not a string.",
+  "error:invalidArgumentLength": "Invalid argument length.",
+  "error:invalidArgumentLogic": "Invalid argument logic.",
   "error:invalidConfigProperty": "Invalid configuration property in config command",
   "error:invalidListProperty": "Invalid list property in list command",
+  "error:invalidMatrixDimensions": "Invalid matrix dimensions.",
+  "error:invalidMemoryIndex": "Invalid index for accessing memory.",
+  "error:invalidParametersInCommand": "Invalid parameters in command.",
   "error:invalidSymbol": "Invalid symbol in prompt input.",
   "error:undefinedVariable": "Variable is undefined but used.",
   "error:unmatchedBrackets": "Some brackets are unmatched.",
   "error:zeroMatrixDeterminant": "Determinant of matrix is zero.",
+
   "issue:invalidExpressionInConstruct": "Invalid expression in constructor.",
   "issue:invalidFunctionOrder": "Invalid function order.",
   "issue:invalidMessage": "Invalid message detected.",
@@ -23,6 +26,7 @@
   "issue:invalidModuleInIdentify": "Invalid module in identify function.",
   "issue:invalidResultLengthInProcess": "Invalid result length in process function.",
   "issue:invalidTokenInParse": "Invalid token in parse function.",
+
   "warn:negativeFactorial": "Factorial function has negative integer input. Currenly gamma function has not been implemented.",
   "warn:strictBoolean": "Strict boolean configuration is set to true. Boolean to expression conversion is not allowed.",
   "warn:zeroExponentOfZero": "Zero raised to exponent of zero is undefined."

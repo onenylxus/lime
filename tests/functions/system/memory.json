@@ -1,0 +1,17 @@
+{
+  "name": "Memory function test",
+  "version": 2,
+  "process": [
+    {
+      "desc": "argument of integer",
+      "config": {},
+      "tests": [
+        {
+          "input": ["9", "8", "7", "mem(2)"],
+          "type": "equals",
+          "output": "8"
+        }
+      ]
+    }
+  ]
+}

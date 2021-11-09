@@ -524,9 +524,9 @@
     chalk "^4.0.0"
 
 "@onenylxus/helpers@^1.1.0":
-  version "1.1.0"
-  resolved "https://npm.pkg.github.com/download/@onenylxus/helpers/1.1.0/a3e35f3e7ea911672482b55e350d65cbf2502d983ddd579d0760f524a4594663#195e0d93cf174b3299fa2ec0bd2fa2bd95dd9035"
-  integrity sha512-J2Ib8Tb77zl+9BwPAT1bAX/JReSm88IHw2DXn4FBCLEcVSrDpVTa5kzkBinEv8R0o7efz7g2I6/oYimSb582Og==
+  version "1.1.1"
+  resolved "https://npm.pkg.github.com/download/@onenylxus/helpers/1.1.1/b72d7847a4d740df7c084daea629c24f5c109afb57c9a816be87846dce24f30c#d0c728c39467fc5e4c500e158d2876e6dced9661"
+  integrity sha512-hNY/fluXXqMbCF+vAlCCoGMwCv/ydgkXMCt7YYLg4T2Zw2qhxm9Z5RvJ1CmKD1SfI4IzZyvmu76khM5Y1UpK/g==
 
 "@rollup/plugin-commonjs@^20.0.0":
   version "20.0.0"

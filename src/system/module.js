@@ -60,9 +60,6 @@ Module.set('combination', require('../functions/counting/combination'));
 Module.set('factorial', require('../functions/counting/factorial'));
 Module.set('permutation', require('../functions/counting/permutation'));
 
-// Identify functions
-Module.set('type', require('../functions/identify/type'));
-
 // Logical functions
 Module.set('logicalAnd', require('../functions/logical/logicalAnd'));
 Module.set('logicalNot', require('../functions/logical/logicalNot'));
@@ -116,6 +113,10 @@ Module.set('matrixBracket', require('../functions/structural/matrixBracket'));
 Module.set('omitted', require('../functions/structural/omitted'));
 Module.set('rowSplit', require('../functions/structural/rowSplit'));
 
+// System functions
+Module.set('memory', require('../functions/system/memory'));
+Module.set('type', require('../functions/system/type'));
+
 // Structures
 Module.set('command', require('../structs/command'));
 Module.set('equation', require('../structs/equation'));
@@ -128,3 +129,4 @@ Module.set('token', require('../structs/token'));
 
 // Export
 module.exports = Module;
+

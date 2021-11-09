@@ -2,7 +2,7 @@
 
 ### v0.3.1 (dev)
 - Added functions:
-  - Identify: `Type`
+  - System: `Memory`, `Type`
 ### v0.3.0 (Nov 8, 2021)
 - Isolated type identifier to another package
 - Added expressions: `String`

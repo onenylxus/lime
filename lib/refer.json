@@ -28,6 +28,7 @@
   "len": ["length", "r"],
   "max": ["maximum", "r"],
   "mean": ["mean", "r"],
+  "mem": ["memory", "r"],
   "min": ["minimum", "r"],
   "minor": ["minor", "r"],
   "ncr": ["combination", "r"],

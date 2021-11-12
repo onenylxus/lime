@@ -17,10 +17,6 @@ class LimeFunctionMean extends LimeFunction {
 
     // Algorithms
     this.algorithms.set('r(arg{expr[@]})', (step) => {
-      if (step.right.length === 0) {
-        throw new Error('error:invalidArgumentLength');
-      }
-
       step.rus(this.lime.direct(['sum', step.right, '/', step.right.length]));
     });
   }

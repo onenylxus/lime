@@ -9,6 +9,11 @@
       },
       "tests": [
         {
+          "input": ["false^false"],
+          "type": "throws",
+          "output": "warn:zeroExponentOfZero"
+        },
+        {
           "input": ["false^true"],
           "type": "equals",
           "output": "0"

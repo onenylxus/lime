@@ -12,6 +12,21 @@
           "input": ["ncr(3,2)"],
           "type": "equals",
           "output": "3"
+        },
+        {
+          "input": ["ncr(3,4)"],
+          "type": "equals",
+          "output": "0"
+        },
+        {
+          "input": ["ncr(-1,2)"],
+          "type": "throws",
+          "output": "error:negativePermutation"
+        },
+        {
+          "input": ["ncr(2,-1)"],
+          "type": "throws",
+          "output": "error:negativePermutation"
         }
       ]
     }

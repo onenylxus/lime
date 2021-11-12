@@ -42,6 +42,11 @@
           "input": ["[1,6]./[-1,3]"],
           "type": "equals",
           "output": "[-1,2]"
+        },
+        {
+          "input": ["[1;2]./[0,3]"],
+          "type": "throws",
+          "output": "error:invalidMatrixDimensions"
         }
       ]
     },

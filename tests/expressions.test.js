@@ -9,8 +9,8 @@ const Lime = require('../src/lime');
 // Variables
 let count = 0;
 
-// Counting test
-describe('Expression counting test', () => {
+// Matching test
+describe('Expression matching test', () => {
   finder('src/expressions').forEach((key) => {
     test(key, () => {
       expect(finder('tests/expressions', '.json').includes(key)).toBeTruthy();

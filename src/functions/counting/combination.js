@@ -18,11 +18,10 @@ class LimeFunctionCombination extends LimeFunction {
     // Algorithms
     this.algorithms.set('r(arg{int[2]})', (step) => {
       const [l, r] = step.right.places;
-      if (l.value < r.value) {
-        throw new Error('error:invalidArgumentLogic');
+      if (l.value < 0 || r.value < 0) {
+        throw new Error('error:negativePermutation');
       }
-
-      step.rus(this.lime.direct(['npr', '(', l, ',', r, ')', '/', r, '!']));
+      step.rus(this.lime.direct(['npr', '(', l, ',', r, ')', '/', 'npr', '(', r, ',', r, ')']));
     });
   }
 }

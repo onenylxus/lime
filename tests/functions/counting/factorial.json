@@ -33,6 +33,11 @@
           "input": ["5!"],
           "type": "equals",
           "output": "120"
+        },
+        {
+          "input": ["(-1)!"],
+          "type": "throws",
+          "output": "warn:negativeFactorial"
         }
       ]
     }

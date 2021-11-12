@@ -19,7 +19,7 @@ class LimeFunctionPrime extends LimeFunction {
     this.algorithms.set('r(arg{int[1]})', (step) => {
       const t = step.right.value[0];
       if (t < 1) {
-        throw new Error('error:invalidArgumentLogic');
+        throw new Error('error:invalidSequenceIndex');
       }
       if (!this.lime.store.hasOwnProperty('prime')) {
         this.lime.store.prime = [2];

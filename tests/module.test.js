@@ -10,6 +10,16 @@ const count = {};
 
 // Module test
 describe('Module test', () => {
+  count.cmd = 0;
+  describe('Commands', () => {
+    finder('src/commands').forEach((key) => {
+      test(key, () => {
+        expect(Module.has(key)).toBeTruthy();
+      });
+      count.cmd++;
+    });
+  });
+
   count.expr = 0;
   describe('Expressions', () => {
     finder('src/expressions').forEach((key) => {

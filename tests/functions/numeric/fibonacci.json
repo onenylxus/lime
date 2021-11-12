@@ -10,6 +10,11 @@
           "input": ["fibonacci(6)"],
           "type": "equals",
           "output": "8"
+        },
+        {
+          "input": ["fibonacci(0)"],
+          "type": "throws",
+          "output": "error:invalidSequenceIndex"
         }
       ]
     }

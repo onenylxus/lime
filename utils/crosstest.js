@@ -23,6 +23,10 @@ function crosstest(testFunc, expectFunc, limeClass, bundleClass, unit) {
                 expectFunc(lime[m](t.input[l - 1])).toStrictEqual(t.output);
                 break;
 
+              case 'throws':
+                expectFunc(lime[m](t.input[l - 1])).toStrictEqual(m === 'prompt' ? lime.message(new Error(t.output)) : '');
+                break;
+
               default:
                 throw new Error('Invalid test script');
             }

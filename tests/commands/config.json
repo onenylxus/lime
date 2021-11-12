@@ -10,6 +10,11 @@
           "input": ["config testMode"],
           "type": "equals",
           "output": "testMode: true"
+        },
+        {
+          "input": ["config a"],
+          "type": "throws",
+          "output": "error:invalidConfigProperty"
         }
       ]
     },
@@ -21,6 +26,11 @@
           "input": ["config strictBoolean false", "config strictBoolean"],
           "type": "equals",
           "output": "strictBoolean: false"
+        },
+        {
+          "input": ["config a 0"],
+          "type": "throws",
+          "output": "error:invalidConfigProperty"
         }
       ]
     }

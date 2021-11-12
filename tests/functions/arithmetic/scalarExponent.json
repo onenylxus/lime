@@ -26,6 +26,11 @@
           "input": ["[2,3].^[-1,0]"],
           "type": "equals",
           "output": "[1/2,1]"
+        },
+        {
+          "input": ["[1,2].^[0;3]"],
+          "type": "throws",
+          "output": "error:invalidMatrixDimensions"
         }
       ]
     },

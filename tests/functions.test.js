@@ -10,8 +10,8 @@ const Lime = require('../src/lime');
 // Variables
 let count = 0;
 
-// Counting test
-describe('Function counting test', () => {
+// Matching test
+describe('Function matching test', () => {
   fs.readdirSync('src/functions').forEach((folder) => {
     finder(`src/functions/${folder}`).forEach((key) => {
       test(`${folder}/${key}`, () => {

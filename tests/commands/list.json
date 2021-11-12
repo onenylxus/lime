@@ -10,6 +10,16 @@
           "input": ["list memory"],
           "type": "equals",
           "output": []
+        },
+        {
+          "input": ["list a"],
+          "type": "throws",
+          "output": "error:invalidListProperty"
+        },
+        {
+          "input": ["list prompt"],
+          "type": "throws",
+          "output": "error:invalidListProperty"
         }
       ]
     }

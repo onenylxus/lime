@@ -9,8 +9,8 @@ const Lime = require('../src/lime');
 // Variables
 let count = 0;
 
-// Counting test
-describe('Command counting test', () => {
+// Matching test
+describe('Command matching test', () => {
   finder('src/commands').forEach((key) => {
     test(key, () => {
       expect(finder('tests/commands', '.json').includes(key)).toBeTruthy();

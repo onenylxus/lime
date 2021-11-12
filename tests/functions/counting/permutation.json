@@ -12,6 +12,21 @@
           "input": ["npr(3,2)"],
           "type": "equals",
           "output": "6"
+        },
+        {
+          "input": ["npr(3,4)"],
+          "type": "equals",
+          "output": "0"
+        },
+        {
+          "input": ["npr(-1,2)"],
+          "type": "throws",
+          "output": "error:negativePermutation"
+        },
+        {
+          "input": ["npr(2,-1)"],
+          "type": "throws",
+          "output": "error:negativePermutation"
         }
       ]
     }

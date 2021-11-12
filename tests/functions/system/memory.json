@@ -10,6 +10,11 @@
           "input": ["9", "8", "7", "mem(2)"],
           "type": "equals",
           "output": "8"
+        },
+        {
+          "input": ["mem(3)"],
+          "type": "throws",
+          "output": "error:invalidMemoryIndex"
         }
       ]
     }

@@ -47,9 +47,6 @@ class LimeExpressionArgument extends LimeExpression {
 
   // Finalize function
   finalize() {
-    if (this.isEmpty) {
-      throw new Error('error:emptyArgumentInFinalize');
-    }
     if (this.length === 1) {
       return this.places[0].finalize();
     }

@@ -13,15 +13,11 @@ class LimeCommandList extends LimeCommand {
 
     // Operations
     this.operations.set(1, (prop) => {
-      if (
-        !this.lime.hasOwnProperty(prop)
-        || Types.isFunction(this.lime[prop])
-      ) {
+      if (!this.lime.hasOwnProperty(prop) || Types.isFunction(this.lime[prop])) {
         throw new Error('error:invalidListProperty');
       }
-      return Types.isClass(Map, this.lime[prop])
-        ? Object.fromEntries(this.lime[prop])
-        : this.lime[prop];
+      const res = this.lime[prop];
+      return Types.isClass(Map, res) ? Object.fromEntries(res) : res;
     });
   }
 }

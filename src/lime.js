@@ -42,7 +42,9 @@ class Lime {
     try {
       return this.run(input);
     } catch (err) {
-      console.log(this.message(err));
+      if (!this.config.testMode) {
+        console.log(this.message(err));
+      }
       return '';
     }
   }

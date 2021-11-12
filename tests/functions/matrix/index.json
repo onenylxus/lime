@@ -10,6 +10,16 @@
           "input": ["index([1,2,3;4,5,6],4)"],
           "type": "equals",
           "output": "4"
+        },
+        {
+          "input": ["index([1,2,3],0)"],
+          "type": "throws",
+          "output": "error:invalidMatrixDimensions"
+        },
+        {
+          "input": ["index([1,2,3],4)"],
+          "type": "throws",
+          "output": "error:invalidMatrixDimensions"
         }
       ]
     },
@@ -21,6 +31,26 @@
           "input": ["index([1,2,3;4,5,6],1,1)"],
           "type": "equals",
           "output": "1"
+        },
+        {
+          "input": ["index([1,2,3],0,1)"],
+          "type": "throws",
+          "output": "error:invalidMatrixDimensions"
+        },
+        {
+          "input": ["index([1,2,3],1,0)"],
+          "type": "throws",
+          "output": "error:invalidMatrixDimensions"
+        },
+        {
+          "input": ["index([1,2,3],2,1)"],
+          "type": "throws",
+          "output": "error:invalidMatrixDimensions"
+        },
+        {
+          "input": ["index([1;2;3],1,2)"],
+          "type": "throws",
+          "output": "error:invalidMatrixDimensions"
         }
       ]
     }

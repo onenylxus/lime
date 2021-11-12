@@ -64,6 +64,10 @@ class LimeExpressionRational extends LimeExpression {
 
   // Print function
   print() {
+    if (this.lime.config.decimalPlaces >= 0) {
+      const r = 10 ** this.lime.config.decimalPlaces;
+      return `${Math.round(this.value.n * r / this.value.d) / r}`;
+    }
     return `${this.nPlace.print()}/${this.dPlace.print()}`;
   }
 }

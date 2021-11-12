@@ -3,6 +3,7 @@
 ### v0.3.1 (dev)
 - Added functions:
   - System: `Memory`, `Type`
+- Added result display in decimal
 - Added error tests for commands, expressions and functions
 ### v0.3.0 (Nov 8, 2021)
 - Isolated type identifier to another package

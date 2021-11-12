@@ -22,7 +22,7 @@ class LimeCommandConfig extends LimeCommand {
         throw new Error('error:invalidConfigProperty');
       }
       const t = this.lime.config[prop];
-      this.lime.config[prop] = this.lime.direct([value]).value;
+      this.lime.config[prop] = this.lime.direct([value.match(/^[-+]?\d+$/) ? +value : value]).value;
       return `${prop}: ${t} > ${this.lime.config[prop]}`;
     });
   }

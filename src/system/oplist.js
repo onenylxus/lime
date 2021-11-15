@@ -19,6 +19,11 @@ const Oplist = {
     'b(expr,expr)':
       (step) => step.bpi('expression'),
 
+    // [Binary] Expression, String
+    'b(expr,str)':
+      (step) => step.lpi('expression')
+      && step.rpi('string'),
+
     // [Binary] Integer, Integer
     'b(int,int)':
       (step) => step.bpi('integer'),
@@ -275,6 +280,11 @@ const Oplist = {
 
   // Actions
   act: {
+    // Transfer function to decimal
+    'f(_.)': (step) => {
+      step.fs(step.lime.refer('_.'));
+    },
+
     // Transfer function to equal
     'f(==)': (step) => {
       step.rus(step.lime.refer('=='));
@@ -488,6 +498,9 @@ const Oplist = {
 
     // [Right unary] Convert from non-boolean to boolean
     'cr({comp|int|rat}->bool)': ['r({comp|int|rat})', 'r({comp|int|rat}->bool)'],
+
+    // [Function] Transfer to decimal
+    'tf(_.)': ['b(int,int)', 'f(_.)'],
 
     // [Function] Transfer to equal
     'tf(==)': ['r(=)', 'f(==)'],

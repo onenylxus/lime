@@ -110,6 +110,7 @@ Module.set('assign', require('../functions/structural/assign'));
 Module.set('columnSplit', require('../functions/structural/columnSplit'));
 Module.set('commonBracket', require('../functions/structural/commonBracket'));
 Module.set('matrixBracket', require('../functions/structural/matrixBracket'));
+Module.set('property', require('../functions/structural/property'));
 Module.set('omitted', require('../functions/structural/omitted'));
 Module.set('rowSplit', require('../functions/structural/rowSplit'));
 

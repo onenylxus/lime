@@ -2,6 +2,7 @@
 
 ### v0.3.1 (dev)
 - Added functions:
+  - Structural: `Property`
   - System: `Memory`, `Type`
 - Added result display in decimal
 - Added error tests for commands, expressions and functions

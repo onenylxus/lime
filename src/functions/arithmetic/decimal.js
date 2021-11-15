@@ -12,13 +12,6 @@ class LimeFunctionDecimal extends LimeFunction {
 
     // Binary operation
     this.operations.b = [
-      'tf(.+)',
-      'tf(./)',
-      'tf(.^)',
-      'tf(.%)',
-      'tf(.*)',
-      'tf(.-)',
-
       'eb(int,int)',
     ];
 

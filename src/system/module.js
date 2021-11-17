@@ -69,6 +69,7 @@ Module.set('logicalOr', require('../functions/logical/logicalOr'));
 Module.set('adjoint', require('../functions/matrix/adjoint'));
 Module.set('cofactor', require('../functions/matrix/cofactor'));
 Module.set('determinant', require('../functions/matrix/determinant'));
+Module.set('hilbertMatrix', require('../functions/matrix/hilbertMatrix'));
 Module.set('identityMatrix', require('../functions/matrix/identityMatrix'));
 Module.set('index', require('../functions/matrix/index'));
 Module.set('inverse', require('../functions/matrix/inverse'));

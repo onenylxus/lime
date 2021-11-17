@@ -1,0 +1,17 @@
+{
+  "name": "Hilbert matrix function test",
+  "version": 2,
+  "process": [
+    {
+      "desc": "argument of integer",
+      "config": {},
+      "tests": [
+        {
+          "input": ["hilbmat(3)"],
+          "type": "equals",
+          "output": "[1,1/2,1/3;1/2,1/3,1/4;1/3,1/4,1/5]"
+        }
+      ]
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 
 ### v0.3.1 (dev)
 - Added functions:
-  - Matrix: `MagicMatrix`
+  - Matrix: `HilbertMatrix`, `MagicMatrix`
   - Structural: `Property`
   - System: `Memory`, `Type`
 - Modified some messages from error to warn type

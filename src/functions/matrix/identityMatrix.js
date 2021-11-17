@@ -17,10 +17,10 @@ class LimeFunctionIdentityMatrix extends LimeFunction {
 
     // Algorithms
     this.algorithms.set('r(arg{int[1]})', (step) => {
-      const places = [];
-      for (let j = 0; j < step.right.value[0]; j++) {
+      const n = step.right.value[0]; const places = [];
+      for (let j = 0; j < n; j++) {
         places.push([]);
-        for (let i = 0; i < step.right.value[0]; i++) {
+        for (let i = 0; i < n; i++) {
           places[j].push(this.lime.direct([i === j ? 1 : 0]));
         }
       }

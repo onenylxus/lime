@@ -20,7 +20,6 @@ class LimeFunctionReducedRowEchelonForm extends LimeFunction {
       const m = step.right.places[0];
       let s = 0; let n = m.row;
 
-      // Swap zero rows to bottom
       while (s < n) {
         if (m.places[s].every((v) => this.lime.direct([v, '==', 0]).value)) {
           m.places.splice(--n, 0, ...m.places.splice(s, 1));
@@ -32,21 +31,14 @@ class LimeFunctionReducedRowEchelonForm extends LimeFunction {
 
       let c = 0; let f = 0;
       while (c < m.column && f < n) {
-        // Check row scan for current column is finished
         if (s >= n) {
-          c++;
-          s = f;
+          c++; s = f;
         }
 
-        // Scan for pivot columns
         else if (this.lime.direct([m.places[s][c], '!=', 0]).value) {
-          // Swap to relative first row
           m.places.splice(f, 0, ...m.places.splice(s, 1));
-
-          // Reduce row
           m.places[f] = m.places[f].map((v) => this.lime.direct([v, '/', m.places[f][c]]));
 
-          // Subtract other rows
           for (let j = 0; j < n; j++) {
             if (j !== f) {
               const r = m.places[j][c];
@@ -56,18 +48,14 @@ class LimeFunctionReducedRowEchelonForm extends LimeFunction {
             }
           }
 
-          // Finalize curret column check
-          f++;
-          s = n;
+          f++; s = n;
         }
 
-        // Iterate
         else {
           s++;
         }
       }
 
-      // Rebuild array
       const a = [];
       for (let v = 0; v < m.row; v++) {
         a.push([]);

@@ -20,6 +20,7 @@
   "fibonacci": ["fibonacci", "r"],
   "floor": ["floor", "r"],
   "gcd": ["greatestCommonDivisor", "r"],
+  "hilbmat": ["hilbertMatrix", "r"],
   "idmat": ["identityMatrix", "r"],
   "im": ["imaginary", "r"],
   "index": ["index", "r"],

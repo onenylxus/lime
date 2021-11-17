@@ -18,10 +18,10 @@ class LimeFunctionZeroMatrix extends LimeFunction {
 
     // Algorithms
     this.algorithms.set('r(arg{int[1]})', (step) => {
-      const places = [];
-      for (let j = 0; j < step.right.value[0]; j++) {
+      const n = step.right.value[0]; const places = [];
+      for (let j = 0; j < n; j++) {
         places.push([]);
-        for (let i = 0; i < step.right.value[0]; i++) {
+        for (let i = 0; i < n; i++) {
           places[j].push(this.lime.direct([0]));
         }
       }
@@ -29,10 +29,10 @@ class LimeFunctionZeroMatrix extends LimeFunction {
     });
 
     this.algorithms.set('r(arg{int[2]})', (step) => {
-      const places = [];
-      for (let j = 0; j < step.right.value[0]; j++) {
+      const [m, n] = step.right.value; const places = [];
+      for (let j = 0; j < m; j++) {
         places.push([]);
-        for (let i = 0; i < step.right.value[1]; i++) {
+        for (let i = 0; i < n; i++) {
           places[j].push(this.lime.direct([0]));
         }
       }

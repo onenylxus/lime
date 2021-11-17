@@ -19,7 +19,7 @@ class LimeFunctionPermutation extends LimeFunction {
     this.algorithms.set('r(arg{int[2]})', (step) => {
       const [l, r] = step.right.places;
       if (l.value < 0 || r.value < 0) {
-        throw new Error('error:negativePermutation');
+        throw new Error('warn:negativePermutation');
       }
       if (l.value < r.value) {
         step.rus(this.lime.direct([0]));

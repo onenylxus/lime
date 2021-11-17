@@ -72,6 +72,7 @@ Module.set('determinant', require('../functions/matrix/determinant'));
 Module.set('identityMatrix', require('../functions/matrix/identityMatrix'));
 Module.set('index', require('../functions/matrix/index'));
 Module.set('inverse', require('../functions/matrix/inverse'));
+Module.set('magicMatrix', require('../functions/matrix/magicMatrix'));
 Module.set('minor', require('../functions/matrix/minor'));
 Module.set('oneMatrix', require('../functions/matrix/oneMatrix'));
 Module.set('reducedRowEchelonForm', require('../functions/matrix/reducedRowEchelonForm'));

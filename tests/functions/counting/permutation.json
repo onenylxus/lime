@@ -21,12 +21,12 @@
         {
           "input": ["npr(-1,2)"],
           "type": "throws",
-          "output": "error:negativePermutation"
+          "output": "warn:negativePermutation"
         },
         {
           "input": ["npr(2,-1)"],
           "type": "throws",
-          "output": "error:negativePermutation"
+          "output": "warn:negativePermutation"
         }
       ]
     }

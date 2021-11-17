@@ -21,12 +21,12 @@
         {
           "input": ["ncr(-1,2)"],
           "type": "throws",
-          "output": "error:negativePermutation"
+          "output": "warn:negativePermutation"
         },
         {
           "input": ["ncr(2,-1)"],
           "type": "throws",
-          "output": "error:negativePermutation"
+          "output": "warn:negativePermutation"
         }
       ]
     }

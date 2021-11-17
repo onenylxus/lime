@@ -16,10 +16,8 @@
   "error:invalidParametersInCommand": "Invalid parameters in command.",
   "error:invalidSequenceIndex": "Invalid sequence index argument.",
   "error:invalidSymbol": "Invalid symbol in prompt input.",
-  "error:negativePermutation": "Permutation parameters is negative.",
   "error:undefinedVariable": "Variable is undefined but used.",
   "error:unmatchedBrackets": "Some brackets are unmatched.",
-  "error:zeroMatrixDeterminant": "Determinant of matrix is zero.",
 
   "issue:invalidExpressionInConstruct": "Invalid expression in constructor.",
   "issue:invalidFunctionOrder": "Invalid function order.",
@@ -30,6 +28,9 @@
   "issue:invalidTokenInParse": "Invalid token in parse function.",
 
   "warn:negativeFactorial": "Factorial function has negative integer input. Currenly gamma function has not been implemented.",
+  "warn:negativePermutation": "Permutation parameters is negative.",
   "warn:strictBoolean": "Strict boolean configuration is set to true. Boolean to expression conversion is not allowed.",
-  "warn:zeroExponentOfZero": "Zero raised to exponent of zero is undefined."
+  "warn:magicMatrixDimensionTwo": "There is no magic matrix with dimension 2.",
+  "warn:zeroExponentOfZero": "Zero raised to exponent of zero is undefined.",
+  "warn:zeroMatrixDeterminant": "Determinant of matrix is zero."
 }

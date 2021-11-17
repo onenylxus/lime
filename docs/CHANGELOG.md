@@ -2,8 +2,10 @@
 
 ### v0.3.1 (dev)
 - Added functions:
+  - Matrix: `MagicMatrix`
   - Structural: `Property`
   - System: `Memory`, `Type`
+- Modified some messages from error to warn type
 - Added result display in decimal
 - Added error tests for commands, expressions and functions
 ### v0.3.0 (Nov 8, 2021)

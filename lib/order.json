@@ -62,6 +62,7 @@
     "inverse",
     "leastCommonMultiple",
     "length",
+    "magicMatrix",
     "maximum",
     "mean",
     "memory",

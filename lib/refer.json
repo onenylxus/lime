@@ -26,6 +26,7 @@
   "inv": ["inverse", "r"],
   "lcm": ["leastCommonMultiple", "r"],
   "len": ["length", "r"],
+  "magicmat": ["magicMatrix", "r"],
   "max": ["maximum", "r"],
   "mean": ["mean", "r"],
   "mem": ["memory", "r"],

@@ -19,7 +19,7 @@ class LimeFunctionInverse extends LimeFunction {
     this.algorithms.set('r(arg{mat[1]})', (step) => {
       const d = this.lime.direct(['det', '(', step.right.places[0], ')']);
       if (d.value === 0) {
-        throw new Error('error:zeroMatrixDeterminant');
+        throw new Error('warn:zeroMatrixDeterminant');
       }
       step.rus(this.lime.direct(['adj', '(', step.right.places[0], ')', './', d]));
     });

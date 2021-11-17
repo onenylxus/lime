@@ -1,0 +1,32 @@
+{
+  "name": "Magic matrix function test",
+  "version": 2,
+  "process": [
+    {
+      "desc": "argument of integer",
+      "config": {},
+      "tests": [
+        {
+          "input": ["magicmat(3)"],
+          "type": "equals",
+          "output": "[8,3,4;1,5,9;6,7,2]"
+        },
+        {
+          "input": ["magicmat(4)"],
+          "type": "equals",
+          "output": "[16,2,3,13;5,11,10,8;9,7,6,12;4,14,15,1]"
+        },
+        {
+          "input": ["magicmat(6)"],
+          "type": "equals",
+          "output": "[35,3,4,26,21,22;1,32,9,19,23,27;33,7,2,24,25,20;8,30,31,17,12,13;28,5,36,10,14,18;6,34,29,15,16,11]"
+        },
+        {
+          "input": ["magicmat(2)"],
+          "type": "throws",
+          "output": "warn:magicMatrixDimensionTwo"
+        }
+      ]
+    }
+  ]
+}

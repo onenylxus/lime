@@ -24,7 +24,7 @@
         {
           "input": ["inv([1,1;1,1])"],
           "type": "throws",
-          "output": "error:zeroMatrixDeterminant"
+          "output": "warn:zeroMatrixDeterminant"
         }
       ]
     }

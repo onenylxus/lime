@@ -6,7 +6,7 @@
   "main": "index.js",
   "private": true,
   "dependencies": {
-    "@onenylxus/helpers": "^1.0.0"
+    "@onenylxus/helpers": "^1.1.0"
   },
   "devDependencies": {
     "chalk": "^4.1.1",

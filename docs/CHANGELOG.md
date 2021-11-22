@@ -1,6 +1,7 @@
 # Changelog
 
-### v0.3.1 (dev)
+### v0.3.1 (Nov 22, 2021)
+- Set up simple user interface in web
 - Added functions:
   - Matrix: `HilbertMatrix`, `MagicMatrix`
   - Structural: `Property`

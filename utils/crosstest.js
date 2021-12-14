@@ -1,12 +1,12 @@
-// Values
-const VERSION = 2;
+// Require
+const { TEST_VERSION } = require('../lib/version.json');
 
 /* ------------------------ division ------------------------ */
 
 // Cross test function
 function crosstest(testFunc, expectFunc, limeClass, bundleClass, unit) {
   let count = 0;
-  if (!unit.hasOwnProperty('version') || unit.version !== VERSION) {
+  if (!unit.hasOwnProperty('version') || unit.version !== TEST_VERSION) {
     throw new Error('Invalid test script');
   }
 

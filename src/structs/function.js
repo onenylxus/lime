@@ -1,12 +1,13 @@
 // Require
 const { Types } = require('@onenylxus/helpers');
+const Compiler = require('../system/compiler');
 const Oplist = require('../system/oplist');
 const Order = require('../../lib/order.json');
 
 /* ------------------------ division ------------------------ */
 
 // Function class
-class LimeFunction {
+class Function {
   // Constructor
   constructor(lime, { ...args }) {
     // Parent
@@ -62,4 +63,4 @@ class LimeFunction {
 /* ------------------------ division ------------------------ */
 
 // Export
-module.exports = LimeFunction;
+module.exports = Compiler.generic(Function, 'Function');

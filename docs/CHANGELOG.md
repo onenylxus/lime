@@ -1,5 +1,7 @@
 # Changelog
 
+### v0.3.2 (dev)
+- Set up generic compiler to generalize classes
 ### v0.3.1 (Nov 22, 2021)
 - Set up simple user interface in web
 - Added functions:

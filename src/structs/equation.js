@@ -1,5 +1,10 @@
+// Require
+const Compiler = require('../system/compiler');
+
+/* ------------------------ division ------------------------ */
+
 // Equation class
-class LimeEquation {
+class Equation {
   // Constructor
   constructor(lime, input) {
     // Parent
@@ -41,4 +46,4 @@ class LimeEquation {
 /* ------------------------ division ------------------------ */
 
 // Export
-module.exports = LimeEquation;
+module.exports = Compiler.generic(Equation, 'Equation');

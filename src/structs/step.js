@@ -1,10 +1,11 @@
 // Require
 const { Types } = require('@onenylxus/helpers');
+const Compiler = require('../system/compiler');
 
 /* ------------------------ division ------------------------ */
 
 // Step class
-class LimeStep {
+class Step {
   // Constructor
   constructor(lime, data, pos) {
     // Parent
@@ -101,4 +102,4 @@ class LimeStep {
 /* ------------------------ division ------------------------ */
 
 // Export
-module.exports = LimeStep;
+module.exports = Compiler.generic(Step, 'Step');

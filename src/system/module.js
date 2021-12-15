@@ -1,132 +1,169 @@
+/* eslint-disable global-require */
+
+// Require
+const Compiler = require('./compiler');
+
+/* ------------------------ division ------------------------ */
+
 // Module map
-const Module = new Map();
+const Module = new Map([].concat(
+  // Commands
+  Compiler.cmd([
+    ['about', require('../commands/about')],
+    ['clear', require('../commands/clear')],
+    ['config', require('../commands/config')],
+    ['help', require('../commands/help')],
+    ['list', require('../commands/list')],
+  ]),
 
-// Commands
-Module.set('about', require('../commands/about'));
-Module.set('clear', require('../commands/clear'));
-Module.set('config', require('../commands/config'));
-Module.set('help', require('../commands/help'));
-Module.set('list', require('../commands/list'));
+  // Expressions
+  Compiler.expr([
+    ['argument', require('../expressions/argument')],
+    ['boolean', require('../expressions/boolean')],
+    ['complex', require('../expressions/complex')],
+    ['integer', require('../expressions/integer')],
+    ['matrix', require('../expressions/matrix')],
+    ['rational', require('../expressions/rational')],
+    ['string', require('../expressions/string')],
+    ['variable', require('../expressions/variable')],
+  ]),
 
-// Expressions
-Module.set('argument', require('../expressions/argument'));
-Module.set('boolean', require('../expressions/boolean'));
-Module.set('complex', require('../expressions/complex'));
-Module.set('integer', require('../expressions/integer'));
-Module.set('matrix', require('../expressions/matrix'));
-Module.set('rational', require('../expressions/rational'));
-Module.set('string', require('../expressions/string'));
-Module.set('variable', require('../expressions/variable'));
+  // Arithmetic functions
+  Compiler.func([
+    ['add', require('../functions/arithmetic/add')],
+    ['decimal', require('../functions/arithmetic/decimal')],
+    ['divide', require('../functions/arithmetic/divide')],
+    ['exponent', require('../functions/arithmetic/exponent')],
+    ['modulo', require('../functions/arithmetic/modulo')],
+    ['multiply', require('../functions/arithmetic/multiply')],
+    ['negative', require('../functions/arithmetic/negative')],
+    ['positive', require('../functions/arithmetic/positive')],
+    ['scalarAdd', require('../functions/arithmetic/scalarAdd')],
+    ['scalarDivide', require('../functions/arithmetic/scalarDivide')],
+    ['scalarExponent', require('../functions/arithmetic/scalarExponent')],
+    ['scalarModulo', require('../functions/arithmetic/scalarModulo')],
+    ['scalarMultiply', require('../functions/arithmetic/scalarMultiply')],
+    ['scalarSubtract', require('../functions/arithmetic/scalarSubtract')],
+    ['subtract', require('../functions/arithmetic/subtract')],
+  ]),
 
-// Arithmetic functions
-Module.set('add', require('../functions/arithmetic/add'));
-Module.set('decimal', require('../functions/arithmetic/decimal'));
-Module.set('divide', require('../functions/arithmetic/divide'));
-Module.set('exponent', require('../functions/arithmetic/exponent'));
-Module.set('modulo', require('../functions/arithmetic/modulo'));
-Module.set('multiply', require('../functions/arithmetic/multiply'));
-Module.set('negative', require('../functions/arithmetic/negative'));
-Module.set('positive', require('../functions/arithmetic/positive'));
-Module.set('scalarAdd', require('../functions/arithmetic/scalarAdd'));
-Module.set('scalarDivide', require('../functions/arithmetic/scalarDivide'));
-Module.set('scalarExponent', require('../functions/arithmetic/scalarExponent'));
-Module.set('scalarModulo', require('../functions/arithmetic/scalarModulo'));
-Module.set('scalarMultiply', require('../functions/arithmetic/scalarMultiply'));
-Module.set('scalarSubtract', require('../functions/arithmetic/scalarSubtract'));
-Module.set('subtract', require('../functions/arithmetic/subtract'));
+  // Bitwise functions
+  Compiler.func([
+    ['bitwiseAnd', require('../functions/bitwise/bitwiseAnd')],
+    ['bitwiseNot', require('../functions/bitwise/bitwiseNot')],
+    ['bitwiseOr', require('../functions/bitwise/bitwiseOr')],
+    ['shiftLeft', require('../functions/bitwise/shiftLeft')],
+    ['shiftRight', require('../functions/bitwise/shiftRight')],
+  ]),
 
-// Bitwise functions
-Module.set('bitwiseAnd', require('../functions/bitwise/bitwiseAnd'));
-Module.set('bitwiseNot', require('../functions/bitwise/bitwiseNot'));
-Module.set('bitwiseOr', require('../functions/bitwise/bitwiseOr'));
-Module.set('shiftLeft', require('../functions/bitwise/shiftLeft'));
-Module.set('shiftRight', require('../functions/bitwise/shiftRight'));
+  // Comparison functions
+  Compiler.func([
+    ['equal', require('../functions/comparison/equal')],
+    ['greater', require('../functions/comparison/greater')],
+    ['greaterEqual', require('../functions/comparison/greaterEqual')],
+    ['notEqual', require('../functions/comparison/notEqual')],
+    ['smaller', require('../functions/comparison/smaller')],
+    ['smallerEqual', require('../functions/comparison/smallerEqual')],
+  ]),
 
-// Comparison functions
-Module.set('equal', require('../functions/comparison/equal'));
-Module.set('greater', require('../functions/comparison/greater'));
-Module.set('greaterEqual', require('../functions/comparison/greaterEqual'));
-Module.set('notEqual', require('../functions/comparison/notEqual'));
-Module.set('smaller', require('../functions/comparison/smaller'));
-Module.set('smallerEqual', require('../functions/comparison/smallerEqual'));
+  // Complex functions
+  Compiler.func([
+    ['conjugate', require('../functions/complex/conjugate')],
+    ['imaginary', require('../functions/complex/imaginary')],
+    ['real', require('../functions/complex/real')],
+  ]),
 
-// Complex functions
-Module.set('conjugate', require('../functions/complex/conjugate'));
-Module.set('imaginary', require('../functions/complex/imaginary'));
-Module.set('real', require('../functions/complex/real'));
+  // Counting functions
+  Compiler.func([
+    ['combination', require('../functions/counting/combination')],
+    ['factorial', require('../functions/counting/factorial')],
+    ['permutation', require('../functions/counting/permutation')],
+  ]),
 
-// Counting functions
-Module.set('combination', require('../functions/counting/combination'));
-Module.set('factorial', require('../functions/counting/factorial'));
-Module.set('permutation', require('../functions/counting/permutation'));
+  // Logical functions
+  Compiler.func([
+    ['logicalAnd', require('../functions/logical/logicalAnd')],
+    ['logicalNot', require('../functions/logical/logicalNot')],
+    ['logicalOr', require('../functions/logical/logicalOr')],
+  ]),
 
-// Logical functions
-Module.set('logicalAnd', require('../functions/logical/logicalAnd'));
-Module.set('logicalNot', require('../functions/logical/logicalNot'));
-Module.set('logicalOr', require('../functions/logical/logicalOr'));
+  // Matrix functions
+  Compiler.func([
+    ['adjoint', require('../functions/matrix/adjoint')],
+    ['cofactor', require('../functions/matrix/cofactor')],
+    ['determinant', require('../functions/matrix/determinant')],
+    ['hilbertMatrix', require('../functions/matrix/hilbertMatrix')],
+    ['identityMatrix', require('../functions/matrix/identityMatrix')],
+    ['index', require('../functions/matrix/index')],
+    ['inverse', require('../functions/matrix/inverse')],
+    ['magicMatrix', require('../functions/matrix/magicMatrix')],
+    ['minor', require('../functions/matrix/minor')],
+    ['oneMatrix', require('../functions/matrix/oneMatrix')],
+    ['reducedRowEchelonForm', require('../functions/matrix/reducedRowEchelonForm')],
+    ['trace', require('../functions/matrix/trace')],
+    ['transpose', require('../functions/matrix/transpose')],
+    ['zeroMatrix', require('../functions/matrix/zeroMatrix')],
+  ]),
 
-// Matrix functions
-Module.set('adjoint', require('../functions/matrix/adjoint'));
-Module.set('cofactor', require('../functions/matrix/cofactor'));
-Module.set('determinant', require('../functions/matrix/determinant'));
-Module.set('hilbertMatrix', require('../functions/matrix/hilbertMatrix'));
-Module.set('identityMatrix', require('../functions/matrix/identityMatrix'));
-Module.set('index', require('../functions/matrix/index'));
-Module.set('inverse', require('../functions/matrix/inverse'));
-Module.set('magicMatrix', require('../functions/matrix/magicMatrix'));
-Module.set('minor', require('../functions/matrix/minor'));
-Module.set('oneMatrix', require('../functions/matrix/oneMatrix'));
-Module.set('reducedRowEchelonForm', require('../functions/matrix/reducedRowEchelonForm'));
-Module.set('trace', require('../functions/matrix/trace'));
-Module.set('transpose', require('../functions/matrix/transpose'));
-Module.set('zeroMatrix', require('../functions/matrix/zeroMatrix'));
+  // Numeric functions
+  Compiler.func([
+    ['absolute', require('../functions/numeric/absolute')],
+    ['ceiling', require('../functions/numeric/ceiling')],
+    ['fibonacci', require('../functions/numeric/fibonacci')],
+    ['floor', require('../functions/numeric/floor')],
+    ['greatestCommonDivisor', require('../functions/numeric/greatestCommonDivisor')],
+    ['leastCommonMultiple', require('../functions/numeric/leastCommonMultiple')],
+    ['prime', require('../functions/numeric/prime')],
+    ['reciprocal', require('../functions/numeric/reciprocal')],
+    ['round', require('../functions/numeric/round')],
+    ['sign', require('../functions/numeric/sign')],
+    ['truncation', require('../functions/numeric/truncation')],
+  ]),
 
-// Numeric functions
-Module.set('absolute', require('../functions/numeric/absolute'));
-Module.set('ceiling', require('../functions/numeric/ceiling'));
-Module.set('fibonacci', require('../functions/numeric/fibonacci'));
-Module.set('floor', require('../functions/numeric/floor'));
-Module.set('greatestCommonDivisor', require('../functions/numeric/greatestCommonDivisor'));
-Module.set('leastCommonMultiple', require('../functions/numeric/leastCommonMultiple'));
-Module.set('prime', require('../functions/numeric/prime'));
-Module.set('reciprocal', require('../functions/numeric/reciprocal'));
-Module.set('round', require('../functions/numeric/round'));
-Module.set('sign', require('../functions/numeric/sign'));
-Module.set('truncation', require('../functions/numeric/truncation'));
+  // Statistical functions
+  Compiler.func([
+    ['maximum', require('../functions/statistical/maximum')],
+    ['mean', require('../functions/statistical/mean')],
+    ['minimum', require('../functions/statistical/minimum')],
+    ['product', require('../functions/statistical/product')],
+    ['random', require('../functions/statistical/random')],
+    ['range', require('../functions/statistical/range')],
+    ['sum', require('../functions/statistical/sum')],
+  ]),
 
-// Statistical functions
-Module.set('maximum', require('../functions/statistical/maximum'));
-Module.set('mean', require('../functions/statistical/mean'));
-Module.set('minimum', require('../functions/statistical/minimum'));
-Module.set('product', require('../functions/statistical/product'));
-Module.set('random', require('../functions/statistical/random'));
-Module.set('range', require('../functions/statistical/range'));
-Module.set('sum', require('../functions/statistical/sum'));
+  // String functions
+  Compiler.func([
+    ['concatenate', require('../functions/string/concatenate')],
+    ['length', require('../functions/string/length')],
+  ]),
 
-// String functions
-Module.set('concatenate', require('../functions/string/concatenate'));
-Module.set('length', require('../functions/string/length'));
+  // Structural functions
+  Compiler.func([
+    ['assign', require('../functions/structural/assign')],
+    ['columnSplit', require('../functions/structural/columnSplit')],
+    ['commonBracket', require('../functions/structural/commonBracket')],
+    ['matrixBracket', require('../functions/structural/matrixBracket')],
+    ['property', require('../functions/structural/property')],
+    ['omitted', require('../functions/structural/omitted')],
+    ['rowSplit', require('../functions/structural/rowSplit')],
+  ]),
 
-// Structural functions
-Module.set('assign', require('../functions/structural/assign'));
-Module.set('columnSplit', require('../functions/structural/columnSplit'));
-Module.set('commonBracket', require('../functions/structural/commonBracket'));
-Module.set('matrixBracket', require('../functions/structural/matrixBracket'));
-Module.set('property', require('../functions/structural/property'));
-Module.set('omitted', require('../functions/structural/omitted'));
-Module.set('rowSplit', require('../functions/structural/rowSplit'));
+  // System functions
+  Compiler.func([
+    ['memory', require('../functions/system/memory')],
+    ['type', require('../functions/system/type')],
+  ]),
 
-// System functions
-Module.set('memory', require('../functions/system/memory'));
-Module.set('type', require('../functions/system/type'));
-
-// Structures
-Module.set('command', require('../structs/command'));
-Module.set('equation', require('../structs/equation'));
-Module.set('expression', require('../structs/expression'));
-Module.set('function', require('../structs/function'));
-Module.set('step', require('../structs/step'));
-Module.set('token', require('../structs/token'));
+  // Structures
+  Compiler.strc([
+    ['command', require('../structs/command')],
+    ['equation', require('../structs/equation')],
+    ['expression', require('../structs/expression')],
+    ['function', require('../structs/function')],
+    ['step', require('../structs/step')],
+    ['token', require('../structs/token')],
+  ]),
+));
 
 /* ------------------------ division ------------------------ */
 

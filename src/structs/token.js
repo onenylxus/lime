@@ -1,11 +1,10 @@
 // Require
 const { Types } = require('@onenylxus/helpers');
-const Compiler = require('../system/compiler');
 
 /* ------------------------ division ------------------------ */
 
 // Token class
-class Token {
+class LimeToken {
   // Constructor
   constructor(lime, type, value) {
     // Parent
@@ -20,4 +19,4 @@ class Token {
 /* ------------------------ division ------------------------ */
 
 // Export
-module.exports = Compiler.generic(Token, 'Token');
+module.exports = LimeToken;

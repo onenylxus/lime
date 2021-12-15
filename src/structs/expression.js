@@ -1,11 +1,10 @@
 // Require
 const { Types } = require('@onenylxus/helpers');
-const Compiler = require('../system/compiler');
 
 /* ------------------------ division ------------------------ */
 
 // Expression class
-class Expression {
+class LimeExpression {
   // Constructor
   constructor(lime, { ...args }) {
     // Parent
@@ -20,4 +19,4 @@ class Expression {
 /* ------------------------ division ------------------------ */
 
 // Export
-module.exports = Compiler.generic(Expression, 'Expression');
+module.exports = LimeExpression;

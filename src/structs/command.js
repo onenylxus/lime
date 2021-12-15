@@ -1,10 +1,5 @@
-// Require
-const Compiler = require('../system/compiler');
-
-/* ------------------------ division ------------------------ */
-
 // Command class
-class Command {
+class LimeCommand {
   // Constructor
   constructor(lime, { ...args }) {
     // Parent
@@ -31,4 +26,4 @@ class Command {
 /* ------------------------ division ------------------------ */
 
 // Export
-module.exports = Compiler.generic(Command, 'Command');
+module.exports = LimeCommand;

@@ -52,6 +52,7 @@
     "concatenate",
     "conjugate",
     "determinant",
+    "factor",
     "factorial",
     "fibonacci",
     "floor",

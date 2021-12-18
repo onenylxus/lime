@@ -109,6 +109,7 @@ const Module = new Map([].concat(
   Compiler.func([
     ['absolute', require('../functions/numeric/absolute')],
     ['ceiling', require('../functions/numeric/ceiling')],
+    ['factor', require('../functions/numeric/factor')],
     ['fibonacci', require('../functions/numeric/fibonacci')],
     ['floor', require('../functions/numeric/floor')],
     ['greatestCommonDivisor', require('../functions/numeric/greatestCommonDivisor')],

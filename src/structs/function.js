@@ -50,7 +50,7 @@ class LimeFunction {
       // Execute action under condition
       if ((cond)(step)) {
         (act)(step);
-        return step;
+        if (op[i][0] !== 'c') { return step; }
       }
     }
 

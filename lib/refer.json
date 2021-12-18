@@ -17,6 +17,7 @@
   "concat": ["concatenate", "r"],
   "conj": ["conjugate", "r"],
   "det": ["determinant", "r"],
+  "factor": ["factor", "r"],
   "fibonacci": ["fibonacci", "r"],
   "floor": ["floor", "r"],
   "gcd": ["greatestCommonDivisor", "r"],

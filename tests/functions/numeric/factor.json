@@ -1,0 +1,17 @@
+{
+  "name": "Factor function test",
+  "version": 2,
+  "process": [
+    {
+      "desc": "argument of integer",
+      "config": {},
+      "tests": [
+        {
+          "input": ["factor(12)"],
+          "type": "equals",
+          "output": "[1,2,3,4,6,12]"
+        }
+      ]
+    }
+  ]
+}

@@ -27,6 +27,7 @@
   "issue:invalidResultLengthInProcess": "Invalid result length in process function.",
   "issue:invalidTokenInParse": "Invalid token in parse function.",
 
+  "warn:invalidNumberFactor": "Integer input smaller than 1 cannot be factored.",
   "warn:negativeFactorial": "Factorial function has negative integer input. Currenly gamma function has not been implemented.",
   "warn:negativePermutation": "Permutation parameters is negative.",
   "warn:strictBoolean": "Strict boolean configuration is set to true. Boolean to expression conversion is not allowed.",

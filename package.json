@@ -8,6 +8,13 @@
     "javascript",
     "mathematics"
   ],
+  "files": [
+    "dist/*",
+    "docs/*",
+    "LICENSE.md",
+    "README.md",
+    "yarn.lock"
+  ],
   "main": "dist/bundle.js",
   "module": "dist/bundle-cjs.js",
   "browser": "dist/bundle-esm.js",

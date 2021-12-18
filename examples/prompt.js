@@ -8,23 +8,25 @@ const Lime = process.argv[2] === '-q' ? require('../src/lime')({ developmentMode
 
 // Process running function
 function run() {
-  const line = Prompt(chalk.cyan('> '));
-  console.log('');
-  if (line !== 'exit') {
+  while (true) {
+    const line = Prompt(chalk.cyan('> '));
+    console.log('');
+
+    if (line === 'exit') {
+      console.log(chalk.cyan.bold('[x] This prompt will exit after this message.'));
+      return;
+    }
+
     let res = Lime.prompt(line);
-    if (Types.isString(res) && res.startsWith('[!]')) {
-      console.log(chalk.red.bold(res));
-    } else if (Types.isString(res) && res.startsWith('[?]')) {
-      console.log(chalk.yellow.bold(res));
-    } else if (Types.isString(res) && res.startsWith('[i]')) {
-      console.log(chalk.blue.bold(res));
-    } else {
-      console.log(res);
+    if (Types.isString(res)) {
+      switch (res.slice(0, 3)) {
+        case '[!]': console.log(chalk.red.bold(res));
+        case '[?]': console.log(chalk.yellow.bold(res));
+        case '[i]': console.log(chalk.blue.bold(res));
+        default: console.log(res);
+      }
     }
     console.log('');
-    run();
-  } else {
-    console.log(chalk.cyan.bold('[x] This prompt will exit after this message.'));
   }
 }
 

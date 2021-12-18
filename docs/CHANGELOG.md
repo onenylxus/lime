@@ -5,6 +5,7 @@
 - Simplified step evaluation process
 - Added functions:
   - Numeric: `Factor`
+- Shrunk package size
 ### v0.3.1 (Nov 22, 2021)
 - Set up simple user interface in web
 - Added functions:

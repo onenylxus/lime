@@ -22,7 +22,7 @@ class LimeFunctionCommonBracket extends LimeFunction {
       let i = step.pos; let part = 0;
       while (i + 1 < data.length && stack.length > 0) {
         // Brackets
-        if (this.lime.identify('commonBracket', 'matrixBracket')(data[i + 1])) {
+        if (this.lime.identify('commonBracket', 'matrixBracket', 'setBracket')(data[i + 1])) {
           if (data[i + 1].mode === 'n') {
             stack.push(data[i + 1]);
           } else {

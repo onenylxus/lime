@@ -18,13 +18,14 @@ function run() {
     }
 
     let res = Lime.prompt(line);
-    if (Types.isString(res)) {
-      switch (res.slice(0, 3)) {
-        case '[!]': console.log(chalk.red.bold(res));
-        case '[?]': console.log(chalk.yellow.bold(res));
-        case '[i]': console.log(chalk.blue.bold(res));
-        default: console.log(res);
-      }
+    if (Types.isString(res) && res.startsWith('[!]')) {
+      console.log(chalk.red.bold(res));
+    } else if (Types.isString(res) && res.startsWith('[?]')) {
+      console.log(chalk.yellow.bold(res));
+    } else if (Types.isString(res) && res.startsWith('[i]')) {
+      console.log(chalk.blue.bold(res));
+    } else {
+      console.log(res);
     }
     console.log('');
   }

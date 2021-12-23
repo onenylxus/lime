@@ -3,12 +3,12 @@ const LimeFunction = require('../../structs/function');
 
 /* ------------------------ division ------------------------ */
 
-// Matrix bracket function class
-class LimeFunctionMatrixBracket extends LimeFunction {
+// Set bracket function class
+class LimeFunctionSetBracket extends LimeFunction {
   // Constructor
   constructor(lime, mode) {
     // Super from function class
-    super(lime, { name: 'matrixBracket', mode });
+    super(lime, { name: 'setBracket', mode });
 
     // Nested operation
     this.operations.n = [
@@ -18,8 +18,8 @@ class LimeFunctionMatrixBracket extends LimeFunction {
     // Algorithms
     this.algorithms.set('n()', (step) => {
       // Create nested equation
-      const { data } = step; const nest = [[[]]]; const stack = [this];
-      let i = step.pos; let row = 0; let col = 0;
+      const { data } = step; const nest = [[]]; const stack = [this];
+      let i = step.pos; let part = 0;
       while (i + 1 < data.length && stack.length > 0) {
         // Brackets
         if (this.lime.identify('commonBracket', 'matrixBracket', 'setBracket')(data[i + 1])) {
@@ -32,28 +32,21 @@ class LimeFunctionMatrixBracket extends LimeFunction {
             stack.pop();
             if (stack.length === 0) { break; }
           }
-          nest[row][col].push(data[++i]);
+          nest[part].push(data[++i]);
         }
 
         // Splits
         else if (this.lime.identify('columnSplit')(data[i + 1]) && stack.length === 1) {
-          nest[row].push([]);
-          col++;
+          nest.push([]);
+          part++;
           i++;
         } else if (this.lime.identify('rowSplit')(data[i + 1]) && stack.length === 1) {
-          if (row > 0 && nest[row].length !== nest[0].length) {
-            throw new Error('error:invalidArgumentLogic');
-          }
-
-          nest.push([[]]);
-          row++;
-          col = 0;
-          i++;
+          throw new Error('error:functionAgreement');
         }
 
         // General expressions and functions
         else {
-          nest[row][col].push(data[++i]);
+          nest[part].push(data[++i]);
         }
       }
       if (stack.length > 0) {
@@ -61,15 +54,12 @@ class LimeFunctionMatrixBracket extends LimeFunction {
       }
 
       // Evaluate and splice
-      const places = []; let len = 1 + (++row) * (++col);
-      for (let j = 0; j < row; j++) {
-        places.push([]);
-        for (let k = 0; k < col; k++) {
-          len += nest[j][k].length;
-          places[j].push(nest[j][k].length > 0 ? this.lime.direct(nest[j][k]) : null);
-        }
+      const places = []; let len = 2 + part;
+      for (let j = 0; j <= part; j++) {
+        len += nest[j].length;
+        places.push(nest[j].length > 0 ? this.lime.direct(nest[j]) : null);
       }
-      step.ns(len, this.lime.build('matrix')(places));
+      step.ns(len, this.lime.build('set')(...places));
     });
   }
 }
@@ -77,4 +67,4 @@ class LimeFunctionMatrixBracket extends LimeFunction {
 /* ------------------------ division ------------------------ */
 
 // Export
-module.exports = LimeFunctionMatrixBracket;
+module.exports = LimeFunctionSetBracket;

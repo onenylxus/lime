@@ -92,6 +92,7 @@
   [
     "commonBracket",
     "matrixBracket",
-    "omitted"
+    "omitted",
+    "setBracket"
   ]
 ]

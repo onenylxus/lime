@@ -86,6 +86,8 @@
   ".%": ["scalarModulo", "b"],
   ".*": ["scalarMultiply", "b"],
   ".-": ["scalarSubtract", "b"],
+  "{": ["setBracket", "n"],
+  "}": ["setBracket", "x"],
   "<<": ["shiftLeft", "b"],
   ">>": ["shiftRight", "b"],
   "<": ["smaller", "b"],

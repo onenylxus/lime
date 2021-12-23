@@ -1,0 +1,22 @@
+{
+  "name": "Set expression test",
+  "version": 2,
+  "process": [
+    {
+      "desc": "natural define",
+      "config": {},
+      "tests": [
+        {
+          "input": ["{1}"],
+          "type": "equals",
+          "output": "{1}"
+        },
+        {
+          "input": ["{1,2,1}"],
+          "type": "equals",
+          "output": "{1,2}"
+        }
+      ]
+    }
+  ]
+}

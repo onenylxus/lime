@@ -24,6 +24,7 @@ const Module = new Map([].concat(
     ['integer', require('../expressions/integer')],
     ['matrix', require('../expressions/matrix')],
     ['rational', require('../expressions/rational')],
+    ['set', require('../expressions/set')],
     ['string', require('../expressions/string')],
     ['variable', require('../expressions/variable')],
   ]),
@@ -147,6 +148,7 @@ const Module = new Map([].concat(
     ['property', require('../functions/structural/property')],
     ['omitted', require('../functions/structural/omitted')],
     ['rowSplit', require('../functions/structural/rowSplit')],
+    ['setBracket', require('../functions/structural/setBracket')],
   ]),
 
   // System functions

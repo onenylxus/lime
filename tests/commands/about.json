@@ -9,7 +9,7 @@
         {
           "input": ["about"],
           "type": "equals",
-          "output": "Lime version 0.3.2\nMathematics computation engine\n2021 Lime Project Team, MIT license\nhttps://github.com/onenylxus/lime"
+          "output": "Lime version 0.3.2\nMathematics computation engine\n2021-2022 Lime Project Team, MIT license\nhttps://github.com/onenylxus/lime"
         }
       ]
     }

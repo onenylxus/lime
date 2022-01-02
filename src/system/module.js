@@ -122,6 +122,12 @@ const Module = new Map([].concat(
     ['truncation', require('../functions/numeric/truncation')],
   ]),
 
+  // Set functions
+  Compiler.func([
+    ['intersection', require('../functions/set/intersection')],
+    ['union', require('../functions/set/union')],
+  ]),
+
   // Statistical functions
   Compiler.func([
     ['maximum', require('../functions/statistical/maximum')],

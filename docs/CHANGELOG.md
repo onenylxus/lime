@@ -6,6 +6,7 @@
 - Added expressions: `Set`
 - Added functions:
   - Numeric: `Factor`
+  - Set: `Intersection`, `Union`
   - Structural: `SetBracket`
 - Shrunk package size
 ### v0.3.1 (Nov 22, 2021)

@@ -25,6 +25,7 @@
   "idmat": ["identityMatrix", "r"],
   "im": ["imaginary", "r"],
   "index": ["index", "r"],
+  "intersection": ["intersection", "r"],
   "inv": ["inverse", "r"],
   "lcm": ["leastCommonMultiple", "r"],
   "len": ["length", "r"],
@@ -51,6 +52,7 @@
   "transpose": ["transpose", "r"],
   "trunc": ["truncation", "r"],
   "type": ["type", "r"],
+  "union": ["union", "r"],
   "zeromat": ["zeroMatrix", "r"],
 
   "+": ["add", "b"],

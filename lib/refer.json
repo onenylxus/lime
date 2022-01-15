@@ -8,7 +8,7 @@
   "false": ["boolean", false],
   "i": ["complex", ["integer", 0], ["integer", 1]],
   "true": ["boolean", true],
-  "()": ["argument", null],
+  "()": ["argument"],
 
   "abs": ["absolute", "r"],
   "adj": ["adjoint", "r"],

@@ -1,5 +1,4 @@
 // Require
-const { Types } = require('@onenylxus/helpers');
 const LimeExpression = require('../structs/expression');
 
 /* ------------------------ division ------------------------ */
@@ -12,10 +11,7 @@ class LimeExpressionArgument extends LimeExpression {
     super(lime, { name: 'argument', isSimple: false });
 
     // Build expression
-    if (
-      !this.lime.identify('expression')(...places)
-      && !(Types.isNull(places[0]))
-    ) {
+    if (!this.lime.identify('expression')(...places)) {
       throw new Error('issue:invalidExpressionInConstruct');
     }
     this.places = places;
@@ -30,12 +26,12 @@ class LimeExpressionArgument extends LimeExpression {
 
   // Get length
   get length() {
-    return this.isEmpty ? 0 : this.places.length;
+    return this.places.length;
   }
 
   // Get empty argument status
   get isEmpty() {
-    return Types.isNull(this.places[0]);
+    return this.length === 0;
   }
 
   /* ------------------------ division ------------------------ */
@@ -47,10 +43,7 @@ class LimeExpressionArgument extends LimeExpression {
 
   // Finalize function
   finalize() {
-    if (this.length === 1) {
-      return this.places[0].finalize();
-    }
-    return this.places.map((p) => p.finalize());
+    return this.length === 1 ? this.places[0].finalize() : this.places.map((p) => p.finalize());
   }
 }
 

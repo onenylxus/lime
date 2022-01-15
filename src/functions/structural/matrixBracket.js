@@ -66,7 +66,9 @@ class LimeFunctionMatrixBracket extends LimeFunction {
         places.push([]);
         for (let k = 0; k < col; k++) {
           len += nest[j][k].length;
-          places[j].push(nest[j][k].length > 0 ? this.lime.direct(nest[j][k]) : null);
+          if (nest[j][k].length > 0) {
+            places[j].push(this.lime.direct(nest[j][k]));
+          }
         }
       }
       step.ns(len, this.lime.build('matrix')(places));

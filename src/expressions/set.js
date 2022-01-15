@@ -1,5 +1,4 @@
 // Require
-const { Types } = require('@onenylxus/helpers');
 const LimeExpression = require('../structs/expression');
 
 /* ------------------------ division ------------------------ */
@@ -12,10 +11,7 @@ class LimeExpressionSet extends LimeExpression {
     super(lime, { name: 'set', isSimple: false });
 
     // Build expression
-    if (
-      !this.lime.identify('expression')(...places)
-      && !Types.isNull(places[0])
-    ) {
+    if (!this.lime.identify('expression')(...places)) {
       throw new Error('issue:invalidExpressionInConstruct');
     }
 
@@ -36,12 +32,12 @@ class LimeExpressionSet extends LimeExpression {
 
   // Get length
   get length() {
-    return this.isEmpty ? 0 : this.places.length;
+    return this.places.length;
   }
 
   // Get empty argument status
   get isEmpty() {
-    return Types.isNull(this.places[0]);
+    return this.length === 0;
   }
 
   /* ------------------------ division ------------------------ */
@@ -62,9 +58,9 @@ class LimeExpressionSet extends LimeExpression {
   print() {
     const space = this.lime.config.testMode ? '' : ' '; let str = '{';
     for (let i = 0; i < this.length; i++) {
-      str += space + this.places[i].print() + (i < this.length - 1 ? ',' : `${space}}`);
+      str += space + this.places[i].print() + (i < this.length - 1 ? ',' : '');
     }
-    return str;
+    return `${str}${space}}`;
   }
 }
 

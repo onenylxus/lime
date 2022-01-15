@@ -57,7 +57,9 @@ class LimeFunctionSetBracket extends LimeFunction {
       const places = []; let len = 2 + part;
       for (let j = 0; j <= part; j++) {
         len += nest[j].length;
-        places.push(nest[j].length > 0 ? this.lime.direct(nest[j]) : null);
+        if (nest[j].length > 0) {
+          places.push(this.lime.direct(nest[j]));
+        }
       }
       step.ns(len, this.lime.build('set')(...places));
     });

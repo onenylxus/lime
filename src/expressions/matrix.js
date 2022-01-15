@@ -1,5 +1,4 @@
 // Require
-const { Types } = require('@onenylxus/helpers');
 const LimeExpression = require('../structs/expression');
 
 /* ------------------------ division ------------------------ */
@@ -12,14 +11,10 @@ class LimeExpressionMatrix extends LimeExpression {
     super(lime, { name: 'matrix', isSimple: false });
 
     // Build expression
-    if (
-      !this.lime.identify('expression')(...places.flat())
-      && !(Types.isNull(places[0][0]))
-    ) {
+    if (!this.lime.identify('expression')(...places.flat())) {
       throw new Error('issue:invalidExpressionInConstruct');
     }
-    const l = places[0].length;
-    if (places.some((r) => r.length !== l)) {
+    if (places.length > 0 && places.some((r) => r.length !== places[0].length)) {
       throw new Error('error:invalidMatrixDimensions');
     }
     this.places = places;
@@ -34,12 +29,12 @@ class LimeExpressionMatrix extends LimeExpression {
 
   // Get row
   get row() {
-    return this.isEmpty ? 0 : this.places.length;
+    return this.places.length;
   }
 
   // Get column
   get column() {
-    return this.isEmpty ? 0 : this.places[0].length;
+    return this.row === 0 ? 0 : this.places[0].length;
   }
 
   // Get size
@@ -49,7 +44,7 @@ class LimeExpressionMatrix extends LimeExpression {
 
   // Get empty matrix status
   get isEmpty() {
-    return Types.isNull(this.places[0][0]);
+    return this.size === 0;
   }
 
   /* ------------------------ division ------------------------ */

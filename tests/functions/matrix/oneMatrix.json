@@ -7,6 +7,11 @@
       "config": {},
       "tests": [
         {
+          "input": ["onemat(0)"],
+          "type": "equals",
+          "output": "[]"
+        },
+        {
           "input": ["onemat(1)"],
           "type": "equals",
           "output": "[1]"

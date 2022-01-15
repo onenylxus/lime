@@ -3,6 +3,7 @@
 ### v0.3.2 (dev)
 - Set up generic compiler to generalize classes
 - Simplified step evaluation process
+- Redefined empty matrices and sets
 - Added expressions: `Set`
 - Added functions:
   - Numeric: `Factor`

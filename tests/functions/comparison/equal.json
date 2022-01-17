@@ -67,6 +67,22 @@
       ]
     },
     {
+      "desc": "complex with complex",
+      "config": {},
+      "tests": [
+        {
+          "input": ["1+2i==1+2i"],
+          "type": "equals",
+          "output": "true"
+        },
+        {
+          "input": ["1+2i==2+i"],
+          "type": "equals",
+          "output": "false"
+        }
+      ]
+    },
+    {
       "desc": "integer with integer",
       "config": {},
       "tests": [

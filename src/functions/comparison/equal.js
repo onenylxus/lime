@@ -25,11 +25,16 @@ class LimeFunctionEqual extends LimeFunction {
       'cb(int->rat,rat)',
       'cb(rat,int->rat)',
 
+      'eb(comp,comp)',
       'eb(int,int)',
       'eb(rat,rat)',
     ];
 
     // Algorithms
+    this.algorithms.set('b(comp,comp)', (step) => {
+      step.bs(this.lime.direct([step.left.rPlace, '==', step.right.rPlace, '&&', step.left.iPlace, '==', step.right.iPlace]));
+    });
+
     this.algorithms.set('b(int,int)', (step) => {
       step.bs(this.lime.build('boolean')(step.left.value === step.right.value));
     });

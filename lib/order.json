@@ -1,10 +1,15 @@
 [
   [
+    "assign",
     "columnSplit",
     "rowSplit"
   ],
   [
-    "assign",
+    "logicalAnd",
+    "logicalNot",
+    "logicalOr"
+  ],
+  [
     "equal",
     "greater",
     "greaterEqual",
@@ -17,9 +22,6 @@
     "bitwiseAnd",
     "bitwiseNot",
     "bitwiseOr",
-    "logicalAnd",
-    "logicalNot",
-    "logicalOr",
     "modulo",
     "scalarAdd",
     "scalarModulo",

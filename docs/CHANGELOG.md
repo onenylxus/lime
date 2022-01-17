@@ -1,6 +1,8 @@
 # Changelog
 
-### v0.3.2 (dev)
+### v0.3.3 (dev)
+- Extended `Equal` function to all expression types (todo)
+### v0.3.2 (Jan 17, 2022)
 - Set up generic compiler to generalize classes
 - Simplified step evaluation process
 - Redefined empty arguments, matrices and sets

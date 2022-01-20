@@ -125,6 +125,7 @@ const Module = new Map([].concat(
   // Set functions
   Compiler.func([
     ['intersection', require('../functions/set/intersection')],
+    ['subset', require('../functions/set/subset')],
     ['union', require('../functions/set/union')],
   ]),
 

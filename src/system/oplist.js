@@ -68,6 +68,10 @@ const Oplist = {
     'b(rat,rat)':
       (step) => step.bpi('rational'),
 
+    // [Binary] Set, Set
+    'b(set,set)':
+      (step) => step.bpi('set'),
+
     // [Binary] String, String
     'b(str,str)':
       (step) => step.bpi('string'),

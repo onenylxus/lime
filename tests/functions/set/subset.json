@@ -1,0 +1,22 @@
+{
+  "name": "Subset function test",
+  "version": 2,
+  "process": [
+    {
+      "desc": "argument of set and set",
+      "config": {},
+      "tests": [
+        {
+          "input": ["subset({1},{1,2})"],
+          "type": "equals",
+          "output": "true"
+        },
+        {
+          "input": ["subset({3,4},{1,2,3})"],
+          "type": "equals",
+          "output": "false"
+        }
+      ]
+    }
+  ]
+}

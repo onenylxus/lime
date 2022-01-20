@@ -27,7 +27,10 @@ class LimeFunctionEqual extends LimeFunction {
 
       'eb(comp,comp)',
       'eb(int,int)',
+      'eb(mat,mat)',
       'eb(rat,rat)',
+      'eb(set,set)',
+      'eb(expr,expr)',
     ];
 
     // Algorithms
@@ -39,8 +42,30 @@ class LimeFunctionEqual extends LimeFunction {
       step.bs(this.lime.build('boolean')(step.left.value === step.right.value));
     });
 
+    this.algorithms.set('b(mat,mat)', (step) => {
+      let bool = step.left.row === step.right.row && step.left.column === step.right.column;
+      let br = !step.left.isEmpty;
+      while (bool && br) {
+        for (let j = 0; j < step.left.row; j++) {
+          for (let i = 0; i < step.left.column; i++) {
+            bool = bool && this.lime.direct([step.left.places[j][i], '==', step.right.places[j][i]]).value;
+            br = j !== step.left.row - 1 || i !== step.left.column - 1;
+          }
+        }
+      }
+      step.bs(this.lime.build('boolean')(bool));
+    });
+
     this.algorithms.set('b(rat,rat)', (step) => {
       step.bs(this.lime.direct([step.left.nPlace, '*', step.right.dPlace, '==', step.right.nPlace, '*', step.left.dPlace]));
+    });
+
+    this.algorithms.set('b(set,set)', (step) => {
+      step.bs(this.lime.direct(['subset', '(', step.left, ',', step.right, ')', '&&', 'subset', '(', step.right, ',', step.left, ')']));
+    });
+
+    this.algorithms.set('b(expr,expr)', (step) => {
+      step.bs(this.lime.direct(['false']));
     });
   }
 }

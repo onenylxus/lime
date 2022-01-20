@@ -85,6 +85,7 @@
     "reducedRowEchelonForm",
     "round",
     "sign",
+    "subset",
     "sum",
     "trace",
     "transpose",

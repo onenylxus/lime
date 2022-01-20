@@ -47,6 +47,7 @@
   "round": ["round", "r"],
   "rref": ["reducedRowEchelonForm", "r"],
   "sgn": ["sign", "r"],
+  "subset": ["subset", "r"],
   "sum": ["sum", "r"],
   "tr": ["trace", "r"],
   "transpose": ["transpose", "r"],

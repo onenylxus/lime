@@ -14,10 +14,10 @@ class LimeExpressionMatrix extends LimeExpression {
     if (!this.lime.identify('expression')(...places.flat())) {
       throw new Error('issue:invalidExpressionInConstruct');
     }
-    if (places.length > 0 && places.some((r) => r.length !== places[0].length)) {
+    if (places.flat().length > 0 && places.some((r) => r.length !== places[0].length)) {
       throw new Error('error:invalidMatrixDimensions');
     }
-    this.places = places;
+    this.places = places.flat().length > 0 ? places : [];
   }
 
   /* ------------------------ division ------------------------ */

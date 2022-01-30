@@ -1,7 +1,9 @@
 # Changelog
 
 ### v0.3.3 (dev)
-- Extended `Equal` function to all expression types (todo)
+- Extended `Equal` function to all expression types
+- Added functions:
+  - Set: `Difference`, `Powerset`, `Subset`, `SymmetricDifference`
 ### v0.3.2 (Jan 17, 2022)
 - Set up generic compiler to generalize classes
 - Simplified step evaluation process

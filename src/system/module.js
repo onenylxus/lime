@@ -124,8 +124,11 @@ const Module = new Map([].concat(
 
   // Set functions
   Compiler.func([
+    ['difference', require('../functions/set/difference')],
     ['intersection', require('../functions/set/intersection')],
+    ['powerset', require('../functions/set/powerset')],
     ['subset', require('../functions/set/subset')],
+    ['symmetricDifference', require('../functions/set/symmetricDifference')],
     ['union', require('../functions/set/union')],
   ]),
 

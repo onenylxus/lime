@@ -162,6 +162,12 @@ const Oplist = {
       && step.ci('rational')(...step.right.places),
 
     // [Right unary] Argument{Set[2]}
+    'r(arg{set[1]})':
+      (step) => step.rpi('argument')
+      && step.right.length === 1
+      && step.ci('set')(...step.right.places),
+
+    // [Right unary] Argument{Set[2]}
     'r(arg{set[2]})':
       (step) => step.rpi('argument')
       && step.right.length === 2

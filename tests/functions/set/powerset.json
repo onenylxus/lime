@@ -1,0 +1,22 @@
+{
+  "name": "Powerset function test",
+  "version": 2,
+  "process": [
+    {
+      "desc": "argument of set and set",
+      "config": {},
+      "tests": [
+        {
+          "input": ["powerset({})"],
+          "type": "equals",
+          "output": "{{}}"
+        },
+        {
+          "input": ["powerset({1,2})"],
+          "type": "equals",
+          "output": "{{},{1},{2},{1,2}}"
+        }
+      ]
+    }
+  ]
+}

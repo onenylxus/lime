@@ -1,5 +1,5 @@
 {
-  "name": "Intersection function test",
+  "name": "Symmetric difference function test",
   "version": 2,
   "process": [
     {
@@ -7,9 +7,9 @@
       "config": {},
       "tests": [
         {
-          "input": ["union({1,2,3},{1,2,4})"],
+          "input": ["symdiff({1,2,3},{3,4})"],
           "type": "equals",
-          "output": "{3,4,1,2}"
+          "output": "{1,2,4}"
         }
       ]
     }

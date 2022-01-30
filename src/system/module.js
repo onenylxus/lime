@@ -101,6 +101,7 @@ const Module = new Map([].concat(
     ['minor', require('../functions/matrix/minor')],
     ['oneMatrix', require('../functions/matrix/oneMatrix')],
     ['reducedRowEchelonForm', require('../functions/matrix/reducedRowEchelonForm')],
+    ['reshape', require('../functions/matrix/reshape')],
     ['trace', require('../functions/matrix/trace')],
     ['transpose', require('../functions/matrix/transpose')],
     ['zeroMatrix', require('../functions/matrix/zeroMatrix')],

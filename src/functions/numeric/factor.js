@@ -28,7 +28,7 @@ class LimeFunctionFactor extends LimeFunction {
           f.push(i);
         }
       }
-      step.rus(this.lime.build('matrix')([f.map((v) => this.lime.direct([v]))]));
+      step.rus(this.lime.build('set')(...f.map((v) => this.lime.direct([v]))));
     });
   }
 }

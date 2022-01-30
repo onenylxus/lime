@@ -85,6 +85,7 @@
     "real",
     "reciprocal",
     "reducedRowEchelonForm",
+    "reshape",
     "round",
     "sign",
     "subset",

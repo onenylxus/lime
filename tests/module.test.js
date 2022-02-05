@@ -12,7 +12,7 @@ const count = {};
 describe('Module test', () => {
   count.cmd = 0;
   describe('Commands', () => {
-    finder('src/commands').forEach((key) => {
+    finder('src/commands', '.js').forEach((key) => {
       test(key, () => {
         expect(Module.has(key)).toBeTruthy();
       });
@@ -22,7 +22,7 @@ describe('Module test', () => {
 
   count.expr = 0;
   describe('Expressions', () => {
-    finder('src/expressions').forEach((key) => {
+    finder('src/expressions', '.js').forEach((key) => {
       test(key, () => {
         expect(Module.has(key)).toBeTruthy();
       });
@@ -33,7 +33,7 @@ describe('Module test', () => {
   count.func = 0;
   describe('Functions', () => {
     fs.readdirSync('src/functions').forEach((folder) => {
-      finder(`src/functions/${folder}`).forEach((key) => {
+      finder(`src/functions/${folder}`, '.js').forEach((key) => {
         test(key, () => {
           expect(Module.has(key)).toBeTruthy();
         });
@@ -44,7 +44,7 @@ describe('Module test', () => {
 
   count.strc = 0;
   describe('Structures', () => {
-    finder('src/structs').forEach((key) => {
+    finder('src/structs', '.js').forEach((key) => {
       test(key, () => {
         expect(Module.has(key)).toBeTruthy();
       });

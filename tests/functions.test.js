@@ -1,40 +1,7 @@
 // Require
-const fs = require('fs');
-const crosstest = require('../utils/crosstest');
-const finder = require('../utils/finder');
-const Bundle = require('../dist/bundle');
-const Lime = require('../src/lime');
+const tester = require('../utils/tester');
 
 /* ------------------------ division ------------------------ */
 
-// Variables
-let count = 0;
-
-// Matching test
-describe('Function matching test', () => {
-  fs.readdirSync('src/functions').forEach((folder) => {
-    finder(`src/functions/${folder}`).forEach((key) => {
-      test(`${folder}/${key}`, () => {
-        expect(finder(`tests/functions/${folder}`, '.json').includes(key)).toBeTruthy();
-      });
-    });
-  });
-});
-
-// Unit tests
-fs.readdirSync('tests/functions').forEach((folder) => {
-  finder(`tests/functions/${folder}`, '.json').forEach((key) => {
-    const unit = require(`./functions/${folder}/${key}`);
-
-    describe(unit.name, () => {
-      count += crosstest(test, expect, Lime, Bundle, unit);
-    });
-  });
-});
-
-// Report
-describe('Report', () => {
-  test(`Number of tests: ${count}`, () => {
-    expect(true).toBeTruthy();
-  });
-});
+// Perform test
+tester(describe, test, expect)('functions');

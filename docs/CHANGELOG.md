@@ -6,6 +6,7 @@
   - Matrix: `Reshape`
   - Set: `Difference`, `Powerset`, `Subset`, `SymmetricDifference`
 - Modified existing functions to support new expression types
+- Replaced with tester function to generalize unit tests
 ### v0.3.2 (Jan 17, 2022)
 - Set up generic compiler to generalize classes
 - Simplified step evaluation process

@@ -10,7 +10,7 @@ class LimeFunctionMinimum extends LimeFunction {
     // Super from function class
     super(lime, { name: 'minimum', mode });
 
-    // Operations
+    // Right unary operation
     this.operations.r = [
       'er(arg{expr[@]})',
     ];

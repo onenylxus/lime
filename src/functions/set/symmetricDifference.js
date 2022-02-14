@@ -10,7 +10,7 @@ class LimeFunctionSymmetricDifference extends LimeFunction {
     // Super from function class
     super(lime, { name: 'symmetricDifference', mode });
 
-    // Operations
+    // Right unary operation
     this.operations.r = [
       'er(arg{set[2]})',
     ];

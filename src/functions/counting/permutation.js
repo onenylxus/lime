@@ -10,7 +10,7 @@ class LimeFunctionPermutation extends LimeFunction {
     // Super from function class
     super(lime, { name: 'permutation', mode });
 
-    // Operations
+    // Right unary operation
     this.operations.r = [
       'er(arg{int[2]})',
     ];

@@ -10,7 +10,7 @@ class LimeFunctionAdjoint extends LimeFunction {
     // Super from function class
     super(lime, { name: 'adjoint', mode });
 
-    // Operations
+    // Right unary operation
     this.operations.r = [
       'er(arg{mat[1]})',
     ];

@@ -10,7 +10,7 @@ class LimeFunctionSubset extends LimeFunction {
     // Super from function class
     super(lime, { name: 'subset', mode });
 
-    // Operations
+    // Right unary operation
     this.operations.r = [
       'er(arg{set[2]})',
     ];

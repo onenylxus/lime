@@ -10,7 +10,7 @@ class LimeFunctionRandom extends LimeFunction {
     // Super from function class
     super(lime, { name: 'random', mode });
 
-    // Operations
+    // Right unary operation
     this.operations.r = [
       'er(arg{})',
       'er(arg{int[1]})',

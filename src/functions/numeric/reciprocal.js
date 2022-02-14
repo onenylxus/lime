@@ -10,7 +10,7 @@ class LimeFunctionReciprocal extends LimeFunction {
     // Super from function class
     super(lime, { name: 'reciprocal', mode });
 
-    // Operations
+    // Right unary operation
     this.operations.r = [
       'er(arg{expr[1]})',
     ];

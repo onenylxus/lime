@@ -1,6 +1,6 @@
 {
   "name": "@onenylxus/lime",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "description": "Mathematics computation engine",
   "author": "Lime Project Team",
   "license": "MIT",
@@ -20,19 +20,19 @@
   "browser": "dist/bundle-esm.js",
   "sideEffects": false,
   "dependencies": {
-    "@onenylxus/helpers": "^1.2.2"
+    "@onenylxus/helpers": "^1.2.3"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
     "codecov": "^3.8.2",
-    "eslint": "^7.25.0",
-    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint": "^8.8.0",
+    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.24.2",
     "husky": "^7.0.2",
     "jest": "^27.1.0",
-    "lint-staged": "^11.1.2",
+    "lint-staged": "^12.3.3",
     "prettier-eslint": "^13.0.0",
     "prettier-eslint-cli": "^5.0.1",
     "rimraf": "^3.0.2",

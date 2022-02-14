@@ -10,7 +10,7 @@ class LimeFunctionConjugate extends LimeFunction {
     // Super from function class
     super(lime, { name: 'conjugate', mode });
 
-    // Operations
+    // Right unary operation
     this.operations.r = [
       'cr(arg{{int|rat}[$]}->arg{comp[$]})',
 

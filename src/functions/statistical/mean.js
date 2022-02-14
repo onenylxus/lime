@@ -10,7 +10,7 @@ class LimeFunctionMean extends LimeFunction {
     // Super from function class
     super(lime, { name: 'mean', mode });
 
-    // Operations
+    // Right unary operation
     this.operations.r = [
       'er(arg{expr[@]})',
     ];

@@ -10,7 +10,7 @@ class LimeFunctionImaginary extends LimeFunction {
     // Super from function class
     super(lime, { name: 'imaginary', mode });
 
-    // Operations
+    // Right unary operation
     this.operations.r = [
       'cr(arg{{int|rat}[$]}->arg{comp[$]})',
 

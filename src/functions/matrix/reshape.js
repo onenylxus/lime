@@ -10,7 +10,7 @@ class LimeFunctionReshape extends LimeFunction {
     // Super from function class
     super(lime, { name: 'reshape', mode });
 
-    // Operations
+    // Right unary operation
     this.operations.r = [
       'er(arg{mat[1],int[2]})',
     ];

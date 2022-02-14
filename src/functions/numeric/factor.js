@@ -10,7 +10,7 @@ class LimeFunctionFactor extends LimeFunction {
     // Super from function class
     super(lime, { name: 'factor', mode });
 
-    // Operations
+    // Right unary operation
     this.operations.r = [
       'er(arg{int[1]})',
     ];

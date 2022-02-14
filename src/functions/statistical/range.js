@@ -10,7 +10,7 @@ class LimeFunctionRange extends LimeFunction {
     // Super from function class
     super(lime, { name: 'range', mode });
 
-    // Operations
+    // Right unary operation
     this.operations.r = [
       'er(arg{expr[@]})',
     ];

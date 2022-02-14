@@ -10,7 +10,7 @@ class LimeFunctionPrime extends LimeFunction {
     // Super from function class
     super(lime, { name: 'prime', mode });
 
-    // Operations
+    // Right unary operation
     this.operations.r = [
       'er(arg{int[1]})',
     ];

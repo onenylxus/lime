@@ -10,7 +10,7 @@ class LimeFunctionMaximum extends LimeFunction {
     // Super from function class
     super(lime, { name: 'maximum', mode });
 
-    // Operations
+    // Right unary operation
     this.operations.r = [
       'er(arg{expr[@]})',
     ];

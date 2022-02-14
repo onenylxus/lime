@@ -10,7 +10,7 @@ class LimeFunctionLength extends LimeFunction {
     // Super from function class
     super(lime, { name: 'length', mode });
 
-    // Operations
+    // Right unary operation
     this.operations.r = [
       'er(arg{str[1]})',
     ];

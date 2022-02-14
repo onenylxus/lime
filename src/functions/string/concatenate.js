@@ -10,7 +10,7 @@ class LimeFunctionConcatenate extends LimeFunction {
     // Super from function class
     super(lime, { name: 'concatenate', mode });
 
-    // Operations
+    // Right unary operation
     this.operations.r = [
       'er(arg{str[@]})',
     ];

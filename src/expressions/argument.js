@@ -8,7 +8,7 @@ class LimeExpressionArgument extends LimeExpression {
   // Constructor
   constructor(lime, ...places) {
     // Super from expression class
-    super(lime, { name: 'argument', isSimple: false });
+    super(lime, { name: 'argument', shorthand: 'arg', isSimple: false });
 
     // Build expression
     if (!this.lime.identify('expression')(...places)) {

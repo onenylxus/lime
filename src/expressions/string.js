@@ -8,7 +8,7 @@ class LimeExpressionString extends LimeExpression {
   // Constructor
   constructor(lime, value) {
     // Super from expression class
-    super(lime, { name: 'string', isSimple: true });
+    super(lime, { name: 'string', shorthand: 'str', isSimple: true });
 
     // Build expression
     this.value = value;

@@ -8,7 +8,7 @@ class LimeExpressionMatrix extends LimeExpression {
   // Constructor
   constructor(lime, places) {
     // Super from expression class
-    super(lime, { name: 'matrix', isSimple: false });
+    super(lime, { name: 'matrix', shorthand: 'mat', isSimple: false });
 
     // Build expression
     if (!this.lime.identify('expression')(...places.flat())) {

@@ -38,7 +38,7 @@ function tester(df, tf, ef) {
           // Cross testing
           Object.values(unit.process).forEach((obj) => {
             const len = obj.tests.length;
-            tf(`${obj.desc} (${len}) test${len === 1 ? '' : 's'}`, () => {
+            tf(`${obj.desc} (${len} test${len === 1 ? '' : 's'})`, () => {
               [Lime, Bundle].forEach((p) => {
                 ['prompt', 'evaluate'].forEach((m) => {
                   obj.tests.forEach((t) => {

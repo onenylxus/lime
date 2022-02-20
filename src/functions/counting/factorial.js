@@ -13,6 +13,7 @@ class LimeFunctionFactorial extends LimeFunction {
     // Left unary operation
     this.operations.l = [
       'tz(_!)',
+      'tl(_!)',
       'tf(!=)',
 
       'cl(var->expr)',

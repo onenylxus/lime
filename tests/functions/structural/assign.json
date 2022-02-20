@@ -23,6 +23,27 @@
           "output": "1"
         }
       ]
+    },
+    {
+      "desc": "order control",
+      "config": {},
+      "tests": [
+        {
+          "input": ["a=+2"],
+          "type": "equals",
+          "output": "2"
+        },
+        {
+          "input": ["a=-2"],
+          "type": "equals",
+          "output": "-2"
+        },
+        {
+          "input": ["a=!false"],
+          "type": "equals",
+          "output": "true"
+        }
+      ]
     }
   ]
 }

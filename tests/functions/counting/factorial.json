@@ -40,6 +40,17 @@
           "output": "warn:negativeFactorial"
         }
       ]
+    },
+    {
+      "desc": "variable conversion",
+      "config": {},
+      "tests": [
+        {
+          "input": ["l=3", "l!"],
+          "type": "equals",
+          "output": "6"
+        }
+      ]
     }
   ]
 }

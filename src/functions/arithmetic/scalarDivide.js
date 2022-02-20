@@ -12,6 +12,8 @@ class LimeFunctionScalarDivide extends LimeFunction {
 
     // Binary operation
     this.operations.b = [
+      'cl(var->expr)',
+      'cr(var->expr)',
       'cl(arg{expr[1]}->expr)',
       'cr(arg{expr[1]}->expr)',
       'cl(bool->int)',

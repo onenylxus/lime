@@ -118,6 +118,10 @@ const Oplist = {
     'l({comp|int|rat})':
       (step) => step.lpi('complex', 'integer', 'rational'),
 
+    // [Left unary] Assign
+    'l(=)':
+      (step) => step.lpi('assign'),
+
     // Nested
     'n()': () => true,
 
@@ -563,23 +567,32 @@ const Oplist = {
     // [Function] Transfer to smaller equal
     'tf(<=)': ['r(=)', 'f(<=)'],
 
-    // Transfer at zero position to logical NOT
-    'tr(_!)': ['r(!)', 'r(_!)'],
+    // [Left unary] Transfer to logical NOT
+    'tl(_!)': ['l(=)', 'f(_!)'],
 
-    // [Right unary] Transfer to positive
-    'tr(_+)': ['r(+)', 'r(_+)'],
+    // [Left unary] Transfer to negative
+    'tl(_-)': ['l(=)', 'f(_-)'],
+
+    // [Left unary] Transfer to positive
+    'tl(_+)': ['l(=)', 'f(_+)'],
+
+    // [Right unary] Transfer to logical NOT
+    'tr(_!)': ['r(!)', 'r(_!)'],
 
     // [Right unary] Transfer to negative
     'tr(_-)': ['r(-)', 'r(_-)'],
 
-    // Transfer at zero position to logical NOT
+    // [Right unary] Transfer to positive
+    'tr(_+)': ['r(+)', 'r(_+)'],
+
+    // [Zero] Transfer at zero position to logical NOT
     'tz(_!)': ['z()', 'f(_!)'],
 
-    // Transfer at zero position to positive
-    'tz(_+)': ['z()', 'f(_+)'],
-
-    // Transfer at zero position to negative
+    // [Zero] Transfer at zero position to negative
     'tz(_-)': ['z()', 'f(_-)'],
+
+    // [Zero] Transfer at zero position to positive
+    'tz(_+)': ['z()', 'f(_+)'],
   },
 };
 

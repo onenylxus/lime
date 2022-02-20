@@ -33,6 +33,17 @@
           "output": "error:invalidMatrixDimensions"
         }
       ]
+    },
+    {
+      "desc": "variable conversion",
+      "config": {},
+      "tests": [
+        {
+          "input": ["l=[13,17]", "r=[4,7]", "l.%r"],
+          "type": "equals",
+          "output": "[1,3]"
+        }
+      ]
     }
   ]
 }

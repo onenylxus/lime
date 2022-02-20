@@ -2,6 +2,7 @@
 
 ### v0.4.0 (dev)
 - Converted `Compiler` from object to class
+- Fixed existing functions to support variables
 
 ### v0.3.3 (Feb 5, 2022)
 - Extended `Equal` function to all expression types

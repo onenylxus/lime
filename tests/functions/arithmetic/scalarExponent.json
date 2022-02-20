@@ -44,6 +44,17 @@
           "output": "[2,3,5]"
         }
       ]
+    },
+    {
+      "desc": "variable conversion",
+      "config": {},
+      "tests": [
+        {
+          "input": ["l=[2,-3]", "r=[3,4]", "l.^r"],
+          "type": "equals",
+          "output": "[8,81]"
+        }
+      ]
     }
   ]
 }

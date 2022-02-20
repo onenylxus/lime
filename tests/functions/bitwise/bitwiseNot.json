@@ -35,6 +35,17 @@
           "output": "1"
         }
       ]
+    },
+    {
+      "desc": "variable conversion",
+      "config": {},
+      "tests": [
+        {
+          "input": ["r=2", "~r"],
+          "type": "equals",
+          "output": "-3"
+        }
+      ]
     }
   ]
 }

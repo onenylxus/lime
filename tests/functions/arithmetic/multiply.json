@@ -185,6 +185,17 @@
           "output": "error:invalidMatrixDimensions"
         }
       ]
+    },
+    {
+      "desc": "variable conversion",
+      "config": {},
+      "tests": [
+        {
+          "input": ["l=2", "r=3", "l*r"],
+          "type": "equals",
+          "output": "6"
+        }
+      ]
     }
   ]
 }

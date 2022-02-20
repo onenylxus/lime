@@ -53,6 +53,17 @@
           "output": "3"
         }
       ]
+    },
+    {
+      "desc": "variable conversion",
+      "config": {},
+      "tests": [
+        {
+          "input": ["l=7", "r=6", "l%r"],
+          "type": "equals",
+          "output": "1"
+        }
+      ]
     }
   ]
 }

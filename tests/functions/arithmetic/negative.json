@@ -93,6 +93,17 @@
           "output": "-2"
         }
       ]
+    },
+    {
+      "desc": "variable conversion",
+      "config": {},
+      "tests": [
+        {
+          "input": ["r=1", "-r"],
+          "type": "equals",
+          "output": "-1"
+        }
+      ]
     }
   ]
 }

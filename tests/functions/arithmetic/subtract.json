@@ -190,6 +190,17 @@
           "output": "-1/12"
         }
       ]
+    },
+    {
+      "desc": "variable conversion",
+      "config": {},
+      "tests": [
+        {
+          "input": ["l=1", "r=3", "l-r"],
+          "type": "equals",
+          "output": "-2"
+        }
+      ]
     }
   ]
 }

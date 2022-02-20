@@ -58,6 +58,17 @@
           "output": "7"
         }
       ]
+    },
+    {
+      "desc": "variable conversion",
+      "config": {},
+      "tests": [
+        {
+          "input": ["l=11", "r=7", "l|r"],
+          "type": "equals",
+          "output": "15"
+        }
+      ]
     }
   ]
 }

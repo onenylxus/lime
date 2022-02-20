@@ -113,6 +113,17 @@
           "output": "true"
         }
       ]
+    },
+    {
+      "desc": "variable conversion",
+      "config": {},
+      "tests": [
+        {
+          "input": ["l=0", "r=3", "l!=r"],
+          "type": "equals",
+          "output": "true"
+        }
+      ]
     }
   ]
 }

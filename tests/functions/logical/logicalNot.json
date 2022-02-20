@@ -46,6 +46,17 @@
           "output": "false"
         }
       ]
+    },
+    {
+      "desc": "variable conversion",
+      "config": {},
+      "tests": [
+        {
+          "input": ["r=false", "!r"],
+          "type": "equals",
+          "output": "true"
+        }
+      ]
     }
   ]
 }

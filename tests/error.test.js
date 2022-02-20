@@ -52,5 +52,7 @@ describe('Error handling test', () => {
     expect(bundle.prompt('(').includes(Message['error:unmatchedBrackets'])).toBeTruthy();
     expect(lime.prompt(')').includes(Message['error:unmatchedBrackets'])).toBeTruthy();
     expect(bundle.prompt(')').includes(Message['error:unmatchedBrackets'])).toBeTruthy();
+    expect(lime.prompt('(]').includes(Message['error:unmatchedBrackets'])).toBeTruthy();
+    expect(bundle.prompt('(]').includes(Message['error:unmatchedBrackets'])).toBeTruthy();
   });
 });

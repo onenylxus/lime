@@ -8,7 +8,7 @@ class LimeExpressionSet extends LimeExpression {
   // Constructor
   constructor(lime, ...places) {
     // Super from expression class
-    super(lime, { name: 'set', isSimple: false });
+    super(lime, { name: 'set', shorthand: 'set', isSimple: false });
 
     // Build expression
     if (!this.lime.identify('expression')(...places)) {

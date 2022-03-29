@@ -30,13 +30,11 @@
   <script src="./bundle.js"></script>
   <script type="text/javascript">
     const lime = Lime({ tabSize: 1 });
-    function qs(sel) {
-      return document.querySelector(sel);
-    }
+    const qs = (sel) => document.querySelector(sel);
 
     qs('form').addEventListener('submit', (e) => {
       e.preventDefault();
-      qs('#answer').innerHTML = lime.prompt(qs('#input-text').value).replace(/ /g, '&nbsp;').replace(/\s/g, '<br>');
+      qs('#answer').innerHTML = lime.prompt(qs('#input-text').value).replace(/ /g, '&nbsp;').replace(/\s/g, '<br />');
       qs('.answer-box').style.display = 'block';
     });
   </script>

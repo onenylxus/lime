@@ -40,14 +40,7 @@ class LimeFunction {
 
     const op = this.operations[this.mode];
     for (let i = 0; i < op.length; i++) {
-      // Fetch operation pairs
-      let cond; let act;
-      if (Types.isString(op[i])) {
-        cond = op[i][0] === 'e' ? Oplist.cond[op[i].substring(1)] : Oplist.cond[Oplist.pair[op[i]][0]];
-        act = op[i][0] === 'e' ? this.algorithms.get(op[i].substring(1)) : Oplist.act[Oplist.pair[op[i]][1]];
-      }
-
-      // Execute action under condition
+      const { cond, act } = this.opfunc(op[i]);
       if ((cond)(step)) {
         (act)(step);
         if (op[i][0] !== 'c') { return step; }
@@ -56,6 +49,32 @@ class LimeFunction {
 
     // Agreement error
     throw new Error('error:functionAgreement');
+  }
+
+  // Operation function
+  opfunc(type) {
+    if (!Types.isString(type)) {
+      throw new Error('warn:invalidOperationFunction');
+    }
+    const mode = type[0]; const scope = type[1]; const args = type.substring(2);
+    let cond; let act;
+
+    // Oplist
+    switch (mode) {
+      case 'c': case 't':
+        cond = Oplist.cond[Oplist.pair[type][0]];
+        act = Oplist.act[Oplist.pair[type][1]];
+        break;
+
+      case 'e':
+        cond = Oplist.cond[`${scope}${args}`];
+        act = this.algorithms.get(`${scope}${args}`);
+        break;
+
+      default:
+        throw new Error('error:invalidOperationFunction');
+    }
+    return { cond, act };
   }
 }
 

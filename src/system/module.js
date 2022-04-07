@@ -26,6 +26,7 @@ const Module = new Map([].concat(
     ['rational', require('../expressions/rational')],
     ['set', require('../expressions/set')],
     ['string', require('../expressions/string')],
+    ['symbol', require('../expressions/symbol')],
     ['variable', require('../expressions/variable')],
   ]),
 

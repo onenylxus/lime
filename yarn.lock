@@ -556,11 +556,6 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@onenylxus/utils@^1.0.0":
-  version "1.0.0"
-  resolved "https://npm.pkg.github.com/download/@onenylxus/utils/1.0.0/f790d76b9bcfc71ebcf295689bd25e690611583a514196515becb60c6e012ccb#04aaa74e6e47cb8a9488a6057c6f97f49bed3eea"
-  integrity sha512-NrgKJy6c2bs+dWta5r40YM5wboBwIB8sl20DHGog1h6n31/XE2o9ruJRCOwZB87OZ7UB/H3XHayvkdX7fDzLIw==
-
 "@rollup/plugin-commonjs@^21.0.1":
   version "21.0.2"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-commonjs/-/plugin-commonjs-21.0.2.tgz#0b9c539aa1837c94abfaf87945838b0fc8564891"

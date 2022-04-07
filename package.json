@@ -12,16 +12,13 @@
     "dist/*",
     "docs/*",
     "LICENSE.md",
-    "README.md",
-    "yarn.lock"
+    "README.md"
   ],
   "main": "dist/bundle.js",
   "module": "dist/bundle-cjs.js",
   "browser": "dist/bundle-esm.js",
   "sideEffects": false,
-  "dependencies": {
-    "@onenylxus/utils": "^1.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-inject": "^4.0.4",

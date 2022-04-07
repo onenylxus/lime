@@ -1,5 +1,5 @@
 // Require
-const { Types } = require('@onenylxus/utils');
+const Types = require('../../utils/types');
 const Oplist = require('../system/oplist');
 const Order = require('../../lib/order.json');
 

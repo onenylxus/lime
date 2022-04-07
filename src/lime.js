@@ -1,5 +1,5 @@
 // Require
-const { Types } = require('@onenylxus/utils');
+const Types = require('../utils/types');
 const Module = require('./system/module');
 const Config = require('./config.json');
 const Message = require('../lib/message.json');

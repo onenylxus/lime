@@ -8,14 +8,14 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
-      - run: npm install
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run: yarn install --immutable
       - save_cache:
+          key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run: npm test
+            - .yarn/cache
+            - .yarn/unplugged
+      - run: yarn ci
 
   'node-14':
     docker:
@@ -24,14 +24,14 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
-      - run: npm install
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run: yarn install --immutable
       - save_cache:
+          key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run: npm test
+            - .yarn/cache
+            - .yarn/unplugged
+      - run: yarn ci
 
   'node-16':
     docker:
@@ -40,14 +40,14 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
-      - run: npm install
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run: yarn install --immutable
       - save_cache:
+          key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run: npm test
+            - .yarn/cache
+            - .yarn/unplugged
+      - run: yarn ci
 
   'node-latest':
     docker:
@@ -56,14 +56,14 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
-      - run: npm install
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run: yarn install --immutable
       - save_cache:
+          key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run: npm test
+            - .yarn/cache
+            - .yarn/unplugged
+      - run: yarn ci
 
 
 workflows:

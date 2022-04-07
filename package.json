@@ -44,8 +44,7 @@
     "prebuild": "yarn lint && yarn clean",
     "build": "rollup -c",
     "watch": "jest --config jest.config.json --watch",
-    "pretest": "yarn build",
-    "test": "jest --config jest.config.json --verbose"
+    "test": "yarn build && jest --config jest.config.json --verbose"
   },
   "husky": {
     "hooks": {

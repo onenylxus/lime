@@ -1,0 +1,57 @@
+{
+  "name": "Convert to rational function test",
+  "version": 2,
+  "process": [
+    {
+      "desc": "argument of boolean",
+      "config": {
+        "strictBoolean": false
+      },
+      "tests": [
+        {
+          "input": ["rational(false)"],
+          "type": "equals",
+          "output": "0"
+        },
+        {
+          "input": ["rational(true)"],
+          "type": "equals",
+          "output": "1"
+        }
+      ]
+    },
+    {
+      "desc": "argument of complex",
+      "config": {},
+      "tests": [
+        {
+          "input": ["rational(2-5i)"],
+          "type": "equals",
+          "output": "2-5i"
+        }
+      ]
+    },
+    {
+      "desc": "argument of integer",
+      "config": {},
+      "tests": [
+        {
+          "input": ["rational(3)"],
+          "type": "equals",
+          "output": "3"
+        }
+      ]
+    },
+    {
+      "desc": "argument of rational",
+      "config": {},
+      "tests": [
+        {
+          "input": ["rational(3/5)"],
+          "type": "equals",
+          "output": "3/5"
+        }
+      ]
+    }
+  ]
+}

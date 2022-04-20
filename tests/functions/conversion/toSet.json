@@ -1,0 +1,98 @@
+{
+  "name": "Convert to set function test",
+  "version": 2,
+  "process": [
+    {
+      "desc": "argument of boolean",
+      "config": {},
+      "tests": [
+        {
+          "input": ["set(false)"],
+          "type": "equals",
+          "output": "{false}"
+        },
+        {
+          "input": ["set(true)"],
+          "type": "equals",
+          "output": "{true}"
+        }
+      ]
+    },
+    {
+      "desc": "argument of complex",
+      "config": {},
+      "tests": [
+        {
+          "input": ["set(1+3i)"],
+          "type": "equals",
+          "output": "{1+3i}"
+        }
+      ]
+    },
+    {
+      "desc": "argument of integer",
+      "config": {},
+      "tests": [
+        {
+          "input": ["set(0)"],
+          "type": "equals",
+          "output": "{0}"
+        }
+      ]
+    },
+    {
+      "desc": "argument of matrix",
+      "config": {},
+      "tests": [
+        {
+          "input": ["set([])"],
+          "type": "equals",
+          "output": "{[]}"
+        },
+        {
+          "input": ["set([1,2;3,4])"],
+          "type": "equals",
+          "output": "{[1,2;3,4]}"
+        }
+      ]
+    },
+    {
+      "desc": "argument of rational",
+      "config": {},
+      "tests": [
+        {
+          "input": ["set(13/14)"],
+          "type": "equals",
+          "output": "{13/14}"
+        }
+      ]
+    },
+    {
+      "desc": "argument of set",
+      "config": {},
+      "tests": [
+        {
+          "input": ["set({})"],
+          "type": "equals",
+          "output": "{}"
+        },
+        {
+          "input": ["set({1,2,3})"],
+          "type": "equals",
+          "output": "{1,2,3}"
+        }
+      ]
+    },
+    {
+      "desc": "argument of string",
+      "config": {},
+      "tests": [
+        {
+          "input": ["set(\"m\")"],
+          "type": "equals",
+          "output": "{\"m\"}"
+        }
+      ]
+    }
+  ]
+}

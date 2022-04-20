@@ -10,6 +10,7 @@
   "error:invalidArgumentLength": "Invalid argument length.",
   "error:invalidArgumentLogic": "Invalid argument logic.",
   "error:invalidConfigProperty": "Invalid configuration property in config command",
+  "error:invalidExpressionType": "Invalid expression type.",
   "error:invalidListProperty": "Invalid list property in list command",
   "error:invalidMatrixDimensions": "Invalid matrix dimensions.",
   "error:invalidMemoryIndex": "Invalid index for accessing memory.",

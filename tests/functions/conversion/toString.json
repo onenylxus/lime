@@ -1,0 +1,98 @@
+{
+  "name": "Convert to string function test",
+  "version": 2,
+  "process": [
+    {
+      "desc": "argument of boolean",
+      "config": {},
+      "tests": [
+        {
+          "input": ["string(false)"],
+          "type": "equals",
+          "output": "\"false\""
+        },
+        {
+          "input": ["string(true)"],
+          "type": "equals",
+          "output": "\"true\""
+        }
+      ]
+    },
+    {
+      "desc": "argument of complex",
+      "config": {},
+      "tests": [
+        {
+          "input": ["string(1+3i)"],
+          "type": "equals",
+          "output": "\"1+3i\""
+        }
+      ]
+    },
+    {
+      "desc": "argument of integer",
+      "config": {},
+      "tests": [
+        {
+          "input": ["string(0)"],
+          "type": "equals",
+          "output": "\"0\""
+        }
+      ]
+    },
+    {
+      "desc": "argument of matrix",
+      "config": {},
+      "tests": [
+        {
+          "input": ["string([])"],
+          "type": "equals",
+          "output": "\"[]\""
+        },
+        {
+          "input": ["string([1,2;3,4])"],
+          "type": "equals",
+          "output": "\"[1,2;3,4]\""
+        }
+      ]
+    },
+    {
+      "desc": "argument of rational",
+      "config": {},
+      "tests": [
+        {
+          "input": ["string(13/14)"],
+          "type": "equals",
+          "output": "\"13/14\""
+        }
+      ]
+    },
+    {
+      "desc": "argument of set",
+      "config": {},
+      "tests": [
+        {
+          "input": ["string({})"],
+          "type": "equals",
+          "output": "\"{}\""
+        },
+        {
+          "input": ["string({1,2,3})"],
+          "type": "equals",
+          "output": "\"{1,2,3}\""
+        }
+      ]
+    },
+    {
+      "desc": "argument of string",
+      "config": {},
+      "tests": [
+        {
+          "input": ["string(\"s\")"],
+          "type": "equals",
+          "output": "\"s\""
+        }
+      ]
+    }
+  ]
+}

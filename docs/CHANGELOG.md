@@ -2,6 +2,8 @@
 
 ### v0.4.0 (dev)
 - Converted `Compiler` from object to class
+- Added functions:
+  - Conversion: `ToBoolean`, `ToComplex`, `ToInteger`, `ToMatrix`, `ToRational`, `ToSet`, `ToString`
 - Fixed existing functions to support variables
 
 ### v0.3.3 (Feb 5, 2022)

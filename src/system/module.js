@@ -75,6 +75,17 @@ const Module = new Map([].concat(
     ['real', require('../functions/complex/real')],
   ]),
 
+  // Conversion functions
+  Compiler.func([
+    ['toBoolean', require('../functions/conversion/toBoolean')],
+    ['toComplex', require('../functions/conversion/toComplex')],
+    ['toInteger', require('../functions/conversion/toInteger')],
+    ['toMatrix', require('../functions/conversion/toMatrix')],
+    ['toRational', require('../functions/conversion/toRational')],
+    ['toSet', require('../functions/conversion/toSet')],
+    ['toString', require('../functions/conversion/toString')],
+  ]),
+
   // Counting functions
   Compiler.func([
     ['combination', require('../functions/counting/combination')],

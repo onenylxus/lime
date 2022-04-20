@@ -1,0 +1,98 @@
+{
+  "name": "Convert to matrix function test",
+  "version": 2,
+  "process": [
+    {
+      "desc": "argument of boolean",
+      "config": {},
+      "tests": [
+        {
+          "input": ["matrix(false)"],
+          "type": "equals",
+          "output": "[false]"
+        },
+        {
+          "input": ["matrix(true)"],
+          "type": "equals",
+          "output": "[true]"
+        }
+      ]
+    },
+    {
+      "desc": "argument of complex",
+      "config": {},
+      "tests": [
+        {
+          "input": ["matrix(1+3i)"],
+          "type": "equals",
+          "output": "[1+3i]"
+        }
+      ]
+    },
+    {
+      "desc": "argument of integer",
+      "config": {},
+      "tests": [
+        {
+          "input": ["matrix(0)"],
+          "type": "equals",
+          "output": "[0]"
+        }
+      ]
+    },
+    {
+      "desc": "argument of matrix",
+      "config": {},
+      "tests": [
+        {
+          "input": ["matrix([])"],
+          "type": "equals",
+          "output": "[]"
+        },
+        {
+          "input": ["matrix([1,2;3,4])"],
+          "type": "equals",
+          "output": "[1,2;3,4]"
+        }
+      ]
+    },
+    {
+      "desc": "argument of rational",
+      "config": {},
+      "tests": [
+        {
+          "input": ["matrix(13/14)"],
+          "type": "equals",
+          "output": "[13/14]"
+        }
+      ]
+    },
+    {
+      "desc": "argument of set",
+      "config": {},
+      "tests": [
+        {
+          "input": ["matrix({})"],
+          "type": "equals",
+          "output": "[{}]"
+        },
+        {
+          "input": ["matrix({1,2,3})"],
+          "type": "equals",
+          "output": "[{1,2,3}]"
+        }
+      ]
+    },
+    {
+      "desc": "argument of string",
+      "config": {},
+      "tests": [
+        {
+          "input": ["matrix(\"m\")"],
+          "type": "equals",
+          "output": "[\"m\"]"
+        }
+      ]
+    }
+  ]
+}

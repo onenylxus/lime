@@ -1,0 +1,113 @@
+{
+  "name": "Convert to boolean function test",
+  "version": 2,
+  "process": [
+    {
+      "desc": "argument of boolean",
+      "config": {},
+      "tests": [
+        {
+          "input": ["boolean(false)"],
+          "type": "equals",
+          "output": "false"
+        },
+        {
+          "input": ["boolean(true)"],
+          "type": "equals",
+          "output": "true"
+        }
+      ]
+    },
+    {
+      "desc": "argument of complex",
+      "config": {},
+      "tests": [
+        {
+          "input": ["boolean(i)"],
+          "type": "equals",
+          "output": "true"
+        },
+        {
+          "input": ["boolean(1+i)"],
+          "type": "equals",
+          "output": "true"
+        }
+      ]
+    },
+    {
+      "desc": "argument of integer",
+      "config": {},
+      "tests": [
+        {
+          "input": ["boolean(0)"],
+          "type": "equals",
+          "output": "false"
+        },
+        {
+          "input": ["boolean(1)"],
+          "type": "equals",
+          "output": "true"
+        }
+      ]
+    },
+    {
+      "desc": "argument of matrix",
+      "config": {},
+      "tests": [
+        {
+          "input": ["boolean([])"],
+          "type": "equals",
+          "output": "false"
+        },
+        {
+          "input": ["boolean([false])"],
+          "type": "equals",
+          "output": "true"
+        }
+      ]
+    },
+    {
+      "desc": "argument of rational",
+      "config": {},
+      "tests": [
+        {
+          "input": ["boolean(-1/2)"],
+          "type": "equals",
+          "output": "true"
+        }
+      ]
+    },
+    {
+      "desc": "argument of set",
+      "config": {},
+      "tests": [
+        {
+          "input": ["boolean({})"],
+          "type": "equals",
+          "output": "false"
+        },
+        {
+          "input": ["boolean({false})"],
+          "type": "equals",
+          "output": "true"
+        }
+      ]
+    },
+    {
+      "desc": "argument of string",
+      "config": {},
+      "tests": [
+        {
+          "input": ["boolean(\"\")"],
+          "type": "equals",
+          "output": "false"
+        },
+        {
+          "input": ["boolean(\"p\")"],
+          "type": "equals",
+          "output": "true"
+        }
+      ]
+    }
+  ]
+}

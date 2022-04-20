@@ -47,6 +47,9 @@
     "test": "yarn build && jest --config jest.config.json --verbose",
     "ci": "rollup -c && jest --config jest.config.json --verbose"
   },
+  "engines": {
+    "node": ">=12"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "yarn test"

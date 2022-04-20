@@ -1,0 +1,83 @@
+{
+  "name": "Convert to integer function test",
+  "version": 2,
+  "process": [
+    {
+      "desc": "argument of boolean",
+      "config": {
+        "strictBoolean": false
+      },
+      "tests": [
+        {
+          "input": ["integer(false)"],
+          "type": "equals",
+          "output": "0"
+        },
+        {
+          "input": ["integer(true)"],
+          "type": "equals",
+          "output": "1"
+        }
+      ]
+    },
+    {
+      "desc": "argument of complex",
+      "config": {},
+      "tests": [
+        {
+          "input": ["integer(3+2i)"],
+          "type": "equals",
+          "output": "3"
+        }
+      ]
+    },
+    {
+      "desc": "argument of integer",
+      "config": {},
+      "tests": [
+        {
+          "input": ["integer(2)"],
+          "type": "equals",
+          "output": "2"
+        }
+      ]
+    },
+    {
+      "desc": "argument of rational",
+      "config": {},
+      "tests": [
+        {
+          "input": ["integer(1/3)"],
+          "type": "equals",
+          "output": "0"
+        },
+        {
+          "input": ["integer(-1/3)"],
+          "type": "equals",
+          "output": "0"
+        }
+      ]
+    },
+    {
+      "desc": "argument of string",
+      "config": {},
+      "tests": [
+        {
+          "input": ["integer(\"\")"],
+          "type": "equals",
+          "output": "0"
+        },
+        {
+          "input": ["integer(\"abc\")"],
+          "type": "equals",
+          "output": "3"
+        },
+        {
+          "input": ["integer(\" \")"],
+          "type": "equals",
+          "output": "1"
+        }
+      ]
+    }
+  ]
+}

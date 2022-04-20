@@ -1,0 +1,57 @@
+{
+  "name": "Convert to complex function test",
+  "version": 2,
+  "process": [
+    {
+      "desc": "argument of boolean",
+      "config": {
+        "strictBoolean": false
+      },
+      "tests": [
+        {
+          "input": ["complex(false)"],
+          "type": "equals",
+          "output": "0"
+        },
+        {
+          "input": ["complex(true)"],
+          "type": "equals",
+          "output": "1"
+        }
+      ]
+    },
+    {
+      "desc": "argument of complex",
+      "config": {},
+      "tests": [
+        {
+          "input": ["complex(1-i)"],
+          "type": "equals",
+          "output": "1-i"
+        }
+      ]
+    },
+    {
+      "desc": "argument of integer",
+      "config": {},
+      "tests": [
+        {
+          "input": ["complex(2)"],
+          "type": "equals",
+          "output": "2"
+        }
+      ]
+    },
+    {
+      "desc": "argument of rational",
+      "config": {},
+      "tests": [
+        {
+          "input": ["complex(2/3)"],
+          "type": "equals",
+          "output": "2/3"
+        }
+      ]
+    }
+  ]
+}

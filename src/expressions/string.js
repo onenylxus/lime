@@ -16,6 +16,13 @@ class LimeExpressionString extends LimeExpression {
 
   /* ------------------------ division ------------------------ */
 
+  // Get empty string status
+  get isEmpty() {
+    return this.value.length === 0;
+  }
+
+  /* ------------------------ division ------------------------ */
+
   // Simplify function
   simplify() {
     return this;

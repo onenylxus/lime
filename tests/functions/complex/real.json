@@ -4,9 +4,7 @@
   "process": [
     {
       "desc": "argument of complex",
-      "config": {
-
-      },
+      "config": {},
       "tests": [
         {
           "input": ["re(1+2i)"],

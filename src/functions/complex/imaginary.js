@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Imaginary function class
 class LimeFunctionImaginary extends LimeFunction {
   // Constructor
@@ -23,8 +21,6 @@ class LimeFunctionImaginary extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionImaginary;

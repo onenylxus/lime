@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Logical OR function class
 class LimeFunctionLogicalOr extends LimeFunction {
   // Constructor
@@ -32,8 +30,6 @@ class LimeFunctionLogicalOr extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionLogicalOr;

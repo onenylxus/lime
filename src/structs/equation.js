@@ -10,8 +10,6 @@ class LimeEquation {
     this.solution = [];
   }
 
-  /* ------------------------ division ------------------------ */
-
   // Get steps
   get steps() {
     return this.solution.length;
@@ -27,8 +25,6 @@ class LimeEquation {
     return this.solution[this.steps - 1].data;
   }
 
-  /* ------------------------ division ------------------------ */
-
   // Record function
   record(step) {
     if (this.lime.config.promptShowSteps) {
@@ -37,8 +33,6 @@ class LimeEquation {
     this.solution.push(step);
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeEquation;

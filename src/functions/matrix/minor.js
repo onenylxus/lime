@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Minor function class
 class LimeFunctionMinor extends LimeFunction {
   // Constructor
@@ -41,8 +39,6 @@ class LimeFunctionMinor extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionMinor;

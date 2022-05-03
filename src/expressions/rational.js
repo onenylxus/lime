@@ -1,8 +1,6 @@
 // Require
 const LimeExpression = require('../structs/expression');
 
-/* ------------------------ division ------------------------ */
-
 // Rational expression class
 class LimeExpressionRational extends LimeExpression {
   // Constructor
@@ -18,14 +16,10 @@ class LimeExpressionRational extends LimeExpression {
     this.dPlace = dPlace;
   }
 
-  /* ------------------------ division ------------------------ */
-
   // Get value
   get value() {
     return { n: this.nPlace.value, d: this.dPlace.value };
   }
-
-  /* ------------------------ division ------------------------ */
 
   // Convert to boolean
   toBoolean() {
@@ -71,8 +65,6 @@ class LimeExpressionRational extends LimeExpression {
     return `${this.nPlace.print()}/${this.dPlace.print()}`;
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeExpressionRational;

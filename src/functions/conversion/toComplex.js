@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Convert to complex function class
 class LimeFunctionToComplex extends LimeFunction {
   // Constructor
@@ -37,8 +35,6 @@ class LimeFunctionToComplex extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionToComplex;

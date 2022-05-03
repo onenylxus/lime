@@ -1,8 +1,6 @@
 // Require
 const LimeCommand = require('../structs/command');
 
-/* ------------------------ division ------------------------ */
-
 // Help command class
 class LimeCommandHelp extends LimeCommand {
   // Constructor
@@ -27,8 +25,6 @@ class LimeCommandHelp extends LimeCommand {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeCommandHelp;

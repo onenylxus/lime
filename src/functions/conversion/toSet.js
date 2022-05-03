@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Convert to set function class
 class LimeFunctionToSet extends LimeFunction {
   // Constructor
@@ -28,8 +26,6 @@ class LimeFunctionToSet extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionToSet;

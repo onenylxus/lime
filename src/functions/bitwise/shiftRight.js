@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Shift right function class
 class LimeFunctionShiftRight extends LimeFunction {
   // Constructor
@@ -32,8 +30,6 @@ class LimeFunctionShiftRight extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionShiftRight;

@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Convert to rational function class
 class LimeFunctionToRational extends LimeFunction {
   // Constructor
@@ -40,8 +38,6 @@ class LimeFunctionToRational extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionToRational;

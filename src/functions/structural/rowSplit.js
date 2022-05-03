@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Row split function class
 class LimeFunctionRowSplit extends LimeFunction {
   // Constructor
@@ -11,8 +9,6 @@ class LimeFunctionRowSplit extends LimeFunction {
     super(lime, { name: 'rowSplit', mode });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionRowSplit;

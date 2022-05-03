@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Decimal function class
 class LimeFunctionDecimal extends LimeFunction {
   // Constructor
@@ -26,8 +24,6 @@ class LimeFunctionDecimal extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionDecimal;

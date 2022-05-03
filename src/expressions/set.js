@@ -1,8 +1,6 @@
 // Require
 const LimeExpression = require('../structs/expression');
 
-/* ------------------------ division ------------------------ */
-
 // Set expression class
 class LimeExpressionSet extends LimeExpression {
   // Constructor
@@ -23,8 +21,6 @@ class LimeExpressionSet extends LimeExpression {
     }
   }
 
-  /* ------------------------ division ------------------------ */
-
   // Get value
   get value() {
     return this.places.map((p) => p.value);
@@ -39,8 +35,6 @@ class LimeExpressionSet extends LimeExpression {
   get isEmpty() {
     return this.length === 0;
   }
-
-  /* ------------------------ division ------------------------ */
 
   // Simplify function
   simplify() {
@@ -63,8 +57,6 @@ class LimeExpressionSet extends LimeExpression {
     return `${str}${space}}`;
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeExpressionSet;

@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Factorial function class
 class LimeFunctionFactorial extends LimeFunction {
   // Constructor
@@ -36,8 +34,6 @@ class LimeFunctionFactorial extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionFactorial;

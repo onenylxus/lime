@@ -1,8 +1,6 @@
 // Require
 const fs = require('fs');
 
-/* ------------------------ division ------------------------ */
-
 // Bundle test
 describe('Bundle test', () => {
   const dir = './dist/bundle', num = Math.trunc(1 / Math.random());

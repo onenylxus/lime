@@ -3,8 +3,6 @@ const Bundle = require('../dist/bundle');
 const Lime = require('../src/lime');
 const Message = require('../lib/message.json');
 
-/* ------------------------ division ------------------------ */
-
 // Error test
 describe('Error handling test', () => {
   // Reset before each test

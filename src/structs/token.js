@@ -1,8 +1,6 @@
 // Require
 const Types = require('../../utils/types');
 
-/* ------------------------ division ------------------------ */
-
 // Token class
 class LimeToken {
   // Constructor
@@ -15,8 +13,6 @@ class LimeToken {
     this.value = Types.isString(value) ? value : '';
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeToken;

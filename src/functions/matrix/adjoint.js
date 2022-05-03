@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Adjoint function class
 class LimeFunctionAdjoint extends LimeFunction {
   // Constructor
@@ -21,8 +19,6 @@ class LimeFunctionAdjoint extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionAdjoint;

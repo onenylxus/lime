@@ -1,8 +1,6 @@
 // Require
 const Package = require('../package.json');
 
-/* ------------------------ division ------------------------ */
-
 // Banner function
 function banner() {
   return [
@@ -12,8 +10,6 @@ function banner() {
     Package.homepage.slice(0, -7),
   ].join('\n');
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = banner;

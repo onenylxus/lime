@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Determinant function class
 class LimeFunctionDeterminant extends LimeFunction {
   // Constructor
@@ -35,8 +33,6 @@ class LimeFunctionDeterminant extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionDeterminant;

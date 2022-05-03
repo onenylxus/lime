@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Zero matrix function class
 class LimeFunctionZeroMatrix extends LimeFunction {
   // Constructor
@@ -40,8 +38,6 @@ class LimeFunctionZeroMatrix extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionZeroMatrix;

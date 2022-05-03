@@ -3,8 +3,6 @@ const fs = require('fs');
 const finder = require('../utils/finder');
 const Module = require('../src/system/module');
 
-/* ------------------------ division ------------------------ */
-
 // Variables
 const count = {};
 

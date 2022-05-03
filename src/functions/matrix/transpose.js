@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Transpose function class
 class LimeFunctionTranspose extends LimeFunction {
   // Constructor
@@ -28,8 +26,6 @@ class LimeFunctionTranspose extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionTranspose;

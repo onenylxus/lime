@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Truncation function class
 class LimeFunctionTruncation extends LimeFunction {
   // Constructor
@@ -26,8 +24,6 @@ class LimeFunctionTruncation extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionTruncation;

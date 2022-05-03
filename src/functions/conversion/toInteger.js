@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Convert to integer function class
 class LimeFunctionToInteger extends LimeFunction {
   // Constructor
@@ -47,8 +45,6 @@ class LimeFunctionToInteger extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionToInteger;

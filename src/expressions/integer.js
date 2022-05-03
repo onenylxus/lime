@@ -2,8 +2,6 @@
 const Types = require('../../utils/types');
 const LimeExpression = require('../structs/expression');
 
-/* ------------------------ division ------------------------ */
-
 // Integer expression class
 class LimeExpressionInteger extends LimeExpression {
   // Constructor
@@ -18,14 +16,10 @@ class LimeExpressionInteger extends LimeExpression {
     this.string = `${value}`;
   }
 
-  /* ------------------------ division ------------------------ */
-
   // Get value
   get value() {
     return Math.trunc(+this.string);
   }
-
-  /* ------------------------ division ------------------------ */
 
   // Convert to boolean
   toBoolean() {
@@ -57,8 +51,6 @@ class LimeExpressionInteger extends LimeExpression {
     return `${this.value}`;
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeExpressionInteger;

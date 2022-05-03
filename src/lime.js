@@ -5,8 +5,6 @@ const Config = require('./config.json');
 const Message = require('../lib/message.json');
 const Refer = require('../lib/refer.json');
 
-/* ------------------------ division ------------------------ */
-
 // Lime class
 class Lime {
   // Constructor
@@ -19,14 +17,10 @@ class Lime {
     this.store = {};
   }
 
-  /* ------------------------ division ------------------------ */
-
   // Get answer
   get answer() {
     return this.variables.get('ans').print();
   }
-
-  /* ------------------------ division ------------------------ */
 
   // Prompt function
   prompt(input) {
@@ -48,8 +42,6 @@ class Lime {
       return '';
     }
   }
-
-  /* ------------------------ division ------------------------ */
 
   // Run function
   run(input) {
@@ -143,8 +135,6 @@ class Lime {
     // Return message
     return `[${symbol}] ${status[1]}\n${Message[err.message]} ${symbol === 'i' ? `\n${Message.github}` : ''}`;
   }
-
-  /* ------------------------ division ------------------------ */
 
   // Lex function
   lex(eq) {
@@ -281,8 +271,6 @@ class Lime {
     }
   }
 
-  /* ------------------------ division ------------------------ */
-
   // Identify function
   identify(...mods) {
     // Find module
@@ -323,8 +311,6 @@ class Lime {
     return undefined;
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = (conf) => new Lime(conf);

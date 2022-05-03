@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Least common multiple function class
 class LimeFunctionLeastCommonMultiple extends LimeFunction {
   // Constructor
@@ -22,8 +20,6 @@ class LimeFunctionLeastCommonMultiple extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionLeastCommonMultiple;

@@ -1,8 +1,6 @@
 // Require
 const LimeCommand = require('../structs/command');
 
-/* ------------------------ division ------------------------ */
-
 // Clear command class
 class LimeCommandClear extends LimeCommand {
   // Constructor
@@ -19,8 +17,6 @@ class LimeCommandClear extends LimeCommand {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeCommandClear;

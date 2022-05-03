@@ -4,8 +4,6 @@ const chalk = require('chalk');
 const Prompt = require('prompt-sync')({ sigint: true });
 const Lime = process.argv[2] === '-q' ? require('../src/lime')({ developmentMode: true }) : require('../dist/bundle')();
 
-/* ------------------------ division ------------------------ */
-
 // Process running function
 function run() {
   while (true) {
@@ -30,8 +28,6 @@ function run() {
     console.log('');
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Execute process
 if (process.argv[2] === '-q') {

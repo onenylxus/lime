@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Fibonacci function class
 class LimeFunctionFibonacci extends LimeFunction {
   // Constructor
@@ -35,8 +33,6 @@ class LimeFunctionFibonacci extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionFibonacci;

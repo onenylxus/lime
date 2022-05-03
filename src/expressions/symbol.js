@@ -1,8 +1,6 @@
 // Require
 const LimeExpression = require('../structs/expression');
 
-/* ------------------------ division ------------------------ */
-
 // Symbol expression class
 class LimeExpressionSymbol extends LimeExpression {
   // Constructor
@@ -14,14 +12,10 @@ class LimeExpressionSymbol extends LimeExpression {
     this.key = key;
   }
 
-  /* ------------------------ division ------------------------ */
-
   // Get value
   get value() {
     return this.key;
   }
-
-  /* ------------------------ division ------------------------ */
 
   // Simplify function
   simplify() {
@@ -33,8 +27,6 @@ class LimeExpressionSymbol extends LimeExpression {
     return this.simplify();
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeExpressionSymbol;

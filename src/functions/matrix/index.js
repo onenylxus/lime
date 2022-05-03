@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Index function class
 class LimeFunctionIndex extends LimeFunction {
   // Constructor
@@ -44,8 +42,6 @@ class LimeFunctionIndex extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionIndex;

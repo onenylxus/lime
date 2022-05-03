@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Conjugate function class
 class LimeFunctionConjugate extends LimeFunction {
   // Constructor
@@ -26,8 +24,6 @@ class LimeFunctionConjugate extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionConjugate;

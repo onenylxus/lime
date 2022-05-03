@@ -1,8 +1,6 @@
 // Require
 const Types = require('../../utils/types');
 
-/* ------------------------ division ------------------------ */
-
 // Step class
 class LimeStep {
   // Constructor
@@ -15,8 +13,6 @@ class LimeStep {
     this.pos = Types.isNumber(pos) && pos >= 0 && pos < this.data.length ? pos : -1;
     this.timestamp = Date.now();
   }
-
-  /* ------------------------ division ------------------------ */
 
   // Get left parameter
   get left() {
@@ -32,8 +28,6 @@ class LimeStep {
   get right() {
     return this.data[this.pos + 1];
   }
-
-  /* ------------------------ division ------------------------ */
 
   // Custom identify
   ci(...mods) {
@@ -59,8 +53,6 @@ class LimeStep {
   bpi(...mods) {
     return this.lime.identify(...mods)(this.left, this.right);
   }
-
-  /* ------------------------ division ------------------------ */
 
   // Left parameter splice
   lps(...value) {
@@ -97,8 +89,6 @@ class LimeStep {
     this.data.splice(this.pos, len, ...value);
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeStep;

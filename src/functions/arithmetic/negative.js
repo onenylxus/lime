@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Negative function class
 class LimeFunctionNegative extends LimeFunction {
   // Constructor
@@ -44,8 +42,6 @@ class LimeFunctionNegative extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionNegative;

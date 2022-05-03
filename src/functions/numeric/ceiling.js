@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Ceiling function class
 class LimeFunctionCeiling extends LimeFunction {
   // Constructor
@@ -26,8 +24,6 @@ class LimeFunctionCeiling extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionCeiling;

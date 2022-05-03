@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Bitwise NOT function class
 class LimeFunctionBitwiseNot extends LimeFunction {
   // Constructor
@@ -29,8 +27,6 @@ class LimeFunctionBitwiseNot extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionBitwiseNot;

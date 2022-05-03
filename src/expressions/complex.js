@@ -1,8 +1,6 @@
 // Require
 const LimeExpression = require('../structs/expression');
 
-/* ------------------------ division ------------------------ */
-
 // Complex expression class
 class LimeExpressionComplex extends LimeExpression {
   // Constructor
@@ -18,14 +16,10 @@ class LimeExpressionComplex extends LimeExpression {
     this.iPlace = iPlace;
   }
 
-  /* ------------------------ division ------------------------ */
-
   // Get value
   get value() {
     return { r: this.rPlace.value, i: this.iPlace.value };
   }
-
-  /* ------------------------ division ------------------------ */
 
   // Convert to boolean
   toBoolean() {
@@ -52,8 +46,6 @@ class LimeExpressionComplex extends LimeExpression {
     return `${this.value.r === 0 ? '' : `${this.rPlace.print()}${s > 0 ? '+' : ''}`}${this.value.i === 1 ? '' : this.value.i === -1 ? '-' : this.iPlace.print()}i`;
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeExpressionComplex;

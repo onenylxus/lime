@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Matrix bracket function class
 class LimeFunctionMatrixBracket extends LimeFunction {
   // Constructor
@@ -75,8 +73,6 @@ class LimeFunctionMatrixBracket extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionMatrixBracket;

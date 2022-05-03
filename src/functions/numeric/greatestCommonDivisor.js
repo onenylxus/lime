@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Greatest common divisor function class
 class LimeFunctionGreatestCommonDivisor extends LimeFunction {
   // Constructor
@@ -27,8 +25,6 @@ class LimeFunctionGreatestCommonDivisor extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionGreatestCommonDivisor;

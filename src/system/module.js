@@ -3,8 +3,6 @@
 // Require
 const Compiler = require('./compiler');
 
-/* ------------------------ division ------------------------ */
-
 // Module map
 const Module = new Map([].concat(
   // Commands
@@ -190,8 +188,6 @@ const Module = new Map([].concat(
     ['token', require('../structs/token')],
   ]),
 ));
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = Module;

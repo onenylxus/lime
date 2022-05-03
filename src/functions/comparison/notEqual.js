@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Not equal function class
 class LimeFunctionNotEqual extends LimeFunction {
   // Constructor
@@ -40,8 +38,6 @@ class LimeFunctionNotEqual extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionNotEqual;

@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Mean function class
 class LimeFunctionMean extends LimeFunction {
   // Constructor
@@ -21,8 +19,6 @@ class LimeFunctionMean extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionMean;

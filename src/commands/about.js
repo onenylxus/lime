@@ -2,8 +2,6 @@
 const banner = require('../../utils/banner');
 const LimeCommand = require('../structs/command');
 
-/* ------------------------ division ------------------------ */
-
 // About command class
 class LimeCommandAbout extends LimeCommand {
   // Constructor
@@ -15,8 +13,6 @@ class LimeCommandAbout extends LimeCommand {
     this.operations.set(0, () => banner());
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeCommandAbout;

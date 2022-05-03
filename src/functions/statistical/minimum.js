@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Minimum function class
 class LimeFunctionMinimum extends LimeFunction {
   // Constructor
@@ -26,8 +24,6 @@ class LimeFunctionMinimum extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionMinimum;

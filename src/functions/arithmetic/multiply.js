@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Multiply function class
 class LimeFunctionMultiply extends LimeFunction {
   // Constructor
@@ -73,8 +71,6 @@ class LimeFunctionMultiply extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionMultiply;

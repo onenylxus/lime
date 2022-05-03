@@ -11,8 +11,6 @@ body {
   background: #fffdfa;
 }
 
-/* ------------------------ division ------------------------ */
-
 /* Input box styles */
 .input-box {
   position: absolute;
@@ -60,8 +58,6 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background: #882200;
 }
-
-/* ------------------------ division ------------------------ */
 
 /* Answer box styles */
 .answer-box {

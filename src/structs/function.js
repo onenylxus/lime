@@ -3,8 +3,6 @@ const Types = require('../../utils/types');
 const Oplist = require('../system/oplist');
 const Order = require('../../lib/order.json');
 
-/* ------------------------ division ------------------------ */
-
 // Function class
 class LimeFunction {
   // Constructor
@@ -19,8 +17,6 @@ class LimeFunction {
     this.algorithms = new Map();
   }
 
-  /* ------------------------ division ------------------------ */
-
   // Get order
   get order() {
     for (let i = 0; i < Order.length; i++) {
@@ -28,8 +24,6 @@ class LimeFunction {
     }
     throw new Error('issue:invalidFunctionOrder');
   }
-
-  /* ------------------------ division ------------------------ */
 
   // Evaluate function
   evaluate(step) {
@@ -77,8 +71,6 @@ class LimeFunction {
     return { cond, act };
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunction;

@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Inverse function class
 class LimeFunctionInverse extends LimeFunction {
   // Constructor
@@ -25,8 +23,6 @@ class LimeFunctionInverse extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionInverse;

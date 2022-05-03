@@ -20,8 +20,6 @@ class Types {
     return args.every((v) => v === false);
   }
 
-  /* ------------------------ division ------------------------ */
-
   // Boolean
   static isBoolean(...args) {
     return args.every((v) => typeof v === 'boolean');
@@ -57,8 +55,6 @@ class Types {
     return args.every((v) => v instanceof type);
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = Types;

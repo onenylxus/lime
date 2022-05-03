@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Identity matrix function class
 class LimeFunctionIdentityMatrix extends LimeFunction {
   // Constructor
@@ -28,8 +26,6 @@ class LimeFunctionIdentityMatrix extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionIdentityMatrix;

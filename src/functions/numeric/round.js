@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Round function class
 class LimeFunctionRound extends LimeFunction {
   // Constructor
@@ -26,8 +24,6 @@ class LimeFunctionRound extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionRound;

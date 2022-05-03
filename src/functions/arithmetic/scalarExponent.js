@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Scalar exponent function class
 class LimeFunctionScalarExponent extends LimeFunction {
   // Constructor
@@ -66,8 +64,6 @@ class LimeFunctionScalarExponent extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionScalarExponent;

@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Maximum function class
 class LimeFunctionMaximum extends LimeFunction {
   // Constructor
@@ -26,8 +24,6 @@ class LimeFunctionMaximum extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionMaximum;

@@ -4,8 +4,6 @@ const Bundle = require('../dist/bundle');
 const Lime = require('../src/lime');
 const { TEST_VERSION } = require('../lib/version.json');
 
-/* ------------------------ division ------------------------ */
-
 // Tester function
 function tester(df, tf, ef) {
   return (type) => {
@@ -75,8 +73,6 @@ function tester(df, tf, ef) {
     });
   };
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = tester;

@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Permutation function class
 class LimeFunctionPermutation extends LimeFunction {
   // Constructor
@@ -29,8 +27,6 @@ class LimeFunctionPermutation extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionPermutation;

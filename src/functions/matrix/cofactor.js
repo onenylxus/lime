@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Cofactor function class
 class LimeFunctionCofactor extends LimeFunction {
   // Constructor
@@ -28,8 +26,6 @@ class LimeFunctionCofactor extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionCofactor;

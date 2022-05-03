@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Positive function class
 class LimeFunctionPositive extends LimeFunction {
   // Constructor
@@ -44,8 +42,6 @@ class LimeFunctionPositive extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionPositive;

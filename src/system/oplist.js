@@ -596,7 +596,5 @@ const Oplist = {
   },
 };
 
-/* ------------------------ division ------------------------ */
-
 // Export
 module.exports = Oplist;

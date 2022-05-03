@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Reciprocal function class
 class LimeFunctionReciprocal extends LimeFunction {
   // Constructor
@@ -21,8 +19,6 @@ class LimeFunctionReciprocal extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionReciprocal;

@@ -2,8 +2,6 @@
 const Types = require('../../utils/types');
 const LimeCommand = require('../structs/command');
 
-/* ------------------------ division ------------------------ */
-
 // List command class
 class LimeCommandList extends LimeCommand {
   // Constructor
@@ -21,8 +19,6 @@ class LimeCommandList extends LimeCommand {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeCommandList;

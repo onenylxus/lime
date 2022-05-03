@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Hilbert matrix function class
 class LimeFunctionHilbertMatrix extends LimeFunction {
   // Constructor
@@ -28,8 +26,6 @@ class LimeFunctionHilbertMatrix extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionHilbertMatrix;

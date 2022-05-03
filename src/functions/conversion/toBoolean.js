@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Convert to boolean function class
 class LimeFunctionToBoolean extends LimeFunction {
   // Constructor
@@ -43,8 +41,6 @@ class LimeFunctionToBoolean extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionToBoolean;

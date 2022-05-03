@@ -11,8 +11,6 @@ class LimeCommand {
     this.operations = new Map();
   }
 
-  /* ------------------------ division ------------------------ */
-
   // Execute function
   execute(input) {
     const params = input.split(/\s/).slice(1); const len = params.length;
@@ -22,8 +20,6 @@ class LimeCommand {
     return this.operations.get(len)(...params);
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeCommand;

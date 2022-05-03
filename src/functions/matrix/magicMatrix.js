@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Magic matrix function class
 class LimeFunctionMagicMatrix extends LimeFunction {
   // Constructor
@@ -101,8 +99,6 @@ class LimeFunctionMagicMatrix extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionMagicMatrix;

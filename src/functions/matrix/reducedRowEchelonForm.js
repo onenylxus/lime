@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Reduced row echelon form function class
 class LimeFunctionReducedRowEchelonForm extends LimeFunction {
   // Constructor
@@ -67,8 +65,6 @@ class LimeFunctionReducedRowEchelonForm extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionReducedRowEchelonForm;

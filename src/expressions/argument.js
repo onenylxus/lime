@@ -1,8 +1,6 @@
 // Require
 const LimeExpression = require('../structs/expression');
 
-/* ------------------------ division ------------------------ */
-
 // Argument expression class
 class LimeExpressionArgument extends LimeExpression {
   // Constructor
@@ -16,8 +14,6 @@ class LimeExpressionArgument extends LimeExpression {
     }
     this.places = places;
   }
-
-  /* ------------------------ division ------------------------ */
 
   // Get value
   get value() {
@@ -34,8 +30,6 @@ class LimeExpressionArgument extends LimeExpression {
     return this.length === 0;
   }
 
-  /* ------------------------ division ------------------------ */
-
   // Simplify function
   simplify() {
     return this.places.map((p) => p.simplify());
@@ -46,8 +40,6 @@ class LimeExpressionArgument extends LimeExpression {
     return this.length === 1 ? this.places[0].finalize() : this.places.map((p) => p.finalize());
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeExpressionArgument;

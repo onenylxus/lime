@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Intersection function class
 class LimeFunctionIntersection extends LimeFunction {
   // Constructor
@@ -23,8 +21,6 @@ class LimeFunctionIntersection extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionIntersection;

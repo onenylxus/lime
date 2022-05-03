@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Symmetric difference function class
 class LimeFunctionSymmetricDifference extends LimeFunction {
   // Constructor
@@ -23,8 +21,6 @@ class LimeFunctionSymmetricDifference extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionSymmetricDifference;

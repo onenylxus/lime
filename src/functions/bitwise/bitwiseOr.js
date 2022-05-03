@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Bitwise OR function class
 class LimeFunctionBitwiseOr extends LimeFunction {
   // Constructor
@@ -33,8 +31,6 @@ class LimeFunctionBitwiseOr extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionBitwiseOr;

@@ -4,8 +4,6 @@ import json from '@rollup/plugin-json';
 import resolve from '@rollup/plugin-node-resolve';
 import { uglify } from 'rollup-plugin-uglify';
 
-/* ------------------------ division ------------------------ */
-
 // Production mode check
 const prod = !process.env.ROLLUP_WATCH;
 

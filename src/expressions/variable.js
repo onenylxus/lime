@@ -1,8 +1,6 @@
 // Require
 const LimeExpression = require('../structs/expression');
 
-/* ------------------------ division ------------------------ */
-
 // Variable expression class
 class LimeExpressionVariable extends LimeExpression {
   // Constructor
@@ -14,8 +12,6 @@ class LimeExpressionVariable extends LimeExpression {
     this.key = key;
   }
 
-  /* ------------------------ division ------------------------ */
-
   // Get value
   get value() {
     if (!this.lime.variables.has(this.key)) {
@@ -23,8 +19,6 @@ class LimeExpressionVariable extends LimeExpression {
     }
     return this.lime.variables.get(this.key);
   }
-
-  /* ------------------------ division ------------------------ */
 
   // Simplify function
   simplify() {
@@ -36,8 +30,6 @@ class LimeExpressionVariable extends LimeExpression {
     return this.simplify();
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeExpressionVariable;

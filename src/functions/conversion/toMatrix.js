@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Convert to matrix function class
 class LimeFunctionToMatrix extends LimeFunction {
   // Constructor
@@ -28,8 +26,6 @@ class LimeFunctionToMatrix extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionToMatrix;

@@ -1,8 +1,6 @@
 // Require
 const LimeFunction = require('../../structs/function');
 
-/* ------------------------ division ------------------------ */
-
 // Random function class
 class LimeFunctionRandom extends LimeFunction {
   // Constructor
@@ -37,8 +35,6 @@ class LimeFunctionRandom extends LimeFunction {
     });
   }
 }
-
-/* ------------------------ division ------------------------ */
 
 // Export
 module.exports = LimeFunctionRandom;

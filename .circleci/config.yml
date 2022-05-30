@@ -1,22 +1,6 @@
 version: 2
 
 jobs:
-  'node-12':
-    docker:
-      - image: cimg/node:12.22
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - yarn-packages-{{ checksum "yarn.lock" }}
-      - run: yarn install --immutable
-      - save_cache:
-          key: yarn-packages-{{ checksum "yarn.lock" }}
-          paths:
-            - .yarn/cache
-            - .yarn/unplugged
-      - run: yarn ci
-
   'node-14':
     docker:
       - image: cimg/node:14.19
@@ -70,7 +54,6 @@ workflows:
   version: 2
   build:
     jobs:
-      - 'node-12'
       - 'node-14'
       - 'node-16'
       - 'node-latest'

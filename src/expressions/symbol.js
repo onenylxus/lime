@@ -26,6 +26,11 @@ class LimeExpressionSymbol extends LimeExpression {
   finalize() {
     return this.simplify();
   }
+
+  // Print function
+  print() {
+    return `${this.key}`;
+  }
 }
 
 // Export

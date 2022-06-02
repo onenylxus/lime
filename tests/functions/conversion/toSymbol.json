@@ -1,0 +1,17 @@
+{
+  "name": "Convert to symbol function test",
+  "version": 2,
+  "process": [
+    {
+      "desc": "argument of variable",
+      "config": {},
+      "tests": [
+        {
+          "input": ["@x"],
+          "type": "equals",
+          "output": "x"
+        }
+      ]
+    }
+  ]
+}

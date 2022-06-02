@@ -106,5 +106,6 @@
   ">>": ["shiftRight", "b"],
   "<": ["smaller", "b"],
   "<=": ["smallerEqual", "b"],
-  "-": ["subtract", "b"]
+  "-": ["subtract", "b"],
+  "@": ["toSymbol", "r"]
 }

@@ -82,6 +82,7 @@ const Module = new Map([].concat(
     ['toRational', require('../functions/conversion/toRational')],
     ['toSet', require('../functions/conversion/toSet')],
     ['toString', require('../functions/conversion/toString')],
+    ['toSymbol', require('../functions/conversion/toSymbol')],
   ]),
 
   // Counting functions

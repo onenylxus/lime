@@ -98,6 +98,7 @@
     "toRational",
     "toSet",
     "toString",
+    "toSymbol",
     "trace",
     "transpose",
     "truncation",

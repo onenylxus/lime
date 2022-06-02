@@ -2,7 +2,7 @@
 Lime is a mathematics computation engine written in JavaScript.
 
 ## Installation
-Step 1: Make sure that `node` version is at least `12`:
+Step 1: Make sure that `node` version is at least `14`:
 ```bat
 node --version
 ```

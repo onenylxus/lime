@@ -27,7 +27,7 @@ class LimeEquation {
 
   // Record function
   record(step) {
-    if (this.lime.config.promptShowSteps) {
+    if (this.lime.config.get('promptShowSteps')) {
       console.log(step.data);
     }
     this.solution.push(step);

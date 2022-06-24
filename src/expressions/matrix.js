@@ -60,7 +60,7 @@ class LimeExpressionMatrix extends LimeExpression {
     let str = '';
 
     // Compact display
-    if (this.lime.config.testMode) {
+    if (this.lime.config.get('testMode')) {
       str += '[';
       for (let cv = 0; cv < this.row; cv++) {
         str += cv === 0 ? '' : ';';
@@ -84,7 +84,7 @@ class LimeExpressionMatrix extends LimeExpression {
 
       for (let av = 0; av < this.row; av++) {
         for (let au = 0; au < this.column; au++) {
-          str += new Array(max[au] - len[av][au] + this.lime.config.tabSize + 1).join(' ') + this.places[av][au].print();
+          str += new Array(max[au] - len[av][au] + this.lime.config.get('tabSize') + 1).join(' ') + this.places[av][au].print();
         }
         str += (av < this.row - 1 ? '\n' : '');
       }

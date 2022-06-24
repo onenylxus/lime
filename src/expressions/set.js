@@ -50,7 +50,7 @@ class LimeExpressionSet extends LimeExpression {
 
   // Print function
   print() {
-    const space = this.lime.config.testMode ? '' : ' '; let str = '{';
+    const space = this.lime.config.get('testMode') ? '' : ' '; let str = '{';
     for (let i = 0; i < this.length; i++) {
       str += space + this.places[i].print() + (i < this.length - 1 ? ',' : '');
     }

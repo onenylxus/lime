@@ -10,18 +10,18 @@ class LimeCommandConfig extends LimeCommand {
 
     // Operations
     this.operations.set(1, (prop) => {
-      if (!this.lime.config.hasOwnProperty(prop)) {
+      if (!this.lime.config.has(prop)) {
         throw new Error('error:invalidConfigProperty');
       }
-      return `${prop}: ${this.lime.config[prop]}`;
+      return `${prop}: ${this.lime.config.get(prop)}`;
     });
     this.operations.set(2, (prop, value) => {
-      if (!this.lime.config.hasOwnProperty(prop)) {
+      if (!this.lime.config.has(prop)) {
         throw new Error('error:invalidConfigProperty');
       }
-      const t = this.lime.config[prop];
-      this.lime.config[prop] = this.lime.direct([value.match(/^[-+]?\d+$/) ? +value : value]).value;
-      return `${prop}: ${t} > ${this.lime.config[prop]}`;
+      const t = this.lime.config.get(prop);
+      this.lime.config.set(prop, this.lime.direct([value.match(/^[-+]?\d+$/) ? +value : value]).value);
+      return `${prop}: ${t} > ${this.lime.config.get(prop)}`;
     });
   }
 }

@@ -8,7 +8,7 @@ describe('Bundle test', () => {
   test('CJS bundle', () => {
     let lime = require(`../${dir}-cjs.js`)({ testMode: true });
     expect(fs.readFileSync(`${dir}-cjs.js`).length).toBeGreaterThan(0);
-    expect(lime.config.testMode).toBeTruthy();
+    expect(lime.config.get('testMode')).toBeTruthy();
     expect(lime.prompt(`${num}`)).toEqual(`${num}`);
   });
 
@@ -19,7 +19,7 @@ describe('Bundle test', () => {
   test('UMD bundle', () => {
     let lime = require(`../${dir}.js`)({ testMode: true });
     expect(fs.readFileSync(`${dir}.js`).length).toBeGreaterThan(0);
-    expect(lime.config.testMode).toBeTruthy();
+    expect(lime.config.get('testMode')).toBeTruthy();
     expect(lime.prompt(`${num}`)).toEqual(`${num}`);
   });
 });

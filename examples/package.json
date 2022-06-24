@@ -5,9 +5,7 @@
   "license": "MIT",
   "main": "index.js",
   "private": true,
-  "dependencies": {
-    "@onenylxus/utils": "^1.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "chalk": "4.1.2",
     "express": "^4.17.3",

@@ -19,7 +19,7 @@ class LimeExpressionBoolean extends LimeExpression {
 
   // Convert to integer
   toInteger() {
-    if (this.lime.config.strictBoolean) {
+    if (this.lime.config.get('strictBoolean')) {
       throw new Error('warn:strictBoolean');
     }
     return this.lime.direct([+this.value]);

@@ -13,15 +13,26 @@ class LimeCommandHelp extends LimeCommand {
       const res = ['Below is a list of available commands:'];
       this.lime.module.forEach((M) => {
         try {
-          const v = new (M)(this.lime);
+          let v;
+          try {
+            v = new (M)(this.lime);
+          } catch (e) {
+            (() => 0)();
+          }
           if (v instanceof LimeCommand) {
             res.push(`${v.name}: ${v.description}`);
           }
         } catch (e) {
-          (() => 0)();
+          throw new Error('issue:invalidModuleInHelp');
         }
       });
       return res.join('\n');
+    });
+    this.operations.set(1, (prop) => {
+      if (!this.lime.module.has(prop)) {
+        throw new Error('error:invalidModuleProperty');
+      }
+      return `${prop}: ${this.lime.build(prop)().name}`;
     });
   }
 }

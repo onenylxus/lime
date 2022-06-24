@@ -10,7 +10,7 @@ class Lime {
   // Constructor
   constructor(conf) {
     // Properties
-    this.config = { ...Config, ...conf };
+    this.config = new Map(Object.entries({ ...Config, ...conf }));
     this.module = Module;
     this.variables = new Map();
     this.memory = [];
@@ -36,7 +36,7 @@ class Lime {
     try {
       return this.run(input);
     } catch (err) {
-      if (!this.config.testMode) {
+      if (!this.config.get('testMode')) {
         console.log(this.message(err));
       }
       return '';
@@ -69,7 +69,7 @@ class Lime {
 
     // Finalize
     this.memory.push(eq);
-    if (this.config.promptShowRuntime) {
+    if (this.config.get('promptShowRuntime')) {
       console.log(`Equation runtime: ${eq.runtime / 1000}s`);
     }
     this.variables.set('ans', eq.result[0]);
@@ -100,7 +100,7 @@ class Lime {
       this.process(eq);
       return eq.result[0];
     } catch (err) {
-      if (this.config.testMode) {
+      if (this.config.get('testMode')) {
         return this.message(err);
       }
 
@@ -128,7 +128,7 @@ class Lime {
       case 'issue': symbol = 'i'; break;
       default: return this.message(ue);
     }
-    if (this.config.developmentMode && symbol === 'i') {
+    if (this.config.get('developmentMode') && symbol === 'i') {
       console.log(err);
     }
 

@@ -17,7 +17,7 @@ class LimeFunctionToInteger extends LimeFunction {
     this.algorithms.set('r(arg{expr[1]})', (step) => {
       switch (this.lime.direct(['type', step.right]).value) {
         case 'boolean':
-          if (this.lime.config.strictBoolean) {
+          if (this.lime.config.get('strictBoolean')) {
             throw new Error('warn:strictBoolean');
           }
           step.rus(this.lime.direct([+step.right.places[0].value]));

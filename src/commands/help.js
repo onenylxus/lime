@@ -6,7 +6,7 @@ class LimeCommandHelp extends LimeCommand {
   // Constructor
   constructor(lime) {
     // Super from command class
-    super(lime, { name: 'help', description: 'list all available commands' });
+    super(lime, require('../../lib/commands/help.json'));
 
     // Operations
     this.operations.set(0, () => {

@@ -1,7 +1,7 @@
 // Require
 const Types = require('../../utils/types');
 const Oplist = require('../system/oplist');
-const Order = require('../../lib/order.json');
+const Order = require('../../lib/system/order.json');
 
 // Function class
 class LimeFunction {

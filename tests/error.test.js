@@ -1,7 +1,7 @@
 // Require
 const Bundle = require('../dist/bundle');
 const Lime = require('../src/lime');
-const Message = require('../lib/message.json');
+const Message = require('../lib/system/message.json');
 
 // Error test
 describe('Error handling test', () => {

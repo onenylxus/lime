@@ -6,7 +6,7 @@ class LimeCommandClear extends LimeCommand {
   // Constructor
   constructor(lime) {
     // Super from command class
-    super(lime, { name: 'clear', description: 'clear variables and memory' });
+    super(lime, require('../../lib/commands/clear.json'));
 
     // Operations
     this.operations.set(0, () => {

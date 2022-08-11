@@ -7,7 +7,7 @@ class LimeCommandList extends LimeCommand {
   // Constructor
   constructor(lime) {
     // Super from command class
-    super(lime, { name: 'list', description: 'list specified engine property' });
+    super(lime, require('../../lib/commands/list.json'));
 
     // Operations
     this.operations.set(1, (prop) => {

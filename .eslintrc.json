@@ -20,6 +20,7 @@
       "comma-style": "error",
       "curly": ["error", "multi-line", "consistent"],
       "dot-location": ["error", "property"],
+      "global-require": "off",
       "handle-callback-err": "off",
       "indent": ["error", 2, { "SwitchCase": 1 }],
       "keyword-spacing": "error",

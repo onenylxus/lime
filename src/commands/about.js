@@ -7,7 +7,7 @@ class LimeCommandAbout extends LimeCommand {
   // Constructor
   constructor(lime) {
     // Super from command class
-    super(lime, { name: 'about', description: 'show information about the engine' });
+    super(lime, require('../../lib/commands/about.json'));
 
     // Operations
     this.operations.set(0, () => banner());

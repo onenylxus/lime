@@ -1,5 +1,3 @@
-/* eslint-disable global-require */
-
 // Require
 const Compiler = require('./compiler');
 

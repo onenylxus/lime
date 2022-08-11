@@ -6,7 +6,7 @@ class LimeCommandConfig extends LimeCommand {
   // Constructor
   constructor(lime) {
     // Super from command class
-    super(lime, { name: 'config', description: 'view and modify engine configurations' });
+    super(lime, require('../../lib/commands/config.json'));
 
     // Operations
     this.operations.set(1, (prop) => {

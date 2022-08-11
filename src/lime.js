@@ -2,8 +2,8 @@
 const Types = require('../utils/types');
 const Module = require('./system/module');
 const Config = require('./config.json');
-const Message = require('../lib/message.json');
-const Refer = require('../lib/refer.json');
+const Message = require('../lib/system/message.json');
+const Refer = require('../lib/system/refer.json');
 
 // Lime class
 class Lime {

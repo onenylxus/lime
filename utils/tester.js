@@ -2,7 +2,7 @@
 const finder = require('./finder');
 const Bundle = require('../dist/bundle');
 const Lime = require('../src/lime');
-const { TEST_VERSION } = require('../lib/version.json');
+const { TEST_VERSION } = require('../lib/system/version.json');
 
 // Tester function
 function tester(df, tf, ef) {
@@ -18,6 +18,9 @@ function tester(df, tf, ef) {
         finder(folder, '.js').forEach((key) => {
           tf(key, () => {
             ef(finder(folder.replace('src', 'tests'), '.json').includes(key)).toBeTruthy();
+            if (type === 'commands') {
+              ef(finder(folder.replace('src', 'lib'), '.json').includes(key)).toBeTruthy();
+            }
           });
         });
       });

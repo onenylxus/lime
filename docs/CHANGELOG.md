@@ -2,8 +2,10 @@
 
 ### v0.4.0 (dev)
 - Converted `Compiler` from object to class
+- Added expressions: `Symbol`
 - Added functions:
-  - Conversion: `ToBoolean`, `ToComplex`, `ToInteger`, `ToMatrix`, `ToRational`, `ToSet`, `ToString`
+  - Conversion: `ToBoolean`, `ToComplex`, `ToInteger`, `ToMatrix`, `ToRational`, `ToSet`, `ToString`, `ToSymbol`
+  - Counting: `Iterator`
 - Moved command information to library as JSON files
 - Fixed existing functions to support variables
 

@@ -190,7 +190,7 @@ const Oplist = {
       && step.ci('matrix')(step.right.places[0])
       && step.ci('integer')(step.right.places[1]),
 
-    // [Right unary] Argument{Matrix[1],Integer[1]}
+    // [Right unary] Argument{Matrix[1],Integer[2]}
     'r(arg{mat[1],int[2]})':
       (step) => step.rpi('argument')
       && step.right.length === 3

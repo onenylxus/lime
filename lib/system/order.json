@@ -66,6 +66,7 @@
     "index",
     "intersection",
     "inverse",
+    "iterator",
     "leastCommonMultiple",
     "length",
     "magicMatrix",

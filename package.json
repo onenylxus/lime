@@ -48,7 +48,7 @@
     "ci": "rollup -c && jest --config jest.config.json --verbose"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "husky": {
     "hooks": {

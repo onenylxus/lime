@@ -31,6 +31,7 @@
   "integer": ["toInteger", "r"],
   "intersection": ["intersection", "r"],
   "inv": ["inverse", "r"],
+  "iter": ["iterator", "r"],
   "lcm": ["leastCommonMultiple", "r"],
   "len": ["length", "r"],
   "magicmat": ["magicMatrix", "r"],

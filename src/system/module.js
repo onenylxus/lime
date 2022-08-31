@@ -87,6 +87,7 @@ const Module = new Map([].concat(
   Compiler.func([
     ['combination', require('../functions/counting/combination')],
     ['factorial', require('../functions/counting/factorial')],
+    ['iterator', require('../functions/counting/iterator')],
     ['permutation', require('../functions/counting/permutation')],
   ]),
 

@@ -1,0 +1,122 @@
+{
+  "name": "Iterator function test",
+  "version": 2,
+  "process": [
+    {
+      "desc": "argument of integer and integer",
+      "config": {},
+      "tests": [
+        {
+          "input": ["iter(1,1)"],
+          "type": "equals",
+          "output": "{1}"
+        },
+        {
+          "input": ["iter(1,3)"],
+          "type": "equals",
+          "output": "{1,2,3}"
+        },
+        {
+          "input": ["iter(7,4)"],
+          "type": "equals",
+          "output": "{7,6,5,4}"
+        }
+      ]
+    },
+    {
+      "desc": "argument of integer and rational",
+      "config": {},
+      "tests": [
+        {
+          "input": ["iter(1/3,5)"],
+          "type": "equals",
+          "output": "{1/3,4/3,7/3,10/3,13/3}"
+        },
+        {
+          "input": ["iter(1,-5/4)"],
+          "type": "equals",
+          "output": "{1,0,-1}"
+        }
+      ]
+    },
+    {
+      "desc": "argument of integer, integer and integer",
+      "config": {},
+      "tests": [
+        {
+          "input": ["iter(1,5,3)"],
+          "type": "equals",
+          "output": "{1,4}"
+        },
+        {
+          "input": ["iter(11,1,-2)"],
+          "type": "equals",
+          "output": "{11,9,7,5,3,1}"
+        },
+        {
+          "input": ["iter(1,3,0)"],
+          "type": "equals",
+          "output": "{1}"
+        }
+      ]
+    },
+    {
+      "desc": "argument of integer, integer and rational",
+      "config": {},
+      "tests": [
+        {
+          "input": ["iter(1/2,8,5)"],
+          "type": "equals",
+          "output": "{1/2,11/2}"
+        },
+        {
+          "input": ["iter(-2,-1/2,1)"],
+          "type": "equals",
+          "output": "{-2,-1}"
+        },
+        {
+          "input": ["iter(3,4,1/4)"],
+          "type": "equals",
+          "output": "{3,13/4,7/2,15/4,4}"
+        }
+      ]
+    },
+    {
+      "desc": "argument of integer, rational and rational",
+      "config": {},
+      "tests": [
+        {
+          "input": ["iter(1,5/2,1/4)"],
+          "type": "equals",
+          "output": "{1,5/4,3/2,7/4,2,9/4,5/2}"
+        },
+        {
+          "input": ["iter(1/3,0,-1/9)"],
+          "type": "equals",
+          "output": "{1/3,2/9,1/9,0}"
+        },
+        {
+          "input": ["iter(1/6,1/4,2)"],
+          "type": "equals",
+          "output": "{1/6}"
+        }
+      ]
+    },
+    {
+      "desc": "invalid argument length",
+      "config": {},
+      "tests": [
+        {
+          "input": ["iter(1)"],
+          "type": "throws",
+          "output": "error:invalidArgumentLength"
+        },
+        {
+          "input": ["iter(1,2,3,4)"],
+          "type": "throws",
+          "output": "error:invalidArgumentLength"
+        }
+      ]
+    }
+  ]
+}

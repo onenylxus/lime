@@ -4,9 +4,7 @@
   "process": [
     {
       "desc": "argument of integer and integer",
-      "config": {
-
-      },
+      "config": {},
       "tests": [
         {
           "input": ["npr(3,2)"],

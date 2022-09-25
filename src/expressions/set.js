@@ -6,7 +6,7 @@ class LimeExpressionSet extends LimeExpression {
   // Constructor
   constructor(lime, ...places) {
     // Super from expression class
-    super(lime, { name: 'set', shorthand: 'set', isSimple: false });
+    super(lime, require('../../lib/expressions/set.json'));
 
     // Build expression
     if (!this.lime.identify('expression')(...places)) {

@@ -6,7 +6,7 @@ class LimeExpressionArgument extends LimeExpression {
   // Constructor
   constructor(lime, ...places) {
     // Super from expression class
-    super(lime, { name: 'argument', shorthand: 'arg', isSimple: false });
+    super(lime, require('../../lib/expressions/argument.json'));
 
     // Build expression
     if (!this.lime.identify('expression')(...places)) {

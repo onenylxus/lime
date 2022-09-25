@@ -6,7 +6,7 @@ class LimeExpressionComplex extends LimeExpression {
   // Constructor
   constructor(lime, rPlace, iPlace) {
     // Super from expression class
-    super(lime, { name: 'complex', shorthand: 'comp', isSimple: true });
+    super(lime, require('../../lib/expressions/complex.json'));
 
     // Build expression
     if (!this.lime.identify('integer', 'rational')(rPlace, iPlace)) {

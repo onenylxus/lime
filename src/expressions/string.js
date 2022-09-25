@@ -6,7 +6,7 @@ class LimeExpressionString extends LimeExpression {
   // Constructor
   constructor(lime, value) {
     // Super from expression class
-    super(lime, { name: 'string', shorthand: 'str', isSimple: true });
+    super(lime, require('../../lib/expressions/string.json'));
 
     // Build expression
     this.value = value;

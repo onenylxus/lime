@@ -6,7 +6,7 @@ class LimeExpressionVariable extends LimeExpression {
   // Constructor
   constructor(lime, key) {
     // Super from expression class
-    super(lime, { name: 'variable', shorthand: 'var', isSimple: true });
+    super(lime, require('../../lib/expressions/variable.json'));
 
     // Build expression
     this.key = key;

@@ -6,7 +6,7 @@ class LimeExpressionSymbol extends LimeExpression {
   // Constructor
   constructor(lime, key) {
     // Super from expression class
-    super(lime, { name: 'symbol', shorthand: 'sym', isSimple: true });
+    super(lime, require('../../lib/expressions/symbol.json'));
 
     // Build expression
     this.key = key;

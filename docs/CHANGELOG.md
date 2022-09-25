@@ -6,7 +6,7 @@
 - Added functions:
   - Conversion: `ToBoolean`, `ToComplex`, `ToInteger`, `ToMatrix`, `ToRational`, `ToSet`, `ToString`, `ToSymbol`
   - Counting: `Iterator`
-- Moved command information to library as JSON files
+- Moved command and expression information to library as JSON files
 - Fixed existing functions to support variables
 
 ### v0.3.3 (Feb 5, 2022)

@@ -6,7 +6,7 @@ class LimeExpressionRational extends LimeExpression {
   // Constructor
   constructor(lime, nPlace, dPlace) {
     // Super from expression class
-    super(lime, { name: 'rational', shorthand: 'rat', isSimple: true });
+    super(lime, require('../../lib/expressions/rational.json'));
 
     // Build expression
     if (!this.lime.identify('integer')(nPlace, dPlace)) {

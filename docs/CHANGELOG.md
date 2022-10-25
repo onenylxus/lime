@@ -1,6 +1,6 @@
 # Changelog
 
-### v0.4.0 (dev)
+### v0.3.4 (Oct 25, 2022)
 - Converted `Compiler` from object to class
 - Added expressions: `Symbol`
 - Added functions:

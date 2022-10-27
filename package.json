@@ -24,15 +24,16 @@
     "@rollup/plugin-inject": "^4.0.4",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^14.1.0",
+    "chalk": "4.1.2",
     "codecov": "^3.8.2",
     "eslint": "^8.24.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "husky": "^8.0.1",
     "jest": "^29.0.3",
     "lint-staged": "^13.0.3",
     "prettier-eslint": "^15.0.1",
     "prettier-eslint-cli": "^7.1.0",
+    "prompt-sync": "^4.2.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.79.1",
     "rollup-plugin-uglify": "^6.0.4"
@@ -40,20 +41,15 @@
   "scripts": {
     "lint": "eslint . --fix && prettier-eslint $PWD/'**/*.js'",
     "clean": "rimraf dist/*.js",
-    "debug": "node examples/prompt.js -q",
-    "prebuild": "yarn lint && yarn clean",
-    "build": "rollup -c",
+    "debug": "node utils/prompt.js -q",
+    "build": "yarn lint && yarn clean && yarn rollup",
+    "rollup": "rollup -c",
     "watch": "jest --config jest.config.json --watch",
     "test": "yarn build && jest --config jest.config.json --verbose",
-    "ci": "rollup -c && jest --config jest.config.json --verbose"
+    "ci": "yarn rollup && jest --config jest.config.json --verbose"
   },
   "engines": {
     "node": ">=14"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn test"
-    }
   },
   "repository": {
     "type": "git",

@@ -1,7 +1,7 @@
 // Require
-const Types = require('../utils/types');
 const chalk = require('chalk');
 const Prompt = require('prompt-sync')({ sigint: true });
+const Types = require('../utils/types');
 const Lime = process.argv[2] === '-q' ? require('../src/lime')({ developmentMode: true }) : require('../dist/bundle')();
 
 // Process running function

@@ -1,5 +1,8 @@
 # Changelog
 
+### dev
+- Remove example folder
+
 ### v0.3.4 (Oct 25, 2022)
 - Converted `Compiler` from object to class
 - Added expressions: `Symbol`
